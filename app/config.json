@@ -1,3 +1,9 @@
 {
-  "serviceName": "Service name goes here"
-}
+  "serviceName": "Al's testing prototype",
+
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+    }
+  }
