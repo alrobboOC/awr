@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "govuk-prototype-kit dev",
-    "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start"
+    "dev": "NODE_OPTIONS=--require=./scripts/sass-warning-filter.cjs govuk-prototype-kit dev --suppress-node-version-warning",
+    "serve": "NODE_OPTIONS=--require=./scripts/sass-warning-filter.cjs govuk-prototype-kit serve --suppress-node-version-warning",
+    "start": "NODE_OPTIONS=--require=./scripts/sass-warning-filter.cjs govuk-prototype-kit start --suppress-node-version-warning"
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "3.0.1",
