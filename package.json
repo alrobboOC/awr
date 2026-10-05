@@ -5,14 +5,18 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@govuk-prototype-kit/step-by-step": "2.2.3",
+    "@govuk-prototype-kit/common-templates": "3.0.1",
+    "@govuk-prototype-kit/step-by-step": "3.0.0",
     "@govuk-prototype-kit/task-list": "2.0.0",
-    "@x-govuk/govuk-prototype-filters": "^2.0.0",
-    "govuk-frontend": "5.10.1",
-    "govuk-prototype-kit": "13.16.2",
-    "hmrc-frontend": "6.65.0",
-    "jquery": "3.7.1",
-    "notifications-node-client": "8.2.1"
+    "@x-govuk/govuk-prototype-filters": "2.2.0",
+    "govuk-frontend": "6.5.1",
+    "govuk-prototype-kit": "13.20.5",
+    "hmrc-frontend": "7.38.0",
+    "jquery": "4.0.0",
+    "notifications-node-client": "8.5.0"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "fsevents@2.3.3": true
   }
 }
