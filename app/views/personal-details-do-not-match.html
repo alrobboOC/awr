@@ -1,0 +1,49 @@
+{% extends "layouts/business-registration.html" %}
+
+{% set pageName = "Your personal details do not match HMRC records" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/registration-summary" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+
+      <p class="govuk-body">The personal details you entered do not match the details held by HMRC.</p>
+      <p class="govuk-body">This could be because:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you entered some details incorrectly</li>
+        <li>the details held by HMRC need updating</li>
+      </ul>
+
+      <p class="govuk-body">The details held by HMRC are:</p>
+      {{ govukSummaryList({
+        rows: [
+          { key: { text: "Name" }, value: { text: "Bob Dole" } },
+          { key: { text: "Date of birth" }, value: { text: "1 January 1990" } },
+          { key: { text: "Home address" }, value: { html: "30–31 Devonshire Place<br>Brighton<br>BN2 1QB" } }
+        ]
+      }) }}
+
+      
+      <p class="govuk-body">Check the personal details you entered in your <a class="govuk-link" href="/registration-summary">registration summary</a>.</p>
+
+     
+      <p class="govuk-body">Sign out and <a class="govuk-link" href="https://www.gov.uk/tell-hmrc-change-of-details" target="_blank" rel="noopener noreferrer">tell HMRC about changes to your personal details (opens in new tab)</a>.</p>
+      <p class="govuk-body">You can continue this registration after HMRC has updated your details.</p>
+
+      <p class="govuk-body">If you continue now, we will use the personal details held by HMRC for this registration.</p>
+
+<br>      
+
+      <form action="/personal-details-do-not-match" method="post" novalidate>
+        {{ govukButton({ text: "Continue" }) }}
+      </form>
+
+
+
+    </div>
+  </div>
+{% endblock %}

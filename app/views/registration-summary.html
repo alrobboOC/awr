@@ -1,0 +1,31 @@
+{% extends "layouts/business-registration.html" %}
+{% set pageName = "Registration summary" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/personal-details-do-not-match" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% if data['useHmrcPersonalDetails'] %}
+        {{ govukNotificationBanner({
+          type: "success",
+          html: '<h2 class="govuk-notification-banner__heading">Your registration will use the personal details held by HMRC.</h2>'
+        }) }}
+      {% endif %}
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+      <h2 class="govuk-heading-m">Personal details</h2>
+      {% if data['useHmrcPersonalDetails'] %}
+        {{ govukSummaryList({ rows: [
+          { key: { text: "Name" }, value: { text: data['registrationPersonalDetails']['name'] } },
+          { key: { text: "Date of birth" }, value: { text: data['registrationPersonalDetails']['dateOfBirth'] } },
+          { key: { text: "Home address" }, value: { html: "30–31 Devonshire Place<br>Brighton<br>BN2 1QB" } }
+        ] }) }}
+      {% else %}
+        <p class="govuk-body">Your personal details do not match HMRC records.</p>
+        <p class="govuk-body"><a class="govuk-link" href="/personal-details-do-not-match">Check the details held by HMRC</a> before continuing your registration.</p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

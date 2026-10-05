@@ -1,0 +1,20 @@
+{% extends "layouts/main.html" %}
+
+{% set serviceName = "Business registration" %}
+{% set serviceUrl = "/personal-details-do-not-match" %}
+
+{% block header %}
+  {{ govukHeader({ homepageUrl: "/" }) }}
+  {% set languageSelect %}
+    {{ hmrcServiceNavigationLanguageSelect({
+      language: "en",
+      cy: { href: "?cy" }
+    }) }}
+  {% endset %}
+  {{ govukServiceNavigation({
+    serviceName: serviceName,
+    serviceUrl: serviceUrl,
+    classes: "hmrc-service-navigation--with-language-select",
+    slots: { end: languageSelect }
+  }) }}
+{% endblock %}
