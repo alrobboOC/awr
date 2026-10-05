@@ -1,0 +1,63 @@
+{% extends "layouts/business-registration.html" %}
+{% set pageName = "Registration summary" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row registration-summary-page">
+    <div class="govuk-grid-column-one-third">
+      <nav class="registration-side-navigation" aria-label="Business registration">
+        <h2 class="govuk-heading-m">Business registration</h2>
+        <ul class="govuk-list">
+          <li><a class="govuk-link" href="/business-registration-summary" aria-current="page">Registration summary</a></li>
+          <li><a class="govuk-link" href="#about-you">About you</a></li>
+          <li><a class="govuk-link" href="#about-the-business">About the business</a></li>
+          <li><a class="govuk-link" href="#view-and-print">View and print</a></li>
+          <li><a class="govuk-link" href="#faqs">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Registration summary</h1>
+      <p class="govuk-body">You must complete all the sections below before the registration can be submitted.</p>
+      <p class="govuk-body">To complete, view or amend a section, follow the relevant link below or select ‘Next’ to start completing the first section.</p>
+      <p class="govuk-body">To delete this registration, select ‘Delete’. You cannot do this if you have accessed this registration as a delegate.</p>
+
+      <h2 class="govuk-heading-m">Share this registration form</h2>
+      <p class="govuk-body">If you want to allow another person, such as an agent, to complete, view or amend this registration you can share it with them by <a class="govuk-link" href="/set-up-a-delegate">setting them up as a new delegate</a>.</p>
+
+      
+      <h2 class="govuk-heading-m" id="about-you">About you</h2>
+      {{ govukTaskList({
+        idPrefix: "about-you",
+        items: [
+          { title: { text: "Personal information" }, href: "/personal-details-do-not-match", status: { tag: { text: "Incomplete", classes: "govuk-tag--red" } } },
+          { title: { text: "Address" }, href: "/change-of-personal-details", status: { tag: { text: "Incomplete", classes: "govuk-tag--red" } } },
+          { title: { text: "Your contact details" }, href: "/business-registration/contact-details", status: { tag: { text: "Completed", classes: "govuk-tag--green" } } }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6" id="about-the-business">About the business</h2>
+      {{ govukTaskList({
+        idPrefix: "about-business",
+        items: [
+          { title: { text: "Business details" }, href: "/business-registration/business-details", status: { tag: { text: "Completed", classes: "govuk-tag--green" } } },
+          { title: { text: "Business address" }, href: "/business-registration/business-address", status: { tag: { text: "Completed", classes: "govuk-tag--green" } } },
+          { title: { text: "Business contact details" }, href: "/business-registration/business-contact-details", status: { tag: { text: "Completed", classes: "govuk-tag--green" } } }
+        ]
+      }) }}
+
+      <div class="govuk-button-group govuk-!-margin-top-7">
+        {{ govukButton({ text: "Next", href: "/personal-details-do-not-match" }) }}
+        {% if not data['isDelegate'] %}
+          
+        {% endif %}
+      </div>
+      <p class="govuk-body"><a class="govuk-link" href="/delete-business-registration">Delete this registration</a></p>
+
+      
+    </div>
+  </div>
+{% endblock %}

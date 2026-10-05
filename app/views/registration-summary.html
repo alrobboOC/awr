@@ -20,7 +20,7 @@
         {{ govukSummaryList({ rows: [
           { key: { text: "Name" }, value: { text: data['registrationPersonalDetails']['name'] } },
           { key: { text: "Date of birth" }, value: { text: data['registrationPersonalDetails']['dateOfBirth'] } },
-          { key: { text: "Home address" }, value: { html: "30–31 Devonshire Place<br>Brighton<br>BN2 1QB" } }
+          { key: { text: "Address" }, value: { html: "24 Example Road<br>Exampleton<br>AB1 2CD" } }
         ] }) }}
       {% else %}
         <p class="govuk-body">Your personal details do not match HMRC records.</p>

@@ -1,0 +1,36 @@
+{% extends "layouts/business-registration.html" %}
+
+{% set pageName = "Change of personal details identified" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/registration-summary" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+
+      <p class="govuk-body">The personal details entered do not match the personal details held for you by HMRC.</p>
+      <p class="govuk-body">The personal details known to HMRC are:</p>
+
+      {{ govukSummaryList({
+        rows: [
+          { key: { text: "Name" }, value: { text: "Alex Morgan" } },
+          { key: { text: "Date of birth" }, value: { text: "14/06/1985" } },
+          { key: { text: "Address" }, value: { html: "24 Example Road<br>Exampleton<br>AB1 2CD" } }
+        ]
+      }) }}
+
+      <p class="govuk-body">If your personal details are incorrect or they have recently changed, you can update them in your <a class="govuk-link" href="https://www.gov.uk/personal-tax-account">Personal Tax Account</a></p>
+      <p class="govuk-body">Selecting 'Next' will use the personal details held by HMRC for the registration.</p>
+<br>
+      <form action="/personal-details-do-not-match" method="post" novalidate>
+        
+        <div class="govuk-button-group">
+          {{ govukButton({ text: "Next" }) }}
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

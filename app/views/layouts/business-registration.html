@@ -4,7 +4,7 @@
 {% set serviceUrl = "/personal-details-do-not-match" %}
 
 {% block header %}
-  {{ govukHeader({ homepageUrl: "/" }) }}
+  {{ hmrcHeader({ homepageUrl: "/", signOutHref: "/business-registration/sign-out" }) }}
   {% set languageSelect %}
     {{ hmrcServiceNavigationLanguageSelect({
       language: "en",

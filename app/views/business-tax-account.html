@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/macros/logo.njk" import govukLogo %}
+
+{% set serviceName = "Business tax account" %}
+{% set pageName = accountSection.title if accountSection else "Business tax account" %}
+
+{% block header %}
+  <header class="govuk-header business-tax-account-header">
+    <div class="govuk-width-container business-tax-account-header__container">
+      <a class="govuk-header__homepage-link" href="/" aria-label="GOV.UK homepage">
+        {{ govukLogo({ classes: "govuk-header__logotype", ariaLabelText: "GOV.UK" }) }}
+      </a>
+      <a class="govuk-header__link business-tax-account-header__service-name" href="/business-tax-account">Business tax account</a>
+    </div>
+  </header>
+  <div class="govuk-width-container">
+    <nav class="business-tax-account-navigation" aria-label="Business tax account">
+      <ul class="govuk-list business-tax-account-navigation__list">
+        <li><a class="govuk-link" href="/business-tax-account"{% if not accountSection %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a class="govuk-link" href="/business-tax-account/manage-account"{% if accountSection.key == "manage-account" %} aria-current="page"{% endif %}>Manage account</a></li>
+        <li><a class="govuk-link" href="/business-tax-account/messages"{% if accountSection.key == "messages" %} aria-current="page"{% endif %}>Messages</a></li>
+        <li><a class="govuk-link" href="/business-tax-account/help-and-contact"{% if accountSection.key == "help-and-contact" %} aria-current="page"{% endif %}>Help and contact</a></li>
+      </ul>
+    </nav>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full business-tax-account-content">
+      <h1 class="govuk-heading-xl">Business tax account</h1>
+      <p class="govuk-body-l">View and access your business taxes in one place</p>
+
+      {{ govukWarningText({
+        text: "You started adding a tax to this account but did not finish.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <p class="govuk-body govuk-!-margin-top-6"><a class="govuk-link" href="/change-of-personal-details">Continue adding a tax</a> to get online access to this tax.</p>
+      <p class="govuk-body">When you <a class="govuk-link" href="/business-tax-account/add-tax">add a tax, duty or scheme</a> to your account it will appear here.</p>
+
+      <p class="govuk-body govuk-!-margin-top-9">Payments will take up to 7 working days to show, depending on how you pay.<br>After you complete your return your tax calculation will take up to 2 days.</p>
+    </div>
+  </div>
+{% endblock %}

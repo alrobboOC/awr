@@ -1,0 +1,20 @@
+{% extends "business-tax-account.html" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds business-tax-account-content">
+      <h1 class="govuk-heading-l">{{ accountSection.title }}</h1>
+      {% if accountSection.key == "manage-account" %}
+        <p class="govuk-body"><a class="govuk-link" href="/registration-summary">View your registration summary</a>.</p>
+      {% elif accountSection.key == "messages" %}
+        <p class="govuk-body">You have no messages.</p>
+      {% elif accountSection.key == "help-and-contact" %}
+        <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact">Contact HMRC</a> for help with your business taxes.</p>
+      {% elif accountSection.key == "add-tax" %}
+        <p class="govuk-body">You started adding a tax to this account but did not finish.</p>
+        <p class="govuk-body"><a class="govuk-link" href="/change-of-personal-details">Continue your business registration</a>.</p>
+      {% endif %}
+      <p class="govuk-body"><a class="govuk-link" href="/business-tax-account">Return to your business tax account</a></p>
+    </div>
+  </div>
+{% endblock %}
