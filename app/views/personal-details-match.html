@@ -1,0 +1,67 @@
+{% extends "layouts/business-registration.html" %}
+
+{% set pageName = "Your personal details match HMRC records" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/personal-details-do-not-match-addresses" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+
+      <p class="govuk-body">You can continue with your registration.</p>
+
+      {% set registrationAddress %}
+        {{ data['registrationAddressLine1'] or '42 Sample Street' }}<br>
+        {% if data['registrationAddressLine2'] %}{{ data['registrationAddressLine2'] }}<br>{% endif %}
+        {{ data['registrationAddressTown'] or 'Exampleton' }}<br>
+        {{ data['registrationAddressPostcode'] or 'AB1 3EF' }}
+      {% endset %}
+
+      {{ govukSummaryList({
+        card: { title: { text: "Personal details" } },
+        rows: [
+          {
+            key: { text: "Name" },
+            value: { text: "Alex Morgan" }
+          },
+          {
+            key: { text: "Date of birth" },
+            value: { text: "14 June 1985" }
+          },
+          {
+            key: { text: "Address" },
+            value: { html: registrationAddress }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: { title: { text: "Details held by HMRC" } },
+        rows: [
+          {
+            key: { text: "Name" },
+            value: { text: "Alex Morgan" }
+          },
+          {
+            key: { text: "Date of birth" },
+            value: { text: "14 June 1985" }
+          },
+          {
+            key: { text: "Address" },
+            value: { html: registrationAddress }
+          }
+        ]
+      }) }}
+
+      <form action="/personal-details-do-not-match" method="post" novalidate>
+        {{ govukButton({ text: "Continue" }) }}
+      </form>
+
+
+
+    </div>
+  </div>
+{% endblock %}
