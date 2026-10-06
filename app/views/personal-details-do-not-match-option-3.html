@@ -1,0 +1,77 @@
+{% extends "layouts/business-registration.html" %}
+
+{% set pageName = "Your personal details do not match HMRC records" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/registration-summary" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+
+      <p class="govuk-body">You must update your personal details so they match the details held by HMRC before you can continue.</p>
+
+      {% set registrationAddress %}
+        {{ data['registrationAddressLine1'] or '42 Sample Street' }}<br>
+        {% if data['registrationAddressLine2'] %}{{ data['registrationAddressLine2'] }}<br>{% endif %}
+        {{ data['registrationAddressTown'] or 'Exampleton' }}<br>
+        {{ data['registrationAddressPostcode'] or 'AB1 3EF' }}
+      {% endset %}
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Compare your personal details</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Detail</th>
+            <th scope="col" class="govuk-table__header">Personal details</th>
+            <th scope="col" class="govuk-table__header">Details held by HMRC</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Name</th>
+            <td class="govuk-table__cell">
+              <div class="govuk-!-margin-bottom-2">Alex Morgan</div>
+              <a class="govuk-link" href="/registration-summary">Change<span class="govuk-visually-hidden"> name entered in your registration</span></a>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-!-margin-bottom-2">Alex James Morgan</div>
+              <a class="govuk-link" href="https://www.gov.uk/tell-hmrc-change-of-details" target="_blank" rel="noopener noreferrer">Change<span class="govuk-visually-hidden"> name held by HMRC (opens in new tab)</span></a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Date of birth</th>
+            <td class="govuk-table__cell">
+              <div class="govuk-!-margin-bottom-2">14 June 1985</div>
+              <a class="govuk-link" href="/registration-summary">Change<span class="govuk-visually-hidden"> date of birth entered in your registration</span></a>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-!-margin-bottom-2">14 June 1985</div>
+              <a class="govuk-link" href="https://www.gov.uk/tell-hmrc-change-of-details" target="_blank" rel="noopener noreferrer">Change<span class="govuk-visually-hidden"> date of birth held by HMRC (opens in new tab)</span></a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Address</th>
+            <td class="govuk-table__cell">
+              <div class="govuk-!-margin-bottom-2">{{ registrationAddress | safe }}</div>
+              <a class="govuk-link" href="/change-registration-address">Change<span class="govuk-visually-hidden"> address entered in your registration</span></a>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-!-margin-bottom-2">18 High Street<br>London<br>SW1A 2AA</div>
+              <a class="govuk-link" href="https://www.gov.uk/tell-hmrc-change-of-details" target="_blank" rel="noopener noreferrer">Change<span class="govuk-visually-hidden"> address held by HMRC (opens in new tab)</span></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form action="/personal-details-do-not-match" method="post" novalidate>
+        {{ govukButton({ text: "Continue" }) }}
+      </form>
+
+
+
+    </div>
+  </div>
+{% endblock %}

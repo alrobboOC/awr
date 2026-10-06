@@ -1,0 +1,87 @@
+{% extends "layouts/business-registration.html" %}
+
+{% set pageName = "Your personal details match HMRC records" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/personal-details-do-not-match-addresses" }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+
+      <p class="govuk-body">The personal details you entered for your registration now match the details held by HMRC.</p>
+      <p class="govuk-body">We have compared the following personal details:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your name</li>
+        <li>your date of birth</li>
+        <li>your address</li>
+      </ul>
+      <p class="govuk-body">The tables below show the personal details entered in your registration and the details held by HMRC. Check both sets of details before continuing.</p>
+      <p class="govuk-body">As these details now match, you can continue with your registration. Select Continue to return to your registration summary.</p>
+
+      {% set registrationAddress %}
+        {{ data['registrationAddressLine1'] or '42 Sample Street' }}<br>
+        {% if data['registrationAddressLine2'] %}{{ data['registrationAddressLine2'] }}<br>{% endif %}
+        {{ data['registrationAddressTown'] or 'Exampleton' }}<br>
+        {{ data['registrationAddressPostcode'] or 'AB1 3EF' }}
+      {% endset %}
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Personal details</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Detail</th>
+            <th scope="col" class="govuk-table__header">Value</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Name</th>
+            <td class="govuk-table__cell">Alex Morgan</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Date of birth</th>
+            <td class="govuk-table__cell">14 June 1985</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Address</th>
+            <td class="govuk-table__cell">{{ registrationAddress | safe }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Details held by HMRC</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Detail</th>
+            <th scope="col" class="govuk-table__header">Value</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Name</th>
+            <td class="govuk-table__cell">Alex Morgan</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Date of birth</th>
+            <td class="govuk-table__cell">14 June 1985</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Address</th>
+            <td class="govuk-table__cell">{{ registrationAddress | safe }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form action="/personal-details-do-not-match" method="post" novalidate>
+        {{ govukButton({ text: "Continue" }) }}
+      </form>
+
+
+
+    </div>
+  </div>
+{% endblock %}
