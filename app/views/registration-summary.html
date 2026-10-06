@@ -23,6 +23,17 @@
           { key: { text: "Address" }, value: { html: "24 Example Road<br>Exampleton<br>AB1 2CD" } }
         ] }) }}
       {% else %}
+        {% set registrationAddress %}
+          {{ data['registrationAddressLine1'] or '42 Sample Street' }}<br>
+          {% if data['registrationAddressLine2'] %}{{ data['registrationAddressLine2'] }}<br>{% endif %}
+          {{ data['registrationAddressTown'] or 'Exampleton' }}<br>
+          {{ data['registrationAddressPostcode'] or 'AB1 3EF' }}
+        {% endset %}
+        {{ govukSummaryList({ rows: [
+          { key: { text: "Name" }, value: { text: "Alex Morgan" } },
+          { key: { text: "Date of birth" }, value: { text: "14 June 1985" } },
+          { key: { text: "Address" }, value: { html: registrationAddress }, actions: { items: [{ href: "/change-registration-address", text: "Change", visuallyHiddenText: "registration address" }] } }
+        ] }) }}
         <p class="govuk-body">Your personal details do not match HMRC records.</p>
         <p class="govuk-body"><a class="govuk-link" href="/personal-details-do-not-match">Check the details held by HMRC</a> before continuing your registration.</p>
       {% endif %}

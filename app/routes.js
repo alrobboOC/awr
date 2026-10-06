@@ -53,3 +53,7 @@ router.post('/personal-details-do-not-match', (req, res, next) => {
     res.redirect('/registration-summary')
   })
 })
+
+router.post('/change-registration-address', (req, res) => {
+  res.redirect('/personal-details-do-not-match-addresses')
+})

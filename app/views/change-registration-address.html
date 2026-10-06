@@ -1,0 +1,19 @@
+{% extends "layouts/business-registration.html" %}
+{% set pageName = "Change your registration address" %}
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/personal-details-do-not-match-addresses" }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+      <form action="/change-registration-address" method="post">
+        {{ govukInput({ label: { text: "Address line 1" }, id: "registrationAddressLine1", name: "registrationAddressLine1", value: data['registrationAddressLine1'] or '42 Sample Street', autocomplete: "address-line1" }) }}
+        {{ govukInput({ label: { text: "Address line 2 (optional)" }, id: "registrationAddressLine2", name: "registrationAddressLine2", value: data['registrationAddressLine2'], autocomplete: "address-line2" }) }}
+        {{ govukInput({ label: { text: "Town or city" }, id: "registrationAddressTown", name: "registrationAddressTown", value: data['registrationAddressTown'] or 'Exampleton', classes: "govuk-!-width-two-thirds", autocomplete: "address-level2" }) }}
+        {{ govukInput({ label: { text: "Postcode" }, id: "registrationAddressPostcode", name: "registrationAddressPostcode", value: data['registrationAddressPostcode'] or 'AB1 3EF', classes: "govuk-input--width-10", autocomplete: "postal-code" }) }}
+        {{ govukButton({ text: "Save and continue" }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}
