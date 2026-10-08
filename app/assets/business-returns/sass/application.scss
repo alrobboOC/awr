@@ -1,0 +1,74 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+//
+
+// Add extra styles here
+@import "_loading.scss";
+
+@import "nhs-card";
+
+.app-summary-list--no-border .govuk-summary-list,
+.app-summary-list--no-border .govuk-summary-list__row {
+  border-bottom: 0 !important;
+}
+
+.returns-table {
+  width: 85%;
+  table-layout: fixed;
+}
+
+.returns-table th,
+.returns-table td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@import "patterns/card";
+@import "patterns/flexbox";
+
+// Overrides / utilities
+.app-summary-list__actions-nowrap {
+  white-space: nowrap;
+}
+
+//manage-worker/user-journey-1/MSC-02
+
+@media (min-width: 40.0625em) {
+  .app-summary-list--manage-worker {
+    display: block;
+  }
+
+  .app-summary-list--manage-worker .govuk-summary-list__row {
+    display: grid;
+    grid-template-columns: 30% minmax(0, 1fr) 190px;
+    border-bottom: 1px solid #b1b4b6;
+  }
+
+  .app-summary-list--manage-worker .govuk-summary-list__key,
+  .app-summary-list--manage-worker .govuk-summary-list__value,
+  .app-summary-list--manage-worker .govuk-summary-list__actions {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0;
+  }
+
+  .app-summary-list--manage-worker .govuk-summary-list__key,
+  .app-summary-list--manage-worker .govuk-summary-list__value {
+    padding-right: 20px;
+  }
+
+  .app-summary-list--manage-worker .govuk-summary-list__actions {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .app-summary-list__separator {
+    display: inline-block;
+    margin: 0 10px;
+    color: #505a5f;
+  }
+}

@@ -1,0 +1,130 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 27" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag">
+        In progress
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">TEMP: UR - User testing CIS prototypes</h1>
+    <p class="govuk-body-l">
+      Friday 18 September 2026
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+<!-- Agent return screens start from here -->
+    <div id="sprint-27-details">
+      <h2 class="govuk-heading-l">Agent: Amend submitted return</h2>
+
+
+
+  <p>
+      <a href="/filing-a-return/ur-testing/ur-file-monthly-return/agent/ip1-introduction">Start agent amend submitted return
+      </a>
+  </p>
+           
+      <p>CIS Trading Accountants (CTA) act as agents who manage CIS for 3 clients, Apple Construction indicated to the agency that they actually did not pay any subcontractors for return period of March 5th to April 5th. CTA is to action this amendment on behalf of Apple Construction. </p>
+
+
+      
+        </div>
+
+        <!-- Agent return screens end -->
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+<!-- Contractor return screens start from here -->
+    <div id="sprint-27-details">
+      <h2 class="govuk-heading-l">Contractor: Filing a standard return</h2>
+
+
+
+  <p>
+      <a href="/filing-a-return/ur-testing/ur-file-monthly-return/contractor/ip1-introduction">Start contractor filing a standard return 
+      </a>
+  </p>
+           
+      <p>Jim Dorito is the owner of Dorito's Construction, he has signed up with CIS and needs to submit a return for the most recent period (6th August - 5th September). As part of this he needs to update his CIS information regarding his contractor details and subcontractor details as he previously entered erroneous data. He would also like to tell HMRC that he doesn't intend on paying subcontractors for the next 6 months as he is going travelling!</p>
+
+
+      
+        </div>
+
+        <!-- Contractor return screens end -->
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+    <!-- Manage subcontractor screens start from here -->
+<div id="sprint-27-manage-subcontractor-details">
+  <h2 class="govuk-heading-l">
+    Verification of subcontractor
+  </h2>
+
+  <p>
+      <a href="/filing-a-return/ur-testing/ur-testing-Insufficient/SLP-01">
+      Start subcontractor verification journey</a>
+  </p>
+
+  <p class="govuk-body">
+    Chrissie Watkins is a contractor who is about to start a construction project that will involve a total of 7 subcontractors. 4 of these subcontractors are brand new, so they will need to be verified.</p>
+
+<p class="govuk-body">The other 3 contractors already exist in her subcontractor list. However, because they have not been added to a CIS return for 5 years, they have lost their verification status and she would like to re-verify them to ensure that the correct deduction rate is being applied.</p>
+
+
+<p class="govuk-body">
+  The 4 brand new subcontractors who need to be verified are
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Martin Brody (Individual)</li>
+  <li>Quint Transportation (Company)</li>
+  <li>Hooper and Associates (Partnership)</li>
+  <li>The Kintner Group (Trust)</li>
+</ul>
+
+<p class="govuk-body">
+  The 3 existing contractors who will also be added to this verification request are:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>InGen Research (Company)</li>
+  <li>Alan Grant (Individual)</li>
+  <li>Malcolm and Sattler (Partnership)</li>
+</ul>
+
+<p class="govuk-body">
+  Turns out that the 3 existing contractors are all missing a UTR, so they are flagged as 'Insufficient' during the verification flow.
+</p>
+
+<p class="govuk-body">Chrissie decides to remove InGen from this request, proceed with verifying Malcom and Sattler (despite the effect on their tax treatment), and amend Alan Grant's subcontractor information to include a UTR
+</p>
+
+
+ 
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

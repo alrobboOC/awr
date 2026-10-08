@@ -1,0 +1,269 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the partnership – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before adding this trust</h1>
+
+      <h2 class="govuk-heading-m">Subcontractor details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Trust"
+            },
+            actions: {
+              items: [
+                {
+                  href: "../all/SL03-subcontractor-type",
+                  text: "Change",
+                  visuallyHiddenText: "type"
+                }
+              ]
+            }
+          },
+
+
+          {
+            key: {
+              text: "Trust name"
+            },
+            value: {
+              text: "{trust name}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "trust-name-AS-T1-ptn",
+                  text: "Change",
+                  visuallyHiddenText: "trust name"
+                }
+              ]
+            }
+          },
+
+          {
+            key: {
+              text: "Add trust address?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "trust-add-address-questions-AS-T2-ptn",
+                  text: "Change",
+                  visuallyHiddenText: "trust address"
+                }
+              ]
+            }
+          },
+
+
+          
+          {
+
+
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   "
+                      {Address line 1}<br>
+                      {Address line 2}<br>
+                      {Town or city}}<br>
+                      {County}<br>
+                      {Postal code}<br>
+                      {Country}<br>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "AS-T-ALS-Country",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+
+           {
+      key: {
+        text: "Add contact details?"
+      },
+   value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "AS-Contact-T",
+            text: "Change",
+            visuallyHiddenText: "Add contact details"
+          }
+        ]
+      }
+    },
+          
+      {
+
+          key: {
+              text: "Methods of contact"
+            },
+            value: {
+              text: "Email address"
+            },
+            actions: {
+              items: [
+                {
+                  href: "AS-T4",
+                  text: "Change",
+                  visuallyHiddenText: "methods of contact"
+                }
+              ]
+            }
+          },
+ {
+
+          key: {
+              text: "Email address"
+            },
+            value: {
+              text: "{Email address}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "trust-contact-email-AS-T4a-ptn",
+                  text: "Change",
+                  visuallyHiddenText: "Email address"
+                }
+              ]
+            }
+          },
+
+
+
+{
+
+            key: {
+              text: "Add UTR?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "trust-has-utr-AS-T5-ptn",
+                  text: "Change",
+                  visuallyHiddenText: "trust UTR"
+                }
+              ]
+            }
+          },
+
+          {
+
+            key: {
+              text: "Trust UTR"
+            },
+            value: {
+              text: "{Trust UTR}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "trust-enter-utr-AS-T6-ptn",
+                  text: "Change",
+                  visuallyHiddenText: "trust UTR"
+                }
+              ]
+            }
+          },
+
+
+        {
+                    key: {
+                      text: "Add works reference number?"
+                    },
+                    value: {
+                      text: "Yes"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "trust-worksref-AS-T7-ptn",
+                          text: "Change",
+                          visuallyHiddenText: "add works reference number"
+                        }
+                      ]
+                    }
+                  },
+ 
+
+
+
+
+          {
+
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "XLS345-MM"
+            },
+            actions: {
+              items: [
+                {
+                  href: "trust-worksref-enter-AS-T8-ptn",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+     
+
+      <h2 class="govuk-heading-m">Now add this subcontractor</h2>
+
+      <p class="govuk-body">By adding this subcontractor you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="../all//subcontractor-added-AS-CONF-ptn" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

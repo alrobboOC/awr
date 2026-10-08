@@ -1,0 +1,36 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Selected subcontractors have not been verified  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            There was a problem with your verification request
+        </h1>
+
+        <p class="govuk-body">
+            The subcontractors that you selected have not been verified and your request has not been saved.
+
+        </p>
+        <p class="govuk-body">
+            <a href="https://www.gov.uk/find-hmrc-contacts/construction-industry-scheme-general-enquiries" class="govuk-link">Contact HMRC by phone</a> for more help quoting error 7912.
+        </p>
+              
+        <p class="govuk-body">
+            Back to <a href="#">Manage your subcontractors</a>.
+        </p>
+       
+      
+
+    </div>
+  </div>
+
+{% endblock %}

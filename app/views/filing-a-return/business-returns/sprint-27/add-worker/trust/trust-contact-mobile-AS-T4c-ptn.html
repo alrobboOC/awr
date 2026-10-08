@@ -1,0 +1,66 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Contact details (optional) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="trust-has-utr-AS-T5-ptn" method="post">
+
+        <h1 class="govuk-heading-l">
+          What is the mobile number for {trust name}?
+        </h1>
+
+       
+        {{ govukInput({
+       
+
+          hint: {
+            text: "HMRC will never use this mobile number to contact this worker"
+          },
+          id: "mobile",
+          name: "mobile",
+          type: "tel",
+          autocomplete: "tel",
+          spellcheck: false
+        }) }}
+
+       
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+      <script>
+          document.querySelector(".form").addEventListener("submit", function (event) {
+            event.preventDefault()
+
+            const remaining = JSON.parse(
+              sessionStorage.getItem("contactPages") || "[]"
+            )
+
+            const nextPage = remaining.shift() || "trust-has-utr-AS-T5-ptn"
+            sessionStorage.setItem("contactPages", JSON.stringify(remaining))
+
+            window.location.href = nextPage
+          })
+      </script>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Confirm nil return payments to workers this month" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: ""
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Confirm nil return payments to workers this month
+    </h1>
+
+    <p class="govuk-body">A nil return is to record that you have not made any payments to workers in the Business Returns Service for the tax month shown below.</p>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="tax-period-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Enter the tax month and year you are reporting nil payments for
+          </h2>
+        </legend>
+        <div id="tax-period-hint" class="govuk-hint">
+Tax months end on the 5th of a month. For example, 6 May to 5 June is the tax month of May, 6 June to 5 July is the tax month of June. Check the 'Help with tax months' dropdown below to check you are entering the correct number for the required tax month.
+</div>
+
+        {{ govukDetails({
+          summaryText: "Help with tax months",
+          html: "
+          <table class=\"govuk-table\">
+            <caption class=\"govuk-table__caption govuk-table__caption--m\">Tax month periods and what to enter</caption>
+            <thead class=\"govuk-table__head\">
+              <tr class=\"govuk-table__row\">
+                <th scope=\"col\" class=\"govuk-table__header\">Time period</th>
+                <th scope=\"col\" class=\"govuk-table__header\">Month ending</th>
+                <th scope=\"col\" class=\"govuk-table__header\">Enter month and year</th>
+              </tr>
+            </thead>
+            <tbody class=\"govuk-table__body\">
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th April - 5th May</td>
+                <td class=\"govuk-table__cell\">May</td>
+                <td class=\"govuk-table__cell\">05 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th May - 5th June</td>
+                <td class=\"govuk-table__cell\">June</td>
+                <td class=\"govuk-table__cell\">06 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th June - 5th July</td>
+                <td class=\"govuk-table__cell\">July</td>
+                <td class=\"govuk-table__cell\">07 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th July - 5th August</td>
+                <td class=\"govuk-table__cell\">August</td>
+                <td class=\"govuk-table__cell\">08 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th August - 5th September</td>
+                <td class=\"govuk-table__cell\">September</td>
+                <td class=\"govuk-table__cell\">09 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th September - 5th October</td>
+                <td class=\"govuk-table__cell\">October</td>
+                <td class=\"govuk-table__cell\">10 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th October - 5th November</td>
+                <td class=\"govuk-table__cell\">November</td>
+                <td class=\"govuk-table__cell\">11 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th November - 5th December</td>
+                <td class=\"govuk-table__cell\">December</td>
+                <td class=\"govuk-table__cell\">12 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th December - 5th January</td>
+                <td class=\"govuk-table__cell\">January</td>
+                <td class=\"govuk-table__cell\">01 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th January - 5th February</td>
+                <td class=\"govuk-table__cell\">February</td>
+                <td class=\"govuk-table__cell\">02 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th February - 5th March</td>
+                <td class=\"govuk-table__cell\">March</td>
+                <td class=\"govuk-table__cell\">03 2025</td>
+              </tr>
+              <tr class=\"govuk-table__row\">
+                <td class=\"govuk-table__cell\">6th March - 5th April</td>
+                <td class=\"govuk-table__cell\">April</td>
+                <td class=\"govuk-table__cell\">04 2025</td>
+              </tr>
+            </tbody>
+          </table>
+          "
+        }) }}
+
+        <div class="govuk-date-input" id="tax-period">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="tax-period-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="tax-period-month" name="tax-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="tax-period-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="tax-period-year" name="tax-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    {{ govukWarningText({
+      text: "You are required by law to submit this return to HMRC by the due date. A penalty may be charged for late returns.",
+      iconFallbackText: "Warning"
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "When is the due date",
+      text: "You must send your monthly returns to HMRC in time to reach us by the 19th of each month. This is known as the Due Date.
+
+For example: a return completed for the period beginning 6 May and ending on the 5 June must reach us by the 19 June at the latest."
+    }) }}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c2-inactivity-request"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

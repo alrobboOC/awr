@@ -1,0 +1,103 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Your workers" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/business-returns-service/manage-brs-return"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">ABC Business Ltd</span>
+      Manage your BRS return worker
+    </h1>
+
+     <p class="govuk-body">You can use this service to manage your workers list.</p>
+
+    <div class="govuk-inset-text">
+      You will need HMRC free software to access the links below.
+    </div>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/workers/add">Add worker</a>
+        </h3>
+        <p class="govuk-body">Add workers to your list</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/workers/verify">Verify worker</a>
+        </h3>
+        <p class="govuk-body">View, verify or manage workers</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-4">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/workers/list">Worker list</a>
+        </h3>
+        <p class="govuk-body">View worker list</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/workers/verification-requests"></a>
+        </h3>
+        <p class="govuk-body"></p>
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-7">
+
+    <h2 class="govuk-heading-m">What you need to know</h2>
+
+<p class="govuk-body">
+  You should include workers – with or without gross payment status – on your worker list. For more information <a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link">on gross payment status</a>.
+</p>
+
+<p class="govuk-body">
+  Workers from your list must be included in your monthly return if you pay them during the month. To submit a return, your selected workers must be verified.
+</p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              What is the Business Returns Service
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS 340: Penalties for late returns
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}

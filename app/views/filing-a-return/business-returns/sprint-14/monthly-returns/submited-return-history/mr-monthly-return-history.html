@@ -1,0 +1,285 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Monthly return history – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+       Monthly return history
+      </h1>
+      <!-- <p>
+       All of your submitted monthly returns can be viewed in a read-only formate from this page. You can also view and save your submission receipts.
+      </p> -->
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-margin-top-5">
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table govuk-!-margin-bottom-6" id = "showMR2022">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax year 2022 to 2023</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <table class="govuk-table govuk-!-margin-bottom-6 govuk-!-display-none" id ="showMR2017">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax year 2017 to 2018</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr>
+          <!-- <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <table class="govuk-table govuk-!-margin-bottom-6 govuk-!-display-none" id ="showMR2014">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax year 2014 to 2015</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="govuk-table govuk-!-margin-bottom-6 govuk-!-display-none" id ="showMR2013">
+        <caption class="govuk-table__caption govuk-table__caption--m">Tax year 2013 to 2014</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+            <td class="govuk-table__cell">06/04/2023</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and save</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><a href="#" class="govuk-link">View and print</a></p>
+            </td>
+            <td class="govuk-table__cell">Awaiting confirmation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="moj-filter" data-module="moj-filter">
+        <div class="moj-filter__header">
+          <div class="moj-filter__header-title">
+            <h2 class="govuk-heading-m">Filter</h2>
+          </div>
+          <div class="moj-filter__header-action">
+          </div>
+        </div>
+        <div class="moj-filter__content">
+          <div class="moj-filter__selected govuk-visually-hidden">
+            <div class="moj-filter__selected-heading">
+              <div class="moj-filter__heading-title">
+                <h2 class="govuk-heading-m">Selected filters</h2>
+              </div>
+              <div class="moj-filter__heading-action">
+                <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+              </div>
+            </div>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Type</h3>
+            <ul class="moj-filter-tags">
+              <li><a class="moj-filter__tag" href="/filing-a-return/business-returns/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Blue</a></li>
+              <li><a class="moj-filter__tag" href="/filing-a-return/business-returns/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Yellow</a></li>
+            </ul>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Status</h3>
+            <ul class="moj-filter-tags">
+              <li><a class="moj-filter__tag" href="/filing-a-return/business-returns/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Completed</a></li>
+            </ul>
+          </div>
+          <div class="moj-filter__options">
+            <!-- <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--m" for="keywords">
+                Keywords
+              </label>
+              <input class="govuk-input" id="keywords" name="keywords" type="text">
+            </div> -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  By tax year
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="type">
+                      2022 to 2023 (2)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2">
+                    <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                      2017 to 2018 (5)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+                    <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                      2014 to 2015 (3)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="4">
+                    <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                      2013 to 2014 (3)
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button" onclick="myFunction ()">
+              Apply filter
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function myFunction () {
+    var checkBox1 = document.getElementById("type");
+    var checkBox2 = document.getElementById("type-2");
+    var checkBox3 = document.getElementById("type-3");
+    var checkBox4 = document.getElementById("type-4");
+    var x = document.getElementById("showMR2022");
+    var y = document.getElementById("showMR2017");
+    var z = document.getElementById("showMR2014");
+    var w = document.getElementById("showMR2013");
+
+    if (checkBox2.checked == true){
+      y.classList.remove("govuk-!-display-none");
+      // noteMessage.style.display ="block";
+      } else {
+        y.classList.add("govuk-!-display-none");
+      }
+
+      if (checkBox3.checked == true){
+      z.classList.remove("govuk-!-display-none");
+      // noteMessage.style.display ="block";
+      } else {
+        z.classList.add("govuk-!-display-none");
+      }
+
+      if (checkBox4.checked == true){
+      w.classList.remove("govuk-!-display-none");
+      // noteMessage.style.display ="block";
+      } else {
+        w.classList.add("govuk-!-display-none");
+      }
+
+  }
+  </script>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  No unmatched workers - Business Returns Service - GOV.UK – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+  
+{% endblock %}
+
+{% block content %}
+
+
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l">
+  No unmatched workers
+</h1>
+
+<p class="govuk-body">The workers marked as unmatched in your most recent verification results have been deleted.
+</p>
+<p class="govuk-body">You can now verify any of your other workers by creating a new verification request.
+</p>
+
+      
+<p class="govuk-body">
+     Back to <a href="#">Manage your workers</a>.
+</p>
+       
+
+       
+      
+
+    </div>
+  </div>
+
+{% endblock %}

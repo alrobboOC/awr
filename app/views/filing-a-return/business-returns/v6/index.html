@@ -1,0 +1,65 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+
+{% set pageName="Sprint 6" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag govuk-tag--green">
+        Completed
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 6 - BRS prototype</h1>
+    <p class="govuk-body-l">
+      Sprint dates to be confirmed
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-6-details">
+      <h2 class="govuk-heading-l">Sprint 6 screens</h2>
+      <p class="govuk-body">
+        BRS prototype screens for the welcome-prepop journey.
+      </p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                welcome-prepop
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="welcome-prepop/ps-04-unsuccessful.html" class="govuk-link">ps-04-unsuccessful.html</a></li>
+              <li><a href="welcome-prepop/ps-05-success.html" class="govuk-link">ps-05-success.html</a></li>
+              <li><a href="welcome-prepop/ps-06-intro.html" class="govuk-link">ps-06-intro.html</a></li>
+              <li><a href="welcome-prepop/ps05b_no_records.html" class="govuk-link">ps05b_no_records.html</a></li>
+              <li><a href="welcome-prepop/ps06b_retrieving.html" class="govuk-link">ps06b_retrieving.html</a></li>
+            </ul>
+            <a href="welcome-prepop/ps-06-intro.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Welcome prepop journey
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

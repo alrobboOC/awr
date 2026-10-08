@@ -1,0 +1,876 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 21" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <span class="govuk-caption-xl">
+     <strong class="govuk-tag govuk-tag--green">
+        Completed
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 21 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Wed, 13 May 2026 to Tue, 26 May 2026
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+<!-- Monthly return screens start from here -->
+    <div id="sprint-21-details">
+      <h2 class="govuk-heading-l">Manage your CIS return</h2>
+                <p class="govuk-body"><a href="/filing-a-return/sprint-21/manage-your-cis-return/new-index.html" class="govuk-link" target="_blank">All screens</a></p>
+      <p>Added amend monthly return, view submitted retun history, delete monthly returns, nil monthly retun and standard returns. Moreover included 2 screens from RADs.</p>
+      <p>All links and buttons open in a new tab</p>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+
+<!-- Error handling 2.0 -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Final Validation (Error handling 2.0)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-01a-error-contractor.html" class="govuk-link" target="_blank">eh-01a Error - contractor</a></li>
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-01b-error-contractor-continue.html" class="govuk-link" target="_blank">eh-01b Error - contractor (continue)</a></li>
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-02a-error-subcontractor.html" class="govuk-link" target="_blank">eh-02a Error - subcontractor</a></li>
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-02b-error-subcontractor-continue.html" class="govuk-link" target="_blank">eh-02b Error - subcontractor (continue)</a></li>
+              <li><a href="/filing-a-return/sprint-21/error-handling/eh-03-error-subcontractor-fix.html" class="govuk-link" target="_blank">eh-03 Fix error - subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-21/error-handling/eh-01a-v-error-contractor.html" class="govuk-link" target="_blank">eh-01a-v Error - contractor</a></li>
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-01b-v-error-contractor-continue.html" class="govuk-link" target="_blank">eh-01b-v Error - contractor (continue)</a></li>
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-02a-v-error-subcontractor.html" class="govuk-link" target="_blank">eh-02a-v Error - subcontractor</a></li>
+             <li><a href="/filing-a-return/sprint-21/error-handling/eh-02b-v-error-subcontractor-continue.html" class="govuk-link" target="_blank">eh-02b-v Error - subcontractor (continue)</a></li>
+              <li><a href="/filing-a-return/sprint-21/error-handling/eh-03-v-error-subcontractor-fix.html" class="govuk-link" target="_blank">eh-03-v Fix error - subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-21/error-handling/eh-04a-enter-scheme-name.html" class="govuk-link" target="_blank">eh-04a Enter scheme name</a></li>
+              <li><a href="/filing-a-return/sprint-21/error-handling/eh-04b-enter-utr.html" class="govuk-link" target="_blank">eh-04b Enter UTR</a></li>
+              <li><a href="/filing-a-return/sprint-21/error-handling/eh-04c-enter-email.html" class="govuk-link" target="_blank">eh-04c Enter email</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+<!-- CIS return dashboard -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                CIS return dashboard 2.0
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+             <li><a href="/filing-a-return/sprint-21/cis-return-dashboard/crd-01-cis-return-dashboard.html" class="govuk-link" target="_blank">crd-01 CIS return dashboard</a></li>
+             <li><a href="/filing-a-return/sprint-21/cis-return-dashboard/crd-02-cis-return-dashboard-agent.html" class="govuk-link" target="_blank">crd-02 CIS return dashboard (Agent view)</a></li>
+            </ul>
+          </div>
+        </div>
+
+<!-- Manage client details -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Manage client details
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+             <li><a href="/filing-a-return/sprint-21/manage-client-details/mc-01-manage-client-details.html" class="govuk-link" target="_blank">mc-01 Manage client details</a></li>
+             <li><a href="/filing-a-return/sprint-21/manage-client-details/mc-02-change-client-reference.html" class="govuk-link" target="_blank">mc-02 Change client reference</a></li>
+             <li><a href="/filing-a-return/sprint-21/manage-client-details/mc-03-client-reference-updated.html" class="govuk-link" target="_blank">mc-03 Client reference updated</a></li>
+             <li><a href="/filing-a-return/sprint-21/manage-client-details/mc-04-remove-this-client.html" class="govuk-link" target="_blank">mc-04 Remove this client</a></li>
+             <li><a href="/filing-a-return/sprint-21/manage-client-details/mc-05-client-removed.html" class="govuk-link" target="_blank">mc-05 Client removed</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Manage contractor details -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Manage contractor details
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-01-manage-contractor-details-intro.html" class="govuk-link" target="_blank">mcd-01 Manage contractor details intro</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-02-enter-utr.html" class="govuk-link" target="_blank">mcd-02 Enter UTR</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-03a-manage-contractor-details.html" class="govuk-link" target="_blank">mcd-03a Manage contractor details (add)</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-03b-manage-contractor-details-change.html" class="govuk-link" target="_blank">mcd-03b Manage contractor details (change)</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-04-enter-scheme-name.html" class="govuk-link" target="_blank">mcd-04 Enter scheme name</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-05-enter-email.html" class="govuk-link" target="_blank">mcd-05 Enter email</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/mcd-06-contractor-details-updated.html" class="govuk-link" target="_blank">mcd-06 Contractor details updated</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/(new)mcd-02-enter-utr.html" class="govuk-link" target="_blank">(new)mcd-02 Enter UTR</a></li>
+              <li><a href="/filing-a-return/sprint-21/manage-contractor-details/(new)mcd-05-enter-email.html" class="govuk-link" target="_blank">(new)mcd-05 Enter email</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Amend monthly return -->
+        <div class="govuk-accordion__section" id="amend-submitted-return">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="amend-submitted-return-heading">
+                Amend submitted return
+              </span>
+            </h2>
+          </div>
+          <div id="amend-submitted-return-content" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/RLP1b-manage-your-cis-return.html" class="govuk-link" target="_blank">RLP1b - Manage your CIS return</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-10-no-submitted-returns.html" class="govuk-link" target="_blank">MR-AR-10 - You have not submitted any returns</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-10b-no-incomplete-returns.html" class="govuk-link" target="_blank">MR-AR-10b - You have no incomplete returns</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-08-incomplete-returns.html" class="govuk-link" target="_blank">MR-AR-08 - Incomplete or unsuccessful returns</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-01-view-tax-year-submission-history.html" class="govuk-link" target="_blank">MR-AR-01 - Which tax year do you want to view</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-02b-monthly-return-history-tax-year.html" class="govuk-link" target="_blank">MR-AR-02b - Monthly return history for 'tax year/s'</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-03-amend-confirmation.html" class="govuk-link" target="_blank">MR-AR-03 - Confirm amendment</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-03b-amend-confirmation.html" class="govuk-link" target="_blank">MR-AR-03b - Confirm amendment with conditional content</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-06b-what-do-you-want-to-do" class="govuk-link" target="_blank">MR-AR-06b - What do you want to amend? </a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-06-what-do-you-want-to-do.html" class="govuk-link" target="_blank">MR-AR-06 - What do you want to amend?</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-09-are-you-sure-nil.html" class="govuk-link" target="_blank">MR-AR-09 - Are you sure you want to amend this return to a nil return?</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-07-declaration-nil-monthly-return.html" class="govuk-link" target="_blank">MR-AR-07 - Declaration nil monthly return</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-04-subcontractor-details-added.html" class="govuk-link" target="_blank">MR-AR-04 - You have added x subcontractor/s</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-11-remove-subcontractor.html" class="govuk-link" target="_blank">MR-AR-11 - Are you sure you want to remove 'Name'</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-05-which-subcontractor-do-you-want-select.html" class="govuk-link" target="_blank">MR-AR-05 - Which subcontractor do you want to add to this return?</a></li>
+            <li><a href="/filing-a-return/sprint-21/amend-submitted-return/mr-ar-03-04-b-payment-details-confirmation.html" class="govuk-link" target="_blank">MR-AR-03-04-b - Do you confirm the information in this return is correct?</a></li>
+            
+
+            </ul>
+            <a href="https://cis-prototype-68106471f73b.herokuapp.com/sprint-21/#amend-submitted-return" role="button" draggable="false" class="govuk-button" target="_blank" data-module="govuk-button">
+              Amend monthly return journey
+            </a>
+          </div>
+        </div>
+
+        <!-- View submitted monthly return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Submitted return history
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-21/submited-return-history/sr-01-view-tax-year-submission-history.html" class="govuk-link" target="_blank">sr-01 Submitted return history</a></li>
+              <li><a href="/filing-a-return/sprint-21/submited-return-history/sr-02-monthly-return-history-tax-year.html" class="govuk-link" target="_blank">sr-02 Retun history - individual tax year</a></li>
+              <li><a href="/filing-a-return/sprint-21/submited-return-history/sr-03-monthly-return-history-all-tax-years.html" class="govuk-link" target="_blank">sr-03 Retun history - all tax year</a></li>
+              <li><a href="/filing-a-return/sprint-21/submited-return-history/sr-04-monthly-return-submission-details.html" class="govuk-link" target="_blank">sr-04 Print monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-21/submited-return-history/sr-04-d-successful-submission.html" class="govuk-link" target="_blank">SR-02-f View/save submitted return</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Delete monthly return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Delete monthly return
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/delete-monthly-return/mr-01-delete-monthly-return.html" class="govuk-link" target="_blank">MR-01-Delete monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/delete-monthly-return/mr-02-delete-amended-monthly-return.html" class="govuk-link" target="_blank">MR-02-Delete amended monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/delete-monthly-return/mr-03-delete-nil-monthly-return.html" class="govuk-link" target="_blank">MR-03-Delete nil monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/delete-monthly-return/mr-04-delete-amended-nil-monthly-return.html" class="govuk-link" target="_blank">MR-04-Delete amended nil monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/delete-monthly-return/mr-05-monthly-return-landing.html" class="govuk-link" target="_blank">MR-05-Monthly return landing</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- nil return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Nil return (updated version)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-02-a-file-your-nil-return.html" class="govuk-link" target="_blank">MR-02-a File your nil return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-02-b-enter-tax-month-and-year.html" class="govuk-link" target="_blank">MR-02-b Enter tax month and year</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-03-08-d-submit-inactivity-request-nil-return.html" class="govuk-link" target="_blank">MR-03-08-d Submit inactivity request nil return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-03-08-e-inactivity-request-nil-return.html" class="govuk-link" target="_blank">MR-03-08-e Inactivity request nil return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link" target="_blank">MR-03-08-2f Do you want email confirmation</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-03-08-f-enter-email-address.html" class="govuk-link" target="_blank">MR-03-08-f Enter email address</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-02-c-declaration-no-payments.html" class="govuk-link" target="_blank">MR-02-c Declaration no payments</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-03-08-g-check-your-answers-submitting-nil-return.html" class="govuk-link" target="_blank">MR-03-08-g Check your answers submitting nil return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-04-a-sending-submission.html" class="govuk-link" target="_blank">MR-04-a Sending submission</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-04-e-successful-submission.html" class="govuk-link" target="_blank">MR-04-e Successful submission with receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-04-b-successful-submission.html" class="govuk-link" target="_blank">MR-04-b Sccessful submission no receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-04-c-successful-submission.html" class="govuk-link" target="_blank">MR-04-c Successful submission no receipt with email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-04-d-successful-submission.html" class="govuk-link" target="_blank">MR-04-d Successful submission with receipt no email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link" target="_blank">MR-05-b Submission in progress (while submitting)</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-05-c-submission-in-progress-back.html" class="govuk-link" target="_blank">MR-05-c Submission in progress (overview page)</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link" target="_blank">MR-05-a submission unsuccessful cannot resubmit</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/nil-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link" target="_blank">MR-05-b Submission unsuccessful resubmit</a></li>
+            </ul>
+            <a href="monthly-returns/nil-monthly-return/mr-02-a-file-your-nil-return.html" role="button" draggable="false" class="govuk-button" target="_blank" data-module="govuk-button">
+              Nil return journey
+            </a>
+          </div>
+        </div>
+
+        <!-- standard return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Standard monthly return
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-02-a-file-monthly-return.html.html" class="govuk-link" target="_blank">MR-02-a File monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-02-b-tax-month-and-year.html.html" class="govuk-link" target="_blank">MR-02-b Enter tax month and year</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-02-a-subcontractors-to-include.html" class="govuk-link" target="_blank">MR-03-02-a Subcontractors to include</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-03-c-enter-total-payments.html" class="govuk-link" target="_blank">MR-03-03-c Enter total payments</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-03-d-enter-material-costs.html" class="govuk-link" target="_blank">MR-03-03-d Enter material costs</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-03-e-enter-tax-deducted.html" class="govuk-link" target="_blank">mr-03-03-e Enter tax deducted</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-04-a-check-your-answers.html" class="govuk-link" target="_blank">mr-03-04-a Check your answers</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-04-c-subcontractor-details-added" class="govuk-link" target="_blank">MR-03-04- c added details for a single subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-04-c-subcontractor-details-added_exhustive-view" class="govuk-link" target="_blank">MR-03-04-c added details for multiple subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-04-d-add-subcontractor-details" class="govuk-link" target="_blank">MR-03-04-d Add subcontractor details</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-04-d-add-subcontractor-details_exhustive_view" class="govuk-link" target="_blank">MR-03-04-d Add subcontractor details...(Exhaustive views) </a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-04e-summary-subcontractor-payments" class="govuk-link" target="_blank">MR-03-04-e Summary subcontractor payments</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-03-b-change-subcontractor" class="govuk-link" target="_blank">MR-03-03-b Change subcontractor's details</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/remove-subcontractor-mr-03-03-b" class="govuk-link" target="_blank">MR-03-03-b Remove subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03=08-b employment-status-declaration.html" class="govuk-link" target="_blank">mr-03=08-b Employment status declaration</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08-b-verified-declaration.html" class="govuk-link" target="_blank">mr-03-08-b Verified declaration</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08-b-verified-declaration.html" class="govuk-link" target="_blank">mr-03-08-b Verified declaration</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08d-submit-inactivity-request.html" class="govuk-link" target="_blank">MR-03-08-d Submit inactivity request</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08e-inactivity-request-warning.html" class="govuk-link" target="_blank">MR-03-08-e Inactivity request warning</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link" target="_blank">MR-03-08-f Email address confirmation</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08f-enter-email-address.html" class="govuk-link" target="_blank">MR-03-08-f Enter your email address</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-03-08-g-check-your-answers-submitting-return.html" class="govuk-link" target="_blank">mr-03-08-g Check your answers (submitting return)</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-04-a-sending-submission.html" class="govuk-link" target="_blank">mr-04-a Sending submission</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-04-b-successful-submission.html" class="govuk-link" target="_blank">mr-04-b Sccessful submission no receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-04-c-successful-submission.html" class="govuk-link" target="_blank">mr-04-c Successful submission no receipt with email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-04-d-successful-submission.html" class="govuk-link" target="_blank">mr-04-d Successful submission with receipt no email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-04-e-successful-submission.html" class="govuk-link" target="_blank">mr-04-e Successful submission with receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link" target="_blank">mr-05-b Submission in progress (while submitting)</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-05-c-submission-in-progress-back.html" class="govuk-link" target="_blank">mr-05-c Submission in progress (overview page)</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link" target="_blank">mr-05-a submission unsuccessful cannot resubmit</a></li>
+              <li><a href="/filing-a-return/sprint-21/monthly-returns/standard-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link" target="_blank">mr-05-b Submission unsuccessful resubmit</a></li>
+            </ul>
+            <p class="govuk-body">
+              <a href="/filing-a-return/sprint-13/monthly-returns/prototype-journey/mr-02-a-file-monthly-return" role="button" draggable="false" class="govuk-button" target="_blank" data-module="govuk-button">Standard return journey</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <!-- RADs review -->
+    <div id="sprint-16-rads-details">
+      <h2 class="govuk-heading-l">
+        RADs review 26 Feb
+      </h2>
+      <p class="govuk-body">
+        Based on the prioritisation of Monthly return history, there are two screens have been asked to implement.
+      </p>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-rads-review">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-rads-review-heading-1">
+                RADs review - Monthly return
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="rad-review-26-feb/RLP1-mamage-your-cis-return.html" class="govuk-link" target="_blank">RLP1 Manage your CIS return</a></li>
+              <li><a href="rad-review-26-feb/MR-03-02a-which-subcontractor-do-you-want-select.html" class="govuk-link" target="_blank">MR-03-02a Which Subcontractors - addded in the list</a></li>
+              <li><a href="rad-review-26-feb/MR-03-04-b-subcontractor-details-added.html" class="govuk-link" target="_blank">MR-03-02b Which Subcontractorsc- No subcontractrors added</a></li>
+              <li><a href="rad-review-26-feb/MR-03-02a-which-subcontractor-do-you-want-select.html" class="govuk-link" target="_blank">MR-03-02c Which Subcontractorsc- Pre-populated subcontractrors added</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manage subcontractor screens start from here -->
+<div id="sprint-21-manage-subcontractor-details">
+  <h2 class="govuk-heading-l">
+    Manage subcontractor
+  </h2>
+
+  <p class="govuk-body">
+    Manage subcontractor screens for Sprint 21, including subcontractor details, change and remove flows.
+  </p>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-manage-subcontractor">
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-subcontractor-heading-1">
+            Manage subcontractor - user journey 1
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-subcontractor-content-1" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-1/AS-Contact-C.html" class="govuk-link" target="_blank">AS-Contact-C.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-multi-C.html" class="govuk-link" target="_blank">MSC-02-UV-multi-C.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-multi-I.html" class="govuk-link" target="_blank">MSC-02-UV-multi-I.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-multi-P.html" class="govuk-link" target="_blank">MSC-02-UV-multi-P.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-multi-T.html" class="govuk-link" target="_blank">MSC-02-UV-multi-T.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-none-I.html" class="govuk-link" target="_blank">MSC-02-UV-none-I.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-single-C.html" class="govuk-link" target="_blank">MSC-02-UV-single-C.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-single-I.html" class="govuk-link" target="_blank">MSC-02-UV-single-I.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-single-P.html" class="govuk-link" target="_blank">MSC-02-UV-single-P.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-UV-single-T.html" class="govuk-link" target="_blank">MSC-02-UV-single-T.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-multi-C.html" class="govuk-link" target="_blank">MSC-02-V-multi-C.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-multi-I.html" class="govuk-link" target="_blank">MSC-02-V-multi-I.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-multi-P.html" class="govuk-link" target="_blank">MSC-02-V-multi-P.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-multi-T.html" class="govuk-link" target="_blank">MSC-02-V-multi-T.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-none-I.html" class="govuk-link" target="_blank">MSC-02-V-none-I.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-single-C.html" class="govuk-link" target="_blank">MSC-02-V-single-C.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-single-I.html" class="govuk-link" target="_blank">MSC-02-V-single-I.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-single-P.html" class="govuk-link" target="_blank">MSC-02-V-single-P.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-02-V-single-T.html" class="govuk-link" target="_blank">MSC-02-V-single-T.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/MSC-03-Contact.html" class="govuk-link" target="_blank">MSC-03-Contact.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-03-Method.html" class="govuk-link" target="_blank">MSC-03-Method.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-04.html" class="govuk-link" target="_blank">MSC-04.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+
+          <li><a href="manage-subcontractor/user-journey-1/SL-01-01-tax.html" class="govuk-link" target="_blank">SL-01-01-tax.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/SL-01-02.html" class="govuk-link" target="_blank">SL-01-02.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-1/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-subcontractor-heading-2">
+            Manage subcontractor - user journey 2
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-subcontractor-content-2" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-2/MSC-02-UV-NatIns.html" class="govuk-link" target="_blank">MSC-02-UV-NatIns.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-2/MSC-02-UV.html" class="govuk-link" target="_blank">MSC-02-UV.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-2/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-2/MSC-SL0205B.html" class="govuk-link" target="_blank">MSC-SL0205B.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-2/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-2/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-subcontractor-heading-3">
+            Manage subcontractor - user journey 3
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-subcontractor-content-3" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-3/MSC-02-UV-WorkRef-None.html" class="govuk-link" target="_blank">MSC-02-UV-WorkRef-None.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-3/MSC-02-UV.html" class="govuk-link" target="_blank">MSC-02-UV.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-3/MSC-03-WorkRef-Radio.html" class="govuk-link" target="_blank">MSC-03-WorkRef-Radio.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-3/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-3/MSC-WorksRef.html" class="govuk-link" target="_blank">MSC-WorksRef.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-subcontractor-heading-4">
+            Manage subcontractor - user journey 4
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-subcontractor-content-4" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-4/DS-03.html" class="govuk-link" target="_blank">DS-03.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-4/DS-03e.html" class="govuk-link" target="_blank">DS-03e.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-4/DS-CONF.html" class="govuk-link" target="_blank">DS-CONF.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-4/SL-01-01-D.html" class="govuk-link" target="_blank">SL-01-01-D.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-4/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-4/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-subcontractor-heading-all">
+            Manage subcontractor - all sectors
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-subcontractor-content-all" class="govuk-accordion__section-content">
+
+        <h3 class="govuk-heading-m">Company</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-all/Company/MSC-C2.html" class="govuk-link" target="_blank">MSC-C2.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Company/MSC-C3.html" class="govuk-link" target="_blank">MSC-C3.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Company/MSC-C6.html" class="govuk-link" target="_blank">MSC-C6.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Company/MSC-C8.html" class="govuk-link" target="_blank">MSC-C8.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Company/MSC-C10.html" class="govuk-link" target="_blank">MSC-C10.html</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Individual</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-all/Individual/MSC-I2.html" class="govuk-link" target="_blank">MSC-I2.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Individual/MSC-I0205B.html" class="govuk-link" target="_blank">MSC-I0205B.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Individual/MSC-I0205C.html" class="govuk-link" target="_blank">MSC-I0205C.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Individual/MSC-I0205I.html" class="govuk-link" target="_blank">MSC-I0205I.html</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Partnership</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-all/Partnership/MSC-P2.html" class="govuk-link" target="_blank">MSC-P2.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Partnership/MSC-P0201E.html" class="govuk-link" target="_blank">MSC-P0201E.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Partnership/MSC-P0205A.html" class="govuk-link" target="_blank">MSC-P0205A.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Partnership/MSC-P0205B.html" class="govuk-link" target="_blank">MSC-P0205B.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Partnership/MSC-P0205I.html" class="govuk-link" target="_blank">MSC-P0205I.html</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Trust</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-subcontractor/user-journey-all/Trust/MSC-T2.html" class="govuk-link" target="_blank">MSC-T2.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Trust/MSC-T3.html" class="govuk-link" target="_blank">MSC-T3.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Trust/MSC-T6.html" class="govuk-link" target="_blank">MSC-T6.html</a></li>
+          <li><a href="manage-subcontractor/user-journey-all/Trust/MSC-T8.html" class="govuk-link" target="_blank">MSC-T8.html</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Manage subcontractor screens end here -->
+
+<!-- Verify subcontractor screens start from here -->
+<div id="sprint-21-verify-subcontractor">
+  <h2 class="govuk-heading-l">
+    Verify subcontractor
+  </h2>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-verify-subcontractor">
+
+    <!-- User journey 1 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-1">
+            User journey 1
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-1" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-check-answers-SM-04-long.html" class="govuk-link" target="_blank">verify-check-answers-SM-04-long.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-check-answers-SM-04-single.html" class="govuk-link" target="_blank">verify-check-answers-SM-04-single.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-check-answers-SM-04.html" class="govuk-link" target="_blank">verify-check-answers-SM-04.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-check-answers-SM-04b.html" class="govuk-link" target="_blank">verify-check-answers-SM-04b.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-check-answers-SM-04c.html" class="govuk-link" target="_blank">verify-check-answers-SM-04c.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-confirm-successful-submission-email-VH-02b.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-email-VH-02b.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-confirm-successful-submission-VH-02a-long.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02a-long.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-confirm-successful-submission-VH-02a-single.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02a-single.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-confirm-successful-submission-VH-02a.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02a.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-declaration-VF-06.html" class="govuk-link" target="_blank">verify-declaration-VF-06.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-email-confirm-no-store-SM-01a.html" class="govuk-link" target="_blank">verify-email-confirm-no-store-SM-01a.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-email-confirm-SM-01.html" class="govuk-link" target="_blank">verify-email-confirm-SM-01.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-select-subcontractor-checkbox-VF-03-Pagi.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03-Pagi.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-select-subcontractor-checkbox-VF-03.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-sending-submission-SM-05.html" class="govuk-link" target="_blank">verify-sending-submission-SM-05.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-subcontractor-list-pagination-SL-01-01Pagi.html" class="govuk-link" target="_blank">verify-subcontractor-list-pagination-SL-01-01Pagi.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-subcontractor-list-unverified-SL-01-01a.html" class="govuk-link" target="_blank">verify-subcontractor-list-unverified-SL-01-01a.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-subcontractor-list-verified-SL-01-01.html" class="govuk-link" target="_blank">verify-subcontractor-list-verified-SL-01-01.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-subcontractor-list-verified-SL-01-01b.html" class="govuk-link" target="_blank">verify-subcontractor-list-verified-SL-01-01b.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-update-email-no-store-SM-01c.html" class="govuk-link" target="_blank">verify-update-email-no-store-SM-01c.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-1/verify-update-email-SM-01b.html" class="govuk-link" target="_blank">verify-update-email-SM-01b.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 2 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-2">
+            User journey 2
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-2" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-check-answers-SM-04a.html" class="govuk-link" target="_blank">verify-check-answers-SM-04a.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-confirm-successful-submission-email-VH-02c.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-email-VH-02c.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-confirm-successful-submission-VH-02d.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02d.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-declaration-VF-06.html" class="govuk-link" target="_blank">verify-declaration-VF-06.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-email-confirm-SM-01.html" class="govuk-link" target="_blank">verify-email-confirm-SM-01.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-minimum-subcontractor-MS-01.html" class="govuk-link" target="_blank">verify-minimum-subcontractor-MS-01.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-select-subcontractor-checkbox-VF-03-Pagi.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03-Pagi.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-select-subcontractor-checkbox-VF-03.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-select-subcontractor-checkbox-VF-03c-Pagi.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03c-Pagi.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-select-subcontractor-checkbox-VF-03c.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03c.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/verify-sending-submission-SM-05.html" class="govuk-link" target="_blank">verify-sending-submission-SM-05.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-2/VF-03b.html" class="govuk-link" target="_blank">VF-03b.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 3A -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-3">
+            User journey 3A
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-3" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3A/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3A/verify-no-subcontractors-SL-01-01.html" class="govuk-link" target="_blank">verify-no-subcontractors-SL-01-01.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3A/VF-12.html" class="govuk-link" target="_blank">VF-12.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 3B -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-4">
+            User journey 3B
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-4" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-check-answers-SM-04a.html" class="govuk-link" target="_blank">verify-check-answers-SM-04a.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-confirm-successful-submission-email-VH-02c.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-email-VH-02c.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-declaration-VF-06.html" class="govuk-link" target="_blank">verify-declaration-VF-06.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-email-confirm-SM-01.html" class="govuk-link" target="_blank">verify-email-confirm-SM-01.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-select-subcontractor-checkbox-VF-03c.html" class="govuk-link" target="_blank">verify-select-subcontractor-checkbox-VF-03c.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/verify-sending-submission-SM-05.html" class="govuk-link" target="_blank">verify-sending-submission-SM-05.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-3/3B/VF-11.html" class="govuk-link" target="_blank">VF-11.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 4 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-5">
+            User journey 4
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-5" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-4/verify-scheme-inactive-CS-11.html" class="govuk-link" target="_blank">verify-scheme-inactive-CS-11.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 5 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-6">
+            User journey 5
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-6" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-5/verify-in-progress-CS-14.html" class="govuk-link" target="_blank">verify-in-progress-CS-14.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-5/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 8 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-7">
+            User journey 8
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-7" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-8/verify-departmental-error-SM-07.html" class="govuk-link" target="_blank">verify-departmental-error-SM-07.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-8/verify-fatal-error-SM-08.html" class="govuk-link" target="_blank">verify-fatal-error-SM-08.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-8/verify-send-error-SM-06.html" class="govuk-link" target="_blank">verify-send-error-SM-06.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 9 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-subcontractor-heading-8">
+            User journey 9
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-subcontractor-content-8" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-9/verify-select-tax-year-view-VH-07.html" class="govuk-link" target="_blank">verify-select-tax-year-view-VH-07.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-9/verify-view-all-tax-2026-2027-VH-07a.html" class="govuk-link" target="_blank">verify-view-all-tax-2026-2027-VH-07a.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-9/verify-view-all-tax-year-VH-07b.html" class="govuk-link" target="_blank">verify-view-all-tax-year-VH-07b.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-9/VH-SR.html" class="govuk-link" target="_blank">VH-SR.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/verify-subcontractor/user-journey-9/VH-VR.html" class="govuk-link" target="_blank">VH-VR.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Verify subcontractor screens end here -->
+
+
+
+
+<!-- Add subcontractor screens start from here -->
+<div id="sprint-21-add-subcontractor">
+  <h2 class="govuk-heading-l">
+    Add subcontractor - all sectors
+  </h2>
+
+  <p class="govuk-body">
+    Register new individual, company, trust and partnership subcontractors and verify their CIS tax status before making deductions from payments.
+  </p>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-add-subcontractor">
+
+    <!-- All -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-subcontractor-heading-1">
+            All
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-subcontractor-content-1" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/all/Archive_AS-UNIVERSAL.html" class="govuk-link" target="_blank">Archive_AS-UNIVERSAL.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/all/AS-Contact-Method.html" class="govuk-link" target="_blank">AS-Contact-Method.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/all/subcontractor-added-AS-CONF-ptn.html" class="govuk-link" target="_blank">subcontractor-added-AS-CONF-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Company -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-subcontractor-heading-2">
+            Company
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-subcontractor-content-2" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/AS-Contact-C.html" class="govuk-link" target="_blank">AS-Contact-C.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/AS-C4.html" class="govuk-link" target="_blank">AS-C4.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/AS-CYA-C-Multi.html" class="govuk-link" target="_blank">AS-CYA-C-Multi.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/AS-CYA-C-Single.html" class="govuk-link" target="_blank">AS-CYA-C-Single.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-add-address-questions-AS-C2-ptn.html" class="govuk-link" target="_blank">company-add-address-questions-AS-C2-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-add-contact-details-question-AS-C4-ptn.html" class="govuk-link" target="_blank">company-add-contact-details-question-AS-C4-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-address-enter-AS-C3-ptn.html" class="govuk-link" target="_blank">company-address-enter-AS-C3-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-check-answers-AS-CYA-C-ptn.html" class="govuk-link" target="_blank">company-check-answers-AS-CYA-C-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-contact-email-AS-C4a-ptn.html" class="govuk-link" target="_blank">company-contact-email-AS-C4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-contact-mobile-AS-C4c-ptn.html" class="govuk-link" target="_blank">company-contact-mobile-AS-C4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-contact-phone-AS-C4b-ptn.html" class="govuk-link" target="_blank">company-contact-phone-AS-C4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-crn-enter-crn-AS-C8-ptn.html" class="govuk-link" target="_blank">company-crn-enter-crn-AS-C8-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-enter-utr-AS-C6-ptn.html" class="govuk-link" target="_blank">company-enter-utr-AS-C6-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-has-crn-AS-C7-ptn.html" class="govuk-link" target="_blank">company-has-crn-AS-C7-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-has-utr-AS-C5-ptn.html" class="govuk-link" target="_blank">company-has-utr-AS-C5-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-name-AS-C1-ptn.html" class="govuk-link" target="_blank">company-name-AS-C1-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-worksref-AS-C9-ptn.html" class="govuk-link" target="_blank">company-worksref-AS-C9-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/company/company-worksref-enter-AS-C10-ptn.html" class="govuk-link" target="_blank">company-worksref-enter-AS-C10-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Individual -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-subcontractor-heading-3">
+            Individual
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-subcontractor-content-3" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/AS-Contact-I.html" class="govuk-link" target="_blank">AS-Contact-I.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/AS-I1.html" class="govuk-link" target="_blank">AS-I1.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/AS-CYA-I-Multi-Ind.html" class="govuk-link" target="_blank">AS-CYA-I-Multi-Ind.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/AS-CYA-I-None-Ind.html" class="govuk-link" target="_blank">AS-CYA-I-None-Ind.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/AS-CYA-I-Single-Ind.html" class="govuk-link" target="_blank">AS-CYA-I-Single-Ind.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-add-address-questions-AS-I2-SL0205E-ptn.html" class="govuk-link" target="_blank">individual-add-address-questions-AS-I2-SL0205E-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-add-contact-details-question-AS-I1-ptn.html" class="govuk-link" target="_blank">individual-add-contact-details-question-AS-I1-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-address-enter-AS-I3-SL0205A-ptn.html" class="govuk-link" target="_blank">individual-address-enter-AS-I3-SL0205A-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-check-answers-AS-CYA-I-ptn.html" class="govuk-link" target="_blank">individual-check-answers-AS-CYA-I-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-contact-email-AS-I4a-ptn.html" class="govuk-link" target="_blank">individual-contact-email-AS-I4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-contact-mobile-AS-I4c-ptn.html" class="govuk-link" target="_blank">individual-contact-mobile-AS-I4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-contact-phone-AS-I4b-ptn.html" class="govuk-link" target="_blank">individual-contact-phone-AS-I4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-enter-nino-AS-I8-SL0205B-ptn.html" class="govuk-link" target="_blank">individual-enter-nino-AS-I8-SL0205B-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-enter-utr-AS-I6-SL0205C-ptn.html" class="govuk-link" target="_blank">individual-enter-utr-AS-I6-SL0205C-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-has-nino-AS-I7-SL0205F-ptn.html" class="govuk-link" target="_blank">individual-has-nino-AS-I7-SL0205F-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-has-tradingname-SL0201E-ptn.html" class="govuk-link" target="_blank">individual-has-tradingname-SL0201E-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-has-utr-AS-I5-SL0205G-ptn.html" class="govuk-link" target="_blank">individual-has-utr-AS-I5-SL0205G-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-name-AS-I1-SL0201A-ptn.html" class="govuk-link" target="_blank">individual-name-AS-I1-SL0201A-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-tradingname-AS-I1-SL0201D-ptn.html" class="govuk-link" target="_blank">individual-tradingname-AS-I1-SL0201D-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-worksref-AS-I9-SL0205H-ptn.html" class="govuk-link" target="_blank">individual-worksref-AS-I9-SL0205H-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/individual/individual-worksref-enter-AS-I10-SL0205I-ptn.html" class="govuk-link" target="_blank">individual-worksref-enter-AS-I10-SL0205I-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Partnership -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-subcontractor-heading-4">
+            Partnership
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-subcontractor-content-4" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/Archive_partnership-check-answers-AS-CYA-P-ptn.html" class="govuk-link" target="_blank">Archive_partnership-check-answers-AS-CYA-P-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/AS-P4.html" class="govuk-link" target="_blank">AS-P4.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/AS-Contact-P.html" class="govuk-link" target="_blank">AS-Contact-P.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/AS-CYA-P-Multi-ptn.html" class="govuk-link" target="_blank">AS-CYA-P-Multi-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/AS-CYA-P-Single-ptn.html" class="govuk-link" target="_blank">AS-CYA-P-Single-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/partnership-add-contact-details-question-AS-P4-ptn.html" class="govuk-link" target="_blank">partnership-add-contact-details-question-AS-P4-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/partnership-address-enter-SL0205-A-ptn.html" class="govuk-link" target="_blank">partnership-address-enter-SL0205-A-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/partnership-contact-email-AS-P4a-ptn.html" class="govuk-link" target="_blank">partnership-contact-email-AS-P4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/partnership-contact-mobile-AS-P4c-ptn.html" class="govuk-link" target="_blank">partnership-contact-mobile-AS-P4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/partnership-contact-phone-AS-P4b-ptn.html" class="govuk-link" target="_blank">partnership-contact-phone-AS-P4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/SL0201-E-ptn.html" class="govuk-link" target="_blank">SL0201-E-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/SL0201-EA-ptn.html" class="govuk-link" target="_blank">SL0201-EA-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/SL0202-D-ptn.html" class="govuk-link" target="_blank">SL0202-D-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/SL0205-H-ptn.html" class="govuk-link" target="_blank">SL0205-H-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/partnership/SL0205-I-ptn.html" class="govuk-link" target="_blank">SL0205-I-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trust -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-subcontractor-heading-5">
+            Trust
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-subcontractor-content-5" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/Archive_trust-check-answers-AS-CYA-T-ptn.html" class="govuk-link" target="_blank">Archive_trust-check-answers-AS-CYA-T-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/Archive_trust-check-answers-AS-CYA-T-YN-ptn.html" class="govuk-link" target="_blank">Archive_trust-check-answers-AS-CYA-T-YN-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/AS-T4.html" class="govuk-link" target="_blank">AS-T4.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/AS-Contact-T.html" class="govuk-link" target="_blank">AS-Contact-T.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/AS-CYA-T-Multi-tru.html" class="govuk-link" target="_blank">AS-CYA-T-Multi-tru.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/AS-CYA-T-Single-tru.html" class="govuk-link" target="_blank">AS-CYA-T-Single-tru.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-add-address-questions-AS-T2-ptn.html" class="govuk-link" target="_blank">trust-add-address-questions-AS-T2-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-add-contact-details-question-AS-T4-ptn.html" class="govuk-link" target="_blank">trust-add-contact-details-question-AS-T4-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-address-enter-AS-T3-ptn.html" class="govuk-link" target="_blank">trust-address-enter-AS-T3-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-contact-email-AS-T4a-ptn.html" class="govuk-link" target="_blank">trust-contact-email-AS-T4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-contact-mobile-AS-T4c-ptn.html" class="govuk-link" target="_blank">trust-contact-mobile-AS-T4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-contact-phone-AS-T4b-ptn.html" class="govuk-link" target="_blank">trust-contact-phone-AS-T4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-enter-utr-AS-T6-ptn.html" class="govuk-link" target="_blank">trust-enter-utr-AS-T6-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-has-utr-AS-T5-ptn.html" class="govuk-link" target="_blank">trust-has-utr-AS-T5-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-name-AS-T1-ptn.html" class="govuk-link" target="_blank">trust-name-AS-T1-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-worksref-AS-T7-ptn.html" class="govuk-link" target="_blank">trust-worksref-AS-T7-ptn.html</a></li>
+          <li><a href="/filing-a-return/sprint-21/add-subcontractor/trust/trust-worksref-enter-AS-T8-ptn.html" class="govuk-link" target="_blank">trust-worksref-enter-AS-T8-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Add subcontractor screens end here -->
+
+  </div>
+</div>
+
+{% endblock %}

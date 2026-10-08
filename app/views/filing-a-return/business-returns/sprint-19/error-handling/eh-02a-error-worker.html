@@ -1,0 +1,94 @@
+{% extends "filing-a-return/business-returns/layouts/main-with-nav-cards.html" %}
+{% import "filing-a-return/business-returns/macros/custom/card-template.njk" as card %}
+
+{% set pageName = "Error handling" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-l">You have some errors to fix</h1>
+                <p class="govuk-body">Some of the information you are about to submit is either incomplete or incorrect.
+                </p>
+                <h1 class="govuk-heading-m">Before you start</h1>
+                <p class="govuk-body">
+                    You can go back and change the workers included in this return, or update and fix these
+                    errors to continue filing your return.</p>
+                <h2 class="govuk-heading-m">Error overview</h2>
+                <ul class="govuk-task-list">
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="#"
+                                aria-describedby="before-you-start-1-status">
+                                Hooper And Associates
+                            </a>
+                        </div>
+                        <div class="govuk-task-list__status" id="before-you-start-1-status">
+                            <strong class="govuk-tag govuk-tag--red">
+                                There is a problem
+                            </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="#"
+                                aria-describedby="before-you-start-2-status">
+                                Quint Transportation
+                            </a>
+                        </div>
+                        <div class="govuk-task-list__status" id="before-you-start-2-status">
+                            <strong class="govuk-tag govuk-tag--red">
+                                There is a problem
+                            </strong>
+                        </div>
+                    </li>
+                    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                        <div class="govuk-task-list__name-and-hint">
+                            <a class="govuk-link govuk-task-list__link" href="#"
+                                aria-describedby="before-you-start-2-status">
+                                The Kintner Group
+                            </a>
+                        </div>
+                        <div class="govuk-task-list__status" id="before-you-start-2-status">
+                            <strong class="govuk-tag govuk-tag--yellow">
+                                Incomplete
+                            </strong>
+                        </div>
+                    </li>
+                </ul>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What do these errors mean?
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        Some errors, such as missing or invalid tax references, incomplete verification details, or
+                        required business information, must be fixed before you can submit your return. Other errors
+                        may only affect optional information and can be fixed later.
+
+                    </div>
+                </details>
+                <!--<div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>-->
+                <p class="govuk-body">
+                    <a href="#" class="govuk-link govuk-link--no-visited-state">Return to select your workers</a>
+                </p>
+            </div>
+        </div>
+</div>
+</main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,220 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "mr-03-03-a-worker-payments.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-l">Scheme 123, Ref 123/AB456<br>Period ending 5 January 2026</span>
+      <h1 class="govuk-heading-l">Check your answers before submitting your return</h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Total payments to workers"
+            },
+            value: {
+              text: "£7,500.00"
+            }
+          },
+          {
+            key: {
+              text: "Total cost of materials"
+            },
+            value: {
+              text: "£2,000.00"
+            }
+          },
+          {
+            key: {
+              text: "Total BRS deductions"
+            },
+            value: {
+              text: "£1,100.00"
+            }
+          }
+        ]
+      }) }}
+
+            <h2 class="govuk-heading-m">Now submit your return</h2>
+      
+      <p class="govuk-body">By submitting this return you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="declaration-employment-status-short.html" method="post" novalidate>
+        {{ govukButton({
+          text: "Continue to declaration"
+        }) }}
+      </form>
+
+      <h2 class="govuk-heading-m">Workers</h2>
+      
+      <p class="govuk-body">You have added 3 workers to this return.</p>
+      
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "TyneWear Ltd"
+          },
+          actions: {
+            items: [
+              {
+                href: "payment-details-screen-1-payments.html?edit=1",
+                text: "Change",
+                visuallyHiddenText: "TyneWear Ltd payment details"
+              },
+              {
+                href: "remove-worker-confirmation.html?remove=1",
+                text: "Remove",
+                visuallyHiddenText: "TyneWear Ltd from this return"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Total payments made"
+            },
+            value: {
+              text: "£1,200.00"
+            }
+          },
+          {
+            key: {
+              text: "Cost of materials"
+            },
+            value: {
+              text: "£300.00"
+            }
+          },
+          {
+            key: {
+              text: "Total tax deducted"
+            },
+            value: {
+              text: "£180.00"
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "BuildRight Business"
+          },
+          actions: {
+            items: [
+              {
+                href: "payment-details-screen-1-payments.html?edit=2",
+                text: "Change",
+                visuallyHiddenText: "BuildRight Business payment details"
+              },
+              {
+                href: "remove-worker-confirmation.html?remove=2",
+                text: "Remove",
+                visuallyHiddenText: "BuildRight Business from this return"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Total payments made"
+            },
+            value: {
+              text: "£2,500.00"
+            }
+          },
+          {
+            key: {
+              text: "Cost of materials"
+            },
+            value: {
+              text: "£750.00"
+            }
+          },
+          {
+            key: {
+              text: "Total tax deducted"
+            },
+            value: {
+              text: "£350.00"
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Northern Trades Ltd"
+          },
+          actions: {
+            items: [
+              {
+                href: "payment-details-screen-1-payments.html?edit=3",
+                text: "Change",
+                visuallyHiddenText: "Northern Trades Ltd payment details"
+              },
+              {
+                href: "remove-worker-confirmation.html?remove=3",
+                text: "Remove",
+                visuallyHiddenText: "Northern Trades Ltd from this return"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Total payments made"
+            },
+            value: {
+              text: "£3,800.00"
+            }
+          },
+          {
+            key: {
+              text: "Cost of materials"
+            },
+            value: {
+              text: "£950.00"
+            }
+          },
+          {
+            key: {
+              text: "Total tax deducted"
+            },
+            value: {
+              text: "£570.00"
+            }
+          }
+        ]
+      }) }}
+
+      <p class="govuk-body">
+        <a href="screen-2-payment-details.html" class="govuk-link">Add another worker</a>
+      </p>
+
+
+
+
+
+
+
+    </div>
+  </div>
+{% endblock %}

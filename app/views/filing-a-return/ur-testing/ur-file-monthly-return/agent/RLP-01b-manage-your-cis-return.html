@@ -1,0 +1,150 @@
+{% extends "filing-a-return/layouts/main-with-nav-cards.html" %}
+{% import "filing-a-return/macros/custom/card-template.njk" as card %}
+
+{% set pageName = "CIS returns" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
+    {# <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          If you have entered a tax month incorrectly and it is in progress, you cannot change it.
+        </p>
+        <p class="govuk-body">
+          You must start a new return for the correct period and then delete the one that is incorrect.
+        </p>
+      </div>
+    </div> #}
+
+    <h1 class="govuk-heading-l">
+      <!--<span class="govuk-caption-l">ABC Construction Ltd</span>-->
+      Manage your CIS return
+    </h1>
+
+    <!-- <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        If you have entered a tax month incorrectly and it is in In progress, you cannot change it. You must start a new return for the correct period and then delete the one that is incorrect.
+      </strong>
+    </div> -->
+
+    {# <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">File a monthly return</a>
+        </h3>
+        <p class="govuk-body">File a CIS return for any subcontractors you used in a monthly return period.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">File a nil return</a>
+        </h3>
+        <p class="govuk-body">File a nil return for any subcontractors you used in a monthly return period.</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">Amend a submitted return</a>
+        </h3>
+        <p class="govuk-body">Change the information you entered when you submitted a monthly or nil return.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">View a submitted return</a>
+        </h3>
+        <p class="govuk-body">View monthly or nil returns you submitted.</p>
+      </div>
+    </div> #}
+
+    <div class="flex-container flex-container--two-across">
+
+      {{ card.card(
+        cardUrl="#",
+        headingLevel="h3",
+        heading="File a monthly return",
+        linkContent="File a CIS return for any subcontractors paid in a tax month.",
+        cardId="fileMonthlyReturnCard"
+      ) }}
+
+      {{ card.card(
+        cardUrl="#",
+        headingLevel="h3",
+        heading="File a nil return",
+        linkContent="File a nil return when no payments were made to subcontractors in a tax month.",
+        cardId="fileNilReturnCard"
+      ) }}
+
+      {# {{ card.card(
+        cardUrl="#",
+        headingLevel="h3",
+        heading="View submitted returns",
+        linkContent="View a return to make amendments, change payment details you entered, or check progress.",
+        cardId="viewSubmittedReturnCard"
+      ) }} #}
+
+      {{ card.card(
+        cardUrl="mr-ar-01-view-tax-year-submission-history",
+        headingLevel="h3",
+        heading="View submitted returns",
+        linkContent="Submit or delete a return in progress. You can also resubmit a return that was not initially accepted.",
+        cardId="viewIncompleteReturnCard"
+      ) }}
+
+
+      {{ card.card(
+        cardUrl="#",
+        headingLevel="h3",
+        heading="Incomplete returns",
+        linkContent="Submit or delete a return in progress. You can also resubmit a return that was not initially accepted. ",
+        cardId="loremIpsumCard"
+      ) }}
+      
+    </div>
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+            <a href="https://www.gov.uk/government/publications/construction-industry-scheme-cis-340/construction-industry-scheme-a-guide-for-contractors-and-subcontractors-cis-340">
+              Construction Industry Scheme: A guide (CIS 340)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/government/publications/construction-industry-scheme-cis-commercial-software-suppliers">
+              Find software suppliers for the Construction Industry Scheme (CIS) - GOV.UK
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+{% endblock %}

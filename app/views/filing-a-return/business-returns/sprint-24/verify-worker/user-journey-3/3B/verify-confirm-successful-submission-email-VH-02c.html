@@ -1,0 +1,82 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Verification request submitted",
+      html: "Your verification reference number<br><strong>(Reference number)</strong>"
+    
+    }) }}
+      
+    <p class="govuk-body">
+      Submitted at hh:mm on dd Month yyyy
+    </p>
+
+    <h2 class="govuk-heading-m">Verification request details</h2>
+
+
+
+<div class="app-summary-list--no-border">
+  <dl class="govuk-summary-list">
+    <dt class="govuk-summary-list__key">
+      Workers to reverify
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Grant, Alan</li>
+        <li>InGen Research</li>
+       
+      </ul>
+    </dd>
+  </dl>
+</div>
+      <p class="govuk-body">
+      Confirmation of submission has been sent to <strong>{email address}</strong>.
+    </p>
+    <p class="govuk-body">
+      You can access this request in read-only format from your <a href="#" class="govuk-link">verification history</a>.
+    </p>
+
+   
+{{ govukInsetText({
+  html: '
+    <p class="govuk-body">
+      You can also save this page or print a copy for your records. 
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      <a href="#" class="govuk-link" onclick="window.print(); return false;">
+        Print this page
+      </a>
+    </p>
+  '
+}) }}
+   
+
+   
+
+    <h2 class="govuk-heading-m">Need help?</h2>
+    <p class="govuk-body">
+      For any questions about your verification request,
+
+<a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">contact HMRC</a>.<br>You will need the reference number of this verification request.
+    </p>
+
+     
+
+      <p class="govuk-body">
+      Back to <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Manage your workers</a>.
+    </p>
+
+    <h2 class="govuk-heading-m">Before you go</h2>
+    <p class="govuk-body">Your feedback helps us make our service better.</p>
+    <p class="govuk-body"><a class="govuk-link" href="#">Take a short survey</a> to share your feedback on this service.</p>
+
+  </div>
+</div>
+
+{% endblock %}

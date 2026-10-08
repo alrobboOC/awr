@@ -1,0 +1,203 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Notices and statements" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/business-returns-service/manage-brs-return"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">ABC Business Ltd</span>
+      Manage your BRS return notices and statements
+    </h1>
+
+    <p class="govuk-body">View confirmation statements, penalty warnings and HMRC notices for your BRS returns.</p>
+
+                <details class="govuk-details govuk-!-margin-top-6">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Understanding your notices
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">Confirmation statements</h3>
+        <p class="govuk-body">You'll receive a confirmation statement when HMRC accepts your BRS return. This confirms the return has been processed.</p>
+        
+        <h3 class="govuk-heading-s">Penalty warnings</h3>
+        <p class="govuk-body">HMRC will send you a penalty warning if your return is late or if there are errors. The notice will explain what you need to do.</p>
+        
+        <h3 class="govuk-heading-s">General notices</h3>
+        <p class="govuk-body">HMRC may send you general notices about changes to BRS, important reminders, or requests for additional information.</p>
+        
+        <h3 class="govuk-heading-s">How long to keep notices</h3>
+        <p class="govuk-body">You should keep all BRS notices and statements for at least 3 years after the end of the tax year they relate to.</p>
+      </div>
+    </details>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-7">Search notices</h2>
+
+    <p class="govuk-body">Select notice type, and then a time period.</p>
+
+    <form action="/filing-a-return/business-returns/business-returns-service/notices/search" method="post" novalidate>
+      
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="message-type">
+          Notice type <span class="govuk-visually-hidden">indicates required information</span>
+        </label>
+        <select class="govuk-select" id="message-type" name="messageType">
+          <option value="all" selected>All notices</option>
+          <option value="confirmation">Confirmation statements</option>
+          <option value="penalty">Penalty warnings</option>
+          <option value="general">General notices</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="read-status">
+          Read/unread notices
+        </label>
+        <select class="govuk-select" id="read-status" name="readStatus">
+          <option value="all" selected>All</option>
+          <option value="read">Read</option>
+          <option value="unread">Unread</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+     
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="period-last-7-days" name="period" type="radio" value="last-7-days">
+              <label class="govuk-label govuk-radios__label" for="period-last-7-days">
+                Last 7 days
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="period-last-month" name="period" type="radio" value="last-month">
+              <label class="govuk-label govuk-radios__label" for="period-last-month">
+                Last month
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="period-date-range" name="period" type="radio" value="date-range">
+              <label class="govuk-label govuk-radios__label" for="period-date-range">
+                Date Range
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="period-all" name="period" type="radio" value="all" checked>
+              <label class="govuk-label govuk-radios__label" for="period-all">
+                All
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Search
+      </button>
+
+    </form>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-6">
+
+    <h2 class="govuk-heading-m">Search results</h2>
+
+    <p class="govuk-body">Displaying 3 out of 3 records</p>
+
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-6">
+
+    <h2 class="govuk-heading-m">Recent notices</h2>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">15 October 2025</th>
+          <td class="govuk-table__cell">Penalty warnings</td>
+          <td class="govuk-table__cell">You need to file a BRS return for the tax month ending 5 October 2025</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Unread</strong></td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/notices/view/124">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">20 September 2025</th>
+          <td class="govuk-table__cell">Confirmation</td>
+          <td class="govuk-table__cell">Return accepted for August 2025</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag">Read</strong></td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/notices/view/123">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">20 August 2025</th>
+          <td class="govuk-table__cell">Confirmation</td>
+          <td class="govuk-table__cell">Return accepted for July 2025</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag">Read</strong></td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/notices/view/122">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/notices/all">View all notices</a>
+    </p>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              What is the Business Returns Service
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS 340: Penalties for late returns
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}

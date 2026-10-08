@@ -1,0 +1,80 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Your workers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+  {% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Manage your BRS workers
+      </h1>
+
+      <p class="govuk-body">
+        Workers must be verified before you can include them on a monthly return. This will ensure that deductions are made at the correct rate.
+      </p>
+
+        {{ govukInsetText({
+        html: 'You will need to use <a href="#" class="govuk-link">commercial BRS software</a> to submit any verification requests that include more than 50 workers.'
+      }) }}
+
+      <ul class="govuk-grid-row card-group govuk-!-margin-bottom-6">
+        <li class="govuk-grid-column-one-half card-group__item">
+          <div class="card card--clickable" data-test="add-workers" style="background-color: #f6f6f6;">
+            <h2 class="govuk-heading-m card__heading">
+              <a class="govuk-link card__link govuk-link--no-visited-state" href="/filing-a-return/business-returns/sprint-4/task-list/r20-task-list.html">
+                Add new workers
+              </a>
+            </h2>
+            <p class="govuk-body card__description">
+              Create a record for any new worker you want to pay.
+            </p>
+          </div>
+        </li>
+
+        <li class="govuk-grid-column-one-half card-group__item">
+          <div class="card card--clickable" data-test="verify-workers" style="background-color: #f6f6f6;">
+            <h2 class="govuk-heading-m card__heading">
+              <a class="govuk-link card__link govuk-link--no-visited-state" href="http://www.hmrc.gov.uk/efiling/charities/soft_dev.htm" rel="noreferrer noopener" target="_blank">
+                Verify your workers
+              </a>
+            </h2>
+            <p class="govuk-body card__description">
+              Make sure your workers have the correct deductions applied to their payments.
+            </p>
+          </div>
+        </li>
+
+        <li class="govuk-grid-column-one-half card-group__item">
+          <div class="card card--clickable" data-test="view-workers" style="background-color: #f6f6f6;">
+            <h2 class="govuk-heading-m card__heading">
+              <a class="govuk-link card__link govuk-link--no-visited-state" href="http://www.hmrc.gov.uk/efiling/charities/soft_dev.htm" rel="noreferrer noopener" target="_blank">
+                View your workers
+              </a>
+            </h2>
+            <p class="govuk-body card__description">
+              Edit the details of any worker in your list.
+            </p>
+            <br>
+            <br>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

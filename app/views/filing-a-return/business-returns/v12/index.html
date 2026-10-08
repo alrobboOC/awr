@@ -1,0 +1,62 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 7" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">     
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong></span>
+    <h1 class="govuk-heading-xl">Sprint 12 - BRS prototype</h1>
+    <p class="govuk-body-l">
+      Wed, 21 Jan 2026 to Tue, 03 Feb 2026
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-5-details">
+      <h2 class="govuk-heading-l">Monthly return</h2>
+      <p class="govuk-body">
+        The monthly returns journey allows businesss to report payments made to workers during a tax month. Businesss select the tax period, choose which workers to include, enter payment and deduction details, and submit their return by the 19th of the following month.
+      </p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          All screens
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link">MR-03-08-f - Email address confirmation</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-a-check-answers-total-payments" class="govuk-link">MR-03-04a - Check your answers</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-c-worker-details-added" class="govuk-link">MR-03-04c - added details for a single worker</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-c-worker-details-added_exhustive-view" class="govuk-link">MR-03-04c - added details for multiple worker</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-d-add-worker-details" class="govuk-link">MR-03-04d - Add worker details</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-d-add-worker-details_exhustive_view" class="govuk-link">MR-03-04d - Add worker details...(Exhaustive views) </a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04e-summary-worker-payments" class="govuk-link">MR-03-04e - Summary worker payments</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-03-b-change-worker" class="govuk-link">MR-03-03b - Change worker's details</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/remove-worker-mr-03-03-b" class="govuk-link">MR-03-03b - Remove worker</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-b-payment-details-confirmation" class="govuk-link">MR-03-04b - Payment details confirmation</a></li>
+          <!-- updated screens for sprint 13 -->
+          <!-- <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-02-b-date-confirm" class="govuk-link">MR-02-b - Enter tax month and year (updated)</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-02-a-select_workers" class="govuk-link">MR-03-02 - Select workers (updated)</a></li>
+          <li><a href="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-b-acknowledge" class="govuk-link">MR-03-04b - Acknowledge</a></li> -->
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

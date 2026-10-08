@@ -1,0 +1,396 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      CIS Prototype
+    </h1>
+
+    <!-- Tab navigation -->
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#current-version">
+            Current version
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#previous-versions">
+            Previous versions
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#documentation">
+            Documentation
+          </a>
+        </li>
+      </ul>
+
+      <!-- Current Version Tab -->
+      <div class="govuk-tabs__panel" id="current-version">
+        <h2 class="govuk-heading-l">Current version</h2>
+        
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Sprint 8 and 9
+              </th>
+              <td class="govuk-table__cell">3 Dec 2025</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag">In progress</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="sprint-5-details">
+          <h3 class="govuk-heading-m">Monthly return</h3>
+          <p class="govuk-body">
+            The monthly returns journey allows contractors to report payments made to subcontractors during a tax month. Contractors select the tax period, choose which subcontractors to include, enter payment and deduction details, and submit their return by the 19th of the following month.
+          </p>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                All screens
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list">
+                <li><a href="/filing-a-return/v8/mr-02-a-monthly_return_intro" class="govuk-link">MR02a - Introduction</a></li>
+                <li><a href="/filing-a-return/v8/mr-02-b-monthly_return_intro" class="govuk-link">MR02b - Enter tax month</a></li>
+                <li><a href="/filing-a-return/v8/mr-03-01-last_return_subcontractors" class="govuk-link">MR0301 -  Last return subcontractors</a></li>
+                <li><a href="/filing-a-return/v8/mr-03-02-a-select_subcontractors" class="govuk-link">MR0302a - Select subcontractors (variant a)</a></li>
+                <li><a href="/filing-a-return/v8/mr-03-02-b-select_subcontractors" class="govuk-link">MR0302b - Select subcontractors (variant b)</a></li>
+                <li><a href="/filing-a-return/v8/mr-03-02-c-select_subcontractors" class="govuk-link">MR0302c - Select subcontractors (variant c)</a></li>
+                <li><a href="/filing-a-return/v9/mr-03-03-h-verify-subcontractors" class="govuk-link">MR0303h - Unverified subcontractors</a></li>
+                <li><a href="/filing-a-return/v9/mr-03-03-a-subcontractor-payments" class="govuk-link">MR0303a - Subcontractors paid</a></li>
+                <li><a href="/filing-a-return/v9/mr-03-03-c-payment-details-screen-payments" class="govuk-link">MR0303c - Total payments made</a></li>
+                <li><a href="/filing-a-return/v9/mr-03-03-d-payment-details-screen-materials" class="govuk-link">MR0303d - Cost of materials</a></li>
+                <li><a href="/filing-a-return/v9/mr-03-03-e-payment-details-screen-tax" class="govuk-link">MR0303e - Total tax deducted</a></li>
+                
+
+              </ul>
+            </div>
+          </details>
+          <p class="govuk-body">
+            <a href="/filing-a-return/v8/monthly-return/introduction.html" class="govuk-link govuk-link--no-visited-state" style="pointer-events: none;">View journey <strong class="govuk-tag govuk-tag--light-blue">
+          In progress
+        </strong></a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Previous Versions Tab -->
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="previous-versions">
+        <h2 class="govuk-heading-l">Previous versions</h2>
+        
+        <!-- All sprints links -->
+        <!-- <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+             <td class="govuk-table__cell">
+                 <a href="v7/index.html" class="govuk-link">Sprint 7</a>
+              </td>
+              <td class="govuk-table__cell">19 Nov 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                 <a href="v6/welcome-prepop/index.html" class="govuk-link">Sprint 6</a>
+              </td>
+              <td class="govuk-table__cell">22 Oct 2025</td>
+              <td class="govuk-table__cell">
+                Completed
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                 <a href="#" class="govuk-link">Sprint 5</a>
+              </td>
+              <td class="govuk-table__cell">8 Oct 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+            <tr class="govuk-table__row">
+             <td class="govuk-table__cell">
+                 <a href="#" class="govuk-link">Sprint 1 to 4</a>
+              </td>
+              <td class="govuk-table__cell">27 Aug 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+          </tbody>
+        </table> -->
+
+        <!-- Sprint 7 (moved from current) -->
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Sprint 7
+              </th>
+              <td class="govuk-table__cell">19 Nov 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="sprint-7-details">
+          <h3 class="govuk-heading-m">Add subcontractor - Individual</h3>
+          <p class="govuk-body">
+            Enables contractors to register new subcontractors and verify their tax status before making CIS-deductible payments.
+          </p>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                All screens
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list">
+                <li><a href="/filing-a-return/v7/subcontractor-landing" class="govuk-link">SLP1 - Subcontractor landing</a></li>
+                <li><a href="/filing-a-return/v7/monthly-return-landing" class="govuk-link">RLP1 - Returns landing</a></li>
+                <li><a href="/filing-a-return/v7/notices-statements-landing" class="govuk-link">NLP1 - Notices and statements landing</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/subcontractor-type" class="govuk-link">SL03 - What type of subcontractor</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/subcontractor-list" class="govuk-link">SL0103 - Subcontractor list</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/trading-name" class="govuk-link">SL0201 - Subcontractor trading name</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/enter-trading-name" class="govuk-link">SL0201-D - Enter name of subcontractor business</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-name" class="govuk-link">SL0201-A - Enter name of subcontractor person</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/add-address-question" class="govuk-link">SL0205-E - Subcontractor address</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-address" class="govuk-link">SL0205-A - Enter subcontractor address</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-has-nino" class="govuk-link">SL0205-F - National Insurance number</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-nino" class="govuk-link">SL0205-B - Enter National Insurance number</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-has-utr" class="govuk-link">SL0205-G - Unique Taxpayer Reference (UTR)</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-utr" class="govuk-link">SL0205-C - Enter Unique Taxpayer Reference (UTR)</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/individual-has-works-ref" class="govuk-link">SL0205-H - Works reference number</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/works-reference" class="govuk-link">SL0205-I - Enter works reference number</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/add-contact-details-question" class="govuk-link">SL0201-C - Contact details</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/contact-details" class="govuk-link">SL0201-C - Enter contact details</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/check-answers" class="govuk-link">SL0205-D - Check your answers</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/confirmation" class="govuk-link">SL0206-A - Confirmation</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/verify-subcontractor" class="govuk-link">SL0206-B - Verify subcontractor</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/verification-result-matched" class="govuk-link">SL0206-C - Subcontractor verified</a></li>
+                <li><a href="/filing-a-return/v7/add-subcontractor/individual/verification-result-unmatched" class="govuk-link">SL0206-D - Subcontractor unverified</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+        
+        <!-- Sprint 6 (moved from current) -->
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Sprint 6
+              </th>
+              <td class="govuk-table__cell">22 Oct 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="govuk-heading-m">Welcome and Pre-Population</h3>
+        <p class="govuk-body">
+          Serves to introduce users to the CIS online service and automatically fill known contractor or subcontractor details from HMRC records, reducing data entry errors and saving time when filing monthly returns.
+        </p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              All screens
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/v6/welcome-prepop/ps-04-unsuccessful" class="govuk-link">PS-04 - Unsuccessful</a></li>
+              <li><a href="/filing-a-return/v6/welcome-prepop/ps-05-success" class="govuk-link">PS-05 - Successful</a></li>
+              <li><a href="/filing-a-return/v6/welcome-prepop/ps05b_no_records" class="govuk-link">PS-05b - No records found</a></li>
+              <li><a href="/filing-a-return/v6/welcome-prepop/ps-06-intro" class="govuk-link">PS-06 - Introduction</a></li>
+              <li><a href="/filing-a-return/v6/welcome-prepop/ps06b_retrieving" class="govuk-link">PS-06b - Retrieving subcontractors</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Sprint 5 -->
+        <table class="govuk-table govuk-!-margin-top-8">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Sprint 5
+              </th>
+              <td class="govuk-table__cell">8 Oct 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="govuk-heading-m">Agent and Contractors</h3>
+        <p class="govuk-body">
+          The Construction Industry Scheme service offers two user journeys: agents managing CIS returns for multiple clients through a client selection interface, and contractors managing their own CIS account with a direct dashboard.
+        </p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              All screens
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/v5/agent-flow/ip1-introduction" class="govuk-link">IP-1 - Introduction</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/lp1-contractor-landing" class="govuk-link">LP-1 - Contractor landing</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/cl1-alp1-combined-search" class="govuk-link">ALP-1 - Search</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/lp2-agent-landing-oneclient" class="govuk-link">LP-2 - Agent landing</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/alp2-no-clients" class="govuk-link">ALP-2 - No clients</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/alp3-problem-list" class="govuk-link">ALP-3 - Problem list</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/alp4-generating-list" class="govuk-link">ALP-4 - Generating list</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Sprint 1-4 -->
+        <table class="govuk-table govuk-!-margin-top-8">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Sprint 1 to 4
+              </th>
+              <td class="govuk-table__cell">27 Aug 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div id="sprint-1-4-details">
+          <h3 class="govuk-heading-m">Nil monthly returns</h3>
+          <p class="govuk-body">
+            A nil return allows construction contractors to declare they made no subcontractor payments in a tax month, with an option to request inactivity status.
+          </p>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                All screens
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list">
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c1-confirm-nil-return" class="govuk-link">C1 - Confirm nil return</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c2-inactivity-request" class="govuk-link">C2 - Inactivity request</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c3-confirm-email" class="govuk-link">C3 - Confirm email</a></li>  
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c4-declaration" class="govuk-link">C4 - Declaration</a></li>          
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c5-inactivity-warning" class="govuk-link">C5 - Inactivity warning</a></li>          
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c6-submission" class="govuk-link">C6 - Submission</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c7-submission-sending" class="govuk-link">C7 - Submission sending</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c8-confirmation" class="govuk-link">C8 - Confirmation</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c8a-confirmation" class="govuk-link">C8a - Confirmation alt</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c9-view-save-receipt" class="govuk-link">C9 - View/save receipt</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c10-submission-receipt" class="govuk-link">C10 - Submission receipt</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c11-submission-unsuccessful" class="govuk-link">C11 - Submission unsuccessful</a></li>
+                <li><a href="/filing-a-return/v1-v4/monthly-nil-return/c12-submission-awaiting" class="govuk-link">C12 - Submission awaiting</a></li>
+              </ul>
+            </div>
+          </details>
+
+          <h3 class="govuk-heading-m">Error handling</h3>
+          <p class="govuk-body">
+            Error handling screens provide clear guidance and next steps when users encounter technical issues, access problems, or invalid actions.
+          </p>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                All screens
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list">
+                <li><a href="/filing-a-return/v1-v4/error-handling/err1" class="govuk-link">ERR1 - System error</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/err2" class="govuk-link">ERR2 - Page not found</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/err4" class="govuk-link">ERR3 - Access denied</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/err5" class="govuk-link">ERR5 - Shuttering</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/crr1" class="govuk-link">CRR1 - Failed to retrieve the contractor details</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/crr2" class="govuk-link">CRR2 - User tries to submit a return already submitted</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/crr3" class="govuk-link">CRR3 - User fails CIS ID check</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/crr4" class="govuk-link">CRR4 - User not authorised - individual</a></li>
+                <li><a href="/filing-a-return/v1-v4/error-handling/crr5" class="govuk-link">CRR5 - User not authorised - organisation</a></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Documentation Tab -->
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="documentation">
+        <h2 class="govuk-heading-l">Documentation</h2>
+        
+        <h3 class="govuk-heading-m">Design</h3>
+        <p class="govuk-body">
+          <a href="https://app.mural.co/t/digitalhmrc9032/m/digitalhmrc9032/1756801867102/8ac6bc28b399e12d5cf5c5afb54c8ecfee1a1aed" class="govuk-link" rel="external" target="_blank">View design files on Mural (opens in new tab)</a>
+        </p>
+
+        <h3 class="govuk-heading-m">Copy</h3>
+        <p class="govuk-body">
+          <a href="https://drive.google.com/drive/folders/13krMb9DKmSXiTKPjxqTO2M5xeJ5PUvgh" class="govuk-link" rel="external" target="_blank">View copy documents on Google Drive (opens in new tab)</a>
+        </p>
+      </div>
+
+    </div>
+
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  </div>
+</div>
+
+{% endblock %}

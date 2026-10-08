@@ -1,0 +1,112 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Review unmatched subcontractors – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+     <h1 class="govuk-heading-l">
+      Cannot verify all subcontractors
+    </h1>
+
+    <p class="govuk-body govuk-!-margin-bottom-3">
+     Some of the subcontractors in your verification request do not have all the information we need to verify them.
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-3">
+      To fix this, you can:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>edit their information and correct any of their details</li>
+      <li>proceed with including them in this verification request without making any changes</li>
+      <li>remove the subcontractor from this verification request</li>
+    </ul>
+
+    <p class="govuk-body">
+  <a href="https://www.gov.uk/what-you-must-do-as-a-cis-contractor/verify-subcontractors"
+     class="govuk-link"
+     target="_blank"
+     rel="noreferrer noopener">
+    What you'll need to verify subcontractors (opens in new tab)</a>
+</p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+
+        <h2 class="govuk-heading-m">Ready for verification</h2>
+
+
+
+    {{ govukTable({
+
+      firstCellIsHeader: false,
+
+      head: [
+        { text: "Name" },
+        { text: "UTR" }
+      ],
+
+      rows: [
+
+        [
+          { html: '<a href="#" class="govuk-link">Brody, Martin</a>' },
+          { text: "3992651526" }
+        ],
+
+        [
+          { html: '<a href="#" class="govuk-link">Hooper Associates</a>' },
+          { text: "4213301986" }
+        ],
+       [
+          { html: '<a href="#" class="govuk-link">Quint Transportation</a>' },
+          { text: "9450429526" }
+        ],
+
+         [
+          { html: '<a href="#" class="govuk-link">The Kintner Group</a>' },
+          { text: "3992651528" }
+        ]
+
+       
+
+      ]
+
+    }) }}
+
+   <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </div>
+
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}

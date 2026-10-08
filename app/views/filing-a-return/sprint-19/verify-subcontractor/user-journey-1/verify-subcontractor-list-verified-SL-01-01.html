@@ -1,0 +1,87 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Your subcontractors – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Your subcontractors
+      </h1>
+
+      {{ govukTable({
+        
+        firstCellIsHeader: false,
+        head: [
+          { text: "Name" },
+          { text: "UTR" },
+          { text: "Verified" },
+          { text: "Verification number" },
+          { text: "Tax treatment" },
+          { text: "Date added" },
+          { text: "Actions" }
+        ],
+        rows: [
+          [
+            { text: "Brody, Martin" },
+            { text: "4352280809" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+          [
+            { text: "Hooper and Associates" },
+            { text: "4213301986" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+       
+          [
+            { text: "Quint Transportation" },
+            { text: "9450429526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Gross" },
+            { text: "2 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+          [
+            { text: "The Kintner Group" },
+            { text: "3992651526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Higher rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ]
+        ]
+      }) }}
+
+    </div>
+  </div>
+
+
+   
+     
+{% endblock %}
+
+

@@ -1,0 +1,51 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "declaration-employment-status-short.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="confirmation.html" method="post" novalidate>
+        
+        <h1 class="govuk-heading-l">Declaration</h1>
+
+        {{ govukRadios({
+          name: "worker-verification",
+          fieldset: {
+            legend: {
+              text: "Has every worker included on this return either been verified with HM Revenue & Customs, or been included in previous BRS returns in this, or the previous two tax years?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Accept"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

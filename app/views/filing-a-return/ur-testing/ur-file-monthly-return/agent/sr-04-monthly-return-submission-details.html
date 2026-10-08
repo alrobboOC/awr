@@ -1,0 +1,229 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Monthly return for period ending April 2023
+      </h1>
+
+        
+    <!-- <h2 class="govuk-heading-m govuk-!-margin-top-8 govuk-!-margin-bottom-6">
+        Submission details
+      </h2> -->
+      <!-- <p>Submitted at 8:46am on 19 March 2026.</p> -->
+      <!-- <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            Return period ended May 2026
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Receipt reference number
+              </dt>
+              <dd class="govuk-summary-list__value">
+              6QEDAHDREBY455GDNCPMDCNDFBDBJSJSJDNDDHDJDZ5
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Submission type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Monthly return
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Contractor name
+              </dt>
+              <dd class="govuk-summary-list__value">
+              PAL 355 Scheme
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                PAYE reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                123/AB456
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div> -->
+
+      <h2 class="govuk-heading-m">
+        Submission details
+      </h2>
+      <p>
+       Submitted at 8:46am on 16 March 2025.
+      </p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Receipt reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+          6QEDAHDREBY455GDNCPMDCNDFBDBJSJSJDNDDHDJDZ5
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Submission type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Monthly return
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contractor name
+          </dt>
+          <dd class="govuk-summary-list__value">
+          Apple Construction
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            PAYE reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            123/EZ10000
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m govuk-!-margin-top-8 govuk-!-margin-bottom-6">
+        Payment details
+      </h2>
+      <!-- <p>Number of subcontractors added: 3</p> -->
+      <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Number of subcontractors added
+            </dt>
+            <dd class="govuk-summary-list__value">
+            3
+            </dd>
+          </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total payments made
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £1900
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total cost of materials
+          </dt>
+          <dd class="govuk-summary-list__value">
+          £616
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total tax deducted
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £380
+          </dd>
+        </div>
+      </dl>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Payments made to subcontractors</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Subcontractor</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments made</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Cost of materials</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tax deducted</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">BuildRight Construction</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£165</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£95</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£95</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Northern Trades Ltd</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£75</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£55</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£55</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">TyneWear Ltd</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£165</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£125</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">£55</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            Total payment summary
+          </h2>
+        </div>
+        <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total payments made
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £1900
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total cost of materials
+                </dt>
+                <dd class="govuk-summary-list__value">
+                £616
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Total tax deducted
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £380
+                </dd>
+              </div>
+            </dl>
+        </div>
+      </div> -->
+    
+
+      
+      <p>
+         <a href="javascript:window.print()" class="govuk-link">Print this page</a>
+      </p>
+
+      <p>
+         <a href="mr-ar-02b-monthly-return-history-tax-year">Return to Monthly return history</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

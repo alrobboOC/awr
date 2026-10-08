@@ -1,0 +1,53 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Declaration" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c3-confirm-email"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Declaration
+    </h1>
+
+    <p class="govuk-body">
+      By submitting this declaration I confirm that no payments have been made to workers in the Business Industry during the tax month [dynamic date].
+    </p>
+
+    {{ govukWarningText({
+      text: "If you give any false information you may face financial penalties and prosecution.",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <div class="govuk-form-group">
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="declaration" name="declaration" type="checkbox" value="confirmed">
+          <label class="govuk-label govuk-checkboxes__label" for="declaration">
+            I confirm that the information given on this return is correct and complete to the best of my knowledge.
+          </label>
+        </div>
+      </div>
+    </div>
+
+    {{ govukButton({
+      text: "Confirm and submit",
+      href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c5-inactivity-warning"
+    }) }}
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Is this page not working properly? (opens in new tab)</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

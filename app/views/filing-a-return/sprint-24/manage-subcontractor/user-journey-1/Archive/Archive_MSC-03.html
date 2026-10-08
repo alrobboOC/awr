@@ -1,0 +1,74 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What are the contact details for {subcontractor name}? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/routing-handler" method="post">
+
+       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "What are the contact details for Martin Brody?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+
+   hint: {
+    text: "Choose which method of contact you would like to add for this subcontractor.
+
+Contact details are only for your own records."
+
+  },
+
+
+
+  items: [
+    {
+      value: "email",
+      text: "Email address"
+    },
+    {
+      value: "phone",
+      text: "Phone number"
+    },
+    {
+      value: "mobile",
+      text: "Mobile number"
+    },
+    {
+      divider: "or"
+    },
+    {
+      value: "none",
+      text: "Do not add any contact details for this subcontractor"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

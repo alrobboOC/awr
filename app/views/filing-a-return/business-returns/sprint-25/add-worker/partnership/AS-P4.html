@@ -1,0 +1,63 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+    Do you want to add contact details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/routing-handler" method="post">
+
+     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "countries",
+  fieldset: {
+    legend: {
+      text: "Which contact details do you want to add for {partnership name}?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Contact details are only for your own records"
+  },
+  items: [
+    {
+      value: "Email address",
+      text: "Email address"
+    },
+    {
+      value: "Phone number",
+      text: "Phone number"
+    },
+    {
+      value: "Mobile number",
+      text: "Mobile number"
+    }
+   
+    
+  ]
+}) }}
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

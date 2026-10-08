@@ -1,0 +1,37 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Selected workers part of a monthly return or verification request  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+         You cannot delete {worker name}
+        </h1>
+
+              
+        <p class="govuk-body">
+          This worker is currently part of a monthly return or verification request that is in progress.
+        </p>
+
+        <p class="govuk-body">
+          You must wait until that monthly return or verification request has been completed before you can delete them.
+        </p>
+             
+        <p class="govuk-body">
+            Back to <a href="#">Your workers</a>.
+        </p>
+       
+      
+
+    </div>
+  </div>
+
+{% endblock %}

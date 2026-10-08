@@ -1,0 +1,84 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Worker details updated"    
+    }) }}
+      
+    <p class="govuk-body">
+      You have updated the worker details for Martin Brody.
+    </p>
+
+    <h2 class="govuk-heading-m">Updates made</h2>
+
+    {{ govukTable({
+  caption: "Changes to worker details",
+  captionClasses: "govuk-visually-hidden",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Details"
+    },
+    {
+      text: "Previous"
+    },
+    {
+      text: "Updated"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Does the worker use a trading name?"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "No"
+      }
+    ],
+
+     
+    [
+      {
+        text: "Worker name"
+      },
+      {
+        text: "None provided"
+      },
+      {
+        text: "Martin Brody"
+      }
+    ]
+     
+
+    
+  ]
+}) }}
+
+
+
+   
+
+   
+
+    <p class="govuk-body">
+      Back to <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Your workers</a>.
+    </p>
+
+
+    <h2 class="govuk-heading-m">Before you go</h2>
+    <p class="govuk-body">Your feedback helps us make our service better.</p>
+    <p class="govuk-body"><a class="govuk-link" href="#">Take a short survey</a> to share your feedback on this service.</p>
+
+  </div>
+</div>
+
+{% endblock %}

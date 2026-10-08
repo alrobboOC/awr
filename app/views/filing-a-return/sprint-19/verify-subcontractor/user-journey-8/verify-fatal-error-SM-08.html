@@ -1,0 +1,31 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request has not been sent to HMRC – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">
+            Your verification request cannot be submitted
+          </h1>
+
+                
+          
+          <p class="govuk-body">
+              You must <a href="https://www.gov.uk/find-hmrc-contacts/construction-industry-scheme-general-enquiries" class="govuk-link">contact HMRC</a> for more help.
+          </p>
+                
+          <p class="govuk-body">
+              Back to <a href="#">Manage your subcontractors</a>.
+          </p>
+       
+    </div>
+  </div>
+
+{% endblock %}

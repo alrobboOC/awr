@@ -1,0 +1,167 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Which workers do you want to include?" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Which workers do you want to include?
+    </h1>
+
+    <p class="govuk-body">Tell us about all the workers you are including in this monthly return.</p>
+
+    <form action="mr-03-04-c-worker-details-added_exhustive-view" method="post">
+      <p class="govuk-body">You can also add workers, remove them, and <a href='#' class='govuk-link'>update your list</a>.</p>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link" id="select-all">Select all</a> | 
+        <a href="#" class="govuk-link" id="deselect-all">Deselect all</a>
+      </p>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-visually-hidden">Workers to include in monthly return</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Verified using this service</th>
+            <th scope="col" class="govuk-table__header">Verification number</th>
+            <th scope="col" class="govuk-table__header">Tax treatment</th>
+            <th scope="col" class="govuk-table__header">Include</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Alice, A</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="alice" name="workers" type="checkbox" value="alice">
+                  <label class="govuk-label govuk-checkboxes__label" for="alice">
+                    <span class="govuk-visually-hidden">Include Alice, A</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Bob, B</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="bob" name="workers" type="checkbox" value="bob">
+                  <label class="govuk-label govuk-checkboxes__label" for="bob">
+                    <span class="govuk-visually-hidden">Include Bob, B</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Charles, C</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="charles" name="workers" type="checkbox" value="charles">
+                  <label class="govuk-label govuk-checkboxes__label" for="charles">
+                    <span class="govuk-visually-hidden">Include Charles, C</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">BuildRight Business</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="bRBusiness" name="workers" type="checkbox" value="BuildRight Business" {{ checked ('workers', "BuildRight Business") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="bRBusiness">
+                    <span class="govuk-visually-hidden">Include BuildRight Business</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Northern Trades Ltd</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nTL" name="workers" type="checkbox" value="Northern Trades Ltd" {{ checked ('workers', "Northern Trades Ltd") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="nTL">
+                    <span class="govuk-visually-hidden">Include Northern Trades Ltd</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">TyneWear Ltd</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="TyneWear Ltd" name="workers" type="checkbox" value="TyneWear Ltd" {{ checked ('workers', "TyneWear Ltd") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="TyneWear Ltd">
+                    <span class="govuk-visually-hidden">Include TyneWear Ltd</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+<script>
+  // Select all / Deselect all functionality
+  document.getElementById('select-all').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('input[name="workers"]').forEach(function(checkbox) {
+      checkbox.checked = true;
+    });
+  });
+  
+  document.getElementById('deselect-all').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('input[name="workers"]').forEach(function(checkbox) {
+      checkbox.checked = false;
+    });
+  });
+</script>
+
+{% endblock %}

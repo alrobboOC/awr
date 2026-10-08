@@ -1,0 +1,189 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the subcontractor – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/SL-02-05-contact-details"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-l">Check your answers</h1>
+
+    <h2 class="govuk-heading-m">Subcontractor details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Type"
+          },
+          value: {
+            text: data['subcontractor-type'] or "Individual"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-03-subcontractor-type",
+                text: "Change",
+                visuallyHiddenText: "subcontractor type"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: data['full-name'] or "John Smith"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-01-individual-name",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Trading name"
+          },
+          value: {
+            text: data['trading-name'] or "No"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-01-trading-name",
+                text: "Change",
+                visuallyHiddenText: "trading name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Contractor address"
+          },
+          value: {
+            text: data['contractor-address'] or "No"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-01-add-address-question",
+                text: "Change",
+                visuallyHiddenText: "contractor address"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "National Insurance number"
+          },
+          value: {
+            text: data['nino'] or "No"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-01-which-identification",
+                text: "Change",
+                visuallyHiddenText: "National Insurance number"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Unique Taxpayer Reference"
+          },
+          value: {
+            text: data['utr'] or "0010294208"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-01-utr",
+                text: "Change",
+                visuallyHiddenText: "Unique Taxpayer Reference"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Works reference number"
+          },
+          value: {
+            text: data['works-ref'] or "No"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-05-works-reference",
+                text: "Change",
+                visuallyHiddenText: "works reference number"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Contact details"
+          },
+          value: {
+            text: data['telephone'] or "0111111111"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/SL-02-05-add-contact-details-question",
+                text: "Change",
+                visuallyHiddenText: "contact details"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Now add the subcontractor</h2>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        You must verify this subcontractor with HMRC before making any payments to them.
+      </strong>
+    </div>
+
+    <p class="govuk-body">
+      By adding this subcontractor you are confirming that, to the best of your knowledge, the details you are providing are correct.
+    </p>
+
+    <form action="/filing-a-return/SL-02-06-confirmation" method="post" novalidate>
+
+      {{ govukButton({
+        text: "Add subcontractor"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

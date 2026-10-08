@@ -1,0 +1,40 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="You have no authorised clients" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      You have no authorised clients
+    </h1>
+
+    <p class="govuk-body">You do not have any clients authorised to use the Construction Industry Scheme (CIS) service.</p>
+
+    <p class="govuk-body">To file returns for a client, they must authorise you to act on their behalf.</p>
+
+    <h2 class="govuk-heading-m">What you need to do</h2>
+
+    <p class="govuk-body">Ask your client to authorise you. They can do this by either:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>authorising you through their <a href="https://www.gov.uk/guidance/client-authorisation-an-overview" class="govuk-link">HMRC online account</a></li>
+      <li>downloading and completing <a href="https://www.gov.uk/government/publications/agent-authorisation-for-clients-64-8" class="govuk-link">form 64-8</a> to authorise you by post</li>
+    </ul>
+
+    <p class="govuk-body">It can take up to 5 working days for new authorisations to appear in your account.</p>
+
+    <p class="govuk-body">
+      <a href="/filing-a-return/v5/agent-flow/ip1-introduction" class="govuk-link">Return to home</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

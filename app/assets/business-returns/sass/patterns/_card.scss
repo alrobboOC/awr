@@ -1,0 +1,125 @@
+// Variables
+$border-color: #b1b4b6;
+$link-color: #005EA5;
+$link-hover: #2e8aca;
+$inactive-color: #6F777B;
+$bg-active: #f8f8f8;
+$bg-active-v1: #f3f2f1;
+$status-bg: #FFFFFF;
+
+// Card base styles
+.pta-card, .pta-card-2, .pta-card-3 {
+  border: 1px solid $border-color;
+
+  &.inactive {
+    color: $inactive-color;
+  }
+
+  .pta-card-heading {
+    margin-top: 0;
+    margin-bottom: .5em;
+    
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .pta-card-body,
+  .pta-card-body-v1 {
+    border-bottom: 1px solid $border-color;
+    padding: 12px;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      background-color: $bg-active;
+      transition: .1s ease-in-out;
+
+      .pta-card-heading a {
+        color: $link-color;
+        margin-top: 0;
+      }
+    }
+
+    .detail-large {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .detail {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+  }
+
+  .pta-card-body-v1 {
+    &.active {
+      background-color: $bg-active-v1;
+    }
+  }
+
+  .pta-card-action {
+    border-top: 0;
+    padding: 12px;
+
+    a {
+      border-bottom: 1px solid #C7DCEB;
+      color: $link-color;
+      text-decoration: none;
+      line-height: 1.5em;
+
+      &:hover {
+        border-bottom: 1px solid $link-color;
+        color: $link-hover;
+      }
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        margin: 0 0 1em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// ON HOVER
+.js-enabled {
+  .pta-card-body {
+    &.active:hover {
+      background-color: $link-color;
+      color: $status-bg;
+      cursor: pointer;
+
+      p, li, .detail-large, .pta-card-heading a {
+        color: $status-bg;
+      }
+
+      .status-low,
+      .status-med,
+      .status-high {
+        border: 1px solid $status-bg;
+        color: $status-bg;
+        transition-delay: .25s;
+      }
+
+      .status-med {
+        background-color: $link-color;
+      }
+    }
+  }
+}
+
+.pta-card-3 {
+  .pta-card-body {
+    padding-bottom: 1.2em;
+  }
+}

@@ -1,0 +1,128 @@
+{% extends "filing-a-return/business-returns/layouts/main-with-nav-cards.html" %}
+{% import "filing-a-return/business-returns/macros/custom/card-template.njk" as card %}
+
+{% block pageTitle %}
+  Manage your workers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <h1 class="govuk-heading-l">
+      Manage your workers
+    </h1>
+
+     <p class="govuk-body">Workers must be verified before you can include them on a monthly return. This will ensure that deductions are made at the correct rate.</p>
+
+        {{ govukInsetText({
+            html: 'You will need to use <a href="#" class="govuk-link">commercial software</a> to submit any verification requests that include more than 50 workers.'
+          }) }}
+          
+
+          
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="/filing-a-return/business-returns/sprint-27/add-worker/all/SL03-worker-type",
+        headingLevel="h2",
+        heading="Add new workers",
+        linkContent="Create records for any new workers who you want to pay.",
+        cardId="BRSreturnCard"
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="View your workers",
+        linkContent="Edit the details of any worker in your list.",
+        cardId="WorkersCard"
+        ) }}
+      </div>
+    </div>
+
+    
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="RLP1b-manage-your-brs-return.html",
+        headingLevel="h2",
+        heading="Review your verification history",
+        linkContent="Download or print copies of all verification requests you've submitted."
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Verify your workers",
+        linkContent="Make sure your workers are given the correct tax treatment."
+        ) }}
+      </div>
+    </div>
+
+
+       <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="RLP1b-manage-your-brs-return.html",
+        headingLevel="h2",
+        heading="Check your results",
+        linkContent="View the outcome of your latest verification request.",
+        cardId="BRSreturnCard"
+        ) }}
+      </div>
+     
+    </div>
+
+
+
+
+  </div>
+
+
+  <!-- Side Nav Links -->
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-!-padding-top-6"></div>
+    <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="/filing-a-return/business-returns/business-returns/guidance">
+              Business Returns Service: A guide for businesss and workers
+            </a>
+          </li>
+          <li>
+            <a href="/filing-a-return/business-returns/business-returns/guidance">
+              Email updates, videos and webinars about the Business Returns Service
+            </a>
+          </li>
+          <li>
+            <a href="/filing-a-return/business-returns/business-returns/guidance">
+              More information about business and property management
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+{% endblock %}
+

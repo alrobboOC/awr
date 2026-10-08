@@ -1,0 +1,36 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="File your monthly CIS return" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      File a monthly return
+    </h1>
+
+    <p class="govuk-body">Use this service to file a monthly return for the Construction Industry Scheme (CIS).</p>
+
+    <p class="govuk-body">You will need to enter the month and year of the return period.</p>
+
+  <form action="mr-02-b-tax-month-and-year" method="post">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

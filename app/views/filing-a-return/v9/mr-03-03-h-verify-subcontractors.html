@@ -1,0 +1,62 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verify subcontractors – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="declaration-page.html" method="post" novalidate>
+
+        <h1 class="govuk-heading-l">You have unverified subcontractors</h1>
+
+        {{ govukWarningText({
+          text: "One or more subcontractors have not been verified. Not verifyng subcontractors will result in them receiving a higher rate of tax.",
+          iconFallbackText: "Warning"
+        }) }}
+
+        {{ govukRadios({
+          name: "verify-subcontractors",
+          fieldset: {
+            legend: {
+              text: "Do you want to verify your subcontractors now?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              hint: {
+                text: "You will be taken to the verification service"
+              }
+            },
+            {
+              value: "no",
+              text: "No",
+              hint: {
+                text: "Higher-rate tax deductions will apply until verification is complete"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

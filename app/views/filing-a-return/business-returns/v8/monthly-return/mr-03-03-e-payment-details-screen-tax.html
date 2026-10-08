@@ -1,0 +1,53 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Total tax deducted – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "payment-details-screen-2-materials.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="mr-03-03-a-worker-payments.html" method="post" novalidate>
+        
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="tax-deducted">
+            Total tax deducted from TyneWear Ltd
+          </label>
+        </h1>
+
+        <div id="tax-deducted-hint" class="govuk-hint">
+          BRS deductions you made from the worker's payment. Enter pounds and pence, like £300.00, £450.00, £1,200.00
+        </div>
+
+        {{ govukInput({
+          classes: "govuk-input--width-10",
+          id: "tax-deducted",
+          name: "tax-deducted",
+          value: "180",
+          prefix: {
+            text: "£"
+          },
+          spellcheck: false,
+          attributes: {
+            inputmode: "decimal",
+            "aria-describedby": "tax-deducted-hint"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

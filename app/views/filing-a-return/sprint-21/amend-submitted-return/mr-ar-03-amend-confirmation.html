@@ -1,0 +1,44 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Confirm amendment
+      </h1>
+
+  <p class="govuk-body"><p>You are about to amend a monthly return. Any information you enter will be saved. </p>
+  {# <p>If you have already contacted the HMRC CIS Helpline about this return, you must also make those amendments in this return.</p> #}
+<p class="govuk-body">You must confirm you understand that:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>you are about to change the data for a return you have submitted previously</li>
+  <li>the original data will be deleted when you submit this amended return</li>
+  <li>the tax treatment for this return may be different from the one previously applied</li>
+</ul>
+
+<br>
+<form class="form" action="mr-ar-05-which-subcontractor-do-you-want-select" method="post">
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Confirm and continue
+</button>
+</form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

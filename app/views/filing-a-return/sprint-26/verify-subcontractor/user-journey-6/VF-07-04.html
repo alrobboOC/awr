@@ -1,0 +1,179 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before updating the individual – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Martin Brody</h1>
+
+      <h2 class="govuk-heading-m">Subcontractor information</h2>
+
+
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Type"
+      },
+      value: {
+        text: "Individual or sole trader"
+      }
+    }
+  ]
+
+  
+}) }}
+
+<h2 class="govuk-heading-m">More details</h2>
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Does subcontractor use a trading name?"
+      },
+      value: {
+        text: "No"
+      }
+    },
+    
+      {
+      key: {
+        text: "Subcontractor name"
+      },
+      value: {
+        text: "Martin Brody"
+      }
+    },
+    {
+      key: {
+        text: "Add subcontractor address?"
+      },
+      value: {
+        text: "Yes"
+      }
+      
+    },
+    {
+      key: {
+        text: "Address"
+      },
+      value: {
+        html: "
+          12 Harbor View Road<br>
+          Amity Island<br>
+          Bodmin<br>
+          Cornwall<br>
+          PL31 2HL<br>
+          England
+        "
+      }
+    },
+
+     {
+      key: {
+        text: "Add contact details?"
+      },
+   value: {
+        text: "Yes"
+      }
+     
+    },
+
+    
+    {
+      key: {
+        text: "Methods of contact"
+      },
+      value: {
+        text: "Email address"
+      }
+    },
+    {
+      key: {
+        text: "Email address"
+      },
+      value: {
+        text: "martin.brody@virginmedia.com"
+      }
+    },
+   
+    
+    {
+      key: {
+        text: "Add UTR?"
+      },
+      value: {
+        text: "Yes"
+      }
+    },
+
+
+    {
+      key: {
+        text: "UTR"
+      },
+      value: {
+        text: "3992651526"
+      }
+    },
+    {
+      key: {
+        text: "Add National Insurance number?"
+      },
+      value: {
+        text: "Yes"
+      }
+      
+    },
+    {
+      key: {
+        text: "National Insurance number"
+      },
+      value: {
+        text: "QQ123456C"
+      }
+    },
+    {
+      key: {
+        text: "Add works reference number?"
+      },
+      value: {
+        text: "Yes"
+      }
+    },
+    {
+      key: {
+        text: "Works reference number"
+      },
+      value: {
+        text: "XLS345-MM"
+      }
+    }
+  ]
+}) }}
+     <div>
+         <p class="govuk-body">
+      Back to <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Review unmatched subcontractors</a>.
+    </p>
+      </div>
+
+    
+
+    </div>
+  </div>
+{% endblock %}

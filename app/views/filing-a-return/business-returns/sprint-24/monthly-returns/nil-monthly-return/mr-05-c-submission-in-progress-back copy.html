@@ -1,0 +1,51 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Submission in progress" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Submission in progress
+    </h1>
+
+    <div class="govuk-inset-text">
+      Monthly return for period ended 5 June 2025
+    </div>
+    <p class="govuk-body-lead">
+      Your submission is currently being processed. This usually takes a few minutes, but may take longer during busy periods.
+    </p>
+
+    <p class="govuk-body">
+      You can check if your submission has been processed by refreshing your page or checking your submitted returns.
+    </p>
+
+    {{ govukDetails({
+      summaryText: "What happens during processing",
+      html: "<p class=\"govuk-body\">While your submission is being processed:</p>
+      <ul class=\"govuk-list govuk-list--bullet\">
+        <li>HMRC systems are validating your return</li>
+        <li>your submission is being checked for errors</li>
+        <li>a confirmation receipt is being generated</li>
+      </ul>
+      
+      <p class=\"govuk-body\">Once processing is complete, you'll be able to view your submission confirmation and receipt.</p>"
+    }) }}
+
+    <p class="govuk-body">
+      For technical problems, contact the <a href="#" class="govuk-link">HMRC Online Services Helpdesk (opens in new tab)</a>.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

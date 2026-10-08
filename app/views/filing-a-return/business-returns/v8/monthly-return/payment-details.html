@@ -1,0 +1,53 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Total payments made – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "mr-03-03-a-worker-payments.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="payment-details-screen-2-materials.html" method="post" novalidate>
+        
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="total-payments">
+            Total payments made to TyneWear Ltd
+          </label>
+        </h1>
+
+        <div id="total-payments-hint" class="govuk-hint">
+          The gross amount paid before any deductions, excluding VAT. Enter pounds and pence, like £300.00, £450.00, £1,200.00
+        </div>
+
+        {{ govukInput({
+          classes: "govuk-input--width-10",
+          id: "total-payments",
+          name: "total-payments",
+          value: "1200",
+          prefix: {
+            text: "£"
+          },
+          spellcheck: false,
+          attributes: {
+            inputmode: "numeric",
+            "aria-describedby": "total-payments-hint"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

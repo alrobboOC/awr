@@ -1,0 +1,84 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Subcontractor Automatic Update - Successful" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/v5/agent-flow/client-dashboard"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">
+      Successful automatic subcontractor update
+    </h1>
+
+    <p class="govuk-body">
+      The subcontractors below have been added to your subcontractor list.
+    </p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Unique Tax Reference</th>
+          <th scope="col" class="govuk-table__header">Verification number</th>
+          <th scope="col" class="govuk-table__header">Date added</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Alice, A</td>
+          <td class="govuk-table__cell">1111111111</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">01 Jan 2014</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Bob, B</td>
+          <td class="govuk-table__cell">2222222222</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">01 Jan 2014</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Charles, C</td>
+          <td class="govuk-table__cell">3333333333</td>
+          <td class="govuk-table__cell">V1000000009</td>
+          <td class="govuk-table__cell">01 Jan 2014</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Dave, D</td>
+          <td class="govuk-table__cell">4444444444</td>
+          <td class="govuk-table__cell">V1000000009</td>
+          <td class="govuk-table__cell">07 May 2015</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Elise, E</td>
+          <td class="govuk-table__cell">5555555555</td>
+          <td class="govuk-table__cell">V1000000009</td>
+          <td class="govuk-table__cell">07 May 2015</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Frank, F</td>
+          <td class="govuk-table__cell">6666666666</td>
+          <td class="govuk-table__cell">V1000000009</td>
+          <td class="govuk-table__cell">07 Jan 2018</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <p class="govuk-body">
+      <button type="submit" class="govuk-button" style="background-color: #00703c;" data-module="govuk-button">
+        Continue
+      </button>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

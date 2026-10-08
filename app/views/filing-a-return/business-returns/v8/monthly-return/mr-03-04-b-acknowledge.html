@@ -1,0 +1,52 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "mr-03-04-check-answers-v3.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="confirmation.html" method="post" novalidate>
+        
+        {{ govukRadios({
+          name: "confirm-declaration",
+          fieldset: {
+            legend: {
+              text: "Do you confirm the information in this return is correct and complete?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "By confirming, you are declaring that to the best of your knowledge you have only selected workers used within this reporting period."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes, the information is correct and complete"
+            },
+            {
+              value: "no",
+              text: "No, I need to make changes"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Accept and submit return"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

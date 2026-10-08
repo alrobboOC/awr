@@ -1,0 +1,70 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Monthly Return - Select Workers" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">
+      Select workers
+    </h1>
+
+    <p class="govuk-body">Use this service to tell us which workers you want to include in this monthly return.</p>
+
+    <p class="govuk-body">You can add and remove workers, and <a href='#' class='govuk-link'>update your list</a>.</p>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link" id="select-all">Select all</a> | 
+        <a href="#" class="govuk-link" id="deselect-all">Deselect all</a>
+      </p>
+
+    <form action="/filing-a-return/business-returns/business-returns-service/monthly-return/payments" method="post">
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Verification required?</th>
+            <th scope="col" class="govuk-table__header">Verification number</th>
+            <th scope="col" class="govuk-table__header">Tax treatment</th>
+            <th scope="col" class="govuk-table__header">Include this month</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">TyneWear</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="worker-1" name="worker-1" type="checkbox" value="tynewear">
+                <label class="govuk-label govuk-checkboxes__label" for="worker-1">
+                  <span class="govuk-visually-hidden">Include TyneWear</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

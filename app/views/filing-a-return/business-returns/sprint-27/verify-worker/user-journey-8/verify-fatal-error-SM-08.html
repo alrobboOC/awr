@@ -1,0 +1,32 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request has not been sent to HMRC – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+      {% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <h1 class="govuk-heading-l">
+            Your verification request cannot be submitted
+        </h1>
+                
+          
+          <p class="govuk-body">
+              You must <a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link">contact HMRC</a> for more help.
+          </p>
+                
+          <p class="govuk-body">
+              Back to <a href="#">Manage your workers</a>.
+          </p>
+       
+    </div>
+  </div>
+
+{% endblock %}

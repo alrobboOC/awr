@@ -1,0 +1,40 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+   Inactivity request  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+         Inactivity request 
+      </h1>
+      <p>You are submitting a request for inactivity. If it is accepted it is only valid for six months.</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          If you pay any subcontractors in this period you must submit a monthly return.
+        </strong>
+      </div>
+      <form class="form" action="mr-03-08-2f-do-you-want-email-confirmation" method="post">
+        {{ govukButton({
+          text: " Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

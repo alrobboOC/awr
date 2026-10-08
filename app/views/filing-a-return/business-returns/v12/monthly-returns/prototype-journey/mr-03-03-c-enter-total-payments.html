@@ -1,0 +1,84 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+    What are the total payments made to {{data['workers']}} in this reporting period? – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {%set workerName = data['workers'] %}
+        {%set subContLenght = data['workers'].length %}
+        <form action="mr-03-03-d-enter-material-costs" method="post" novalidate> 
+          {%if subContLenght > 1 %}
+          <!-- multiple worker -->
+           {%if data['whichWorkerDeetails'] != '' or data['whichWorkerDeetails'] != null %}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="total-payments">
+              What are the total payments made to {{data['whichWorkerDeetails']}}?  
+            </label>
+          </h1>
+          {%else%}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="total-payments">
+              What are the total payments made to {{workerName[0]}}?  
+            </label>
+          </h1>
+          {%endif%}
+          <div id="total-payments-hint" class="govuk-hint">
+            The gross amount paid before any deductions, excluding VAT. Enter pounds and pence, like £300.00, £1,200.00
+          </div>
+          {{ govukInput({
+            classes: "govuk-input--width-10",
+            id: "total-payments",
+            name: "total-payments",
+            value: data['total-payments'],
+            prefix: {
+              text: "£"
+            },
+            spellcheck: false,
+            attributes: {
+              inputmode: "numeric",
+              "aria-describedby": "total-payments-hint"
+            }
+          }) }}
+          {%else%}
+          <!-- single worker -->
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="total-payments">
+              What are the total payments made to {{workerName}}? 
+            </label>
+          </h1>
+          <div id="total-payments-hint" class="govuk-hint">
+            Enter the gross amount you paid to this worker. Exclude VAT and any deductions. Round up to the nearest pound.
+          </div>
+
+          {{ govukInput({
+            classes: "govuk-input--width-10",
+            id: "total-payments",
+            name: "total-payments",
+            value: data['total-payments'],
+            prefix: {
+              text: "£"
+            },
+            spellcheck: false,
+            attributes: {
+              inputmode: "numeric",
+              "aria-describedby": "total-payments-hint"
+            }
+          }) }}
+        {%endif%}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

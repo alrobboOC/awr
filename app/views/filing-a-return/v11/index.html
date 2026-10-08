@@ -1,0 +1,104 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 7" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">     
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong></span>
+    <h1 class="govuk-heading-xl">Sprint 11 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Wed, 07 Jan 2026 to Tue, 20 Jan 2026
+    </p>
+     <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-l">Add subcontractor - partnership</h2>
+    <p class="govuk-body">
+      Register new partnership subcontractors and verify their CIS tax status before making deductions from payments.
+    </p> -->
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-5-details">
+      <h2 class="govuk-heading-l">Monthly return</h2>
+      <p class="govuk-body">
+        The monthly returns journey allows contractors to report payments made to subcontractors during a tax month. Contractors select the tax period, choose which subcontractors to include, enter payment and deduction details, and submit their return by the 19th of the following month.
+      </p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          All screens
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/v11/monthly-returns/submit-inactivity-request-mr-03-08d" class="govuk-link">MR-03-08d - Submit Inactivity Request</a></li>
+          <li><a href="/filing-a-return/v11/monthly-returns/inactivity-request-warning-mr-03-08e" class="govuk-link">MR-03-08e - Inactivity Request Warning</a></li>
+          <li><a href="/filing-a-return/v11/monthly-returns/enter-email-address-mr-03-08f.html" class="govuk-link">MR-03-08f - Enter email Address</a></li>
+        </ul>
+      </div>
+    </details>
+      <!-- <p class="govuk-body">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">View journey</a>
+      </p> -->
+
+
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-11-details">
+      <h2 class="govuk-heading-l">Add subcontractor - partnership</h2>
+      <p class="govuk-body">
+        Register new partnership subcontractors and verify their CIS tax status before making deductions from payments.
+      </p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          All screens
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-add-address-questions-sl0205e-ptn" class="govuk-link">SL0205e - Add addresss subcontractor</a></li>
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-address-sl0205a-ptn" class="govuk-link">SL0205a - Enter addresss subcontractor</a></li>
+
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-add-contact-details-question-sl0201ca-ptn" class="govuk-link">SL0201ca - Add contact details subcontractor</a></li>
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-contact-details-sl0201b-ptn" class="govuk-link">SL0201b - Enter contact details subcontractor</a></li>
+
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-nominated-partner-name-sl0205b-ptn" class="govuk-link">SL0205b - Nominated partner name</a></li>
+
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-has-utr-sl0205ja-ptn" class="govuk-link">SL0205ja - Add UTR details</a></li>
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-partner-details-utr-sl0205j-ptn" class="govuk-link">SL0205j - Enter UTR details</a></li>
+
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-has-nino-sl0205ka-ptn" class="govuk-link">SL0205ka - Add NiNo details</a></li>
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-partner-details-ni-sl0205k-ptn" class="govuk-link">SL0205k - Enter NiNo details</a></li>
+
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-has-crn-sl0205la-ptn" class="govuk-link">SL0205la - Add Company Reg Number details</a></li>
+          <li><a href="/filing-a-return/v11/add-subcontractor/partnership-partner-details-crn-sl0205l-ptn" class="govuk-link">SL0205l - Enter Company Reg Number details</a></li>
+
+
+         
+          
+        </ul>
+      </div>
+    </details>
+
+  </div>
+</div>
+
+{% endblock %}

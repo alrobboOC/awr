@@ -1,0 +1,110 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+
+{% set pageName="Sprint 8" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag govuk-tag--green">
+        Completed
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 8 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Sprint dates to be confirmed
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-8-details">
+      <h2 class="govuk-heading-l">Sprint 8 screens</h2>
+      <p class="govuk-body">
+        CIS prototype screens for the monthly return journey.
+      </p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                monthly-return
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="monthly-return/date-confirm.html" class="govuk-link">date-confirm.html</a></li>
+              <li><a href="monthly-return/introduction.html" class="govuk-link">introduction.html</a></li>
+              <li><a href="monthly-return/mr-03-01-last_return_subcontractors.html" class="govuk-link">mr-03-01-last_return_subcontractors.html</a></li>
+              <li><a href="monthly-return/mr-03-02-a-select_subcontractors.html" class="govuk-link">mr-03-02-a-select_subcontractors.html</a></li>
+              <li><a href="monthly-return/mr-03-02-b-select_subcontractors.html" class="govuk-link">mr-03-02-b-select_subcontractors.html</a></li>
+              <li><a href="monthly-return/mr-03-02-c-select_subcontractors.html" class="govuk-link">mr-03-02-c-select_subcontractors.html</a></li>
+              <li><a href="monthly-return/mr-03-03-b-remove-subcontractor.html" class="govuk-link">mr-03-03-b-remove-subcontractor.html</a></li>
+              <li><a href="monthly-return/mr-03-03-d-payment-details-screen-materials.html" class="govuk-link">mr-03-03-d-payment-details-screen-materials.html</a></li>
+              <li><a href="monthly-return/mr-03-03-e-payment-details-screen-tax.html" class="govuk-link">mr-03-03-e-payment-details-screen-tax.html</a></li>
+              <li><a href="monthly-return/mr-03-03-g-subcontractor-payments.html" class="govuk-link">mr-03-03-g-subcontractor-payments.html</a></li>
+              <li><a href="monthly-return/mr-03-03-h-verify-subcontractors.html" class="govuk-link">mr-03-03-h-verify-subcontractors.html</a></li>
+              <li><a href="monthly-return/mr-03-03-i-subcontractor-payments-change.html" class="govuk-link">mr-03-03-i-subcontractor-payments-change.html</a></li>
+              <li><a href="monthly-return/mr-03-03-j-subcontractor-payments-proceed.html" class="govuk-link">mr-03-03-j-subcontractor-payments-proceed.html</a></li>
+              <li><a href="monthly-return/mr-03-04-a-check-answers-incomplete.html" class="govuk-link">mr-03-04-a-check-answers-incomplete.html</a></li>
+              <li><a href="monthly-return/mr-03-04-b-acknowledge.html" class="govuk-link">mr-03-04-b-acknowledge.html</a></li>
+              <li><a href="monthly-return/mr-03-04-c-check-answers-complete.html" class="govuk-link">mr-03-04-c-check-answers-complete.html</a></li>
+              <li><a href="monthly-return/mr-03-06-screen-no-subcontractors.html" class="govuk-link">mr-03-06-screen-no-subcontractors.html</a></li>
+              <li><a href="monthly-return/mr-03-08-a-declaration.html" class="govuk-link">mr-03-08-a-declaration.html</a></li>
+              <li><a href="monthly-return/mr-03-08-b-terms.html" class="govuk-link">mr-03-08-b-terms.html</a></li>
+              <li><a href="monthly-return/mr-03-08-c-terms.html" class="govuk-link">mr-03-08-c-terms.html</a></li>
+              <li><a href="monthly-return/mr-03-08-d-inactivity-request.html" class="govuk-link">mr-03-08-d-inactivity-request.html</a></li>
+              <li><a href="monthly-return/mr-03-08-e-inactivity-warning.html" class="govuk-link">mr-03-08-e-inactivity-warning.html</a></li>
+              <li><a href="monthly-return/mr-03-08-f-confirm-email-address.html" class="govuk-link">mr-03-08-f-confirm-email-address.html</a></li>
+              <li><a href="monthly-return/mr-03-08-g-declaration-final.html" class="govuk-link">mr-03-08-g-declaration-final.html</a></li>
+              <li><a href="monthly-return/payment-details.html" class="govuk-link">payment-details.html</a></li>
+              <li><a href="monthly-return/select-subcontractors.html" class="govuk-link">select-subcontractors.html</a></li>
+              <li><a href="monthly-return/subcontractor-payments.html" class="govuk-link">subcontractor-payments.html</a></li>
+            </ul>
+            <a href="monthly-return/introduction.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Monthly return subfolder journey
+            </a>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                v8 root files
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="mr-02-a-monthly_return_intro.html" class="govuk-link">mr-02-a-monthly_return_intro.html</a></li>
+              <li><a href="mr-02-b-monthly_return_intro.html" class="govuk-link">mr-02-b-monthly_return_intro.html</a></li>
+              <li><a href="mr-03-01-last_return_subcontractors.html" class="govuk-link">mr-03-01-last_return_subcontractors.html</a></li>
+              <li><a href="mr-03-02-a-select_subcontractors.html" class="govuk-link">mr-03-02-a-select_subcontractors.html</a></li>
+              <li><a href="mr-03-02-b-select_subcontractors.html" class="govuk-link">mr-03-02-b-select_subcontractors.html</a></li>
+              <li><a href="mr-03-02-c-select_subcontractors.html" class="govuk-link">mr-03-02-c-select_subcontractors.html</a></li>
+            </ul>
+            <a href="mr-02-a-monthly_return_intro.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              V8 root journey
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

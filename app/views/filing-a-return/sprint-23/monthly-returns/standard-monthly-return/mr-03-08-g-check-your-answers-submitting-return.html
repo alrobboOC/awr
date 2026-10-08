@@ -1,0 +1,171 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers for TyneWear Ltd – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+      <form class="form" action="mr-04-e-successful-submission" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {%set subcontractorselected = data['subcontractors']%}
+      {%set tPayment = data['total-payments']%}
+      {%set mCost = data['materials-cost']%}
+      {%set tTax = data['tax-deducted']%}
+      <h1 class="govuk-heading-l">
+        Check your answers before submitting your return
+      </h1>
+      <h2 class="govuk-heading-m">Return details</h2>
+      {{ govukSummaryList({
+        rows: [
+        {
+            key: {
+              text: "Return type"
+            },
+            value: {
+              text: "Monthly return"
+         }
+         },
+          {
+            key: {
+              text: "Return period ended"
+            },
+            value: {
+              text: "February 2025"
+         }
+         },
+
+                 
+          {
+            key: {
+              text: "Number of subcontractor payments made"
+            },
+            value: {
+              text: "4"
+         },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+
+
+         
+        {
+            key: {
+              text: "Declaration of employment status"
+            },
+            value: {
+              text: "Yes"
+         },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Declaration of verified status"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Inactivity request"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+      <h2 class="govuk-heading-m">Email confirmation</h2>
+       {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Do you want submission confirmation by email?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Email address"
+            },
+            value: {
+              text: "sarah.phillips@example.gov.uk"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+        {{ govukButton({
+          text: "Confirm and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

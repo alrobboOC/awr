@@ -1,0 +1,39 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Scheme inactive – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     <h1 class="govuk-heading-l">
+            Your verification request cannot be submitted
+     </h1>
+
+
+       
+<p class="govuk-body">
+    You need to select at least one subcontractor to send a verification request.
+</p>
+       
+
+      
+
+    </div>
+  </div>
+
+   
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Select subcontractors"
+  }) }}
+
+  <a class="govuk-link" href="#">Cancel request</a>
+</div>
+
+{% endblock %}

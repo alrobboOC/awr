@@ -1,0 +1,38 @@
+ {% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Are you sure you want to delete the monthly return for August 2025? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+      <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+        What is the business's Unique Taxpayer Reference (UTR)?
+    </h1>
+
+    <p class="govuk-body">A UTR is a 10 or 13-digit number issued by HMRC to identify individuals or companies for tax purposes.</p>
+    <div class="govuk-form-group">
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+
+    <div class="govuk-!-padding-top-6"></div>
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+   Continue
+    </button>
+  
+  </div>
+  </div>
+{% endblock %}

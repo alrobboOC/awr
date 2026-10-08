@@ -1,0 +1,141 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Check subcontractors" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">
+      Check subcontractors
+    </h1>
+
+    <p class="govuk-body">The subcontractors listed below were included in the last monthly return you submitted.</p>
+
+    <p class="govuk-body">If you do not want to include one or more of the subcontractors, de-select them. 
+</p>
+
+    <p class="govuk-body">You can deselect any subcontractor you do not want to include. To add a subcontractor from your list, select 'Show all subcontractors' below.</p>
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">Show all subcontractors</a>
+    </p>
+
+    <form action="/filing-a-return/construction-industry-scheme/monthly-return/payments" method="post">
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Verified using this service</th>
+            <th scope="col" class="govuk-table__header">Verification number</th>
+            <th scope="col" class="govuk-table__header">Tax treatment</th>
+            <th scope="col" class="govuk-table__header">Include this month</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Alice, A</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-alice" name="subcontractors" type="checkbox" value="alice">
+                <label class="govuk-label govuk-checkboxes__label" for="include-alice">
+                  <span class="govuk-visually-hidden">Include Alice, A</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Bob, B</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-bob" name="subcontractors" type="checkbox" value="bob">
+                <label class="govuk-label govuk-checkboxes__label" for="include-bob">
+                  <span class="govuk-visually-hidden">Include Bob, B</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Charles, C</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-charles" name="subcontractors" type="checkbox" value="charles">
+                <label class="govuk-label govuk-checkboxes__label" for="include-charles">
+                  <span class="govuk-visually-hidden">Include Charles, C</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Dave, D</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-dave" name="subcontractors" type="checkbox" value="dave">
+                <label class="govuk-label govuk-checkboxes__label" for="include-dave">
+                  <span class="govuk-visually-hidden">Include Dave, D</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Elise, E</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-elise" name="subcontractors" type="checkbox" value="elise">
+                <label class="govuk-label govuk-checkboxes__label" for="include-elise">
+                  <span class="govuk-visually-hidden">Include Elise, E</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Frank, F</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-frank" name="subcontractors" type="checkbox" value="frank" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="include-frank">
+                  <span class="govuk-visually-hidden">Include Frank, F</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Do you want to submit an inactivity request?" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c1-confirm-nil-return"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Do you want to submit an inactivity request?
+  </h1>
+</legend>
+        
+        <p class="govuk-body">You can submit an inactivity request to tell HMRC that you do not anticipate paying workers in the next six months.</p>
+        
+        <p class="govuk-body">If this request is accepted, you won't need to send us a monthly return.</p>
+
+        {{ govukInsetText({
+          text: "You must let HMRC know when you start to pay workers again by phoning the BRS Helpline. Telephone: 0300 200 3210."
+        }) }}
+
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="inactivity-request" name="inactivity-request" type="radio" value="yes">
+    <label class="govuk-label govuk-radios__label" for="inactivity-request">
+      Yes
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="inactivity-request-2" name="inactivity-request" type="radio" value="no">
+    <label class="govuk-label govuk-radios__label" for="inactivity-request-2">
+      No
+    </label>
+  </div>
+</div>
+      </fieldset>
+    </div>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c3-confirm-email"
+    }) }}
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Is this page not working properly? (opens in new tab)</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

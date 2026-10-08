@@ -1,0 +1,155 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  CIS monthly return submitted – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      {{ govukPanel({
+        titleText: "CIS monthly return submitted",
+        html: "Your reference number<br><strong>CIS-2025-12-123AB456</strong>"
+      }) }}
+
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        We'll process your return and update your account within 3 working days.
+      </p>
+
+      <p class="govuk-body">
+        You must pay the total CIS deductions of <strong>£720.00</strong> by 22 January 2026 (or 19 January if paying by post).
+      </p>
+
+      <h2 class="govuk-heading-m">What you confirmed</h2>
+
+      <p class="govuk-body">By submitting this return you confirmed that:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>The employment status of each individual included on this return has been considered and payments have not been made under contracts of employment</li>
+        <li>Every subcontractor included on this return has either been verified with HM Revenue & Customs, or has been included in previous CIS returns in this, or the previous two tax years</li>
+        <li>The information given on this return is correct and complete to the best of your knowledge and belief</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Your submission</h2>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            CIS-2025-12-123AB456
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            PAYE reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            123/AB456
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Tax period
+          </dt>
+          <dd class="govuk-summary-list__value">
+            6 April 2022 to 5 May 2022
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date submitted
+          </dt>
+          <dd class="govuk-summary-list__value">
+            15 December 2025 at 3:47pm
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Subcontractors paid
+          </dt>
+          <dd class="govuk-summary-list__value">
+            3
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total payments made
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £4,500
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total materials cost
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £900
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total CIS deductions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £720.00
+          </dd>
+        </div>
+      </dl>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">View or print a copy of your submitted return</a>
+      </p>
+
+      <h2 class="govuk-heading-m">Make a payment</h2>
+
+      <p class="govuk-body">
+        You can pay online, by Direct Debit, or through your bank or building society.
+      </p>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Make a payment now</a>
+      </p>
+
+      <h2 class="govuk-heading-m">What you can do next</h2>
+
+      <ul class="govuk-list">
+        <li>
+          <a href="#" class="govuk-link">Submit another CIS monthly return</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">View your CIS account</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">View submitted returns</a>
+        </li>
+        <li>
+          <a href="#" class="govuk-link">Manage your subcontractors</a>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Get help</h2>
+
+      <p class="govuk-body">
+        Contact the CIS Helpline if you have questions about your return or payment.
+      </p>
+
+      <div class="govuk-inset-text">
+        <p class="govuk-body">
+          <strong>CIS Helpline</strong><br>
+          Telephone: 0300 200 3210<br>
+          Monday to Friday, 8am to 6pm<br>
+          <a href="#" class="govuk-link">Find out about call charges</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

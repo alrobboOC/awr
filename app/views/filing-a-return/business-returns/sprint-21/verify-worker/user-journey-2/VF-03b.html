@@ -1,0 +1,75 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation by email – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/routing-handler" method="post">
+
+        <h1 class="govuk-heading-l">
+          Reverify existing workers
+        </h1>
+
+        <p class="govuk-body">
+          To make sure that their tax treatment is correct and up to date, you can reverify any of your existing workers.
+
+        </p>
+
+        <p class="govuk-body">
+            You may want to reverify workers if they:
+
+        </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>have recently changed any of their information</li>
+              <li>have not been included on a return recently and have lost their verified status</li>
+              <li>are about to lose their verified status</li>
+            </ul>
+
+              <h2 class="govuk-heading-m">
+                Do you want to add other workers to this verification request?
+              </h2>
+
+        {{ govukRadios({
+          name: "emailConfirmation",
+          classes: "govuk-radios--inline",
+          fieldset: {
+            describedBy: "email-confirmation-info"
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            
+            {
+              value: "No",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

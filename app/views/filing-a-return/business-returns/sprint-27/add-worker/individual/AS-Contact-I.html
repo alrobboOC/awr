@@ -1,0 +1,70 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you want to add contact details – {{ serviceName }} – GOV.UK Prototype Kit
+
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form class="form" onsubmit="return routeAddress()">
+
+        {{ govukRadios({
+          name: "add-contact",
+          fieldset: {
+            legend: {
+              text: "Do you want to add contact details for {worker name}?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+        
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+ <script>
+  function routeAddress() {
+    const selected = document.querySelector('input[name="add-contact"]:checked');
+
+    if (!selected) return false;
+
+    window.location.href = selected.value === 'yes'
+      ? 'AS-I4'
+      : 'individual-has-utr-AS-I5-SL0205G-ptn';
+
+    return false;
+  }
+</script>
+
+{% endblock %}

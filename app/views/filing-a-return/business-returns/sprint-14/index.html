@@ -1,0 +1,249 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 7" %}
+{% set pageName="Sprint 14" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">     
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong>
+      </span>
+        </strong></span>
+    <h1 class="govuk-heading-xl">Sprint 14 - BRS prototype</h1>
+    <p class="govuk-body-l">
+      Wed, 18 Feb 2026 to Tue, 3 March 2026
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <!-- Add worker screens start from here -->
+    <div id="sprint-14-details">
+      <h2 class="govuk-heading-l">
+        Add worker
+      </h2>
+      <p class="govuk-body">
+       Register new individual workers and verify their BRS tax status before making deductions from payments.
+      </p>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Add worker - individual
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+
+              <!-- All -->
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/all/worker-added-AS-CONF-ptn.html" class="govuk-link">
+                  AS-CONF – Worker added (confirmation)
+                </a>
+              </li>
+
+              <!-- Individual -->
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-add-address-questions-AS-I2-SL0205E-ptn.html" class="govuk-link">
+                  AS-I2-SL0205E – Add individual address (question)
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-add-contact-details-question-AS-I1-ptn.html" class="govuk-link">
+                  AS-I1 – Add individual contact details (question)
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-address-enter-AS-I3-SL0205A-ptn.html" class="govuk-link">
+                  AS-I3-SL0205A – Enter individual address
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-check-answers-AS-CYA-I-ptn.html" class="govuk-link">
+                  AS-CYA-I – Check answers (individual)
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-contact-email-AS-I4a-ptn.html" class="govuk-link">
+                  AS-I4a – Individual contact email
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-contact-mobile-AS-I4c-ptn.html" class="govuk-link">
+                  AS-I4c – Individual contact mobile
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-contact-phone-AS-I4b-ptn.html" class="govuk-link">
+                  AS-I4b – Individual contact phone
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-enter-nino-AS-I8-SL0205B-ptn.html" class="govuk-link">
+                  AS-I8-SL0205B – Enter individual NINO
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-enter-utr-AS-I6-SL0205C-ptn.html" class="govuk-link">
+                  AS-I6-SL0205C – Enter individual UTR
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-has-nino-AS-I7-SL0205F-ptn.html" class="govuk-link">
+                  AS-I7-SL0205F – Does the individual have a NINO?
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-has-tradingname-SL0201E-ptn.html" class="govuk-link">
+                  SL0201E – Does the individual have a trading name?
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-has-utr-AS-I5-SL0205G-ptn.html" class="govuk-link">
+                  AS-I5-SL0205G – Does the individual have a UTR?
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-name-AS-I1-SL0201A-ptn.html" class="govuk-link">
+                  AS-I1-SL0201A – Individual name
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-tradingname-AS-I1-SL0201D-ptn.html" class="govuk-link">
+                  AS-I1-SL0201D – Individual trading name
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-worksref-AS-I9-SL0205H-ptn.html" class="govuk-link">
+                  AS-I9-SL0205H – Individual works reference
+                </a>
+              </li>
+              <li>
+                <a href="/filing-a-return/business-returns/sprint-14/add-worker/individual/individual-worksref-enter-AS-I10-SL0205I-ptn.html" class="govuk-link">
+                  AS-I10-SL0205I – Enter individual works reference
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Monthly return screens start from here -->
+    <div id="sprint-14-details">
+      <h2 class="govuk-heading-l">Monthly return</h2>
+      <p>In this sprint, we worked on updating the Nil return journey, align with the standard return journey.</p>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Nil return (updated version)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="monthly-returns/nil-monthly-return/mr-02-a-file-your-nil-return.html" class="govuk-link">MR-02-a File your nil return</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-02-b-enter-tax-month-and-year.html" class="govuk-link">MR-02-b Enter tax month and year</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-03-08-d-submit-inactivity-request-nil-return.html" class="govuk-link">MR-03-08-d Submit inactivity request nil return</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-03-08-e-inactivity-request-nil-return.html" class="govuk-link">MR-03-08-e Inactivity request nil return</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link">MR-03-08-2f Do you want email confirmation</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-03-08-f-enter-email-address.html" class="govuk-link">MR-03-08-f Enter email address</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-02-c-declaration-no-payments.html" class="govuk-link">MR-02-c Declaration no payments</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-03-08-g-check-your-answers-submitting-nil-return.html" class="govuk-link">MR-03-08-g Check your answers submitting nil return</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-04-a-sending-submission.html" class="govuk-link">MR-04-a Sending submission</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-04-e-successful-submission.html" class="govuk-link">MR-04-e Successful submission with receipt and email</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-04-b-successful-submission.html" class="govuk-link">MR-04-b Sccessful submission no receipt and email</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-04-c-successful-submission.html" class="govuk-link">MR-04-c Successful submission no receipt with email</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-04-d-successful-submission.html" class="govuk-link">MR-04-d Successful submission with receipt no email</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link">MR-05-b Submission in progress (while submitting)</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-05-c-submission-in-progress-back.html" class="govuk-link">MR-05-c Submission in progress (overview page)</a></li>
+              
+              <li><a href="monthly-returns/nil-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link">MR-05-a submission unsuccessful cannot resubmit</a></li>
+              <li><a href="monthly-returns/nil-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link">MR-05-b Submission unsuccessful resubmit</a></li>
+              
+
+            </ul>
+            <!-- <p class="govuk-body">
+              <a href="nil-monthly-return/mr-02-a-file-your-nil-return.html" class="govuk-link">view Nil retun journey</a>
+            </p> -->
+            <a href="monthly-returns/nil-monthly-return/mr-02-a-file-your-nil-return.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Nil return journey
+            </a>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Standard monthly return
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+          <ul class="govuk-list">
+            
+            <li><a href="monthly-returns/standard-monthly-return/mr-02-a-file-monthly-return.html.html" class="govuk-link">MR-02-a File monthly return</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-02-b-tax-month-and-year.html.html" class="govuk-link">MR-02-b Enter tax month and year</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-02-a-workers-to-include.html" class="govuk-link">MR-03-02-a Workers to include</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-03-c-enter-total-payments.html" class="govuk-link">MR-03-03-c Enter total payments</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-03-d-enter-material-costs.html" class="govuk-link">MR-03-03-d Enter material costs</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-03-e-enter-tax-deducted.html" class="govuk-link">mr-03-03-e Enter tax deducted</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04-a-check-your-answers.html" class="govuk-link">mr-03-04-a Check your answers</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04-c-worker-details-added" class="govuk-link">MR-03-04- c added details for a single worker</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04-c-worker-details-added_exhustive-view" class="govuk-link">MR-03-04-c added details for multiple worker</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04-d-add-worker-details" class="govuk-link">MR-03-04-d Add worker details</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04-d-add-worker-details_exhustive_view" class="govuk-link">MR-03-04-d Add worker details...(Exhaustive views) </a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04e-summary-worker-payments" class="govuk-link">MR-03-04-e Summary worker payments</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-03-b-change-worker" class="govuk-link">MR-03-03-b Change worker's details</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/remove-worker-mr-03-03-b" class="govuk-link">MR-03-03-b Remove worker</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-04-b-payment-details-confirmation" class="govuk-link">MR-03-04-b Payment details confirmation</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08-b-employment-status-declaration.html" class="govuk-link">mr-03-08-b Employment status declaration</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08-b-verified-declaration.html" class="govuk-link">mr-03-08-b Verified declaration</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08-b-verified-declaration.html" class="govuk-link">mr-03-08-b Verified declaration</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08d-submit-inactivity-request.html" class="govuk-link">MR-03-08-d Submit inactivity request</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08e-inactivity-request-warning.html" class="govuk-link">MR-03-08-e Inactivity request warning</a></li>
+            
+
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link">MR-03-08-f Email address confirmation</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08f-enter-email-address.html" class="govuk-link">MR-03-08-f Enter your email address</a></li>
+            
+            <!-- <li><a href="monthly-returns/standard-monthly-return/mr-03-04-a-check-answers-total-payments" class="govuk-link">MR-03-04-a Check your answers</a></li> -->
+
+
+
+
+            <li><a href="monthly-returns/standard-monthly-return/mr-03-08-g-check-your-answers-submitting-return.html" class="govuk-link">mr-03-08-g Check your answers (submitting return)</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-04-a-sending-submission.html" class="govuk-link">mr-04-a Sending submission</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-04-b-successful-submission.html" class="govuk-link">mr-04-b Sccessful submission no receipt and email</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-04-c-successful-submission.html" class="govuk-link">mr-04-c Successful submission no receipt with email</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-04-d-successful-submission.html" class="govuk-link">mr-04-d Successful submission with receipt no email</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-04-e-successful-submission.html" class="govuk-link">mr-04-e Successful submission with receipt and email</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link">mr-05-b Submission in progress (while submitting)</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-05-c-submission-in-progress-back.html" class="govuk-link">mr-05-c Submission in progress (overview page)</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link">mr-05-a submission unsuccessful cannot resubmit</a></li>
+            <li><a href="monthly-returns/standard-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link">mr-05-b Submission unsuccessful resubmit</a></li>
+          </ul>
+          <p class="govuk-body">
+            <a href="/filing-a-return/business-returns/sprint-13/monthly-returns/prototype-journey/mr-02-a-file-monthly-return" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Standard return journey</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -66,3 +66,19 @@ registrationPages.forEach((page) => {
     res.redirect(`/business-registration/${page}`)
   })
 })
+
+// The generic return-filing journey is the default entry point.
+router.get('/filing-a-return', (req, res) => {
+  res.redirect('/filing-a-return/business-returns/')
+})
+
+router.use('/filing-a-return/business-returns', (req, res, next) => {
+  res.locals.serviceName = 'Business Returns Service'
+  next()
+}, require('./views/filing-a-return/business-returns/routes'))
+
+// Imported CIS prototype: keep its service name and routes within this journey.
+router.use('/filing-a-return', (req, res, next) => {
+  res.locals.serviceName = 'Construction Industry Scheme'
+  next()
+}, require('./views/filing-a-return/routes'))

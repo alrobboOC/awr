@@ -1,0 +1,55 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the worker's Unique Taxpayer Reference? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/SL-02-01-address"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/SL-02-05-verification-number" method="post">
+
+        {{ govukRadios({
+          name: "has-utr",
+          fieldset: {
+            legend: {
+              text: "Do you know the Unique Taxpayer Reference for {company name}?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This information will be used to verify the company as a worker"
+          },
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

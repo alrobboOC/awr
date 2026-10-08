@@ -1,0 +1,136 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Verification request
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Submission details
+      </h2>
+      <p>
+       Submitted at hh:mm on dd Month yyyy
+      </p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Verification number
+          </dt>
+          <dd class="govuk-summary-list__value">
+          V0004528765
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Subcontractors in this request
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7
+          </dd>
+       
+        </div>
+      </dl>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-8 govuk-!-margin-bottom-6">
+  Subcontractors to verify
+</h2>
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  head: [
+    {
+      text: "Name"
+    },
+    {
+      text: "Verification number"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Amity Marine Contractors"
+      },
+      {
+        text: "V0004528765"
+      }
+    ],
+    [
+      {
+        text: "Brody, Martin"
+      },
+      {
+        text: "V0004528765"
+      }
+    ],
+    [
+      {
+        text: "Brody, Michael"
+      },
+      {
+        text: "V0004528765"
+      }
+    ],
+    [
+      {
+        text: "Brody, Sean"
+      },
+      {
+        text: "V0004528765"
+      }
+    ],
+    [
+      {
+        text: "Hooper and Associates"
+      },
+      {
+        text: "V0004528765"
+      }
+    ],
+    [
+      {
+        text: "Orca Industrial"
+      },
+      {
+        text: "V0004528765/L"
+      }
+    ],
+    [
+      {
+        text: "Quint Transportation"
+      },
+      {
+        text: "V0004528765"
+      }
+    ]
+  ]
+}) }}
+    
+
+      
+      <p class="govuk-body">
+         <a href="javascript:window.print()" class="govuk-link">Print this request</a>
+      </p>
+
+      <p class="govuk-body">
+         Back to <a href="sr-02-monthly-return-history-tax-year.html">Manage your subcontractors</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

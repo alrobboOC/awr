@@ -1,0 +1,36 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="File your monthly BRS return" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Manage business details
+    </h1>
+
+    <p class="govuk-body">Use this service to confirm or change the business's email or scheme name associated with this account.</p>
+
+    <p class="govuk-body">You will need the business Unique Tax Reference (UTR) to do this.</p>
+
+  <form action="mr-02-b-tax-month-and-year" method="post">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

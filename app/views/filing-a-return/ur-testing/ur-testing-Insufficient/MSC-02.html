@@ -1,0 +1,291 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before updating the individual – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Alan Grant</h1>
+
+      <h2 class="govuk-heading-m">Subcontractor information</h2>
+
+
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Type"
+      },
+      value: {
+        text: "Individual or sole trader"
+      }
+    }
+  ]
+
+  
+}) }}
+
+<h2 class="govuk-heading-m">More details</h2>
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    
+
+   {
+          key: {
+        text: "Names"
+      },
+      value: {
+        text: "Subcontractor name"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "Subcontractor name"
+          }
+        ]
+      }
+    },  
+
+
+      {
+          key: {
+        text: "Subcontractor name"
+      },
+      value: {
+        text: "Alan Grant"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "company name"
+          }
+        ]
+      }
+    },  
+
+    {
+      key: {
+        text: "Add subcontractor address?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "subcontractor address"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Address"
+      },
+      value: {
+        html: "
+          21 Raptor Ridge<br>
+          Ambermos<br>
+          Birdport<br>
+          Dorset<br>
+          TR3 3EX<br>
+          England
+        "
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "address"
+          }
+        ]
+      }
+    },
+
+     {
+      key: {
+        text: "Add contact details?"
+      },
+   value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "Add contact details"
+          }
+        ]
+      }
+    },
+
+    
+    {
+      key: {
+        text: "Methods of contact"
+      },
+      value: {
+        text: "Email address"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "methods of contact"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Email address"
+      },
+      value: {
+        text: "alan.grant@virginmedia.com"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "email address"
+          }
+        ]
+      }
+    },
+   
+    
+    {
+      key: {
+        text: "Add UTR?"
+      },
+      value: {
+        text: "No"
+      },
+      actions: {
+        items: [
+          {
+            href: "individual-has-utr-AS-I5-SL0205G-ptn",
+            text: "Change",
+            visuallyHiddenText: "add UTR"
+          }
+        ]
+      }
+    },
+    
+    {
+      key: {
+        text: "Add National Insurance number?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "add National Insurance number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "National Insurance number"
+      },
+      value: {
+        text: "QQ123499T"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "National Insurance number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Add works reference number?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "add works reference number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Works reference number"
+      },
+      value: {
+        text: "JEEP18"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "works reference number"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+     
+
+      <h2 class="govuk-heading-m">Confirm changes</h2>
+
+      <p class="govuk-body">By changing this subcontractor's details you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+          <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Confrim",
+          href: "#"
+        }) }}
+
+        <a class="govuk-link" href="#">Cancel changes</a>
+      </div>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+
+{% set pageName="Sprint 1-4" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag govuk-tag--green">
+        Completed
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 1-4 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Sprint dates to be confirmed
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-1-4-details">
+      <h2 class="govuk-heading-l">Sprint 1-4 screens</h2>
+      <p class="govuk-body">
+        Early CIS prototype screens covering error handling and monthly nil return journeys.
+      </p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                error-handling
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="error-handling/crr1.html" class="govuk-link">crr1.html</a></li>
+              <li><a href="error-handling/crr2.html" class="govuk-link">crr2.html</a></li>
+              <li><a href="error-handling/crr3.html" class="govuk-link">crr3.html</a></li>
+              <li><a href="error-handling/crr4.html" class="govuk-link">crr4.html</a></li>
+              <li><a href="error-handling/crr5.html" class="govuk-link">crr5.html</a></li>
+              <li><a href="error-handling/err1.html" class="govuk-link">err1.html</a></li>
+              <li><a href="error-handling/err2.html" class="govuk-link">err2.html</a></li>
+              <li><a href="error-handling/err3.html" class="govuk-link">err3.html</a></li>
+              <li><a href="error-handling/err4.html" class="govuk-link">err4.html</a></li>
+              <li><a href="error-handling/err5.html" class="govuk-link">err5.html</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                monthly-nil-return
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="monthly-nil-return/c1-confirm-nil-return.html" class="govuk-link">c1-confirm-nil-return.html</a></li>
+              <li><a href="monthly-nil-return/c2-inactivity-request.html" class="govuk-link">c2-inactivity-request.html</a></li>
+              <li><a href="monthly-nil-return/c3-confirm-email.html" class="govuk-link">c3-confirm-email.html</a></li>
+              <li><a href="monthly-nil-return/c4-declaration.html" class="govuk-link">c4-declaration.html</a></li>
+              <li><a href="monthly-nil-return/c5-inactivity-warning.html" class="govuk-link">c5-inactivity-warning.html</a></li>
+              <li><a href="monthly-nil-return/c6-submission.html" class="govuk-link">c6-submission.html</a></li>
+              <li><a href="monthly-nil-return/c7-submission-sending.html" class="govuk-link">c7-submission-sending.html</a></li>
+              <li><a href="monthly-nil-return/c8-confirmation.html" class="govuk-link">c8-confirmation.html</a></li>
+              <li><a href="monthly-nil-return/c8a-confirmation.html" class="govuk-link">c8a-confirmation.html</a></li>
+              <li><a href="monthly-nil-return/c9-view-save-receipt.html" class="govuk-link">c9-view-save-receipt.html</a></li>
+              <li><a href="monthly-nil-return/c10-submission-receipt.html" class="govuk-link">c10-submission-receipt.html</a></li>
+              <li><a href="monthly-nil-return/c11-submission-unsuccessful.html" class="govuk-link">c11-submission-unsuccessful.html</a></li>
+              <li><a href="monthly-nil-return/c12-submission-awaiting.html" class="govuk-link">c12-submission-awaiting.html</a></li>
+            </ul>
+            <a href="monthly-nil-return/c1-confirm-nil-return.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Monthly nil return journey
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,348 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the individual – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before adding this individual</h1>
+
+      <h2 class="govuk-heading-m">Subcontractor details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Individual or sole trader"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "type"
+                }
+              ]
+            }
+          },
+
+     {
+
+          key: {
+              text: "Names"
+            },
+            value: {
+              text: "Subcontractor name"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Names"
+                }
+              ]
+            }
+          },
+ 
+
+     {
+          key: {
+              text: "Subcontractor name"
+            },
+            value: {
+              text: "{Subcontractor name}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Subcontractor name"
+                }
+              ]
+            }
+          },
+
+      
+    
+        
+
+
+  
+
+
+
+          
+
+  
+
+
+          
+
+
+
+            {
+            key: {
+              text: "Add subcontractor address?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "subcontractor address"
+                }
+              ]
+            }
+          },
+
+          {
+
+
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   "
+                      {Address line 1}<br>
+                      {Address line 2}<br>
+                      {Town or city}}<br>
+                      {County}<br>
+                      {Postal code}<br>
+                      {Country}<br>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+
+           {
+      key: {
+        text: "Add contact details?"
+      },
+   value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "Add contact details"
+          }
+        ]
+      }
+    },
+
+
+        {
+
+          key: {
+              text: "Methods of contact"
+            },
+            value: {
+              text: "Email address"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "methods of contact"
+                }
+              ]
+            }
+          },
+ {
+
+          key: {
+              text: "Email address"
+            },
+            value: {
+              text: "{Email address}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Email address"
+                }
+              ]
+            }
+          },
+
+
+ 
+
+
+  
+
+  {
+              key: {
+                text: "Add UTR?"
+              },
+              value: {
+                text: "Yes"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "add UTR"
+                  }
+                ]
+              }
+            },
+
+   {
+           key: {
+              text: "UTR"
+            },
+            value: {
+              text: "{subcontractor UTR}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "corporation tax utr"
+                }
+              ]
+            }
+          },
+
+
+
+          
+          {
+            key: {
+              text: "Add National Insurance number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          },
+
+
+
+       
+          {  
+
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: "{NI number}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          },
+
+
+{
+            key: {
+              text: "Add works reference number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          },
+
+
+          {
+            
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "XLS345-MM"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          }
+
+        ]
+      }) }}
+
+     
+
+      <h2 class="govuk-heading-m">Now add this subcontractor</h2>
+
+      <p class="govuk-body">By adding this subcontractor you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

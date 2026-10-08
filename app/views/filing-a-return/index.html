@@ -1,12 +1,291 @@
-{% extends "layouts/main.html" %}
-
-{% set pageName = "Filing a return" %}
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Home" %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Filing a return</h1>
-    <p class="govuk-body">Pages for this journey will be added here.</p>
+
+    <h1 class="govuk-heading-xl">
+      CIS Prototype
+    </h1>
+
+    <!-- Tab navigation -->
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#current-version">
+            Current version
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#previous-versions">
+            Previous versions
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#documentation">
+            Documentation
+          </a>
+        </li>
+      </ul>
+
+      <!-- Current Version Tab -->
+      <div class="govuk-tabs__panel" id="current-version">
+        <h2 class="govuk-heading-l">Current version</h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-27/">Sprint 27</a>
+              </td>
+              <td class="govuk-table__cell">05 August 2026</td>
+              <td class="govuk-table__cell">In-progress</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Previous Versions Tab -->
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="previous-versions">
+        <h2 class="govuk-heading-l">Previous versions</h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Version</th>
+              <th scope="col" class="govuk-table__header">Date created</th>
+              <th scope="col" class="govuk-table__header">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+
+    <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-26" class="govuk-link">Sprint 26</a>
+              </td>
+              <td class="govuk-table__cell">22 July 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+    </tr>
+
+      <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-25" class="govuk-link">Sprint 25</a>
+              </td>
+              <td class="govuk-table__cell">08 July 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-24" class="govuk-link">Sprint 24</a>
+              </td>
+              <td class="govuk-table__cell">24 June 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+    </tr>
+
+
+    <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-23" class="govuk-link">Sprint 23</a>
+              </td>
+              <td class="govuk-table__cell">10 June 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+  </tr>
+
+    <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-22" class="govuk-link">Sprint 22</a>
+              </td>
+              <td class="govuk-table__cell">27 May 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-21" class="govuk-link">Sprint 21</a>
+              </td>
+              <td class="govuk-table__cell">13 May 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+             <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-20" class="govuk-link">Sprint 20</a>
+              </td>
+              <td class="govuk-table__cell">30 April 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-19" class="govuk-link">Sprint 19</a>
+              </td>
+              <td class="govuk-table__cell">15 April 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-18" class="govuk-link">Sprint 18 (previously Sprint 17 in UCD)</a>
+              </td>
+              <td class="govuk-table__cell">1 April 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <span class="govuk-body">Sprint 17</span>
+                <br>
+                <span class="govuk-hint">(Renamed to Sprint 18)</span>
+              </td>
+              <td class="govuk-table__cell">N/A</td>
+              <td class="govuk-table__cell">Renamed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-16" class="govuk-link">Sprint 16</a>
+              </td>
+              <td class="govuk-table__cell">18 March 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-15" class="govuk-link">Sprint 15</a>
+              </td>
+              <td class="govuk-table__cell">4 March 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-14" class="govuk-link">Sprint 14</a>
+              </td>
+              <td class="govuk-table__cell">18 Feb 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/sprint-13" class="govuk-link">Sprint 13</a>
+              </td>
+              <td class="govuk-table__cell">4 Feb 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v12" class="govuk-link">v12</a>
+              </td>
+              <td class="govuk-table__cell">21 Jan 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v11" class="govuk-link">v11</a>
+              </td>
+              <td class="govuk-table__cell">7 Jan 2026</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v10" class="govuk-link">v10</a>
+              </td>
+              <td class="govuk-table__cell">17 Dec 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v9" class="govuk-link">v9</a>
+              </td>
+              <td class="govuk-table__cell">3 Dec 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v8/index.html" class="govuk-link">v8</a>
+              </td>
+              <td class="govuk-table__cell">3 Dec 2025</td>
+              <td class="govuk-table__cell">Completed</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v7/index.html" class="govuk-link">v7</a>
+              </td>
+              <td class="govuk-table__cell">Previous version</td>
+              <td class="govuk-table__cell">Restored legacy prototype screens</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v6/index.html" class="govuk-link">v6</a>
+              </td>
+              <td class="govuk-table__cell">Previous version</td>
+              <td class="govuk-table__cell">Restored legacy prototype screens</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v5/index.html" class="govuk-link">v5</a>
+              </td>
+              <td class="govuk-table__cell">Previous version</td>
+              <td class="govuk-table__cell">Restored legacy prototype screens</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="/filing-a-return/v1-v4/index.html" class="govuk-link">v1-v4</a>
+              </td>
+              <td class="govuk-table__cell">Previous version</td>
+              <td class="govuk-table__cell">Restored legacy prototype screens</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Documentation Tab -->
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="documentation">
+        <h2 class="govuk-heading-l">Documentation</h2>
+
+        <h3 class="govuk-heading-m">Design</h3>
+        <p class="govuk-body">
+          <a href="https://app.mural.co/t/digitalhmrc9032/m/digitalhmrc9032/1756801867102/8ac6bc28b399e12d5cf5c5afb54c8ecfee1a1aed" class="govuk-link" rel="external" target="_blank">View design files on Mural (opens in new tab)</a>
+        </p>
+
+        <h3 class="govuk-heading-m">Copy</h3>
+        <p class="govuk-body">
+          <a href="https://drive.google.com/drive/folders/13krMb9DKmSXiTKPjxqTO2M5xeJ5PUvgh" class="govuk-link" rel="external" target="_blank">View copy documents on Google Drive (opens in new tab)</a>
+        </p>
+      </div>
+
+    </div>
+
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
+
 {% endblock %}

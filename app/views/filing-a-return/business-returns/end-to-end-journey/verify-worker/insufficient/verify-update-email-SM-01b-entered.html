@@ -1,0 +1,52 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Contact email {worker name}? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/SL-02-06-check-answers" method="post">
+
+        <h1 class="govuk-heading-l">
+          What email address should HMRC send this confirmation to?
+        </h1>
+
+       
+        {{ govukInput({
+         
+
+          hint: {
+            text: "HMRC will only use this email address to confirm this verification request. Your saved email address will not be changed."
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          value: "projectjawspark@gmail.com",
+          autocomplete: "email",
+          spellcheck: false
+        }) }}
+
+       
+
+        {{ govukButton({
+          text: "Continue",
+          href:"verify-check-answers-SM-04b"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+   How much did {{data['workers']}} pay in material costs? – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {%set workerName = data['workers'] %}
+        {%set subContLenght = data['workers'].length %}
+      <form action="mr-03-03-e-enter-tax-deducted-northerntrades" method="post" novalidate>
+        {%if subContLenght > 1 %}
+          <!-- multiple worker -->
+          {%if data['whichWorkerDeetails'] != '' or data['whichWorkerDeetails'] != null %}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="materials-cost">
+              How much did {{data['whichWorkerDeetails'] or "Northern Trades"}} pay in material costs?
+            </label>
+          </h1>
+          {%else%}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="materials-cost">
+              How much did {{workerName[0] or "Northern Trades"}} pay in material costs?
+            </label>
+          </h1>
+          {%endif%}
+        {%else%}
+          <!-- single worker -->
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="materials-cost">
+              How much did {{data['workers'] or "Northern Trades Ltd"}} pay in material costs?
+            </label>
+          </h1>
+        {%endif%}
+          <div id="materials-cost-hint" class="govuk-hint">
+            Enter the total material costs paid by the worker. Round down to the nearest pound.
+          </div>
+
+          {{ govukInput({
+            classes: "govuk-input--width-10",
+            id: "materials-cost",
+            name: "materials-cost",
+            value: "20",
+            prefix: {
+              text: "£"
+            },
+            spellcheck: false,
+            attributes: {
+              inputmode: "numeric",
+              "aria-describedby": "materials-cost-hint"
+            }
+          }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

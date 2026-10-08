@@ -1,0 +1,70 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Does {company name} have a company registration number? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form class="form" action="#" method="post" novalidate>
+
+        {{ govukRadios({
+          name: "has-wrn",
+          fieldset: {
+            legend: {
+              text: "Is there a works reference number associated with {trust name}?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This is the reference number used to identify a worker’s work or project. It can contain letters and numbers."
+          },
+
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+          <script>
+            document.querySelector(".form").addEventListener("submit", function (event) {
+              event.preventDefault()
+
+              const selected = document.querySelector('input[name="has-wrn"]:checked')
+              if (!selected) return
+
+              const destinations = {
+                yes: "trust-worksref-enter-AS-T8-ptn",
+                no: "AS-CYA-T-Single-tru"
+              }
+
+              window.location.href = destinations[selected.value]
+            })
+          </script>
+    </div>
+  </div>
+{% endblock %}

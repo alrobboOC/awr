@@ -1,0 +1,37 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Check subcontractor records" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/v5/agent-flow/ps-07-welcome"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Check subcontractor records
+    </h1>
+
+    <p class="govuk-body">
+      We will now check if there are any subcontractor records you have recently paid/verified.
+    </p>
+
+    <p class="govuk-body">
+      Any record we find will be automatically added to your subcontractor list, which will be available to view.
+    </p>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "/filing-a-return/v5/agent-flow/ps-05-success-screen"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the company registration number? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/SL-02-02-company-name"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/SL-02-02-company-address" method="post">
+
+        {{ govukInput({
+          label: {
+            text: "What is the company registration number?",
+            isPageHeading: true,
+            classes: "govuk-label--l"
+          },
+          hint: {
+            text: "This is 8 characters, for example 01234567 or AC012345. You can find it on the certificate of incorporation."
+          },
+          id: "company-number",
+          name: "company-number",
+          classes: "govuk-input--width-10",
+          spellcheck: false
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

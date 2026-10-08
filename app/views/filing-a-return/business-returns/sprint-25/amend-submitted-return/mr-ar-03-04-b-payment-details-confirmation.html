@@ -1,0 +1,67 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you confirm the information in this return is correct? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/filing-a-return/business-returns/form-handler" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="confirm-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you confirm the information in this return is correct?
+              </h1>
+            </legend>
+            <div id="confirm-hint" class="govuk-hint">
+              By confirming you are declaring that, to the best of your knowledge, you have only selected workers you used in this return period.
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="confirmInformation" name="confirmInformation" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="confirmInformation">
+                  Yes, the information is correct and complete
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="confirmInformation-2" name="confirmInformation" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="confirmInformation-2">
+                  No, I need to make changes
+                </label>
+              </div>
+             {# <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-6" name="whereDoYouLive" type="radio" value="abroad">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
+          Cancel any amendments you made
+        </label>
+      </div> #}
+    
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  <a class="govuk-link" href="#">Cancel amendment</a>
+</div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

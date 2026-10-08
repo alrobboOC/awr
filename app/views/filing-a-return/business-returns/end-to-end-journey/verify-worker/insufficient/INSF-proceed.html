@@ -1,0 +1,53 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Proceed with worker verification request? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/SL-02-05-verification-number" method="post">
+<h1 class="govuk-heading-l">
+Are you sure you want to proceed with including Malcolm And Sattler in this verification request?</h1>
+
+<p class="govuk-body">
+This will assign the higher rate tax treatment to this worker.</p>
+
+{{ govukRadios({
+  name: "remove-worker",
+  classes: "govuk-radios--inline",
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          text: "Continue",
+          href: "INSF-07-03c"
+        }) }}
+
+
+        
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

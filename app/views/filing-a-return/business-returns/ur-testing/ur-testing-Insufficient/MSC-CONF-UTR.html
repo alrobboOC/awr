@@ -1,0 +1,83 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Worker details updated"    
+    }) }}
+      
+    <p class="govuk-body">
+      You have updated the worker details for Grant, Alan.
+    </p>
+
+    <h2 class="govuk-heading-m">Updates made</h2>
+
+    {{ govukTable({
+  caption: "Changes to worker details",
+  captionClasses: "govuk-visually-hidden",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Details"
+    },
+    {
+      text: "Previous"
+    },
+    {
+      text: "Updated"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Add UTR?"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes"
+      }
+    ],
+
+    [
+      {
+        text: "UTR"
+      },
+      {
+        text: "None provided"
+      },
+      {
+        text: "1234567890"
+      }
+    ]
+
+
+    
+
+    
+  ]
+}) }}
+
+
+
+   
+
+   
+
+    <p class="govuk-body">
+      Back to <a href="INSF-07-03b2" class="govuk-link" rel="noreferrer noopener" target="_blank">Cannot verify all workers</a>.
+    </p>
+
+
+ 
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Submission - Sending" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Sending your submission</h1>
+    
+    <p class="govuk-body">Your submission is being sent to HMRC.</p>
+    
+    {{ govukInsetText({
+      text: "Do not refresh this page or press the back button, while your submission is being processed."
+    }) }}
+
+   
+
+  </div>
+</div>
+
+{% endblock %}

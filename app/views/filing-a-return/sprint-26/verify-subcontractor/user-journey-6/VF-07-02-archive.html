@@ -1,0 +1,127 @@
+
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification results – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Verification results
+      </h1>
+
+       
+
+        
+
+       
+
+         
+
+        <p class="govuk-body govuk-!-margin-bottom-3">
+              Here are the verification results from your most recent verification request.
+        </p>
+
+      {{ govukTable({
+        
+        firstCellIsHeader: false,
+        head: [
+          { text: "Name" },
+          { text: "Verification status" },
+          { text: "Tax treatment" },
+          { text: "Verification number" }
+          
+        ],
+        rows: [
+
+
+         [
+            { html: '<a href="#" class="govuk-link">Amity Marine Contractors</a>' },
+            { text: "Unmatched" },
+            { text: "Standard rate" },
+            { text: "V0004528765" }
+            
+          ],
+          [
+            { html: '<a href="#" class="govuk-link">Brody, Martin</a>' },
+            { text: "Unmatched" },
+            { text: "Standard rate" },
+            { text: "V0004528765" }
+          ],
+          [
+            { html: '<a href="#" class="govuk-link">Hooper and Associates</a>' },
+            { text: "Unmatched" },
+            { text: "Standard rate" },
+            { text: "V0004528765" }
+
+          ],
+
+           [
+            { html: '<a href="#" class="govuk-link">Orca Industrial</a>' },
+            { text: "Unmatched" },
+            { text: "Gross" },
+            { text: "V0004528765" }
+
+          ],
+       
+          [
+            { html: '<a href="#" class="govuk-link">Quint Transportation</a>' },
+            { text: "Unmatched" },
+            { text: "Gross" },
+            { text: "V0004528765" }
+
+          ],
+
+
+           [
+            { html: '<a href="#" class="govuk-link">Shaw Concrete and Aggregates</a>' },
+            { text: "Verified" },
+            { text: "Standard rate" },
+            { text: "V0004528765" }
+
+          ],
+
+          [
+            { html: '<a href="#" class="govuk-link">The Kintner Group</a>' },
+            { text: "Unmatched" },
+            { text: "Higher rate" },
+            { text: "V0004528765" }
+
+          ],
+
+          [
+            { html: '<a href="#" class="govuk-link">Vaughn Civil Engineering</a>' },
+            { text: "Unmatched" },
+            { text: "Higher rate" },
+            { text: "V0004528765" }
+
+          ]
+        ]
+      }) }}
+
+      
+  </div>
+
+    <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Review unmatched subcontractors"
+        }) }}
+</div>
+
+     
+{% endblock %}
+
+

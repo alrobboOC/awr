@@ -1,0 +1,56 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Submission unsuccessful" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Submission unsuccessful
+    </h1>
+
+    <p class="govuk-body-lead">
+      There has been a problem with your submission. You cannot amend or attempt to resubmit it.
+    </p>
+
+    <p class="govuk-body">
+      To solve this problem please contact the <a href="#" class="govuk-link">HMRC Online Services Helpdesk</a>.
+    </p>
+
+    {{ govukDetails({
+      summaryText: "What information to provide when contacting HMRC",
+      html: "<p class=\"govuk-body\">When contacting the helpdesk, please provide:</p>
+      <ul class=\"govuk-list govuk-list--bullet\">
+        <li>your Employers Reference number</li>
+        <li>the date and time you attempted to submit</li>
+        <li>details of any error messages you received</li>
+        <li>the type of return you were trying to submit (CIS monthly return)</li>
+      </ul>
+      
+      <p class=\"govuk-body\">This will help us resolve your issue more quickly.</p>"
+    }) }}
+
+
+    {{ govukWarningText({
+      text: "You must still submit your monthly return by the deadline to avoid penalties, even if you experience technical difficulties.",
+      iconFallbackText: "Important"
+    }) }}
+
+    {{ govukButton({
+      text: "Return to start",
+      href: "/filing-a-return/v1-v4/monthly-nil-return/c1-confirm-nil-return"
+    }) }}
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Is this page not working properly? (opens in new tab)</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

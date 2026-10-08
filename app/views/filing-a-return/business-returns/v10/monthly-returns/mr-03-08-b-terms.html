@@ -1,0 +1,51 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "mr-03-04-a-check-answers-fixed.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="confirmation.html" method="post" novalidate>
+        
+        <h1 class="govuk-heading-l">Declaration</h1>
+
+        {{ govukRadios({
+          name: "employment-status",
+          fieldset: {
+            legend: {
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius, elit ut tincidunt condimentum, quam nunc blandit velit, finibus semper ex mauris nec mi.",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Accept"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

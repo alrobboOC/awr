@@ -1,0 +1,34 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="File your monthly BRS return" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Manage business details
+    </h1>
+
+    <p class="govuk-body">To use the Business Returns Service service, you will need the business's Unique Taxpayer Reference. </p>
+
+  <form action="mcd-02-enter-utr" method="post">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

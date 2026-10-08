@@ -1,0 +1,134 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Which subcontractor do you want to add in your monthly return?
+      </h1>
+        <p class="govuk-body">Tell us about all the subcontractors you are including in this monthly return.</p>
+        <p class="govuk-body">You can also add subcontractors, remove them, and <a href="#" class="govuk-link">update your list</a>.
+        </p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Select all</a> | <a href="#" class="govuk-link">Deselect all</a></p>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-visually-hidden">Subcontractors to include in monthly return</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Include</th>
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Verified</th>
+            <th scope="col" class="govuk-table__header">Verification number</th>
+            <th scope="col" class="govuk-table__header">Tax treatment</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          
+          
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="bRConstruction" name="subcontractors" type="checkbox" value="BuildRight Construction" {{ checked ('subcontractors', "BuildRight Construction") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="bRConstruction">
+                    <span class="govuk-visually-hidden">Include BuildRight Construction</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <th scope="row" class="govuk-table__header">BuildRight Construction</th>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nTL" name="subcontractors" type="checkbox" value="Northern Trades Ltd" {{ checked ('subcontractors', "Northern Trades Ltd") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="nTL">
+                    <span class="govuk-visually-hidden">Include Northern Trades Ltd</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <th scope="row" class="govuk-table__header">Northern Trades Ltd</th>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="TyneWear Ltd" name="subcontractors" type="checkbox" value="TyneWear Ltd" {{ checked ('subcontractors', "TyneWear Ltd") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="TyneWear Ltd">
+                    <span class="govuk-visually-hidden">Include TyneWear Ltd</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <th scope="row" class="govuk-table__header">TyneWear Ltd</th>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="bRConstruction" name="subcontractors" type="checkbox" value="BuildRight Construction" {{ checked ('subcontractors', "BuildRight Construction") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="bRConstruction">
+                    <span class="govuk-visually-hidden">Include BuildRight Construction</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <th scope="row" class="govuk-table__header">Newcastle Construction</th>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">V1000000001</td>
+            <td class="govuk-table__cell">Standard rate</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nTL" name="subcontractors" type="checkbox" value="Northern Trades Ltd" {{ checked ('subcontractors', "Northern Trades Ltd") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="nTL">
+                    <span class="govuk-visually-hidden">Include Northern Trades Ltd</span>
+                  </label>
+                </div>
+              </div>
+            </td>
+            <th scope="row" class="govuk-table__header">Bobs Builders</th>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <form action="eh-02a-error-subcontractor" method="post">
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

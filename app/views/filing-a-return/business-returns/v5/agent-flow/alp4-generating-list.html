@@ -1,0 +1,50 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Retrieving your client list" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Retrieving your client list
+    </h1>
+
+    <p class="govuk-body">Please wait while we retrieve your authorised clients. This should only take a few moments.</p>
+
+    <p class="govuk-body govuk-!-font-weight-bold">Do not refresh this page or use the back button.</p>
+
+    <div class="govuk-inset-text govuk-!-margin-top-6">
+      <h2 class="govuk-heading-m">Filing only service</h2>
+
+      <p class="govuk-body">You can send BRS monthly returns on behalf of a client without completing an authorisation online or form FBI-2.</p>
+
+      <p class="govuk-body">This service is only available using commercial software.</p>
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link">Find commercial software for BRS returns</a>
+      </p>
+    </div>
+
+    <noscript>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          JavaScript is not enabled. This page will not refresh automatically.
+        </strong>
+      </div>
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/business-returns-service/agent/client-search" class="govuk-link">Continue to search for a client</a>
+      </p>
+    </noscript>
+
+  </div>
+</div>
+
+{% endblock %}

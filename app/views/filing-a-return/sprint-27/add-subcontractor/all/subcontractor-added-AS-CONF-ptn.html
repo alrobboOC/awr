@@ -1,0 +1,63 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you want to add an address for {company name}– {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Subcontractor added"
+       
+      }) }}
+
+      <p class="govuk-body">
+        You can now find {contractor name} on your list of subcontractors.</p>
+
+      <h2 class="govuk-heading-m">Next steps</h2>
+
+      <p class="govuk-body">
+        Before you can make any payments to this subcontractor, you will need to verify them.</p>
+
+      <p class="govuk-body">Once they're verified with HMRC, you will be able to:</p>
+        
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>make CIS deductions at the correct rate</li>
+          <li>include them on a monthly return</li>
+          <li>provide them with payment and deduction statements</li>
+        </ul>
+
+      <h2 class="govuk-heading-m">Help and support</h2>
+
+      <p class="govuk-body">
+        If you need help with the Construction Industry Scheme (CIS) and what it means for you, <a href="https://www.gov.uk/what-is-the-construction-industry-scheme."> guidance is available on GOV.UK</a>.
+      </p>
+
+      </p>
+        <p class="govuk-body">
+        <a href="/filing-a-return/sprint-27/subcontractor-landing-page/SLP-01" class="govuk-link">Manage your subcontractors</a>
+      </p>
+
+
+       <h2 class="govuk-heading-m">Before you go</h2>
+
+       <p class="govuk-body">
+        Your feedback helps us make our service better.
+       </p>
+      <p class="govuk-body">
+        <a href="#">Take a short survey</a> to share your feedback on this service.
+      </p>
+
+
+     
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirm your email address – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="declaration-final.html" method="post" novalidate>
+        
+        <h1 class="govuk-heading-l">Confirm your email address</h1>
+
+        <p class="govuk-body">HMRC will send confirmation of successful submission by email using the address below. You can change your email address temporarily for this submission.</p>
+
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          id: "email-address",
+          name: "email-address",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false,
+          classes: "govuk-input--width-20"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

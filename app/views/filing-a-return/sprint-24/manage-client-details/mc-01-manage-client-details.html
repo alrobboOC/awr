@@ -1,0 +1,52 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+Manage client details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="mr-05-monthly-return-landing" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              {Scheme123} details
+            </h1>
+          </legend>
+          <div class="govuk-!-padding-bottom-6"></div>
+          <table class="govuk-table">
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Employers reference</th>
+                <td class="govuk-table__cell">123/ab4</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Client reference</th>
+                <td class="govuk-table__cell">AOR1</td>
+                <td class="govuk-table__cell"><a href="mc-02-change-client-reference.html" class="govuk-link">Change</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+        <div class="govuk-!-padding-bottom-6"></div>
+    </form>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">Return to the client dashboard</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}

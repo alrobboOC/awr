@@ -1,0 +1,45 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Subcontractor details updated"    
+    }) }}
+      
+    <p class="govuk-body">
+      You have updated the following information for Martin Brody:
+    </p>
+
+  <div class="app-summary-list--no-border">
+  <dl class="govuk-summary-list">
+    
+    <dd class="govuk-summary-list__value">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Method of contact</li>
+        <li>Email address</li>
+      </ul>
+    </dd>
+  </dl>
+</div>
+   
+  
+
+    <p class="govuk-body">
+      Back to <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Your subcontractors</a>.
+    </p>
+
+   
+
+    <h2 class="govuk-heading-m">Before you go</h2>
+    <p class="govuk-body">Your feedback helps us make our service better.</p>
+    <p class="govuk-body"><a class="govuk-link" href="#">Take a short survey</a> to share your feedback on this service.</p>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Sorry, you are unable to use this service - GOV.UK" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Sorry, you are unable to use this service</h1>
+
+        <p class="govuk-body">You are no longer authorised. </p>
+
+        <h1 class="govuk-heading-m">What you need to do</h1>
+
+        <p class="govuk-body">Ask your client to authorise you. They can do this by either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>authorising you through their <a href="https://www.gov.uk/guidance/client-authorisation-an-overview"
+                    class="govuk-link govuk-link--no-visited-state">HMRC online account</a></li>
+            <li>downloading and completing <a
+                    href="https://www.gov.uk/government/publications/agent-authorisation-for-clients-64-8"
+                    class="govuk-link govuk-link--no-visited-state">form 64-8</a> to authorise you by post</li>
+        </ul>
+
+        <p class="govuk-body">It can take up to 5 working days for new authorisations to appear in your account.</p>
+
+        <p class="govuk-body">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Return to client list</a>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

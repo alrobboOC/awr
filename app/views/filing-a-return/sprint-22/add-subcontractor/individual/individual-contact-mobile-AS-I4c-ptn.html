@@ -1,0 +1,50 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Contact mobile number {subcontractor name}? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/SL-02-05-work-type"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/SL-02-06-check-answers" method="post">
+
+        <h1 class="govuk-heading-l">
+          What is the mobile number for {subcontractor name}?
+        </h1>
+
+       
+        {{ govukInput({
+       
+
+          hint: {
+            text: "HMRC will never use this mobile number to contact this subcontractor"
+          },
+          id: "mobile",
+          name: "mobile",
+          type: "tel",
+          autocomplete: "tel",
+          spellcheck: false
+        }) }}
+
+       
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

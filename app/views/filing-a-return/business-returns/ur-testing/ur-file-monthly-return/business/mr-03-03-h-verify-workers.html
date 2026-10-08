@@ -1,0 +1,62 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verify workers – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="mr-03-04-c-worker-details-added_exhustive-view" method="post" novalidate>
+
+        <h1 class="govuk-heading-l">You have unverified workers</h1>
+
+        {{ govukWarningText({
+          text: "One or more workers have not been verified. Not verifyng workers will result in them receiving a higher rate of tax.",
+          iconFallbackText: "Warning"
+        }) }}
+
+        {{ govukRadios({
+          name: "verify-workers",
+          fieldset: {
+            legend: {
+              text: "Do you want to verify your workers now?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              hint: {
+                text: "You will be taken to the verification service"
+              }
+            },
+            {
+              value: "no",
+              text: "No",
+              hint: {
+                text: "Higher-rate tax deductions will apply until verification is complete"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Retrieving your subcontractors" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Your subcontractors
+    </h1>
+
+    <p class="govuk-body">We are locating your subcontractor records.</p>
+
+    <p class="govuk-body">This should only take a few moments.</p>
+
+    <p class="govuk-body govuk-!-font-weight-bold">Do not refresh this page or use the back button.</p>
+
+    <noscript>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          JavaScript is not enabled. This page will not refresh automatically.
+        </strong>
+      </div>
+      <p class="govuk-body">
+        <a href="/filing-a-return/construction-industry-scheme/agent/subcontractor-records" class="govuk-link">Continue to subcontractor records</a>
+      </p>
+    </noscript>
+
+  </div>
+</div>
+
+{% endblock %}

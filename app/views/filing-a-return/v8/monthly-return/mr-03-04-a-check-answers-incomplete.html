@@ -1,0 +1,151 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "mr-03-03-a-subcontractor-payments.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-l">Scheme 123, Ref 123/AB456<br>Period ending 5 January 2026</span>
+      <h1 class="govuk-heading-l">Check your answers before submitting your return</h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Total payments to subcontractors"
+            },
+            value: {
+              text: "£1,200.00"
+            }
+          },
+          {
+            key: {
+              text: "Total cost of materials"
+            },
+            value: {
+              text: "£300.00"
+            }
+          },
+          {
+            key: {
+              text: "Total CIS deductions"
+            },
+            value: {
+              text: "£180.00"
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Subcontractors</h2>
+      
+      <p class="govuk-body">You have added 3 subcontractors to this return.</p>
+
+      <h3 class="govuk-heading-s">Completed</h3>
+      
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "TyneWear Ltd"
+          },
+          actions: {
+            items: [
+              {
+                href: "payment-details-screen-1-payments.html?edit=1",
+                text: "Change",
+                visuallyHiddenText: "TyneWear Ltd payment details"
+              },
+              {
+                href: "remove-subcontractor-confirmation.html?remove=1",
+                text: "Remove",
+                visuallyHiddenText: "TyneWear Ltd from this return"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Total payments made"
+            },
+            value: {
+              text: "£1,200.00"
+            }
+          },
+          {
+            key: {
+              text: "Cost of materials"
+            },
+            value: {
+              text: "£300.00"
+            }
+          },
+          {
+            key: {
+              text: "Total tax deducted"
+            },
+            value: {
+              text: "£180.00"
+            }
+          }
+        ]
+      }) }}
+
+      <h3 class="govuk-heading-s">Needs payment details</h3>
+      
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            BuildRight Construction
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="payment-details-screen-1-payments.html?edit=2">
+              Add details<span class="govuk-visually-hidden"> for BuildRight Construction</span>
+            </a>
+            <a class="govuk-link" href="remove-subcontractor-confirmation.html?remove=2" style="margin-left: 20px;">
+              Remove<span class="govuk-visually-hidden"> BuildRight Construction from this return</span>
+            </a>
+          </dd>
+        </div>
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key govuk-!-font-weight-regular">
+            Northern Trades Ltd
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="payment-details-screen-1-payments.html?edit=3">
+              Add details<span class="govuk-visually-hidden"> for Northern Trades Ltd</span>
+            </a>
+            <a class="govuk-link" href="remove-subcontractor-confirmation.html?remove=3" style="margin-left: 20px;">
+              Remove<span class="govuk-visually-hidden"> Northern Trades Ltd from this return</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+      {{ govukWarningText({
+        text: "You must add payment details for all subcontractors before you can submit this return.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <form action="declaration-employment-status-short.html" method="post" novalidate>
+
+      </form>
+
+
+
+    </div>
+  </div>
+{% endblock %}

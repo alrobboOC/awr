@@ -1,0 +1,36 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Subcontractor Automatic Update - Unsuccessful" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "/filing-a-return/v5/agent-flow/client-dashboard"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Unsuccessful automatic subcontractor update
+    </h1>
+
+    <p class="govuk-body">
+      CIS Online will check this again the next time you enter the application. </p>
+
+    <p class="govuk-body">
+      You can also add subcontractor details, but you must complete your contractor details first. </p>
+
+    <p class="govuk-body">
+      <button type="submit" class="govuk-button" style="background-color: #00703c;" data-module="govuk-button">
+        Continue
+      </button>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

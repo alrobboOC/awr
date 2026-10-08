@@ -1,0 +1,47 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="There is a problem with your submission" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      There is a problem with your submission
+    </h1>
+
+    <!-- <p class="govuk-body-lead">
+      There is a problem with your submission.
+    </p> -->
+
+   <p class="govuk-body">You must go back to <a href="/filing-a-return/sprint-13/monthly-returns/mr-monthly-return-landing" class="govuk-link">Manage your CIS return</a> and submit again.</p>
+      {{ govukWarningText({
+      text: "You must submit your monthly return by the required deadline to avoid any penalties.",
+      iconFallbackText: "Important"
+    }) }}
+    <p class="govuk-body">
+      If you have any technical difficulties, contact the <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">HMRC Online Services Helpdesk (opens in new tab)</a>.
+    </p>
+
+        <p class="govuk-body">You will need to provide:</p>
+     <ul class="govuk-list govuk-list--bullet">
+        <li>your PAYE reference number, also known as an  Employer Reference Number (ERN)</li>
+        <li>the date when you tried to submit the return</li>
+      </ul>
+
+    <p class="govuk-body govuk-!-margin-top-6">
+      <a href="/filing-a-return/sprint-13/monthly-returns/mr-monthly-return-landing" class="govuk-link">Back to Manage your CIS return</a>
+    </p>
+
+
+    <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Is this page not working properly? (opens in new tab)</a>
+    </p> -->
+
+  </div>
+</div>
+
+{% endblock %}

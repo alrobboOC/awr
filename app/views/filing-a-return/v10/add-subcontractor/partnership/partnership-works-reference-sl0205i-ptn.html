@@ -1,0 +1,45 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the works reference number? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/SL-02-05-contact-details" method="post">
+
+        {{ govukInput({
+          label: {
+            text: "What is the works reference number for {John Smith Ltd}?",
+            isPageHeading: true,
+            classes: "govuk-label--l"
+          },
+          hint: {
+            text: "This is unique to the construction work or project"
+          },
+          id: "works-reference",
+          name: "works-reference",
+          classes: "govuk-input--width-20",
+          spellcheck: false
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

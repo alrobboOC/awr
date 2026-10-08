@@ -1,0 +1,37 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Selected workers have not been verified  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            There was a problem with your verification request
+        </h1>
+
+              
+        <p class="govuk-body">
+           The workers that you selected have not been verified and your request has not been saved.
+
+        </p>
+        <p class="govuk-body">
+            To verify these workers, you need to start again with a new verification request.
+        </p>
+              
+        <p class="govuk-body">
+            Back to <a href="#">Manage your workers</a>.
+        </p>
+       
+      
+
+    </div>
+  </div>
+
+{% endblock %}

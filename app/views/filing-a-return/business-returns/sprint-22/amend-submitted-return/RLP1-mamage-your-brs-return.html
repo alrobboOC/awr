@@ -1,0 +1,171 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="BRS returns" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          If you have entered a tax month incorrectly and it is in progress, you cannot change it.
+        </p>
+        <p class="govuk-body">
+          You must start a new return for the correct period and then delete the one that is incorrect.
+        </p>     
+      </div>
+    </div>
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">ABC Business Ltd</span>
+      Manage your BRS return
+    </h1>
+    <!-- <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          If you have entered a tax month incorrectly and it is in In progress, you cannot change it. You must start a new return for the correct period and then delete the one that is incorrect.
+        </strong>
+      </div> -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">File a monthly return</a>
+        </h3>
+        <p class="govuk-body">File a BRS return for any workers you used in a monthly return period.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">File a nil return</a>
+        </h3>
+        <p class="govuk-body">File a nil return for any workers you used in a monthly return period.</p>
+      </div>
+      
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="mr-ar-01-view-tax-year-submission-history.html">Amend a submitted return</a>
+        </h3>
+        <p class="govuk-body">Change the information you entered when you submitted a monthly or nil return.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">View a submitted return</a>
+        </h3>
+        <p class="govuk-body">View monthly or nil returns you submitted.</p>
+      </div>
+      
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-6">
+    <h2 class="govuk-heading-m">Returns outstanding</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Tax month</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Last updated</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#" class="govuk-link"><span class="govuk-visually-hidden"> Monthly return for</span>August 2025</a></th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag">In progress</strong></td>
+          <td class="govuk-table__cell">19 September 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> August 2025 return</span></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#" class="govuk-link"><span class="govuk-visually-hidden"> Monthly return for</span>July 2025</a></th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag">In progress</strong></td>
+          <td class="govuk-table__cell">19 August 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> July 2025 return</span></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="#" class="govuk-link"><span class="govuk-visually-hidden"> Monthly return for</span>May 2025</a></th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag">In progress</strong></td>
+          <td class="govuk-table__cell">19 June 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> July 2025 return</span></a></td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="../monthly-returns/standard-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link"><span class="govuk-visually-hidden"> Monthly return for</span>April 2025</a></th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Unsuccessful</strong></td>
+          <td class="govuk-table__cell">18 May 2025</td>
+          <td class="govuk-table__cell">Contact HMRC</td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="../monthly-returns/standard-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link"><span class="govuk-visually-hidden"> Monthly return for</span>June 2025</a></th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Unsuccessful</strong></td>
+          <td class="govuk-table__cell">18 July 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Resubmit<span class="govuk-visually-hidden"> July 2025 return</span></a></td>
+
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="../monthly-returns/standard-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link"><span class="govuk-visually-hidden"> Monthly return for</span>July 2025</a></th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Pending</strong></td>
+          <td class="govuk-table__cell">18 August 2025</td>
+          <td class="govuk-table__cell">Not required</td>
+
+        </tr>
+      </tbody>
+    </table>
+    <!-- <p class="govuk-body">
+      <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/return-history">View returns history</a>
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-6"> -->
+  </div>
+  <!-- <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              What is the Business Returns Service
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS 340: Penalties for late returns
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              Understanding BRS penalties
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div> -->
+</div>
+
+{% endblock %}

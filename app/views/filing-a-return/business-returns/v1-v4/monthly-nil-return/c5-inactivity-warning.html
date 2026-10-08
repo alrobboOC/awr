@@ -1,0 +1,38 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Nil Monthly Return - Inactivity Warning" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c4-declaration"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Nil Monthly Return - Inactivity Warning
+    </h1>
+
+    <p class="govuk-body">
+      You are submitting a monthly return to tell us about payments to business workers. Our records for the submission period show that if your request for inactivity is accepted it is important to note that this is only valid for 6 months.
+    </p>
+
+    {{ govukWarningText({
+      text: "If you start paying any workers before the end of this period you must advise a monthly return.",
+      iconFallbackText: "Important"
+    }) }}
+
+    {{ govukButton({
+      text: "Accept and continue",
+      href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c6-submission"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

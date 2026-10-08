@@ -1,0 +1,57 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+Declaration of employment status – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Declaration of employment status
+      </h1>
+
+      <form method="post" novalidate action="mr-03-08-b-verified-declaration">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+              Has the employment status of each individual included on this return been considered and have payments not been made under contracts of employment?
+            </legend>
+            <!-- <div id="add-another-hint" class="govuk-hint">
+              Select 'Yes' to submit your return, and 'No' if you need to add more.
+            </div> -->
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="add-another">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="add-another-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

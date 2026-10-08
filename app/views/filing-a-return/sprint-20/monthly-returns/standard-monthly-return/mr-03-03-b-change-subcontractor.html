@@ -1,0 +1,94 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Change TyneWear Ltd's details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {%set subcontractorselected = data['subcontractors']%}
+      {%set tPayment = data['total-payments']%}
+      {%set mCost = data['materials-cost']%}
+      {%set tTax = data['tax-deducted']%}
+
+      <h1 class="govuk-heading-l">
+        Change TyneWear Ltd's details
+      </h1>
+  
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Total payments to subcontractor"
+              },
+              value: {
+                text: "£1000"
+          },
+              actions: {
+                items: [
+                  {
+                    href: "mr-03-03-c-payment-details-screen-payments.html",
+                    text: "Change",
+                    visuallyHiddenText: "Question 1"
+                  }
+                ]
+              }
+            }
+            ,
+            {
+              key: {
+                text: "Total cost of materials"
+              },
+              value: {
+                text: "£300"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "mr-03-03-d-payment-details-screen-materials.html",
+                    text: "Change",
+                    visuallyHiddenText: "Question 2"
+                  }
+                ]
+              }
+            }
+            ,
+            {
+              key: {
+                text: "Total CIS deductions"
+              },
+              value: {
+                text: "£200" 
+              },
+              actions: {
+                items: [
+                  {
+                    href: "mr-03-03-e-payment-details-screen-tax.html",
+                    text: "Change",
+                    visuallyHiddenText: "Question 3"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+     
+      <form action="/filing-a-return/v12/monthly-returns/add-subcontractors-paid-details-to-list" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request history – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% macro verificationTable(rows) %}
+    <table class="govuk-table govuk-!-margin-bottom-8">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Verification number</th>
+          <th scope="col" class="govuk-table__header">Date submitted</th>
+          <th scope="col" class="govuk-table__header">Verification request</th>
+          <th scope="col" class="govuk-table__header">Submission receipt</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        {% for row in rows %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">{{ row.number }}</th>
+            <td class="govuk-table__cell">{{ row.date }}</td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">View</a></td>
+            <td class="govuk-table__cell"><a href="#" class="govuk-link">View</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endmacro %}
+
+  {% set rows2026 = [
+    { number: "V0004528765", date: "6 Apr 2026" },
+    { number: "V0004528766", date: "6 Jun 2026" },
+    { number: "V0004528767", date: "6 Aug 2026" },
+    { number: "V0004528768", date: "6 Oct 2026" },
+    { number: "V0004528769", date: "6 Dec 2026" },
+    { number: "V0004528770", date: "6 Feb 2027" }
+  ] %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Verification request history for 2026 to 2027 tax year
+      </h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-5">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ verificationTable(rows2026) }}
+
+      <p class="govuk-body">
+        Back to <a href="../user-journey-1/verify-landing-SLP1.html" class="govuk-link">Manage your workers</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

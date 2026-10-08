@@ -1,0 +1,52 @@
+{% set serviceName = "Business Returns Service" %}
+{% set bodyClasses = "business-returns" %}
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "hmrc/components/service-navigation-language-select/macro.njk" import hmrcServiceNavigationLanguageSelect %}
+
+{% block header %}
+
+    {{ govukHeader({
+    })}}
+    {{ govukServiceNavigation({
+        serviceName: "Business Returns Service",
+        serviceUrl: "#",
+        classes: "hmrc-service-navigation--with-language-select",
+        slots: {
+            end: hmrcServiceNavigationLanguageSelect({
+            language: 'en',
+            en: {
+                href: '?en'
+            },
+            cy: {
+                href: '?cy'
+            }
+            })
+        }
+    })}}
+
+{% endblock %}
+
+{% block main %}
+<div class="govuk-width-container">
+  {% block beforeContent %}{% endblock %}
+  <main class="govuk-main-wrapper {{ mainClasses }} govuk-!-padding-top-0"
+        id="main-content"
+        role="main">
+    {% block content %}{% endblock %}
+  </main>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/public/business-returns/javascripts/card.js"></script>
+
+{% endblock %}

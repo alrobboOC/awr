@@ -1,0 +1,75 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Contact details (optional) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/SL-02-05-work-type"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/SL-02-06-check-answers" method="post">
+
+        <h1 class="govuk-heading-l">
+          What is the worker's name?
+        </h1>
+
+       
+        {{ govukInput({
+
+          label: {
+      text: "First name"
+    },
+          
+          id: "first-name",
+          name: "first-name",
+          type: "text",
+          autocomplete: "first-name",
+          spellcheck: false
+        }) }}
+
+          {{ govukInput({
+
+          label: {
+      text: "Middle names"
+    },
+          
+          id: "middle-names",
+          name: "middle-names",
+          type: "text",
+          autocomplete: "middle-names",
+          spellcheck: false
+        }) }}
+
+          {{ govukInput({
+
+          label: {
+      text: "Last name"
+    },
+          
+          id: "last-name",
+          name: "last-name",
+          type: "text",
+          autocomplete: "last-name",
+          spellcheck: false 
+        }) }}
+       
+
+        {{ govukButton({
+          text: "Update"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

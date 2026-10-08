@@ -1,0 +1,52 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "mr-03-04-check-answers-v3.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="confirmation.html" method="post" novalidate>
+        
+        {{ govukRadios({
+          name: "confirm-declaration",
+          fieldset: {
+            legend: {
+              text: "Is the information in this return correct and complete?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "By confirming, you declare that, to the best of your knowledge, you have only selected subcontractors used within this report period."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Accept"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Subcontractor details updated"    
+    }) }}
+      
+    <p class="govuk-body">
+      You have updated the subcontractor details for Martin Brody.
+    </p>
+
+    <h2 class="govuk-heading-m">Updates made</h2>
+
+    {{ govukTable({
+  caption: "Changes to subcontractor details",
+  captionClasses: "govuk-visually-hidden",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Details"
+    },
+    {
+      text: "Previous"
+    },
+    {
+      text: "Updated"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Email address"
+      },
+      {
+        text: "martin.brody@virginmedia.com"
+      },
+      {
+        text: "None provided"
+      }
+    ],
+
+     
+
+      [
+      {
+        text: "Mobile number"
+      },
+      {
+        text: "None provided"
+      },
+      {
+        text: "07739 320069"
+      }
+    ]
+
+     
+
+    
+  ]
+}) }}
+
+
+
+   
+
+   
+
+    <p class="govuk-body">
+      Back to <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Your subcontractors</a>.
+    </p>
+
+
+    <h2 class="govuk-heading-m">Before you go</h2>
+    <p class="govuk-body">Your feedback helps us make our service better.</p>
+    <p class="govuk-body"><a class="govuk-link" href="#">Take a short survey</a> to share your feedback on this service.</p>
+
+  </div>
+</div>
+
+{% endblock %}

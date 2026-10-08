@@ -1,0 +1,35 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Inactivity warning – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h1 class="govuk-heading-l">Monthly return - inactivity warning</h1>
+
+      <p class="govuk-body">You are submitting a monthly return to tell us about payments to construction workers. Our records for the submission period show that if your request for inactivity is accepted it is important to note that this is only valid for 6 months.</p>
+
+      {{ govukWarningText({
+        text: "If you start paying any subcontractors before the end of this period you must submit a monthly return.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <form action="confirmation.html" method="post" novalidate>
+        {{ govukButton({
+          text: "Accept and continue"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

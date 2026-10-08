@@ -1,0 +1,46 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the works reference number associated with {worker name}? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="AS-CYA-I-None-Ind" method="post" novalidate>
+
+        {{ govukInput({
+          label: {
+            text: "What is the works reference number associated with {worker name}?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "This is unique to the business work or project"
+          },
+          id: "crn",
+          name: "crn",
+          classes: "govuk-input--width-10",
+          spellcheck: false,
+          autocomplete: "off"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

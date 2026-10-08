@@ -1,0 +1,390 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the partnership – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before adding this partnership</h1>
+
+      <h2 class="govuk-heading-m">Worker details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Partnership"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "type"
+                }
+              ]
+            }
+          },
+
+
+        
+
+           {
+            key: {
+              text: "Partnership name"
+            },
+            value: {
+              text: "{partnership name}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership name"
+                }
+              ]
+            }
+          },
+
+            {
+            key: {
+              text: "Add partnership address?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership address"
+                }
+              ]
+            }
+          },
+
+          {
+
+
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   "
+                      {Address line 1}<br>
+                      {Address line 2}<br>
+                      {Town or city}}<br>
+                      {County}<br>
+                      {Postal code}<br>
+                      {Country}<br>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+
+
+        
+   {
+
+          key: {
+              text: "Methods of contact"
+            },
+            value: {
+              text: "Email address"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "methods of contact"
+                }
+              ]
+            }
+          },
+ {
+
+          key: {
+              text: "Email address"
+            },
+            value: {
+              text: "{Email address}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Email address"
+                }
+              ]
+            }
+          },
+
+    
+  
+ 
+  
+
+  {
+              key: {
+                text: "Add UTR?"
+              },
+              value: {
+                text: "Yes"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "add UTR"
+                  }
+                ]
+              }
+            },
+
+   {
+           key: {
+              text: "Partnership UTR"
+            },
+            value: {
+              text: "{partnership UTR}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership utr"
+                }
+              ]
+            }
+          },
+
+
+
+                {
+            key: {
+              text: "Nominated partner"
+            },
+            value: {
+              text: "{nominated partner name}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner"
+                }
+              ]
+            }
+          },
+
+          
+
+          {
+            key: {
+              text: "Add UTR for nominated partner?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner UTR"
+                }
+              ]
+            }
+          },
+
+
+    {
+            key: {
+              text: "UTR for nominated partner"
+            },
+            value: {
+              text: "{Self Assessment UTR for nominated partner}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner UTR"
+                }
+              ]
+            }
+          },
+
+
+
+     {
+            key: {
+              text: "Add National Insurance number for nominated partner?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner National Insurance number"
+                }
+              ]
+            }
+          },
+
+
+    {
+            key: {
+              text: "National Insurance number for nominated partner"
+            },
+            value: {
+              text: "{NI number}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner UTR"
+                }
+              ]
+            }
+          },
+
+
+
+          {
+            key: {
+              text: "Add company registration number for nominated partner?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "company registration number for nominated partner"
+                }
+              ]
+            }
+          },
+
+
+
+       
+          {  
+
+            key: {
+              text: "Company registration number for nominated partner"
+            },
+            value: {
+              text: "{Company registration number}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "company registration number"
+                }
+              ]
+            }
+          },
+
+
+{
+            key: {
+              text: "Add works reference number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          },
+
+
+          {
+            
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "XLS345-MM"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          }
+
+        ]
+      }) }}
+
+     
+
+      <h2 class="govuk-heading-m">Now add this worker</h2>
+
+      <p class="govuk-body">By adding this worker you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

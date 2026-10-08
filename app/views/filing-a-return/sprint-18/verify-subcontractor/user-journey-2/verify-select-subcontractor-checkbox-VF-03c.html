@@ -1,0 +1,178 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verify your subcontractors – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="subcontractors-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Which subcontractors do you want to reverify?
+              </h1>
+            </legend>
+
+            <div id="subcontractors-hint" class="govuk-hint govuk-!-margin-bottom-6">
+              Select the existing subcontractors you want to include in this verification request
+            </div>
+
+            <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-bottom-4">
+              <div class="govuk-checkboxes__item">
+                <!-- 
+                Select all checbox option
+                <input
+                  class="govuk-checkboxes__input"
+                  id="select-all-subcontractors"
+                  name="select-all-subcontractors"
+                  type="checkbox"
+                  value="all">
+                <label class="govuk-label govuk-checkboxes__label" for="select-all-subcontractors">
+                  Select all subcontractors
+                </label> -->
+              </div>
+            </div>
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Include</th>
+                  <th scope="col" class="govuk-table__header">Name</th>
+                  <th scope="col" class="govuk-table__header">UTR</th>
+                  <th scope="col" class="govuk-table__header">Verified</th>
+                  <th scope="col" class="govuk-table__header">Verification number</th>
+                  <th scope="col" class="govuk-table__header">Tax treatment</th>
+                  <th scope="col" class="govuk-table__header">Date added</th>
+                </tr>
+              </thead>
+
+              <tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="sub-2"
+                          name="select-subcontractors"
+                          type="checkbox"
+                          value="grant-alan">
+                        <label class="govuk-label govuk-checkboxes__label" for="sub-2">
+                          <span class="govuk-visually-hidden">Select Alan Grant</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">Grant, Alan</td>
+                  <td class="govuk-table__cell">0991272528</td>
+                  <td class="govuk-table__cell">No</td>
+                  <td class="govuk-table__cell">V0001256246</td>
+                  <td class="govuk-table__cell">Standard rate</td>
+                  <td class="govuk-table__cell">11 May 2020</td>
+                </tr>
+
+<tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="sub-4"
+                          name="select-subcontractors"
+                          type="checkbox"
+                          value="hammond-house">
+                        <label class="govuk-label govuk-checkboxes__label" for="sub-4">
+                          <span class="govuk-visually-hidden">Select Hammond House</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">Hammond House</td>
+                  <td class="govuk-table__cell">2904743750</td>
+                  <td class="govuk-table__cell">Yes</td>
+                  <td class="govuk-table__cell">V0001217702</td>
+                  <td class="govuk-table__cell">Gross</td>
+                  <td class="govuk-table__cell">1 Oct 2025</td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="sub-1"
+                          name="select-subcontractors"
+                          type="checkbox"
+                          value="ingen-research">
+                        <label class="govuk-label govuk-checkboxes__label" for="sub-1">
+                          <span class="govuk-visually-hidden">Select InGen Research</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">InGen Research</td>
+                  <td class="govuk-table__cell">9347488729</td>
+                  <td class="govuk-table__cell">No</td>
+                  <td class="govuk-table__cell">V0005617876</td>
+                  <td class="govuk-table__cell">Standard rate</td>
+                  <td class="govuk-table__cell">1 Mar 2020</td>
+                </tr>
+
+                
+
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input
+                          class="govuk-checkboxes__input"
+                          id="sub-3"
+                          name="select-subcontractors"
+                          type="checkbox"
+                          value="malcolm-sattler">
+                        <label class="govuk-label govuk-checkboxes__label" for="sub-3">
+                          <span class="govuk-visually-hidden">Select Malcolm And Sattler</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="govuk-table__cell">Malcolm And Sattler</td>
+                  <td class="govuk-table__cell">0074742762</td>
+                  <td class="govuk-table__cell">Yes</td>
+                  <td class="govuk-table__cell">V0004635231</td>
+                  <td class="govuk-table__cell">Higher rate</td>
+                  <td class="govuk-table__cell">1 Oct 2025</td>
+                </tr>
+
+                
+              </tbody>
+            </table>
+
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

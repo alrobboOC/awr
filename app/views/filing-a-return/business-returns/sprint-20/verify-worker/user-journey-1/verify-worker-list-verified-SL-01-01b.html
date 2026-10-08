@@ -1,0 +1,140 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Your workers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Your workers
+      </h1>
+
+        <p id="results-count" class="govuk-body govuk-!-margin-bottom-3">
+              Showing 1 to 6 of 14 results
+            </p>
+
+      {{ govukTable({
+        
+        firstCellIsHeader: false,
+        head: [
+          { text: "Name" },
+          { text: "UTR" },
+          { text: "Verified" },
+          { text: "Verification number" },
+          { text: "Tax treatment" },
+          { text: "Date added" },
+          { text: "Actions" }
+        ],
+        rows: [
+          [
+            { text: "Brody, Martin" },
+            { text: "4352280809" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+           [
+            { text: "Hendricks, Ellen" },
+            { text: "6829517403" },
+            { text: "Yes" },
+            { text: "V0004528767" },
+            { text: "Standard rate" },
+            { text: "6 Dec 2025" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+          [
+            { text: "Hooper and Associates" },
+            { text: "4213301986" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+             [
+            { text: "InGen Research" },
+            { text: "9347488729" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Mar 2020" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+         
+
+          [
+            { text: "Quint Transportation" },
+            { text: "9450429526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Gross" },
+            { text: "2 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+            [
+            { text: "The Kintner Group" },
+            { text: "3992651526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Higher rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Edit</a> | <a href="#" class="govuk-link">Delete</a>' }
+          ]
+
+         
+
+         
+        ]
+      }) }}
+
+    </div>
+  </div>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
+
+   
+     
+{% endblock %}
+
+

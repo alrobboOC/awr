@@ -1,0 +1,52 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Worker not verified – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Worker not verified
+      </h1>
+
+      <p class="govuk-body">
+        HMRC could not match the details you provided with their records.
+      </p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          You must deduct tax at 30% from payments to this worker.
+        </strong>
+      </div>
+
+      <h2 class="govuk-heading-m">What to do next</h2>
+
+      <p class="govuk-body">
+        Check the worker's details match with their HMRC records.
+      </p>
+
+      <p class="govuk-body">
+        If they have not registered for BRS, they can call HMRC on 0300 200 3210.
+      </p>
+
+      {{ govukButton({
+        text: "Return to worker list",
+        href: "/filing-a-return/business-returns/worker-list"
+      }) }}
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/worker-details/1" class="govuk-link">Edit worker details and try again</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

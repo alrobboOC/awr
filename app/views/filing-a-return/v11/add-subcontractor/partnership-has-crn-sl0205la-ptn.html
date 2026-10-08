@@ -1,0 +1,53 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Does John Smith have a Company Registration Number? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "partnership-partner-details-ni.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="partnership-partner-details-crn.html" method="post" novalidate>
+
+        {{ govukRadios({
+          name: "has-crn",
+          fieldset: {
+            legend: {
+              text: "Does {nominated partner name} have a company registration number?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This only applies if they are a corporate partner or director of a company.  This information will be used to verify them as a subcontractor."
+          },
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

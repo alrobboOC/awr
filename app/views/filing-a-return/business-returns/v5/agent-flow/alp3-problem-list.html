@@ -1,0 +1,47 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="There is a problem" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/business-returns-service/agent/client-search"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      We could not retrieve your client list
+    </h1>
+
+    <p class="govuk-body">This could be because:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>there is a temporary problem with the service</li>
+      <li>your authorisations are still being processed</li>
+      <li>you do not have any authorised clients for BRS</li>
+    </ul>
+
+    <p class="govuk-body">If the problem continues, contact the <a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/online-services-helpdesk" class="govuk-link">HMRC Online Services Helpdesk</a>.</p>
+
+    <div class="govuk-inset-text govuk-!-margin-top-6">
+      <h2 class="govuk-heading-m">Filing only service</h2>
+
+      <p class="govuk-body">You can send BRS monthly returns on behalf of a client without completing an authorisation online or form FBI-2.</p>
+
+      <p class="govuk-body">This service is only available using commercial software.</p>
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link">Find commercial software for BRS returns</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+

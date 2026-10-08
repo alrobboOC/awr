@@ -1,0 +1,309 @@
+
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the individual – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Martin Brody</h1>
+
+      <h2 class="govuk-heading-m">Worker details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Individual or sole trader"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "",
+                  visuallyHiddenText: "type"
+                }
+              ]
+            }
+          },
+
+
+        
+
+
+    {
+            key: {
+              text: "Does worker use a trading name?"
+            },
+            value: {
+              text: "No"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "does worker use a trading name"
+                }
+              ]
+            }
+          },
+
+
+
+          
+
+           {
+            key: {
+              text: "Worker name"
+            },
+            value: {
+              text: "Martin Brody"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Worker name"
+                }
+              ]
+            }
+          },
+
+
+          
+
+
+
+            {
+            key: {
+              text: "Add worker address?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "worker address"
+                }
+              ]
+            }
+          },
+
+          {
+
+
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   "
+                      12 Harbor View Road<br>
+                      Amity Island<br>
+                      Bodmin<br>
+                      Cornwall<br>
+                      PL31 2HL<br>
+                      England<br>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+
+
+        
+
+ {
+
+          key: {
+              text: "Methods of contact"
+            },
+            value: {
+              text: "None"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "methods of contact"
+                }
+              ]
+            }
+          },
+ 
+ 
+
+
+
+  
+
+  {
+              key: {
+                text: "Add UTR?"
+              },
+              value: {
+                text: "Yes"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "add UTR"
+                  }
+                ]
+              }
+            },
+
+   {
+           key: {
+              text: "UTR"
+            },
+            value: {
+              text: "3992651526"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "corporation tax utr"
+                }
+              ]
+            }
+          },
+
+
+
+          
+          {
+            key: {
+              text: "Add National Insurance number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          },
+
+
+
+       
+          {  
+
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: "QQ123456C"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          },
+
+
+{
+            key: {
+              text: "Add works reference number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          },
+
+
+          {
+            
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "XLS345-MM"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          }
+
+        ]
+      }) }}
+
+     
+
+      <h2 class="govuk-heading-m">Confirm changes</h2>
+
+      <p class="govuk-body">By changing this worker's details you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+          <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+        <a class="govuk-link" href="#">Cancel changes</a>
+      </div>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

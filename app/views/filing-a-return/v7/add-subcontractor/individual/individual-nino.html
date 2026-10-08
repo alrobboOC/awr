@@ -1,0 +1,46 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the subcontractor's National Insurance number? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/SL-02-01-date-of-birth"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/SL-02-01-address" method="post">
+
+        {{ govukInput({
+          label: {
+            text: "What is the subcontractor's National Insurance number?",
+            isPageHeading: true,
+            classes: "govuk-label--l"
+          },
+          hint: {
+            text: "The subcontractor's National Insurance number will be on their National Insurance card, benefit letter, payslip or P60"
+          },
+          id: "nino",
+          name: "nino",
+          classes: "govuk-input--width-10",
+          spellcheck: false,
+          autocomplete: "off"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

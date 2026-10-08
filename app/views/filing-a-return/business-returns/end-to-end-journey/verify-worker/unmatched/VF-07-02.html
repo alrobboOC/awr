@@ -1,0 +1,97 @@
+
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification results – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Verification results
+      </h1>
+
+       
+
+        
+
+       
+
+         
+
+        <p class="govuk-body govuk-!-margin-bottom-3">
+              Here are the verification results from your most recent verification request.
+        </p>
+
+      {{ govukTable({
+        
+        firstCellIsHeader: false,
+        head: [
+          { text: "Name" },
+          { text: "Verification status" },
+          { text: "Tax treatment" },
+          { text: "Verification number" }
+          
+        ],
+        rows: [
+
+
+       
+          [
+            { text: "Brody, Martin" },
+            { text: "Unmatched" },
+            { text: "Higher rate" },
+            { text: "V0004528765/A" }
+          ],
+         
+
+         
+       
+          [
+            { text: "Quint Transportation" },
+            { text: "Unmatched" },
+            { text: "Higher rate" },
+            { text: "V0004528765/B" }
+
+          ],
+
+
+         
+
+          [
+            { text: "The Kintner Group" },
+            { text: "Unmatched" },
+            { text: "Higher rate" },
+            { text: "V0004528765/C" }
+
+          ]
+
+          
+        ]
+      }) }}
+
+      
+  </div>
+
+    <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Review unmatched workers"
+        }) }}
+</div>
+
+     
+{% endblock %}
+
+

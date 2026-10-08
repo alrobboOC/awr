@@ -1,0 +1,88 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Choose your address – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+   
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-l">Choose your address for {worker name}</h1>
+
+<form class="form" action="/filing-a-return/business-returns/form-handler" method="post" novalidate>
+  {{ govukRadios({
+    name: "selected-address",
+    items: [
+      {
+        value: "9a",
+        text: "9a Cobalt, Newcastle upon Tyne, NE1 1AS",
+        id: "9a"
+      },
+      {
+        value: "9b",
+        text: "9b Cobalt, Newcastle upon Tyne, NE1 1AS",
+        id: "9b"
+      },
+      {
+        value: "9c",
+        text: "9c Cobalt, Newcastle upon Tyne, NE1 1AS",
+        id: "9c"
+      },
+      {
+        divider: "or"
+      },
+      {
+        value: "none",
+        text: "None of these",
+        id: "none-of-these"
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</form>
+
+<script>
+  document.querySelector(".form").addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    const selected = document.querySelector(
+      'input[name="selected-address"]:checked'
+    )
+
+    if (!selected) return
+
+    const destinations = {
+      "9c": "AS-I-ALS-Address-review",
+      none: "AS-I-ALS-Address-enter"
+    }
+
+    if (destinations[selected.value]) {
+      window.location.href = destinations[selected.value]
+    }
+  })
+</script>
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration that no payments have been made – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="mr-03-08-g-check-your-answers-submitting-nil-return" method="post" novalidate>
+        
+        <h1 class="govuk-heading-l">Declaration that no payments have been made</h1>
+
+        <p class="govuk-body">By submitting this declaration I confirm that no payments have been made to workers during the tax month (payment date).</p>
+
+        {{ govukWarningText({
+          text: "You may face financial penalties and prosecution if you give any false information.",
+          iconFallbackText: "Warning"
+        }) }}
+
+        {{ govukCheckboxes({
+          name: "final-declaration",
+          items: [
+            {
+              text: "Yes, I confirm the information I have provided is correct to the best of my knowledge."
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Confirm"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

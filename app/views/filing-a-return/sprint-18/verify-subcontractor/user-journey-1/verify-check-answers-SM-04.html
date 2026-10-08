@@ -1,0 +1,111 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before submitting your verification request – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before submitting your verification request</h1>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          
+
+          {
+
+
+            key: {
+              text: "Subcontractors to verify"
+            },
+            value: {
+          html: '
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Brody, Martin</li>
+                    <li>Hooper And Associates</li>
+                    <li>Quint Transportation</li>
+                    <li>The Kintner Group</li>
+                  </ul>
+                '
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          }
+
+
+
+        ]
+      }) }}
+
+     
+
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          
+
+          {
+
+
+            key: {
+              text: "Do you want confirmation by email?"
+            },
+            value: {
+              html:   "
+                      Send confirmation to current email address: <strong>{email address}</strong>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          }
+
+ 
+
+        ]
+      }) }}
+
+
+
+
+      
+
+      <form action="#" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Confirm and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

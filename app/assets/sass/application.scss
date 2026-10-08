@@ -98,3 +98,11 @@
     padding-bottom: 10px;
   }
 }
+
+.filing-a-return {
+  @import "../filing-a-return/sass/application";
+}
+
+.business-returns {
+  @import "../business-returns/sass/application";
+}

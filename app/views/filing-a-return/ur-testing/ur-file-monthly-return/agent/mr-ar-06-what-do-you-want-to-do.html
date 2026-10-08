@@ -1,0 +1,52 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+ What do you want to do? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="mr-ar-09-are-you-sure-nil" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+             What do you want to amend? 
+            </h1>
+          </legend>
+          
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatDoYouWantToDo" name="whatDoYouWantToDo" type="radio" value="nil">
+              <label class="govuk-label govuk-radios__label" for="whatDoYouWantToDo">
+                I want to amend this standard return to a nil return
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatDoYouWantToDo-2" name="whatDoYouWantToDo" type="radio" value="Amend">
+              <label class="govuk-label govuk-radios__label" for="whatDoYouWantToDo-2">
+                I want to amend payment or subcontractor details on this return
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <br>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

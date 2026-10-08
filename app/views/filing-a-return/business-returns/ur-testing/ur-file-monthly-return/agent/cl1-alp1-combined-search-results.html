@@ -1,0 +1,190 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Select a client to file BRS returns" %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      File monthly BRS returns
+    </h1>
+
+    <p class="govuk-body">There are three potential ways to search for, and then file, a monthly BRS return.</p>
+
+    <!-- Skip to results link (only shown after search/when coming back to page with results) -->
+    {% if showSkipLink %}
+    <div class="govuk-skip-link-container">
+      <a href="#search-results" class="govuk-skip-link">Skip to results</a>
+    </div>
+    {% endif %}
+
+    {% if errors %}
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: errors
+    }) }}
+    {% endif %}
+
+    <form method="get" action="#" novalidate>
+
+      <!-- Select dropdown for search type -->
+      <div class="govuk-form-group {{ 'govuk-form-group--error' if errors.searchBy }}">
+        <label class="govuk-label govuk-label--m" for="search-by">
+          What do you want to search by?
+        </label>
+        {% if errors.searchBy %}
+        <p id="search-by-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> {{ errors.searchBy.text }}
+        </p>
+        {% endif %}
+        <select class="govuk-select {{ 'govuk-select--error' if errors.searchBy }}" 
+                id="search-by" 
+                name="searchBy"
+                aria-describedby="{{ 'search-by-error' if errors.searchBy }}">
+          <option value="">Select an option</option>
+         <option value="name" selected>Client name</option>
+          <option value="employer-ref" {{ "selected" if data['searchBy'] == "employer-ref" }}>Employer reference</option>
+          <option value="client-ref" {{ "selected" if data['searchBy'] == "client-ref" }}>Client reference</option>
+        </select>
+      </div>
+
+      <!-- Search input - always visible -->
+      <div class="govuk-form-group {{ 'govuk-form-group--error' if errors.search }}">
+        <label class="govuk-label" for="client-search">
+          Enter your search
+        </label>
+        <div id="client-search-hint" class="govuk-hint">
+          This is the client name (ABC Business), employer reference (123/AB45678), or client reference (ABC-001)
+        </div>
+        {% if errors.search %}
+        <p id="client-search-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> {{ errors.search.text }}
+        </p>
+        {% endif %}
+  <input class="govuk-input govuk-!-width-two-thirds {{ 'govuk-input--error' if errors.search }}"
+       id="client-search"
+       name="search"
+       type="search"
+       spellcheck="false"
+
+       value="Apple"
+       aria-describedby="client-search-hint {{ 'client-search-error' if errors.search }}"
+       onfocus="window.location.href='cl1-alp1-combined-search-entered'">
+      </div>
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Search
+        </button>
+        <a href="/filing-a-return/business-returns/business-returns-service/agent/select-client" class="govuk-link govuk-link--no-visited-state">
+          Clear search
+        </a>
+      </div>
+
+    </form>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <!-- Results section -->
+    <div id="search-results">
+
+      {% if data['search'] %}
+      <h2 class="govuk-heading-m">Search results</h2>
+      <p class="govuk-body">
+        Showing results for <strong>'{{ data['search'] }}'</strong>
+      </p>
+      {% else %}
+      <h2 class="govuk-heading-m">Your clients</h2>
+      {% endif %}
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-visually-hidden">
+          List of clients available for filing BRS returns
+        </caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Client name</th>
+            <th scope="col" class="govuk-table__header">Employer reference</th>
+            <th scope="col" class="govuk-table__header">Client reference</th>
+            <th scope="col" class="govuk-table__header">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="LP-02-brs-return-dashboard-agent" 
+                 class="govuk-link">
+                Apple Business
+              </a>
+            </th>
+            <td class="govuk-table__cell">123/EZ10000</td>
+            <td class="govuk-table__cell">Apple Business</td>
+            <td class="govuk-table__cell">
+              <a href="/filing-a-return/business-returns/business-returns-service/agent/remove-client?client=ABC-Business-Ltd&return=/business-returns-service/agent/select-client" 
+                 class="govuk-link">
+                Remove<span class="govuk-visually-hidden"> Apple Business from your client list</span>
+              </a>
+            </td>
+          </tr>
+        
+          
+        </tbody>
+      </table>
+
+      {% if clientCount == 0 %}
+
+      <p class="govuk-body">No clients found matching '{{ data['search'] }}'.</p>
+      
+      <p class="govuk-body">Try:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>checking your spelling</li>
+        <li>using fewer keywords</li>
+        <li>searching for part of the name or reference</li>
+      </ul>
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/business-returns-service/agent/select-client" class="govuk-link">
+          View all your clients
+        </a>
+      </p>
+
+      {% endif %}
+
+    </div>
+
+    {{ govukDetails({
+      summaryText: "Download your client list",
+      html: "<p class='govuk-body'>You can download a list of all your clients as a CSV file. This may take some time if you have many clients.</p>
+      <p class='govuk-body'>
+        <a href='/filing-a-return/business-returns/business-returns-service/agent/download-client-list' class='govuk-link'>Download client list (CSV)</a>
+      </p>"
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "Filing only service",
+      html: "<p class='govuk-body'>You can send BRS monthly returns on behalf of a client without completing an authorisation online or form 64-8.</p>
+      <p class='govuk-body'>This service is only available using commercial software.</p>
+      <p class='govuk-body'>
+        <a href='/filing-a-return/business-returns/business-returns/guidance' class='govuk-link' rel='external'>Find commercial software for BRS returns (opens in new tab)</a>
+      </p>"
+    }) }}
+
+  </div>
+</div>
+
+
+
+{% endblock %}

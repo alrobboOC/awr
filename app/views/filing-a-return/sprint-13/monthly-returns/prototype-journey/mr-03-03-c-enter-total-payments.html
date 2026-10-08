@@ -1,0 +1,84 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+    What are the total payments made to {{data['subcontractors']}} in this reporting period? – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {%set subcontractorName = data['subcontractors'] %}
+        {%set subContLenght = data['subcontractors'].length %}
+        <form action="mr-03-03-d-enter-material-costs" method="post" novalidate> 
+          {%if subContLenght > 1 %}
+          <!-- multiple subcontractor -->
+           {%if data['whichSubcontractorDeetails'] != '' or data['whichSubcontractorDeetails'] != null %}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="total-payments">
+              What are the total payments made to {{data['whichSubcontractorDeetails']}}?  
+            </label>
+          </h1>
+          {%else%}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="total-payments">
+              What are the total payments made to {{subcontractorName[0]}}?  
+            </label>
+          </h1>
+          {%endif%}
+          <div id="total-payments-hint" class="govuk-hint">
+            Enter the gross amount you paid to this subcontractor. Exclude VAT and any deductions. Round up to the nearest pound.
+          </div>
+          {{ govukInput({
+            classes: "govuk-input--width-10",
+            id: "total-payments",
+            name: "total-payments",
+            value: data['total-payments'],
+            prefix: {
+              text: "£"
+            },
+            spellcheck: false,
+            attributes: {
+              inputmode: "numeric",
+              "aria-describedby": "total-payments-hint"
+            }
+          }) }}
+          {%else%}
+          <!-- single subcontractor -->
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="total-payments">
+              What are the total payments made to {{subcontractorName}}? 
+            </label>
+          </h1>
+          <div id="total-payments-hint" class="govuk-hint">
+           Enter the gross amount you paid to this subcontractor. Exclude VAT and any deductions. Round up to the nearest pound.
+          </div>
+
+          {{ govukInput({
+            classes: "govuk-input--width-10",
+            id: "total-payments",
+            name: "total-payments",
+            value: data['total-payments'],
+            prefix: {
+              text: "£"
+            },
+            spellcheck: false,
+            attributes: {
+              inputmode: "numeric",
+              "aria-describedby": "total-payments-hint"
+            }
+          }) }}
+        {%endif%}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

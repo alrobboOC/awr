@@ -1,0 +1,32 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Your submission is being sent to HMRC – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="hods-loading-spinner" role="status">
+        <div class="hods-loading-spinner__spinner"></div>
+        <div class="hods-loading-spinner__content ">
+          <h1 class="govuk-heading-m">
+            Your verification request is being sent to HMRC
+          </h1>
+          <p class="govuk-body">
+            Do not refresh this page or press the back button while your submission is being processed.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <script>
+  setTimeout(function () {
+    window.location.href = "verify-confirm-successful-submission-email-VH-02b";
+  }, 3500);
+</script>
+{% endblock %}

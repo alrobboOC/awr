@@ -1,0 +1,59 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the individual's Unique Taxpayer Reference? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/SL-02-05-verification-number" method="post">
+       {% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<h1 class="govuk-heading-l">Self Assessment Unique Taxpayer Reference (UTR)</h1>
+
+<p class="govuk-body">The UTR will be on tax returns and other documents from HMRC. It might be called 'reference', 'UTR', or 'official use'.</p>
+
+<p class="govuk-body"><a class="govuk-link" rel="noreferrer noopener" target="_blank" href="#">Get more help to find a UTR (opens in new tab)</a></p>
+
+{{
+  govukInput({
+    label: {
+      text: "What is the Self Assessment UTR for Alan Grant?",
+      classes: "govuk-label--m",
+      isPageHeading: false
+    },
+    hint: {
+      text: "A UTR is a 10 digit number"
+    },
+    id: "utr",
+    name: "utr",
+    value: "",
+    classes: "govuk-input--width-10",
+    attributes: {
+      onfocus: "window.location.href='individual-enter-utr-AS-I6-SL0205C-ptn-entered'"
+    }
+  })
+}}
+
+ {{ govukButton({
+          text: "Continue",
+          href: "#"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

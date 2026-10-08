@@ -1,0 +1,99 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Worker verified" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Worker verified",
+      html: "Verification number<br><strong>V1234567890</strong>"
+    }) }}
+
+    <h2 class="govuk-heading-m">Verification details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Worker
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John Smith
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Verification number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          V1234567890
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Payment status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Registered for net payment
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Tax deduction rate
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong>20%</strong>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Verification date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10 November 2025
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Valid until
+        </dt>
+        <dd class="govuk-summary-list__value">
+          9 November 2027
+        </dd>
+      </div>
+    </dl>
+
+    {{ govukInsetText({
+      text: "This verified status is valid for 2 years if you continue to pay this worker, and include them in your monthly BRS returns."
+    }) }}
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">You can now:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>deduct tax at 20% from labour payments to this worker</li>
+      <li>include them in your monthly BRS returns</li>
+      <li>provide them with payment and deduction statements</li>
+    </ul>
+
+    {{ govukWarningText({
+      text: "You must keep a record of this verification number for your BRS records.",
+      iconFallbackText: "Warning"
+    }) }}
+
+    {{ govukButton({
+      text: "Return to worker list",
+      href: "/filing-a-return/business-returns/business-returns-service/agent/your-workers"
+    }) }}
+
+    <p class="govuk-body">
+      <a href="/filing-a-return/business-returns/business-returns-service/agent/verify-worker" class="govuk-link">Verify another worker</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,785 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 27" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag">
+        In progress
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 27 - BRS prototype</h1>
+    <p class="govuk-body-l">
+      Wed, 05 August 2026 to Tue, 18 August 2026
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+<!-- Monthly return screens start from here -->
+    <div id="sprint-27-details">
+      <h2 class="govuk-heading-l">BRS management and filing</h2>
+                <p class="govuk-body"><a href="/filing-a-return/business-returns/sprint-27/manage-your-brs-return/new-index.html" class="govuk-link" target="_blank">All screens</a></p>
+      <p>Users of this service are either businesss who are members of the Business Returns Service (BRS), or agents working on behalf of businesss. From the relevant landing page, this can include managing or amending their client or business details, and submitting, amending or deleting nil returns or monthly returns.</p>
+
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<!-- Worker landing page screens start from here -->
+<div id="sprint-27-worker-landing-page">
+  <h2 class="govuk-heading-l">
+    Worker landing page
+  </h2>
+
+  <p class="govuk-body">
+    Developed the worker landing page using Team A's Manage worker landing page as the baseline, adapting the design to support the new user journey.
+  </p>
+
+  <ul class="govuk-list">
+    <li>
+      <a href="worker-landing-page/SLP-01.html" class="govuk-link" target="_blank">
+        SLP-01 Worker landing page
+      </a>
+    </li>
+  </ul>
+</br>
+</div>
+<!-- Worker landing page screens end here -->
+
+
+
+
+
+    <!-- Manage worker screens start from here -->
+<div id="sprint-27-manage-worker-details">
+  <h2 class="govuk-heading-l">
+    Manage worker
+  </h2>
+
+  <p class="govuk-body">
+    Manage worker screens for Sprint 23, including worker details, change and remove flows.
+  </p>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-manage-worker">
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-1">
+            Manage worker - user journey 1
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-worker-content-1" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-1/AS-Contact-C.html" class="govuk-link" target="_blank">AS-Contact-C.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-multi-C.html" class="govuk-link" target="_blank">MSC-02-UV-multi-C.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-multi-I.html" class="govuk-link" target="_blank">MSC-02-UV-multi-I.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-multi-P.html" class="govuk-link" target="_blank">MSC-02-UV-multi-P.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-multi-T.html" class="govuk-link" target="_blank">MSC-02-UV-multi-T.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-none-I.html" class="govuk-link" target="_blank">MSC-02-UV-none-I.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-single-C.html" class="govuk-link" target="_blank">MSC-02-UV-single-C.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-single-I.html" class="govuk-link" target="_blank">MSC-02-UV-single-I.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-single-P.html" class="govuk-link" target="_blank">MSC-02-UV-single-P.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-UV-single-T.html" class="govuk-link" target="_blank">MSC-02-UV-single-T.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-multi-C.html" class="govuk-link" target="_blank">MSC-02-V-multi-C.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-multi-I.html" class="govuk-link" target="_blank">MSC-02-V-multi-I.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-multi-P.html" class="govuk-link" target="_blank">MSC-02-V-multi-P.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-multi-T.html" class="govuk-link" target="_blank">MSC-02-V-multi-T.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-none-I.html" class="govuk-link" target="_blank">MSC-02-V-none-I.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-single-C.html" class="govuk-link" target="_blank">MSC-02-V-single-C.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-single-I.html" class="govuk-link" target="_blank">MSC-02-V-single-I.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-single-P.html" class="govuk-link" target="_blank">MSC-02-V-single-P.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-02-V-single-T.html" class="govuk-link" target="_blank">MSC-02-V-single-T.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/MSC-03-Contact.html" class="govuk-link" target="_blank">MSC-03-Contact.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-03-Method.html" class="govuk-link" target="_blank">MSC-03-Method.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-04.html" class="govuk-link" target="_blank">MSC-04.html</a></li>
+          <li><a href="manage-worker/user-journey-1/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+
+          <li><a href="manage-worker/user-journey-1/SL-01-01-tax.html" class="govuk-link" target="_blank">SL-01-01-tax.html</a></li>
+          <li><a href="manage-worker/user-journey-1/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-worker/user-journey-1/SL-01-02.html" class="govuk-link" target="_blank">SL-01-02.html</a></li>
+          <li><a href="manage-worker/user-journey-1/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-2">
+            Manage worker - user journey 2
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-worker-content-2" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-2/MSC-02-V-single-I-NatIns.html" class="govuk-link" target="_blank">MSC-02-V-single-I-NatIns.html</a></li>
+          <li><a href="manage-worker/user-journey-2/MSC-02-V-single-I.html" class="govuk-link" target="_blank">MSC-02-V-single-I.html</a></li>
+          <li><a href="manage-worker/user-journey-2/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+          <li><a href="manage-worker/user-journey-2/MSC-SL0205B.html" class="govuk-link" target="_blank">MSC-SL0205B.html</a></li>
+          <li><a href="manage-worker/user-journey-2/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-worker/user-journey-2/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+        
+
+     <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-3">
+            Manage worker - user journey 3
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-worker-content-3" class="govuk-accordion__section-content">
+          <ul class="govuk-list">
+              <li><a href="manage-worker/user-journey-3/MSC-02-V-WorkRef-None.html" class="govuk-link" target="_blank">MSC-02-V-WorkRef-None.html</a></li>
+              <li><a href="manage-worker/user-journey-3/MSC-02-V-none-I.html" class="govuk-link" target="_blank">MSC-02-V-none-I.html</a></li>
+              <li><a href="manage-worker/user-journey-3/MSC-03-WorkRef-Radio.html" class="govuk-link" target="_blank">MSC-03-WorkRef-Radio.html</a></li>
+              <li><a href="manage-worker/user-journey-3/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+              <li><a href="manage-worker/user-journey-3/MSC-WorksRef.html" class="govuk-link" target="_blank">MSC-WorksRef.html</a></li>
+          </ul>
+      </div>
+
+
+
+
+
+      <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-3">
+            Manage worker - user journey 3B
+          </span>
+        </h2>
+      </div>
+
+    <div id="accordion-manage-worker-content-3" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-3b/MSC-02-UV-single-I-name.html" class="govuk-link" target="_blank">MSC-02-UV-single-I-name.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/MSC-02-UV-single-I-trading-name.html" class="govuk-link" target="_blank">MSC-02-UV-single-I-trading-name.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/MSC-02-V-none-I.html" class="govuk-link" target="_blank">MSC-02-V-none-I.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/MSC-03-removal-confirm-I.html" class="govuk-link" target="_blank">MSC-03-removal-confirm-I.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/MSC-03-use-trading-name-question-I.html" class="govuk-link" target="_blank">MSC-03-use-trading-name-question-I.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/MSC-ISL0201A.html" class="govuk-link" target="_blank">MSC-ISL0201A.html</a></li>
+          <li><a href="manage-worker/user-journey-3b/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+        </ul>
+    </div>
+</div>  
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-4">
+            Manage worker - user journey 4
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-worker-content-4" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-4/DS-03.html" class="govuk-link" target="_blank">DS-03.html</a></li>
+          <li><a href="manage-worker/user-journey-4/DS-03e.html" class="govuk-link" target="_blank">DS-03e.html</a></li>
+          <li><a href="manage-worker/user-journey-4/DS-CONF.html" class="govuk-link" target="_blank">DS-CONF.html</a></li>
+          <li><a href="manage-worker/user-journey-4/SL-01-01-D.html" class="govuk-link" target="_blank">SL-01-01-D.html</a></li>
+          <li><a href="manage-worker/user-journey-4/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-worker/user-journey-4/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 5 starts - multiple entries (scenario) -->
+
+     <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-5">
+            Manage worker - user journey 5
+          </span>
+        </h2>
+      </div>
+
+
+  
+      <div id="accordion-manage-worker-content-6" class="govuk-accordion__section-content">
+       <h3 class="govuk-heading-s">Scenario 1</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-5/scenario-1/AS-I4.html" class="govuk-link" target="_blank">AS-I4.html</a></li>
+          <li><a href="manage-worker/user-journey-5/scenario-1/individual-contact-mobile-AS-I4c.html" class="govuk-link" target="_blank">individual-contact-mobile-AS-I4c.html</a></li>
+          <li><a href="manage-worker/user-journey-5/scenario-1/MSC-02-V-I-change.html" class="govuk-link" target="_blank">MSC-02-V-I-change.html</a></li>
+          <li><a href="manage-worker/user-journey-5/scenario-1/MSC-02-V-I.html" class="govuk-link" target="_blank">MSC-02-V-I.html</a></li>
+          <li><a href="manage-worker/user-journey-5/scenario-1/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+          <li><a href="manage-worker/user-journey-5/scenario-1/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+          <li><a href="manage-worker/user-journey-5/scenario-1/SLP-01.html" class="govuk-link" target="_blank">SLP-01.html</a></li>
+        </ul>
+      </div>
+
+    
+
+
+    </div>
+
+
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-manage-worker-heading-all">
+            Manage worker - all sectors
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-manage-worker-content-all" class="govuk-accordion__section-content">
+
+        <h3 class="govuk-heading-m">Company</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C1.html" class="govuk-link" target="_blank">MSC-C1.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C2.html" class="govuk-link" target="_blank">MSC-C2.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C3.html" class="govuk-link" target="_blank">MSC-C3.html</a></li>
+
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C4A.html" class="govuk-link" target="_blank">MSC-C4A.html</a></li>   
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C4B.html" class="govuk-link" target="_blank">MSC-C4B.html</a></li>  
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C4C.html" class="govuk-link" target="_blank">MSC-C4C.html</a></li>   
+
+
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C6.html" class="govuk-link" target="_blank">MSC-C6.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C8.html" class="govuk-link" target="_blank">MSC-C8.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Company/MSC-C10.html" class="govuk-link" target="_blank">MSC-C10.html</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Individual</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-I2.html" class="govuk-link" target="_blank">MSC-I2.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-ISL0201A.html" class="govuk-link" target="_blank">MSC-ISL0201A.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-ISL0201D.html" class="govuk-link" target="_blank">MSC-ISL0201D.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-ISL0205A.html" class="govuk-link" target="_blank">MSC-ISL0205A.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-I0205B.html" class="govuk-link" target="_blank">MSC-I0205B.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-I0205C.html" class="govuk-link" target="_blank">MSC-I0205C.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Individual/MSC-I0205I.html" class="govuk-link" target="_blank">MSC-I0205I.html</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Partnership</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-P2.html" class="govuk-link" target="_blank">MSC-P2.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-P0201E.html" class="govuk-link" target="_blank">MSC-P0201E.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-P0205A.html" class="govuk-link" target="_blank">MSC-P0205A.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-P0205B.html" class="govuk-link" target="_blank">MSC-P0205B.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-P0205C.html" class="govuk-link" target="_blank">MSC-P0205C.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-P0205I.html" class="govuk-link" target="_blank">MSC-P0205I.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-PSL0202D.html" class="govuk-link" target="_blank">MSC-PSL0202D.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-PSL0205K.html" class="govuk-link" target="_blank">MSC-PSL0205K.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Partnership/MSC-PSL0205L.html" class="govuk-link" target="_blank">MSC-PSL0205L.html</a></li>
+        </ul>
+
+        <h3 class="govuk-heading-m">Trust</h3>
+        <ul class="govuk-list">
+          <li><a href="manage-worker/user-journey-all/Trust/MSC-T1.html" class="govuk-link" target="_blank">MSC-T1.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Trust/MSC-T2.html" class="govuk-link" target="_blank">MSC-T2.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Trust/MSC-T3.html" class="govuk-link" target="_blank">MSC-T3.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Trust/MSC-T6.html" class="govuk-link" target="_blank">MSC-T6.html</a></li>
+          <li><a href="manage-worker/user-journey-all/Trust/MSC-T8.html" class="govuk-link" target="_blank">MSC-T8.html</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Manage worker screens end here -->
+
+<!-- Verify worker screens start from here -->
+<div id="sprint-27-verify-worker">
+  <h2 class="govuk-heading-l">
+    Verify worker
+  </h2>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-verify-worker">
+
+    <!-- User journey 1 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-1">
+            User journey 1
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-1" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-check-answers-SM-04-long.html" class="govuk-link" target="_blank">verify-check-answers-SM-04-long.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-check-answers-SM-04-single.html" class="govuk-link" target="_blank">verify-check-answers-SM-04-single.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-check-answers-SM-04.html" class="govuk-link" target="_blank">verify-check-answers-SM-04.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-check-answers-SM-04b.html" class="govuk-link" target="_blank">verify-check-answers-SM-04b.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-check-answers-SM-04c.html" class="govuk-link" target="_blank">verify-check-answers-SM-04c.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-confirm-successful-submission-email-VH-02b.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-email-VH-02b.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-confirm-successful-submission-VH-02a-long.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02a-long.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-confirm-successful-submission-VH-02a-single.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02a-single.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-confirm-successful-submission-VH-02a.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02a.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-declaration-VF-06.html" class="govuk-link" target="_blank">verify-declaration-VF-06.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-email-confirm-no-store-SM-01a.html" class="govuk-link" target="_blank">verify-email-confirm-no-store-SM-01a.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-email-confirm-SM-01.html" class="govuk-link" target="_blank">verify-email-confirm-SM-01.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-select-worker-checkbox-VF-03-Pagi.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03-Pagi.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-select-worker-checkbox-VF-03.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-sending-submission-SM-05.html" class="govuk-link" target="_blank">verify-sending-submission-SM-05.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-worker-list-pagination-SL-01-01Pagi.html" class="govuk-link" target="_blank">verify-worker-list-pagination-SL-01-01Pagi.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-worker-list-unverified-SL-01-01a.html" class="govuk-link" target="_blank">verify-worker-list-unverified-SL-01-01a.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-worker-list-verified-SL-01-01.html" class="govuk-link" target="_blank">verify-worker-list-verified-SL-01-01.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-worker-list-verified-SL-01-01b.html" class="govuk-link" target="_blank">verify-worker-list-verified-SL-01-01b.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-update-email-no-store-SM-01c.html" class="govuk-link" target="_blank">verify-update-email-no-store-SM-01c.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-1/verify-update-email-SM-01b.html" class="govuk-link" target="_blank">verify-update-email-SM-01b.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 2 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-2">
+            User journey 2
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-2" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-check-answers-SM-04a.html" class="govuk-link" target="_blank">verify-check-answers-SM-04a.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-check-answers-SM-04a2.html" class="govuk-link" target="_blank">verify-check-answers-SM-04a2.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-confirm-successful-submission-email-VH-02c.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-email-VH-02c.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-confirm-successful-submission-VH-02d.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-VH-02d.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-declaration-VF-06.html" class="govuk-link" target="_blank">verify-declaration-VF-06.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-email-confirm-SM-01.html" class="govuk-link" target="_blank">verify-email-confirm-SM-01.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-minimum-worker-MS-01.html" class="govuk-link" target="_blank">verify-minimum-worker-MS-01.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-select-worker-checkbox-VF-03-Pagi.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03-Pagi.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-select-worker-checkbox-VF-03.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-select-worker-checkbox-VF-03c-Pagi.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03c-Pagi.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-select-worker-checkbox-VF-03c.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03c.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/verify-sending-submission-SM-05.html" class="govuk-link" target="_blank">verify-sending-submission-SM-05.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-2/VF-03b.html" class="govuk-link" target="_blank">VF-03b.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 3A -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-3">
+            User journey 3A
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-3" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3A/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3A/verify-no-workers-SL-01-01.html" class="govuk-link" target="_blank">verify-no-workers-SL-01-01.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3A/VF-12.html" class="govuk-link" target="_blank">VF-12.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 3B -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-4">
+            User journey 3B
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-4" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-check-answers-SM-04a.html" class="govuk-link" target="_blank">verify-check-answers-SM-04a.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-confirm-successful-submission-email-VH-02c.html" class="govuk-link" target="_blank">verify-confirm-successful-submission-email-VH-02c.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-declaration-VF-06.html" class="govuk-link" target="_blank">verify-declaration-VF-06.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-email-confirm-SM-01.html" class="govuk-link" target="_blank">verify-email-confirm-SM-01.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-select-worker-checkbox-VF-03c.html" class="govuk-link" target="_blank">verify-select-worker-checkbox-VF-03c.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/verify-sending-submission-SM-05.html" class="govuk-link" target="_blank">verify-sending-submission-SM-05.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-3/3B/VF-11.html" class="govuk-link" target="_blank">VF-11.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 4 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-5">
+            User journey 4
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-5" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-4/verify-scheme-inactive-CS-11.html" class="govuk-link" target="_blank">verify-scheme-inactive-CS-11.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 5 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-6">
+            User journey 5
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-6" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-5/verify-in-progress-CS-14.html" class="govuk-link" target="_blank">verify-in-progress-CS-14.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-5/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button">
+        User journey 6
+      </span>
+    </h2>
+  </div>
+
+  <div class="govuk-accordion__section-content">
+    <ul class="govuk-list">
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/MSC-02.html" class="govuk-link" target="_blank">MSC-02.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/MSC-CONF.html" class="govuk-link" target="_blank">MSC-CONF.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/SL-01-01.html" class="govuk-link" target="_blank">SL-01-01.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/verify-landing-SLP1.html" class="govuk-link" target="_blank">verify-landing-SLP1.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-02.html" class="govuk-link" target="_blank">VF-07-02.html</a></li>
+       <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-02e.html" class="govuk-link" target="_blank">VF-07-02e.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-03.html" class="govuk-link" target="_blank">VF-07-03.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-03B.html" class="govuk-link" target="_blank">VF-07-03B.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-03C.html" class="govuk-link" target="_blank">VF-07-03C.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-03D.html" class="govuk-link" target="_blank">VF-07-03D.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-07-04.html" class="govuk-link" target="_blank">VF-07-04.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-remove.html" class="govuk-link" target="_blank">VF-remove.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/VF-proceed.html" class="govuk-link" target="_blank">VF-proceed.html</a></li>
+       <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-6/CS-12.html" class="govuk-link" target="_blank">CS-12html</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button">
+        User journey 7
+      </span>
+    </h2>
+  </div>
+
+  <div class="govuk-accordion__section-content">
+    <ul class="govuk-list">
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/INSF-07-03.html" class="govuk-link" target="_blank">INSF-07-03.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/INSF-07-03C.html" class="govuk-link" target="_blank">INSF-07-03C.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/INSF-proceed.html" class="govuk-link" target="_blank">INSF-proceed.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/INSF-remove.html" class="govuk-link" target="_blank">INSF-remove.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/MSC-02.html" class="govuk-link" target="_blank">MSC-02.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/MSC-CONF-UTR.html" class="govuk-link" target="_blank">MSC-CONF-UTR.html</a></li>
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-7/VF-07-04-UTR.html" class="govuk-link" target="_blank">VF-07-04-UTR.html</a></li>
+    </ul>
+  </div>
+</div>
+
+    <!-- User journey 8 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-7">
+            User journey 8
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-verify-worker-content-7" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+           <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-8/verify-send-error-SM-06.html" class="govuk-link" target="_blank">verify-send-error-SM-06.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-8/verify-departmental-error-SM-07.html" class="govuk-link" target="_blank">verify-departmental-error-SM-07.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-8/verify-fatal-error-SM-08.html" class="govuk-link" target="_blank">verify-fatal-error-SM-08.html</a></li>
+           <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-8/verify-departmental-error-SM-09.html" class="govuk-link" target="_blank">verify-departmental-error-SM-09.html</a></li>
+         
+        </ul>
+      </div>
+    </div>
+
+    <!-- User journey 9 -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-verify-worker-heading-8">
+            User journey 9
+          </span>
+        </h2>
+      </div>
+
+      
+
+      <div id="accordion-verify-worker-content-8" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-9/verify-select-tax-year-view-VH-07.html" class="govuk-link" target="_blank">verify-select-tax-year-view-VH-07.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-9/verify-view-all-tax-2026-2027-VH-07a.html" class="govuk-link" target="_blank">verify-view-all-tax-2026-2027-VH-07a.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-9/verify-view-all-tax-year-VH-07b.html" class="govuk-link" target="_blank">verify-view-all-tax-year-VH-07b.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-9/VH-SR.html" class="govuk-link" target="_blank">VH-SR.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-9/VH-VR.html" class="govuk-link" target="_blank">VH-VR.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button">
+        User journey 11
+      </span>
+    </h2>
+  </div>
+
+  <div class="govuk-accordion__section-content">
+    <ul class="govuk-list">
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-11/CS-13.html" class="govuk-link" target="_blank">CS-13.html</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="govuk-accordion__section">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button">
+        User journey 12
+      </span>
+    </h2>
+  </div>
+
+  <div class="govuk-accordion__section-content">
+    <ul class="govuk-list">
+      <li><a href="/filing-a-return/business-returns/sprint-27/verify-worker/user-journey-12/VH-07-empty.html" class="govuk-link" target="_blank">VH-07-empty.html</a></li>
+    </ul>
+  </div>
+</div>
+
+
+  </div>
+</div>
+<!-- Verify worker screens end here -->
+
+
+
+
+<!-- Add worker screens start from here -->
+<div id="sprint-27-add-worker">
+  <h2 class="govuk-heading-l">
+    Add worker - all sectors
+  </h2>
+
+  <p class="govuk-body">
+    Register new individual, company, trust and partnership workers and verify their BRS tax status before making deductions from payments.
+  </p>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-add-worker">
+
+    <!-- All -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-worker-heading-1">
+            All
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-worker-content-1" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/all/AS-Contact-Method.html" class="govuk-link" target="_blank">AS-Contact-Method.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/all/worker-added-AS-CONF-ptn.html" class="govuk-link" target="_blank">worker-added-AS-CONF-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Company -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-worker-heading-2">
+            Company
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-worker-content-2" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/AS-Contact-C.html" class="govuk-link" target="_blank">AS-Contact-C.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/AS-C4.html" class="govuk-link" target="_blank">AS-C4.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/AS-CYA-C-Multi.html" class="govuk-link" target="_blank">AS-CYA-C-Multi.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/AS-CYA-C-Single.html" class="govuk-link" target="_blank">AS-CYA-C-Single.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-add-address-questions-AS-C2-ptn.html" class="govuk-link" target="_blank">company-add-address-questions-AS-C2-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-address-enter-AS-C3-ptn.html" class="govuk-link" target="_blank">company-address-enter-AS-C3-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-check-answers-AS-CYA-C-ptn.html" class="govuk-link" target="_blank">company-check-answers-AS-CYA-C-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-contact-email-AS-C4a-ptn.html" class="govuk-link" target="_blank">company-contact-email-AS-C4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-contact-mobile-AS-C4c-ptn.html" class="govuk-link" target="_blank">company-contact-mobile-AS-C4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-contact-phone-AS-C4b-ptn.html" class="govuk-link" target="_blank">company-contact-phone-AS-C4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-crn-enter-crn-AS-C8-ptn.html" class="govuk-link" target="_blank">company-crn-enter-crn-AS-C8-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-enter-utr-AS-C6-ptn.html" class="govuk-link" target="_blank">company-enter-utr-AS-C6-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-has-crn-AS-C7-ptn.html" class="govuk-link" target="_blank">company-has-crn-AS-C7-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-has-utr-AS-C5-ptn.html" class="govuk-link" target="_blank">company-has-utr-AS-C5-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-name-AS-C1-ptn.html" class="govuk-link" target="_blank">company-name-AS-C1-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-worksref-AS-C9-ptn.html" class="govuk-link" target="_blank">company-worksref-AS-C9-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/company/company-worksref-enter-AS-C10-ptn.html" class="govuk-link" target="_blank">company-worksref-enter-AS-C10-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Individual -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-worker-heading-3">
+            Individual
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-worker-content-3" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/AS-Contact-I.html" class="govuk-link" target="_blank">AS-Contact-I.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/AS-CYA-I-Multi-Ind.html" class="govuk-link" target="_blank">AS-CYA-I-Multi-Ind.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/AS-CYA-I-None-Ind.html" class="govuk-link" target="_blank">AS-CYA-I-None-Ind.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/AS-CYA-I-Single-Ind.html" class="govuk-link" target="_blank">AS-CYA-I-Single-Ind.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-add-address-questions-AS-I2-SL0205E-ptn.html" class="govuk-link" target="_blank">individual-add-address-questions-AS-I2-SL0205E-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-address-enter-AS-I3-SL0205A-ptn.html" class="govuk-link" target="_blank">individual-address-enter-AS-I3-SL0205A-ptn.html</a></li>
+
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/AS-I4.html" class="govuk-link" target="_blank">AS-I4</a></li>
+
+
+
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-contact-email-AS-I4a-ptn.html" class="govuk-link" target="_blank">individual-contact-email-AS-I4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-contact-mobile-AS-I4c-ptn.html" class="govuk-link" target="_blank">individual-contact-mobile-AS-I4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-contact-phone-AS-I4b-ptn.html" class="govuk-link" target="_blank">individual-contact-phone-AS-I4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-enter-nino-AS-I8-SL0205B-ptn.html" class="govuk-link" target="_blank">individual-enter-nino-AS-I8-SL0205B-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-enter-utr-AS-I6-SL0205C-ptn.html" class="govuk-link" target="_blank">individual-enter-utr-AS-I6-SL0205C-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-has-nino-AS-I7-SL0205F-ptn.html" class="govuk-link" target="_blank">individual-has-nino-AS-I7-SL0205F-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-has-tradingname-SL0201E-ptn.html" class="govuk-link" target="_blank">individual-has-tradingname-SL0201E-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-has-utr-AS-I5-SL0205G-ptn.html" class="govuk-link" target="_blank">individual-has-utr-AS-I5-SL0205G-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-name-AS-I1-SL0201A-ptn.html" class="govuk-link" target="_blank">individual-name-AS-I1-SL0201A-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-tradingname-AS-I1-SL0201D-ptn.html" class="govuk-link" target="_blank">individual-tradingname-AS-I1-SL0201D-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-worksref-AS-I9-SL0205H-ptn.html" class="govuk-link" target="_blank">individual-worksref-AS-I9-SL0205H-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/individual/individual-worksref-enter-AS-I10-SL0205I-ptn.html" class="govuk-link" target="_blank">individual-worksref-enter-AS-I10-SL0205I-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Partnership -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-worker-heading-4">
+            Partnership
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-worker-content-4" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/AS-P4.html" class="govuk-link" target="_blank">AS-P4.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/AS-Contact-P.html" class="govuk-link" target="_blank">AS-Contact-P.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/AS-CYA-P-Multi-ptn.html" class="govuk-link" target="_blank">AS-CYA-P-Multi-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/AS-CYA-P-Single-ptn.html" class="govuk-link" target="_blank">AS-CYA-P-Single-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-add-address-questions-sl0205e-ptn.html" class="govuk-link" target="_blank">partnership-add-address-questions-sl0205e-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-address-enter-SL0205-A-ptn.html" class="govuk-link" target="_blank">partnership-address-enter-SL0205-A-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-check-answers-AS-CYA-P-ptn.html" class="govuk-link" target="_blank">partnership-check-answers-AS-CYA-P-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-contact-email-AS-P4a-ptn.html" class="govuk-link" target="_blank">partnership-contact-email-AS-P4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-contact-mobile-AS-P4c-ptn.html" class="govuk-link" target="_blank">partnership-contact-mobile-AS-P4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-contact-phone-AS-P4b-ptn.html" class="govuk-link" target="_blank">partnership-contact-phone-AS-P4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-has-crn-sl0205la-ptn.html" class="govuk-link" target="_blank">partnership-has-crn-sl0205la-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-has-nino-sl0205ka-ptn.html" class="govuk-link" target="_blank">partnership-has-nino-sl0205ka-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-has-utr-sl0205ja-ptn.html" class="govuk-link" target="_blank">partnership-has-utr-sl0205ja-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-nominated-partner-name-sl0205b-ptn.html" class="govuk-link" target="_blank">partnership-nominated-partner-name-sl0205b-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-partner-details-crn-sl0205l-ptn.html" class="govuk-link" target="_blank">partnership-partner-details-crn-sl0205l-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-partner-details-ni-sl0205k-ptn.html" class="govuk-link" target="_blank">partnership-partner-details-ni-sl0205k-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/partnership-partner-details-utr-sl0205j-ptn.html" class="govuk-link" target="_blank">partnership-partner-details-utr-sl0205j-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/SL0201-E-ptn.html" class="govuk-link" target="_blank">SL0201-E-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/SL0201-EA-ptn.html" class="govuk-link" target="_blank">SL0201-EA-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/SL0202-D-ptn.html" class="govuk-link" target="_blank">SL0202-D-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/SL0205-H-ptn.html" class="govuk-link" target="_blank">SL0205-H-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/partnership/SL0205-I-ptn.html" class="govuk-link" target="_blank">SL0205-I-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Trust -->
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-add-worker-heading-5">
+            Trust
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-add-worker-content-5" class="govuk-accordion__section-content">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/AS-T4.html" class="govuk-link" target="_blank">AS-T4.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/AS-Contact-T.html" class="govuk-link" target="_blank">AS-Contact-T.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/AS-CYA-T-Multi-tru.html" class="govuk-link" target="_blank">AS-CYA-T-Multi-tru.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/AS-CYA-T-Single-tru.html" class="govuk-link" target="_blank">AS-CYA-T-Single-tru.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-check-answers-AS-CYA-T-ptn.html" class="govuk-link" target="_blank">trust-check-answers-AS-CYA-T-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-add-address-questions-AS-T2-ptn.html" class="govuk-link" target="_blank">trust-add-address-questions-AS-T2-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-add-contact-details-question-AS-T4-ptn.html" class="govuk-link" target="_blank">trust-add-contact-details-question-AS-T4-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-address-enter-AS-T3-ptn.html" class="govuk-link" target="_blank">trust-address-enter-AS-T3-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-contact-email-AS-T4a-ptn.html" class="govuk-link" target="_blank">trust-contact-email-AS-T4a-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-contact-mobile-AS-T4c-ptn.html" class="govuk-link" target="_blank">trust-contact-mobile-AS-T4c-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-contact-phone-AS-T4b-ptn.html" class="govuk-link" target="_blank">trust-contact-phone-AS-T4b-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-enter-utr-AS-T6-ptn.html" class="govuk-link" target="_blank">trust-enter-utr-AS-T6-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-has-utr-AS-T5-ptn.html" class="govuk-link" target="_blank">trust-has-utr-AS-T5-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-name-AS-T1-ptn.html" class="govuk-link" target="_blank">trust-name-AS-T1-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-worksref-AS-T7-ptn.html" class="govuk-link" target="_blank">trust-worksref-AS-T7-ptn.html</a></li>
+          <li><a href="/filing-a-return/business-returns/sprint-27/add-worker/trust/trust-worksref-enter-AS-T8-ptn.html" class="govuk-link" target="_blank">trust-worksref-enter-AS-T8-ptn.html</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Add worker screens end here -->
+
+  </div>
+</div>
+
+{% endblock %}

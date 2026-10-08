@@ -1,0 +1,100 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Your monthly return has been successfully submitted",
+      html: "Your reference number<br><strong>KCNJQEFYOYVU6C2BTZCDQ<br>SWUSGG5ODG</strong>",
+      classes: "govuk-!-margin-bottom-6"
+    }) }}
+
+    <p class="govuk-body">
+      Your BRS monthly return for period ended 5 March 2018 was successfully submitted to HMRC at 08:46 GMT on 6 April 2017.
+    </p>
+
+    <h2 class="govuk-heading-m">Submission details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          PAL 355 Scheme
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employers Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123/AB456
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email confirmation sent to
+        </dt>
+        <dd class="govuk-summary-list__value">
+          test@test.com
+        </dd>
+      </div>
+    </dl>
+
+    {{ govukInsetText({
+      text: "Save this page or print a copy for your records. You may need your reference number for future correspondence with HMRC."
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "What is a submission receipt and reference number?",
+      html: "<p class=\"govuk-body\">Your submission receipt and reference number provide proof that you have submitted your BRS monthly return to HMRC.</p>
+      
+      <p class=\"govuk-body\">The reference number:</p>
+      <ul class=\"govuk-list govuk-list--bullet\">
+        <li>is a unique identification code calculated from your entire submission</li>
+        <li>can be used when contacting HMRC about this return</li>
+        <li>should be kept for your records</li>
+      </ul>
+      
+      <p class=\"govuk-body\">It is important that you retain a copy of this page in case you require it in the future.</p>"
+    }) }}
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Print this page",
+        classes: "govuk-button--secondary",
+        href: "javascript:window.print()"
+      }) }}
+    </div>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">
+      You will receive email confirmation of your submission. This return can be accessed in read-only format from your submission history.
+    </p>
+
+    <p class="govuk-body">
+      If you have any questions about your submission, contact the BRS Helpline on 0300 200 3210.
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Tell us what you think</h2>
+
+    <p class="govuk-body">
+      Send us your feedback. Your views are important in order to help make improvements to the service.
+    </p>
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Is this page not working properly? (opens in new tab)</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+   How much tax in total did you deduct from {{data['workers']}}?  – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+      <form action="mr-03-04-a-check-your-answers" method="post" novalidate>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {%set workerName = data['workers'] %}
+      {%set subContLenght = data['workers'].length %}
+        {% if subContLenght > 1 %}
+          <!-- multiple worker -->
+          {%if data['whichWorkerDeetails'] != '' or data['whichWorkerDeetails'] != null %}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="tax-deducted">
+              How much tax in total did you deduct from {{data['whichWorkerDeetails'] or "TyneWear Ltd"}}?
+            </label>
+          </h1>
+          {%else%}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="tax-deducted">
+              How much tax in total did you deduct from {{workerName[0] or "TyneWear Ltd"}}?
+            </label>
+          </h1>
+          {%endif%}
+        {%else%}
+        <!-- single worker -->
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="tax-deducted">
+            How much tax in total did you deduct from {{data['workers'] or "BuildRight Business"}}?  
+          </label>
+        </h1>
+        {%endif%}
+        <div id="tax-deducted-hint" class="govuk-hint">
+          Enter the total tax deducted from the worker in pounds and pence, like £300.00 or £450.33
+        </div>
+        {{ govukInput({
+          classes: "govuk-input--width-10",
+          id: "tax-deducted",
+          name: "tax-deducted",
+          prefix: {
+            text: "£"
+          },
+          spellcheck: false,
+          attributes: {
+            inputmode: "decimal",
+            "aria-describedby": "tax-deducted-hint",
+            onfocus: "window.location.href='mr-03-03-e-enter-tax-deducted-entered'"
+          }
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

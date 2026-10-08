@@ -1,0 +1,346 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the partnership – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before adding the partnership</h1>
+
+      <h2 class="govuk-heading-m">Partnership details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Partnership"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "type"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Partnership name"
+            },
+            value: {
+              text: "Smith & Johnson Partnership"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Partnership has a UTR"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership has a UTR"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Partnership UTR"
+            },
+            value: {
+              text: "1234567890"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Partnership UTR"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Partnership has a works reference number"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership has a works reference number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "ABC/123456"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Partnership has an address"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "partnership has an address"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Address"
+            },
+            value: {
+              html: "15 Oakwood Avenue<br>Manchester<br>M1 4BT"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Add partnership contact details"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "add partnership contact details"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Contact details"
+            },
+            value: {
+              html: '<p class="govuk-body">smithjohnson@partnership.com</p><p class="govuk-body">01234 567890</p>'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "contact details"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Nominated partner</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "John Smith"
+            },
+            actions: {
+              items: [
+                {
+                  href: "partnership-nominated-partner-name.html",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Nominated partner has a UTR"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner has a UTR"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Unique Taxpayer Reference"
+            },
+            value: {
+              text: "1234567890"
+            },
+            actions: {
+              items: [
+                {
+                  href: "partnership-partner-details-utr.html?id=1",
+                  text: "Change",
+                  visuallyHiddenText: "Unique Taxpayer Reference"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Nominated partner has a National Insurance number"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner has a National Insurance number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: "QQ 12 34 56 C"
+            },
+            actions: {
+              items: [
+                {
+                  href: "partnership-partner-details-ni.html?id=1",
+                  text: "Change",
+                  visuallyHiddenText: "National Insurance number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Nominated partner has a Company Registration Number"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "partnership-partner-has-crn.html?id=1",
+                  text: "Change",
+                  visuallyHiddenText: "nominated partner has a Company Registration Number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Company Registration Number"
+            },
+            value: {
+              text: "01234567"
+            },
+            actions: {
+              items: [
+                {
+                  href: "partnership-partner-details-crn.html?id=1",
+                  text: "Change",
+                  visuallyHiddenText: "Company Registration Number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Now add the partnership</h2>
+
+      {{ govukWarningText({
+        text: "You must verify this partnership with HMRC before submitting your return.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <p class="govuk-body">By adding this partnership you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Accept and add partnership"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Submission Receipt" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Submission receipt",
+      html: "Your reference number<br><strong>KCNJQEFYOYVU6C2BTZCDQ<br>SWUSGG5ODG</strong>"
+    }) }}
+
+    <p class="govuk-body">Your BRS monthly return for period ended 5 March 2018 was successfully submitted to HMRC at 08:46 GMT on 6 April 2017.</p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          PAL 355 Scheme
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employers Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123/AB456
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Save a copy of this receipt</h2>
+
+    <p class="govuk-body">It is important that you retain a copy of this submission receipt in case you require it in the future.</p>
+
+    <p class="govuk-body">You can save this page using your browser's 'Save as' option or print a copy using the button below.</p>
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Print this page",
+        classes: "govuk-button--secondary",
+        href: "javascript:window.print()"
+      }) }}
+    </div>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">You will receive confirmation of your submission by email.</p>
+
+    <p class="govuk-body">If you have any questions about your submission, contact the BRS Helpline on 0300 200 3210.</p>
+
+  </div>
+</div>
+
+{% endblock %}

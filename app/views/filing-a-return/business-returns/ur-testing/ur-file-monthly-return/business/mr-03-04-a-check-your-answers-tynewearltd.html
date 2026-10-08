@@ -1,0 +1,93 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers for TyneWear Ltd – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+      <form action="mr-03-04-c-worker-details-added_exhustive-view-d-complete" method="post" novalidate>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {%set workerselected = data['workers']%}
+      {%set tPayment = data['total-payments']%}
+      {%set mCost = data['materials-cost']%}
+      {%set tTax = data['tax-deducted']%}
+      <h1 class="govuk-heading-l">
+        Check your answers for Tynewear Ltd
+      </h1>
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Total payments to worker"
+            },
+            value: {
+              text: "£100"
+         },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Total cost of materials"
+            },
+            value: {
+              text: "£20"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Total BRS deductions"
+            },
+            value: {
+              text: "£10"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

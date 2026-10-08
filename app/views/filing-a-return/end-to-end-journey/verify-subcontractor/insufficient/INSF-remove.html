@@ -1,0 +1,50 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Remove subcontractor from verification request? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/SL-02-05-verification-number" method="post">
+<h1 class="govuk-heading-l">
+  Are you sure you want to remove InGen Research from this verification request?
+</h1>
+
+<p class="govuk-body">This means they will remain unverified, so you must not make any payments to them.</p>
+
+{{ govukRadios({
+  name: "remove-subcontractor",
+  classes: "govuk-radios--inline",
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+       {{ govukButton({
+          text: "Continue",
+          href: "INSF-07-03b"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

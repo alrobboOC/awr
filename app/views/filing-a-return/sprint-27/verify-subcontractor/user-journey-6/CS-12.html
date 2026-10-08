@@ -1,0 +1,46 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  You have unmatched subcontractors - Construction Industry Scheme - GOV.UK Prototype Kit
+  Send error  – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+  
+{% endblock %}
+
+{% block content %}
+
+{% from "hmrc/components/page-heading/macro.njk"  import hmrcPageHeading %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-l">
+  You have unmatched subcontractors
+</h1>
+
+<p class="govuk-body">Some of the subcontractor details in your most recent verification request do not match the information about that subcontractor held by HMRC.
+</p>
+
+<p class="govuk-body">You cannot create a new verification request until you have reviewed and fixed these unmatched results.
+</p>
+
+
+      
+<p class="govuk-body">
+     <a href="#">Check your latest verification results</a>
+</p>
+       
+
+       
+      
+
+    </div>
+  </div>
+
+{% endblock %}

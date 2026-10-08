@@ -1,0 +1,38 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="No worker records found" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/business-returns-service/agent/client-landing"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Successful automatic worker update
+    </h1>
+
+        <p class="govuk-body">
+  No worker records were found.</p>
+
+    <p class="govuk-body">
+  You can <a href="#" class="govuk-link">add a worker</a>.
+</p>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "/filing-a-return/business-returns/business-returns-service/agent/client-landing"
+    }) }}
+
+
+
+  </div>
+</div>
+
+{% endblock %}

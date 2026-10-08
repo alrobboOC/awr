@@ -1,0 +1,121 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers for TyneWear Ltd – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+    <form action="mr-04-d-successful-submission" method="post" novalidate>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    {%set workerselected = data['workers']%}
+    {%set tPayment = data['total-payments']%}
+    {%set mCost = data['materials-cost']%}
+    {%set tTax = data['tax-deducted']%}
+    <h1 class="govuk-heading-l">
+      Check your answers before submitting your nil return
+    </h1>
+    <h2 class="govuk-heading-m">Return details</h2>
+      {{ govukSummaryList({
+        rows: [
+        {
+            key: {
+              text: "Return type"
+            },
+            value: {
+              text: "Monthly nil return"
+         }
+         },
+          {
+            key: {
+              text: "Return period ended"
+            },
+            value: {
+              text: "February 2025"
+         }
+         },
+                   {
+            key: {
+              text: "Payments to workers"
+            },
+            value: {
+              text: "None"
+         }
+         },
+
+          {
+            key: {
+              text: "Inactivity request"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+    <h2 class="govuk-heading-m">Email confirmation</h2>
+    {{ govukSummaryList({
+    rows: [
+    {
+    key: {
+    text: "Do you want submission confirmation by email?"
+    },
+    value: {
+    text: "Yes"
+    },
+    actions: {
+    items: [
+    {
+    href: "#",
+    text: "Change",
+    visuallyHiddenText: "Question 3"
+    }
+    ]
+    }
+    },
+    {
+    key: {
+    text: "Email address"
+    },
+    value: {
+    text: "sarah.phillips@example.gov.uk"
+    },
+    actions: {
+    items: [
+    {
+    href: "#",
+    text: "Change",
+    visuallyHiddenText: "Question 3"
+    }
+    ]
+    }
+    }
+    ]
+    }) }}
+
+      {{ govukButton({
+      text: "Confirm and continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}

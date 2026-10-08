@@ -1,0 +1,70 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Your workers" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/business-returns-service/manage-brs-return"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Manage your BRS workers
+    </h1>
+
+     <p class="govuk-body">Workers must be verified before you can include them on a monthly return. This will ensure that deductions are made at the correct rate.</p>
+
+     {{ govukInsetText({
+        html: 'You will need to use <a href="#" class="govuk-link">commercial BRS software</a> to submit any verification requests that include more than 50 workers.'
+      }) }}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">Add new workers
+          </a>
+        </h3>
+        <p class="govuk-body">Create a record for any new worker you want to pay.
+</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="verification-select-worker-VF-03-ptn">Verify your workers
+</a>
+        </h3>
+        <p class="govuk-body">Make sure your workers have the correct deductions applied to their payments.</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-4">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">View your workers
+</a>
+        </h3>
+        <p class="govuk-body">Edit the details of any worker in your list.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#"></a>
+        </h3>
+        <p class="govuk-body"></p>
+      </div>
+    </div>
+
+   
+
+  </div>
+
+ 
+
+  </div>
+</div>
+
+{% endblock %}

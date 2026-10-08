@@ -1,0 +1,67 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you know the National Insurance number for {worker name}? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "partnership-partner-details-ni.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="partnership-partner-details-crn.html" method="post" novalidate>
+
+       {{ govukRadios({
+  name: "has-crn",
+  fieldset: {
+    legend: {
+      text: "Do you want to add other workers to this verification request?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    html: '
+      <p class="govuk-body">
+        To make sure that their tax treatment is correct and up to date, you can reverify any of your existing workers.
+      </p>
+
+      <p class="govuk-body">
+        You may want to reverify workers if they:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have recently changed any of their information</li>
+        <li>have not been included on a return recently and have lost their verified status</li>
+        <li>are about to lose their verified status</li>
+      </ul>
+    '
+  },
+  classes: "govuk-radios--inline",
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

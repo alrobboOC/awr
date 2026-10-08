@@ -1,0 +1,70 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+   What are the material costs for {{data['subcontractors']}}? – CIS Prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {%set subcontractorName = data['subcontractors'] %}
+        {%set subContLenght = data['subcontractors'].length %}
+      <form action="mr-03-03-e-enter-tax-deducted" method="post" novalidate>
+        {%if subContLenght > 1 %}
+          <!-- multiple subcontractor -->
+          {%if data['whichSubcontractorDeetails'] != '' or data['whichSubcontractorDeetails'] != null %}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="materials-cost">
+              How much did {{data['whichSubcontractorDeetails'] or "TyneWear Ltd"}} pay in material costs?
+            </label>
+          </h1>
+          {%else%}
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="materials-cost">
+              How much did {{subcontractorName[0] or "TyneWear Ltd"}} pay in material costs?
+            </label>
+          </h1>
+          {%endif%}
+        {%else%}
+          <!-- single subcontractor -->
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="materials-cost">
+              How much did {{data['subcontractors'] or "TyneWear Ltd"}} pay in material costs?
+            </label>
+          </h1>
+        {%endif%}
+          <div id="materials-cost-hint" class="govuk-hint">
+            Enter the total material costs paid by the subcontractor. Round up to the nearest pound.
+          </div>
+
+          {{ govukInput({
+            classes: "govuk-input--width-10",
+            id: "materials-cost",
+            name: "materials-cost",
+            value: data['materials-cost'],
+            prefix: {
+              text: "£"
+            },
+            spellcheck: false,
+            attributes: {
+              inputmode: "numeric",
+              "aria-describedby": "materials-cost-hint"
+            }
+          }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 7" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">     
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong></span>
+    <h1 class="govuk-heading-xl">Sprint 10 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Tue 20 Jan 2026 to [in progress...]
+    </p>
+     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-l">Add subcontractor - partnership</h2>
+    <p class="govuk-body">
+      Register new partnership subcontractors and verify their CIS tax status before making deductions from payments.
+    </p>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          All screens
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+          <li><a href="/filing-a-return/v10/add-subcontractor/partnership/partnership-name-sl0201d-ptn" class="govuk-link">SL0201 - D (PTN) - Partnership name</a></li>
+          <li><a href="/filing-a-return/v10/add-subcontractor/partnership/partnership-has-utr-sl0201ea-ptn" class="govuk-link">SL0201 - EA (PTN) - UTR</a></li>
+          <li><a href="/filing-a-return/v10/add-subcontractor/partnership/partnership-utr-sl0201e-ptn" class="govuk-link">SL0201 - E (PTN) - Enter UTR</a></li>
+          <li><a href="/filing-a-return/v10/add-subcontractor/partnership/partnership-has-works-ref-sl0205h-ptn" class="govuk-link">SL0205 - H (PTN) - Works ref</a></li>
+          <li><a href="/filing-a-return/v10/add-subcontractor/partnership/partnership-works-reference-sl0205i-ptn" class="govuk-link">SL0205 - I (PTN) - Enter works ref</a></li>
+
+
+        </ul>
+      </div>
+    </details>
+
+    <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
+
+    <!-- <div id="sprint-5-details">
+      <h2 class="govuk-heading-l">Monthly return</h2>
+      <p class="govuk-body">
+        The monthly returns journey allows contractors to report payments made to subcontractors during a tax month. Contractors select the tax period, choose which subcontractors to include, enter payment and deduction details, and submit their return by the 19th of the following month.
+      </p>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            All screens
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <ul class="govuk-list">
+            <li><a href="/filing-a-return/v8/mr-02-a-monthly_return_intro" class="govuk-link">MR02a - Introduction</a></li>
+            <li><a href="/filing-a-return/v8/mr-02-b-monthly_return_intro" class="govuk-link">MR02b - Enter tax month</a></li>
+            <li><a href="/filing-a-return/v8/mr-03-01-last_return_subcontractors" class="govuk-link">MR0301 -  Last return subcontractors</a></li>
+            <li><a href="/filing-a-return/v8/mr-03-02-a-select_subcontractors" class="govuk-link">MR0302a - Select subcontractors (variant a)</a></li>
+            <li><a href="/filing-a-return/v8/mr-03-02-b-select_subcontractors" class="govuk-link">MR0302b - Select subcontractors (variant b)</a></li>
+            <li><a href="/filing-a-return/v8/mr-03-02-c-select_subcontractors" class="govuk-link">MR0302c - Select subcontractors (variant c)</a></li>
+            <li><a href="/filing-a-return/v9/mr-03-03-h-verify-subcontractors" class="govuk-link">MR0303h - Unverified subcontractors</a></li>
+            <li><a href="/filing-a-return/v9/mr-03-03-a-subcontractor-payments" class="govuk-link">MR0303a - Subcontractors paid</a></li>
+            <li><a href="/filing-a-return/v9/mr-03-03-c-payment-details-screen-payments" class="govuk-link">MR0303c - Total payments made</a></li>
+            <li><a href="/filing-a-return/v9/mr-03-03-d-payment-details-screen-materials" class="govuk-link">MR0303d - Cost of materials</a></li>
+            <li><a href="/filing-a-return/v9/mr-03-03-e-payment-details-screen-tax" class="govuk-link">MR0303e - Total tax deducted</a></li>
+
+
+            <li><a href="/filing-a-return/v10/monthly-returns/mr-03-03-b-remove-subcontractor" class="govuk-link">MR0303b - Remove subcontractor</a></li>
+            <li><a href="/filing-a-return/v10/monthly-returns/mr-03-04-a-check-answers-incomplete" class="govuk-link">MR0304a - Check answers (variant a)</a></li>
+            <li><a href="/filing-a-return/v10/monthly-returns/mr-03-04-c-check-answers-complete" class="govuk-link">MR0304c - Check answers (variant b)</a></li>
+            <li><a href="/filing-a-return/v10/monthly-returns/mr-03-04-b-acknowledge" class="govuk-link">MR0304b - Declaration a</a></li>
+            <li><a href="/filing-a-return/v10/monthly-returns/mr-03-08-b-terms" class="govuk-link">MR0308b - Declaration b</a></li>
+
+          </ul>
+        </div>
+      </details>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">View journey</a>
+      </p>
+  </div> -->
+</div>
+
+{% endblock %}

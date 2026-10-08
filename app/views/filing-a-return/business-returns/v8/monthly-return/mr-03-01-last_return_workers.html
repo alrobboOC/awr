@@ -1,0 +1,141 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Check workers" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">
+      Check workers
+    </h1>
+
+    <p class="govuk-body">The workers listed below were included in the last monthly return you submitted.</p>
+
+    <p class="govuk-body">If you do not want to include one or more of the workers, de-select them. 
+</p>
+
+    <p class="govuk-body">You can deselect any worker you do not want to include. To add a worker from your list, select 'Show all workers' below.</p>
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">Show all workers</a>
+    </p>
+
+    <form action="/filing-a-return/business-returns/business-returns-service/monthly-return/payments" method="post">
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Verified using this service</th>
+            <th scope="col" class="govuk-table__header">Verification number</th>
+            <th scope="col" class="govuk-table__header">Tax treatment</th>
+            <th scope="col" class="govuk-table__header">Include this month</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Alice, A</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-alice" name="workers" type="checkbox" value="alice">
+                <label class="govuk-label govuk-checkboxes__label" for="include-alice">
+                  <span class="govuk-visually-hidden">Include Alice, A</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Bob, B</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-bob" name="workers" type="checkbox" value="bob">
+                <label class="govuk-label govuk-checkboxes__label" for="include-bob">
+                  <span class="govuk-visually-hidden">Include Bob, B</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Charles, C</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-charles" name="workers" type="checkbox" value="charles">
+                <label class="govuk-label govuk-checkboxes__label" for="include-charles">
+                  <span class="govuk-visually-hidden">Include Charles, C</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Dave, D</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-dave" name="workers" type="checkbox" value="dave">
+                <label class="govuk-label govuk-checkboxes__label" for="include-dave">
+                  <span class="govuk-visually-hidden">Include Dave, D</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Elise, E</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-elise" name="workers" type="checkbox" value="elise">
+                <label class="govuk-label govuk-checkboxes__label" for="include-elise">
+                  <span class="govuk-visually-hidden">Include Elise, E</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Frank, F</td>
+            <td class="govuk-table__cell">Yes</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">Unknown</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="include-frank" name="workers" type="checkbox" value="frank" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="include-frank">
+                  <span class="govuk-visually-hidden">Include Frank, F</span>
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

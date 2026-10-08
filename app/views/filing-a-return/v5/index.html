@@ -1,0 +1,67 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+
+{% set pageName="Sprint 5" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag govuk-tag--green">
+        Completed
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 5 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Sprint dates to be confirmed
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-5-details">
+      <h2 class="govuk-heading-l">Sprint 5 screens</h2>
+      <p class="govuk-body">
+        CIS prototype screens for the v5 agent-flow journey.
+      </p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                agent-flow
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="agent-flow/alp2-no-clients.html" class="govuk-link">alp2-no-clients.html</a></li>
+              <li><a href="agent-flow/alp3-problem-list.html" class="govuk-link">alp3-problem-list.html</a></li>
+              <li><a href="agent-flow/alp4-generating-list.html" class="govuk-link">alp4-generating-list.html</a></li>
+              <li><a href="agent-flow/cl1-alp1-combined-search.html" class="govuk-link">cl1-alp1-combined-search.html</a></li>
+              <li><a href="agent-flow/ip1-introduction.html" class="govuk-link">ip1-introduction.html</a></li>
+              <li><a href="agent-flow/lp1-contractor-landing.html" class="govuk-link">lp1-contractor-landing.html</a></li>
+              <li><a href="agent-flow/lp2-agent-landing-oneclient.html" class="govuk-link">lp2-agent-landing-oneclient.html</a></li>
+            </ul>
+            <a href="agent-flow/ip1-introduction.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Agent flow journey
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

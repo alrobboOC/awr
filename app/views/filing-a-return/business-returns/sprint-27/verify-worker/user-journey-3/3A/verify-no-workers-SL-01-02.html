@@ -1,0 +1,41 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request in progress – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/SL-02-05-work-type"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     
+
+        <h1 class="govuk-heading-l">
+         Your workers
+        </h1>
+
+       
+<p class="govuk-body">
+You do not have any workers at the moment.
+</p>
+
+<p class="govuk-body">
+You will need to <a href="#" class="govuk-link">add some workers first</a> before you can create a verification request or monthly return.</p>
+       
+ <p class="govuk-body">
+           Back to <a href="#">Manage your workers</a>.
+        </p>
+      
+
+    </div>
+  </div>
+
+{% endblock %}

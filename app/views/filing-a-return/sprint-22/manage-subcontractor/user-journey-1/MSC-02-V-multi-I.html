@@ -1,0 +1,318 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before updating the individual – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Martin Brody</h1>
+
+      <h2 class="govuk-heading-m">Subcontractor information</h2>
+
+
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Type"
+      },
+      value: {
+        text: "Individual or sole trader"
+      }
+    },
+
+
+
+    {
+      key: {
+        text: "UTR"
+      },
+      value: {
+        text: "3992651526"
+      }
+    }, 
+
+     {
+      key: {
+        text: "Verification number"
+      },
+      value: {
+        text: "V0004528765"
+      }
+    } 
+      
+    
+  ]
+
+  
+}) }}
+<h2 class="govuk-heading-m">More details</h2>
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Does subcontractor use a trading name?"
+      },
+      value: {
+        text: "No"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "does subcontractor use a trading name"
+          }
+        ]
+      }
+    },
+    
+    {
+      key: {
+        text: "Add subcontractor address?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "subcontractor address"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Address"
+      },
+      value: {
+        html: "
+          12 Harbor View Road<br>
+          Amity Island<br>
+          Bodmin<br>
+          Cornwall<br>
+          PL31 2HL<br>
+          England
+        "
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "address"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Methods of contact"
+      },
+      value: {
+        html: '<ul class="govuk-list govuk-list--bullet"><li>Email address</li><li>Phone number</li><li>Mobile number</li></ul>'
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "methods of contact"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Email address"
+      },
+      value: {
+        text: "martin.brody@virginmedia.com"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "email address"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Phone number"
+      },
+      value: {
+        text: "01208 261580"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "phone number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Mobile number"
+      },
+      value: {
+        text: "07739 320069"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "mobile number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Add UTR?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "add UTR"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "UTR"
+      },
+      value: {
+        text: "3992651526"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "UTR"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Add National Insurance number?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "add National Insurance number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "National Insurance number"
+      },
+      value: {
+        text: "QQ123456C"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "National Insurance number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Add works reference number?"
+      },
+      value: {
+        text: "Yes"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "add works reference number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Works reference number"
+      },
+      value: {
+        text: "XLS345-MM"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "works reference number"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+     
+
+      <h2 class="govuk-heading-m">Confirm changes</h2>
+
+      <p class="govuk-body">By changing this subcontractor's details you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+          <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+        <a class="govuk-link" href="#">Cancel changes</a>
+      </div>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

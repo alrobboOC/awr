@@ -1,0 +1,50 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation by email – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/routing-handler" method="post">
+
+        <h1 class="govuk-heading-l">
+          Your workers
+        </h1>
+
+        <p class="govuk-body">
+          You don't have any workers at the moment.
+
+        </p>
+
+        <p class="govuk-body">
+          You will need to <a href="#">add some workers first</a> before you can create a verification request or monthly return.
+        </p>
+
+         <p class="govuk-body">
+           Back to <a href="#">Manage your workers</a>.
+        </p>
+        
+
+
+      
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

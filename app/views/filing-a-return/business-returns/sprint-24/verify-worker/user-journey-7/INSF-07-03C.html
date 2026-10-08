@@ -1,0 +1,96 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Review unmatched workers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+     <h1 class="govuk-heading-l">
+      Cannot verify all workers
+    </h1>
+
+    <p class="govuk-body govuk-!-margin-bottom-3">
+     Some of the workers in your verification request do not have all the information we need to verify them.
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-3">
+      To fix this, you can:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>edit their information and correct any of their details</li>
+      <li>proceed with including them in this verification request without making any changes</li>
+      <li>remove the worker from this verification request</li>
+    </ul>
+
+    <p class="govuk-body">
+  <a href="/filing-a-return/business-returns/business-returns/guidance"
+     class="govuk-link"
+     target="_blank"
+     rel="noreferrer noopener">
+    What you'll need to verify workers (opens in new tab)</a>
+</p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
+
+        <h2 class="govuk-heading-m">Ready for verification</h2>
+
+
+
+    {{ govukTable({
+
+      firstCellIsHeader: false,
+
+      head: [
+        { text: "Name" },
+        { text: "Unique Taxpayer Reference" }
+      ],
+
+      rows: [
+
+       [
+          { html: '<a href="#" class="govuk-link">Brody, Martin</a>' },
+          { text: "3992651526" }
+        ]
+
+      ]
+
+    }) }}
+
+   <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </div>
+
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}

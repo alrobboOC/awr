@@ -1,0 +1,615 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Monthly return history – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Submitted returns</span>
+      <h1 class="govuk-heading-l">
+          Monthly return history
+      </h1>
+        <!-- <h1 class="govuk-heading-l">
+       Submission history for tax year {{data["whichTaxYear"]}}
+      </h1>
+      <p>
+       All of your submitted monthly returns can be viewed in a read-only formate from this page. You can also view and save your submission receipts.
+      </p> -->
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-margin-top-5">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Tax year 2022 to 2023
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <table class="govuk-table" id = "showMR2022">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Return period ended</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">March 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">February 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">In progress</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Jan 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Not available</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Dec 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Nov 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Oct 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Tax year 2020 to 2021
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <table class="govuk-table" id = "showMR2022">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Return period ended</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">March 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">February 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">In progress</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Jan 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Not available</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Dec 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Nov 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Oct 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Tax year 2019 to 2020
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content">
+            <table class="govuk-table" id = "showMR2022">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Return period ended</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">March 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">February 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">In progress</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Jan 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Not available</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Dec 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Nov 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Oct 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Tax year 2018 to 2019
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+            <table class="govuk-table" id = "showMR2022">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Return period ended</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">March 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">February 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">In progress</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Monthly return for period ended April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Jan 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Not available</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Dec 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Nov 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Oct 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+            <!-- <table class="govuk-table" id = "showMR2022">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Return period ended</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Date submitted</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Submission receipt</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Monthly return</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Amend return</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">April 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">March 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">February 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">In progress</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Jan 2023</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Not available</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Dec 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">Awaiting confirmation</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Nov 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Oct 2022</th>
+                  <td class="govuk-table__cell">06/04/2023</td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">View<span class="govuk-visually-hidden"> submission receipt</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Print<span class="govuk-visually-hidden"> monthly return</span></a></p>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <p class="govuk-body"><a href="#" class="govuk-link">Amend</a></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table> -->
+    </div>
+  </div>
+{% endblock %}

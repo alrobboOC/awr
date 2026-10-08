@@ -1,0 +1,68 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  You have not selected any workers – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "screen-1-worker-list.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">You have not selected any workers</h1>
+
+      {{ govukInsetText({
+        text: "You cannot submit a monthly return without either selecting workers to include, or completing a nil return."
+      }) }}
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">Choose one of the following options:</p>
+
+      <h3 class="govuk-heading-s">If you paid workers this month</h3>
+      
+      <p class="govuk-body">
+        <a href="screen-1-worker-list.html" class="govuk-link">Go back and select the workers</a> you paid this month, then enter their payment details.
+      </p>
+
+      <p class="govuk-body">
+        If the worker you need is not in your list, you can <a href="manage-workers.html" class="govuk-link">add a new worker</a> to your account first.
+      </p>
+
+      <h3 class="govuk-heading-s">If you did not pay any workers this month</h3>
+
+      <p class="govuk-body">
+        You must <a href="nil-return.html" class="govuk-link">submit a nil monthly return</a> to tell HMRC you made no payments to workers during this tax period.
+      </p>
+
+      {{ govukWarningText({
+        text: "You must submit either a regular return or a nil return for each tax period, even if you made no payments.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <h2 class="govuk-heading-m">Get help</h2>
+
+      <p class="govuk-body">
+        If you're not sure what to do, contact the BRS Helpline.
+      </p>
+
+      <p class="govuk-body">
+        Telephone: 0300 200 3210<br>
+        Monday to Friday, 8am to 6pm<br>
+        <a href="#" class="govuk-link">Find out about call charges</a>
+      </p>
+
+      {{ govukButton({
+        text: "Return to worker list",
+        href: "screen-1-worker-list.html"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends "filing-a-return/layouts/main-with-nav-cards.html" %}
+{% import "filing-a-return/macros/custom/card-template.njk" as card %}
+
+{% set pageName = "CIS returns" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-!-padding-top-4"></div>
+    <h1 class="govuk-heading-l">
+      Manage Construction Industry Scheme account
+    </h1>
+
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Agent name</th>
+          <td class="govuk-table__cell">CIS Trading Accountants</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Scheme name</th>
+          <td class="govuk-table__cell">Apple Construction</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Employer reference</th>
+          <td class="govuk-table__cell">123/EZ10000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="RLP-01b-manage-your-cis-return",
+        headingLevel="h2",
+        heading="Manage your CIS return",
+        linkContent="File or amend your monthly or nil returns.",
+        cardId="CISreturnCard"
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Manage your subcontractors",
+        linkContent="Add or edit a subcontractor, submit or view a verification request.",
+        cardId="SubcontractorsCard"
+        ) }}
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Manage your contractor details",
+        linkContent="Add or change a unique taxpayer reference, scheme name or email address.",
+        cardId="ContractorDetailsCard"
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Appeal a penalty",
+        linkContent="Appeal a penalty within 30 days of receiving one.",
+        cardId="AppealAPenaltyCard"
+        ) }}
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Manage client details",
+        linkContent="View client details or change their employer reference.",
+        cardId="ManageClientDetailsCard"
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Remove client",
+        linkContent="Remove a client that you no longer manage.",
+        cardId="RemoveClientCard"
+        ) }}
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Notices and statements",
+        linkContent="View HMRC notices, penalty warnings and confirmation statements.",
+        cardId="NoticesAndStatementsCard"
+        ) }}
+      </div>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-!-padding-top-6"></div>
+    <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.gov.uk/government/publications/construction-industry-scheme-cis-340/construction-industry-scheme-a-guide-for-contractors-and-subcontractors-cis-340">
+              Construction Industry Scheme: A guide (CIS 340)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/pay-paye-tax">
+              Pay employers' PAYE
+            </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/government/publications/compliance-checks-penalties-if-you-dont-file-construction-industry-scheme-returns-on-time-ccfs18b/penalties-for-failure-to-file-returns-on-time-the-construction-industry-scheme-cis-ccfs18b">
+              Penalties for late returns (CIS) CC/FS18b
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+
+
+{% endblock %}

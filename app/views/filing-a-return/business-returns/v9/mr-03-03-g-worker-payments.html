@@ -1,0 +1,64 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Workers you paid this month – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Scheme 123, Ref 123/AB456<br>Period ending 5 January 2026</span>
+      <h1 class="govuk-heading-l">Workers you paid this month</h1>
+      
+      <p class="govuk-body">You have added 2 workers to this monthly return.</p>
+
+      <p class="govuk-body">Select 'Add details' to add payment details for each worker.</p>
+
+      <dl class="govuk-summary-list">
+
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            BuildRight Business
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="screen-2-payment-details.html?edit=2">
+              Add details<span class="govuk-visually-hidden"> for BuildRight Business</span>
+            </a>
+            <a class="govuk-link" href="#" style="margin-left: 20px;">
+              Remove<span class="govuk-visually-hidden"> BuildRight Business from this return</span>
+            </a>
+          </dd>
+        </div>
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Northern Trades Ltd
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="screen-2-payment-details.html?edit=3">
+              Add details<span class="govuk-visually-hidden"> for Northern Trades Ltd</span>
+            </a>
+            <a class="govuk-link" href="#" style="margin-left: 20px;">
+              Remove<span class="govuk-visually-hidden"> Northern Trades Ltd from this return</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <p class="govuk-body">
+        <a href="screen-2-payment-details.html" class="govuk-link">Add another worker</a>
+      </p>
+
+
+
+    </div>
+  </div>
+{% endblock %}

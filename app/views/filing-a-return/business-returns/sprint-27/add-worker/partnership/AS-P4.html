@@ -1,0 +1,86 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you want to add contact details? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "contact-method",
+  fieldset: {
+    legend: {
+      text: "Which contact details do you want to add for {partnership}?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Contact details are only for your own records"
+  },
+  items: [
+    {
+      value: "Email address",
+      text: "Email address"
+    },
+    {
+      value: "Phone number",
+      text: "Phone number"
+    },
+    {
+      value: "Mobile number",
+      text: "Mobile number"
+    }
+   
+    
+  ]
+}) }}
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+      <script>
+  document.querySelector(".form").addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    const selected = Array.from(
+      document.querySelectorAll('input[name="contact-method"]:checked')
+    ).map(input => input.value)
+
+    if (selected.length === 0) return
+
+    const pages = {
+      "Email address": "partnership-contact-email-AS-P4a-ptn",
+      "Phone number": "partnership-contact-phone-AS-P4b-ptn",
+      "Mobile number": "partnership-contact-mobile-AS-P4c-ptn"
+    }
+
+    const journey = selected.map(method => pages[method])
+    sessionStorage.setItem("contactPages", JSON.stringify(journey.slice(1)))
+
+    window.location.href = journey[0]
+  })
+</script>
+
+    </div>
+  </div>
+
+{% endblock %}

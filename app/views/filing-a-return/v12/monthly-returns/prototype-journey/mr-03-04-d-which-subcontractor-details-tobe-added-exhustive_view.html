@@ -1,0 +1,54 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Which subcontractor do you need to add payment details for? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="mr-03-03-c-payment-details-screen-payments" method="post" novalidate>
+        {%set subcontractorselected = data['subcontractors']%}
+        {%if subcontractorselected == null %}
+          {% set subcontractorselected = ['BuildRight Construction','Northern Trades Ltd'] %}
+        {%endif%}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Which subcontractor do you need to add payment details for?
+              </h1>
+            </legend>
+          <p class="govuk-body">You have added details for:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>BuildRight Construction</li>
+            <li>Northern Trades Ltd</li>
+          </ul>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whichSubcontractorDeetails-2" name="whichSubcontractorDeetails" type="radio" value="TyneWear Ltd">
+                <label class="govuk-label govuk-radios__label" for="whichSubcontractorDeetails-2">
+                  TyneWear Ltd
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

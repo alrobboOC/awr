@@ -1,0 +1,46 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is {nominated partner name's} National Insurance number? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="partnership-partner-details-crn.html" method="post" novalidate>
+
+        {{ govukInput({
+          label: {
+            text: "What is the National Insurance number for {nominated partner name}?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "National Insurance numbers can be found on payslips, P60s and other tax documents. For example, 'QQ 12 34 56 C'"
+          },
+          id: "national-insurance-number",
+          name: "national-insurance-number",
+          classes: "govuk-input--width-10",
+          spellcheck: false,
+          autocomplete: "off"
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="CIS returns" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/construction-industry-scheme/manage-cis-return"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      You need to file a CIS return for the tax month ending 5 October 2025
+    </p>
+    <p class="govuk-body">Your return is due by 19 October 2025.</p>
+    <p class="govuk-body">
+      <a href="/filing-a-return/construction-industry-scheme/file-return/standard" class="govuk-link">File standard return</a> or 
+      <a href="/filing-a-return/construction-industry-scheme/file-return/nil" class="govuk-link">File nil return</a>
+    </p>
+  </div>
+</div>
+
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">ABC Construction Ltd</span>
+      Manage your CIS return
+    </h1>
+
+
+
+
+   
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/file-return/standard">File standard return</a>
+        </h3>
+        <p class="govuk-body">File your monthly CIS return.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/file-return/nil">File nil return</a>
+        </h3>
+        <p class="govuk-body">File nil returns (when you have made no payments).</p>
+      </div>
+      
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/file-return/standard">Amend return</a>
+        </h3>
+        <p class="govuk-body">Make changes to a return you've already submitted.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/file-return/nil">Payments and deductions</a>
+        </h3>
+        <p class="govuk-body">Payments made to subcontractors during the tax month.</p>
+      </div>
+      
+    </div>
+
+        <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/file-return/standard">Notices and statements</a>
+        </h3>
+        <p class="govuk-body">View HMRC notices, penalty warnings and confirmation statements.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/file-return/nil"></a>
+        </h3>
+        <p class="govuk-body"></p>
+      </div>
+      
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-6">
+
+    <h2 class="govuk-heading-m">Recent CIS returns</h2>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Tax month</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Last updated</th>
+          <th scope="col" class="govuk-table__header">Delete</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">August 2025</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Accepted</strong></td>
+          <td class="govuk-table__cell">19 September 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> August 2025 return</span></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">July 2025</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Accepted</strong></td>
+          <td class="govuk-table__cell">19 August 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> July 2025 return</span></a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">June 2025</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Accepted</strong></td>
+          <td class="govuk-table__cell">18 July 2025</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> June 2025 return</span></a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="/filing-a-return/construction-industry-scheme/return-history">View returns history</a>
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-top-6">
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/what-is-the-construction-industry-scheme">
+              What is the Construction Industry Scheme
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/guidance/cis-monthly-returns">
+              CIS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/government/publications/cis-340">
+              CIS 340: Penalties for late returns
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/guidance/construction-industry-scheme-cis-340-penalties-for-late-monthly-returns">
+              Understanding CIS penalties
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}

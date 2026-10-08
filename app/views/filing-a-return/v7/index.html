@@ -1,0 +1,115 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+
+{% set pageName="Sprint 7" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">
+      <strong class="govuk-tag govuk-tag--green">
+        Completed
+      </strong>
+    </span>
+    <h1 class="govuk-heading-xl">Sprint 7 - CIS prototype</h1>
+    <p class="govuk-body-l">
+      Sprint dates to be confirmed
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-7-details">
+      <h2 class="govuk-heading-l">Sprint 7 screens</h2>
+      <p class="govuk-body">
+        CIS prototype screens for add subcontractor and landing page journeys.
+      </p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                add-subcontractor
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+
+            <h3 class="govuk-heading-m">company-trust-partnership</h3>
+            <ul class="govuk-list">
+              <li><a href="add-subcontractor/company-trust-partnership/company-address.html" class="govuk-link">company-address.html</a></li>
+              <li><a href="add-subcontractor/company-trust-partnership/company-name.html" class="govuk-link">company-name.html</a></li>
+              <li><a href="add-subcontractor/company-trust-partnership/company-number.html" class="govuk-link">company-number.html</a></li>
+              <li><a href="add-subcontractor/company-trust-partnership/company-utr.html" class="govuk-link">company-utr.html</a></li>
+              <li><a href="add-subcontractor/company-trust-partnership/trust-address.html" class="govuk-link">trust-address.html</a></li>
+              <li><a href="add-subcontractor/company-trust-partnership/trust-name.html" class="govuk-link">trust-name.html</a></li>
+              <li><a href="add-subcontractor/company-trust-partnership/trust-utr.html" class="govuk-link">trust-utr.html</a></li>
+            </ul>
+
+            <h3 class="govuk-heading-m">individual</h3>
+            <ul class="govuk-list">
+              <li><a href="add-subcontractor/individual/add-address-question.html" class="govuk-link">add-address-question.html</a></li>
+              <li><a href="add-subcontractor/individual/add-contact-details-question.html" class="govuk-link">add-contact-details-question.html</a></li>
+              <li><a href="add-subcontractor/individual/check-answers.html" class="govuk-link">check-answers.html</a></li>
+              <li><a href="add-subcontractor/individual/confirmation.html" class="govuk-link">confirmation.html</a></li>
+              <li><a href="add-subcontractor/individual/contact-details.html" class="govuk-link">contact-details.html</a></li>
+              <li><a href="add-subcontractor/individual/enter-trading-name.html" class="govuk-link">enter-trading-name.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-address.html" class="govuk-link">individual-address.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-has-nino.html" class="govuk-link">individual-has-nino.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-has-utr.html" class="govuk-link">individual-has-utr.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-has-works-ref.html" class="govuk-link">individual-has-works-ref.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-name.html" class="govuk-link">individual-name.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-nino.html" class="govuk-link">individual-nino.html</a></li>
+              <li><a href="add-subcontractor/individual/individual-utr.html" class="govuk-link">individual-utr.html</a></li>
+              <li><a href="add-subcontractor/individual/subcontractor-list.html" class="govuk-link">subcontractor-list.html</a></li>
+              <li><a href="add-subcontractor/individual/subcontractor-type.html" class="govuk-link">subcontractor-type.html</a></li>
+              <li><a href="add-subcontractor/individual/trading-name.html" class="govuk-link">trading-name.html</a></li>
+              <li><a href="add-subcontractor/individual/verification-result-matched.html" class="govuk-link">verification-result-matched.html</a></li>
+              <li><a href="add-subcontractor/individual/verification-result-unmatched.html" class="govuk-link">verification-result-unmatched.html</a></li>
+              <li><a href="add-subcontractor/individual/verify-subcontractor.html" class="govuk-link">verify-subcontractor.html</a></li>
+              <li><a href="add-subcontractor/individual/which-identification.html" class="govuk-link">which-identification.html</a></li>
+              <li><a href="add-subcontractor/individual/works-reference.html" class="govuk-link">works-reference.html</a></li>
+            </ul>
+
+            <a href="add-subcontractor/individual/subcontractor-type.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Add subcontractor journey
+            </a>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                landing pages
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="monthly-return-landing.html" class="govuk-link">monthly-return-landing.html</a></li>
+              <li><a href="notices-statements-landing.html" class="govuk-link">notices-statements-landing.html</a></li>
+              <li><a href="subcontractor-landing.html" class="govuk-link">subcontractor-landing.html</a></li>
+            </ul>
+            <a href="subcontractor-landing.html" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              View landing pages
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

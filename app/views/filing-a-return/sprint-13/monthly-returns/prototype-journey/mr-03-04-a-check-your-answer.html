@@ -1,0 +1,164 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers for {{data['subcontractors']}} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {%set subcontractorName = data['subcontractors'] %}
+      {%set subContLenght = data['subcontractors'].length %}
+      {%if subContLenght > 1 %}
+        <!-- multiple subcontractors -->
+        {%if data['whichSubcontractorDeetails'] != '' or data['whichSubcontractorDeetails'] != null %}
+        <h1 class="govuk-heading-l">
+          Check your answers for {{data['whichSubcontractorDeetails']}}
+        </h1>
+          {%else%}
+        <h1 class="govuk-heading-l">
+          Check your answers for {{data['subcontractors'][0]}}
+        </h1>
+        {%endif%}
+      {%else%}
+        <!-- single subcontractor -->
+      <h1 class="govuk-heading-l">
+        Check your answers for {{data['subcontractors']}}
+      </h1>
+      {%endif%}
+        {%if data['total-payments'] == null or data['materials-cost'] == null or data['tax-deducted'] == null %}
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Total payments to subcontractor"
+                },
+                value: {
+                  text: "£1000"
+            },
+                actions: {
+                  items: [
+                    {
+                      href: "mr-03-03-c-/enter-total-payments.html",
+                      text: "Change",
+                      visuallyHiddenText: "Question 1"
+                    }
+                  ]
+                }
+              }
+              ,
+              {
+                key: {
+                  text: "Total cost of materials"
+                },
+                value: {
+                  text: "£300"
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "mr-03-03-d-payment-details-screen-materials.html",
+                      text: "Change",
+                      visuallyHiddenText: "Question 2"
+                    }
+                  ]
+                }
+              }
+              ,
+              {
+                key: {
+                  text: "Total CIS deductions"
+                },
+                value: {
+                  text: "£200" 
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "mr-03-03-e-payment-details-screen-tax.html",
+                      text: "Change",
+                      visuallyHiddenText: "Question 3"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+        {%else%}
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Total payments to subcontractor"
+                },
+                value: {
+                  text: "£" + data['total-payments'] 
+            },
+                actions: {
+                  items: [
+                    {
+                      href: "mr-03-03-c-enter-total-payments.html",
+                      text: "Change",
+                      visuallyHiddenText: "Question 1"
+                    }
+                  ]
+                }
+              }
+              ,
+              {
+                key: {
+                  text: "Total cost of materials"
+                },
+                value: {
+                  text: "£" + data['materials-cost']
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "mr-03-03-d-enter-material-costs.html",
+                      text: "Change",
+                      visuallyHiddenText: "Question 2"
+                    }
+                  ]
+                }
+              }
+              ,
+              {
+                key: {
+                  text: "Total CIS deductions"
+                },
+                value: {
+                  text: "£" + data['tax-deducted']
+                },
+                actions: {
+                  items: [
+                    {
+                      href: "mr-03-03-e-enter-tax-deducted.html",
+                      text: "Change",
+                      visuallyHiddenText: "Question 3"
+                    }
+                  ]
+                }
+              }
+            ]
+          }) }}
+        {%endif%}
+
+      <form action="mr-03-04-c-subcontractor-details-added" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

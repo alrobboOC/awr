@@ -1,0 +1,64 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Which tax month are you filing a return for?" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Which tax month and year are you filing a return for?
+      </h1>
+
+      <p class="govuk-body">A tax month runs from the 6th of a month, to the 5th of the next month. For example, 6 May to 5 June should be inputted as June. The 6th of June to the 5th of July should inputted as July, and so on.</p>
+
+          {{ govukWarningText({
+      text: "You are required, by law, to submit this return by the due date (19th of each month). A penalty may be charged for late returns.",
+      iconFallbackText: "Warning"
+    }) }}
+
+          <form action="mr-03-02-a-workers-to-include" method="post">
+        {{ govukDateInput({
+          id: "mty",
+          namePrefix: "mty",
+          fieldset: {
+            legend: {
+              text: "Tax month and tax year",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "For example, 9 2025"
+          },
+          items: [
+
+            {
+              name: "month",
+              classes: "govuk-input--width-2",
+              autocomplete: "tax-month"
+            },
+            {
+              name: "year",
+              classes: "govuk-input--width-4",
+              autocomplete: "tax-year"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>   
+
+  </div>
+</div>
+
+{% endblock %}

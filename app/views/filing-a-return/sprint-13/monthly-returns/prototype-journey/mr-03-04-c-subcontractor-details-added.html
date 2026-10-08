@@ -1,0 +1,108 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  You have added details for a single subcontractor – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">You have added details for a single subcontractor</h1>
+      <div class="govuk-form-group">
+        <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
+          {%set subcontractorselected = data['subcontractors']%}
+          {%set subcontractorName = data['subcontractors'] %}
+          {%set subContLenght = data['subcontractors'].length %}
+          {%if subContLenght > 1 %}
+          <!-- multiple subcontractors -->
+            {%if data['whichSubcontractorDeetails'] != '' or data['whichSubcontractorDeetails'] != null %}
+            <!-- multiple subcontractor displayed -->
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+                {{subcontractorselected[0]}}
+              </dt>
+              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="change-your-answer.html"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change {{subcontractorselected}}</span></a></li>
+                  <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="remove-subcontractor-mr-03-03-b.html"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove {{subcontractorselected}} from the list</span></a></li>
+                </ul>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+                {{data['whichSubcontractorDeetails']}}
+              </dt>
+              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="change-your-answer.html"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change {{subcontractorselected}}</span></a></li>
+                  <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="remove-subcontractor-mr-03-03-b.html"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove {{subcontractorselected}} from the list</span></a></li>
+                </ul>
+              </dd>
+            </div>
+            {%endif%}
+          {%else%}
+          <!-- single subcontractor displayed -->
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+              {%if subcontractorselected == null %}
+                {%set subcontractorselected = "TyneWear Ltd"%}
+              {%else%}
+                {%if data['subcontractors'].length > 1 %}
+                {{subcontractorselected[0]}}
+                {%else%}
+                {{subcontractorselected}}
+                {%endif%}
+              {%endif%}
+            </dt>
+            <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+              <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="change-your-answer.html"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change {{subcontractorselected}}</span></a></li>
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="remove-subcontractor-mr-03-03-b.html"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove {{subcontractorselected}} from the list</span></a></li>
+              </ul>
+            </dd>
+          </div>
+          {%endif%}
+        </dl>
+      </div>
+      <form method="post" novalidate action="mr-03-04e-summary-subcontractor-payments">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+              Have you added all the subcontractors you are submitting returns for?
+            </legend>
+            <div id="add-another-hint" class="govuk-hint">
+              Select 'Yes' to submit your return, and 'No' if you need to add more.
+            </div>
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="add-another">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="add-another-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

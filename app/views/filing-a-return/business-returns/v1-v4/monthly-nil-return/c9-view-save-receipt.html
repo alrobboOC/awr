@@ -1,0 +1,49 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="View and save the submission receipt" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c8-confirmation"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      View and save the submission receipt
+    </h1>
+
+    <p class="govuk-body">
+      You have chosen to view your Submission Receipt. Your browser automatically shows a copy of the file in the computer's 'Temporary Internet Files' cache.
+    </p>
+
+    <p class="govuk-body">
+      We suggest that if you are not using your own computer, or have concerns about the security of the computer, you delete the file once you have viewed your Submission Receipt.
+    </p>
+
+    <p class="govuk-body">
+      The most common way of doing this is to select 'Tools' from the browser menu, then select 'Internet options' followed by 'Delete Files' under the 'Temporary Internet Files' section.
+    </p>
+
+    <p class="govuk-body">
+      If these instructions are not applicable to the browser you are using please refer to the 'Help' section in your browser, which should give instructions on how to do this.
+    </p>
+
+    {{ govukButton({
+      text: "View and save",
+      href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c10-submission-receipt"
+    }) }}
+
+    <p class="govuk-body">
+      <a class="govuk-link" href="#">Is this page not working properly? (opens in new tab)</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

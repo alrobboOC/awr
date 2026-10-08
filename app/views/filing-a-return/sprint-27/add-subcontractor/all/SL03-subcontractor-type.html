@@ -1,0 +1,82 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What type of subcontractor are you adding? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What type of subcontractor are you adding?
+            </h1>
+          </legend>
+
+
+          {{ govukRadios({
+            name: "subcontractor-type",
+            items: [
+              {
+                value: "individual",
+                text: "Individual or sole trader"
+              },
+              {
+                value: "company",
+                text: "Limited company"
+              },
+              {
+                value: "partnership",
+                text: "Partnership"
+              },
+              {
+                value: "trust",
+                text: "Trust"
+              }
+            ]
+          }) }}
+        </fieldset>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+      <script>
+  document.querySelector(".form").addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    const selected = document.querySelector(
+      'input[name="subcontractor-type"]:checked'
+    )
+
+    if (!selected) return
+
+    const destinations = {
+      individual: "../individual/individual-has-tradingname-SL0201E-ptn",
+      company: "../company/company-name-AS-C1-ptn",
+      partnership: "../partnership/SL0202-D-ptn",
+      trust: "../trust/trust-name-AS-T1-ptn"
+    }
+
+    window.location.href = destinations[selected.value]
+  })
+</script>
+
+    </div>
+  </div>
+
+{% endblock %}

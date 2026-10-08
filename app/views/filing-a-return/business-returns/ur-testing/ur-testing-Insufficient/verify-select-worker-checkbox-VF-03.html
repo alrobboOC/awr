@@ -1,0 +1,104 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verify your workers – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <form method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="workers-hint results-count">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Which workers do you want to verify?
+              </h1>
+            </legend>
+
+            <div id="workers-hint" class="govuk-hint">
+              Select the unverified workers you want to add to this verification request
+            </div>
+
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input
+                  class="govuk-checkboxes__input"
+                  id="worker-1"
+                  name="select-workers"
+                  type="checkbox"
+                  value="brody-martin">
+                <label class="govuk-label govuk-checkboxes__label" for="worker-1">
+                  Brody, Martin
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input
+                  class="govuk-checkboxes__input"
+                  id="worker-2"
+                  name="select-workers"
+                  type="checkbox"
+                  value="hooper-and-associates">
+                <label class="govuk-label govuk-checkboxes__label" for="worker-2">
+                  Hooper Associates
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input
+                  class="govuk-checkboxes__input"
+                  id="worker-4"
+                  name="select-workers"
+                  type="checkbox"
+                  value="quint-transportation">
+                <label class="govuk-label govuk-checkboxes__label" for="worker-4">
+                  Quint Transportation
+                </label>
+              </div>
+              
+               <div class="govuk-checkboxes__item">
+                <input
+                  class="govuk-checkboxes__input"
+                  id="worker-3"
+                  name="select-workers"
+                  type="checkbox"
+                  value="the-kintner-group">
+                <label class="govuk-label govuk-checkboxes__label" for="worker-3">
+                  The Kintner Group
+                </label>
+              </div>
+
+              
+
+              
+            </div>
+          </fieldset>
+        </div>
+
+
+        {{ govukButton({
+          text: "Continue",
+          href: "VF-03b"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

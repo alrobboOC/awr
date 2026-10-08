@@ -1,0 +1,72 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the subcontractor's Unique Taxpayer Reference? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+        {{ govukRadios({
+          name: "has-utr",
+          fieldset: {
+            legend: {
+              text: "Do you know the Unique Taxpayer Reference for {company name}?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This information will be used to verify the company as a subcontractor"
+          },
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+      <script>
+  document.querySelector(".form").addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    const selected = document.querySelector('input[name="has-utr"]:checked')
+    if (!selected) return
+
+    const destinations = {
+      yes: "company-enter-utr-AS-C6-ptn",
+      no: "company-has-crn-AS-C7-ptn"
+    }
+
+    window.location.href = destinations[selected.value]
+  })
+</script>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "filing-a-return/layouts/main-with-nav-cards.html" %}
+{% import "filing-a-return/macros/custom/card-template.njk" as card %}
+
+{% set pageName = "CIS returns" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <h1 class="govuk-heading-l">
+      CIS dashboard
+    </h1>
+
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Scheme name</th>
+          <td class="govuk-table__cell">Scheme 123</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Employers reference</th>
+          <td class="govuk-table__cell">123/EZ00100</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="RLP1b-manage-your-cis-return.html",
+        headingLevel="h2",
+        heading="Manage your CIS return",
+        linkContent="File, view or manage your CIS monthly or nil returns.",
+        cardId="CISreturnCard"
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Manage your subcontractors",
+        linkContent="View, verify or manage your subcontractors.",
+        cardId="SubcontractorsCard"
+        ) }}
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Manage your contractor details",
+        linkContent="Confirm or change a contractor's unique tax reference, scheme name or email.",
+        cardId="ContractorDetailsCard"
+        ) }}
+      </div>
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Appeal a penalty",
+        linkContent="Appeal a penalty for a late payment, or a late or incorrect monthly return.",
+        cardId="AppealAPenaltyCard"
+        ) }}
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        {{ card.card(
+        cardUrl="#",
+        headingLevel="h2",
+        heading="Notices and Statements",
+        linkContent="View HMRC notices, penalty warnings and confirmation statements.",
+        cardId="NoticesAndStatementsCard"
+        ) }}
+      </div>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <div class="govuk-!-padding-top-6"></div>
+    <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Help and guidance
+      </h2>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="#">
+              What is the Construction Industry Scheme?
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              CIS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              CIS 340: penalties for late returns
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Understanding CIS penalties
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Business Returns Service for ABC Business Ltd" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to clients",
+    href: "/filing-a-return/business-returns/business-returns-service/agent-dashboard"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">ABC Business Ltd</span>
+    <h1 class="govuk-heading-l">
+      BRS return dashboard
+    </h1>
+
+    <p class="govuk-body">You can manage ABC Business Ltd's monthly BRS returns – including dates and statements.</p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employer reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123/AB45678
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Unique Taxpayer Reference (UTR)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1234567890
+        </dd>
+      </div>
+    </dl>
+
+    <!-- Action required -->
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Action required</h2>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h3 class="govuk-summary-card__title">
+              <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/file-return">Return due</a>
+            </h3>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1" style="font-size: 36px;">1</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Due by 19 October 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper">
+            <h3 class="govuk-summary-card__title">
+              <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/notices">New notices</a>
+            </h3>
+          </div>
+          <div class="govuk-summary-card__content">
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1" style="font-size: 36px;">2</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Notices to view</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key actions -->
+    <h2 class="govuk-heading-m govuk-!-margin-top-7">Manage this client</h2>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/your-workers">Workers</a>
+        </h3>
+        <p class="govuk-body govuk-!-font-size-16">View, verify or manage workers for this client.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/return-history">Return history</a>
+        </h3>
+        <p class="govuk-body govuk-!-font-size-16">View previously submitted BRS returns for this client.</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-4">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/notices">Notices and statements</a>
+        </h3>
+        <p class="govuk-body govuk-!-font-size-16">View HMRC notices, penalty warnings and confirmation statements.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/amend-return">Amend a return</a>
+        </h3>
+        <p class="govuk-body govuk-!-font-size-16">Make changes to a return you've already submitted.</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-4">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="/filing-a-return/business-returns/business-returns-service/agent/manage-client">Client details</a>
+        </h3>
+        <p class="govuk-body govuk-!-font-size-16">Update client information and authorisation settings.</p>
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <!-- Recent activity -->
+    <h2 class="govuk-heading-m">Recent activity</h2>
+
+    <p class="govuk-body">Last return submitted: 19 September 2025 for tax month August 2025</p>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-s" id="subsection-title">
+        Help and guidance
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              What is the Business Returns Service
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS 340: Penalties for late returns
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}

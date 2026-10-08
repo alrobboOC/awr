@@ -1,0 +1,74 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you have a National Insurance number? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post" novalidate>
+
+        {{ govukRadios({
+          name: "has-nino",
+          fieldset: {
+            legend: {
+              text: "Do you know the National Insurance number for {nominated partner name}?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This information will be used to verify them as a worker"
+          },
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+
+       <script>
+  document.querySelector(".form").addEventListener("submit", function (event) {
+    event.preventDefault()
+
+    const selected = document.querySelector('input[name="has-nino"]:checked')
+    if (!selected) return
+
+    const destinations = {
+      yes: "partnership-partner-details-ni-sl0205k-ptn",
+      no: "partnership-has-crn-sl0205la-ptn"
+    }
+
+    window.location.href = destinations[selected.value]
+  })
+</script>
+
+    </div>
+  </div>
+
+{% endblock %}

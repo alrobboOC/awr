@@ -1,0 +1,71 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the worker's Unique Taxpayer Reference? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="trust-enter-utr-AS-T6-ptn" method="post">
+
+        {{ govukRadios({
+          name: "has-utr",
+          fieldset: {
+            legend: {
+              text: "Do you know the Unique Taxpayer Reference for {trust name}?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This information will be used to verify the trust as a worker"
+          },
+          classes: "govuk-radios--inline",
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+            <script>
+              document.querySelector(".form").addEventListener("submit", function (event) {
+                event.preventDefault()
+
+                const selected = document.querySelector('input[name="has-utr"]:checked')
+                if (!selected) return
+
+                const destinations = {
+                  yes: "trust-enter-utr-AS-T6-ptn",
+                  no: "trust-worksref-AS-T7-ptn"
+                }
+
+                window.location.href = destinations[selected.value]
+              })
+            </script>
+    </div>
+  </div>
+
+{% endblock %}

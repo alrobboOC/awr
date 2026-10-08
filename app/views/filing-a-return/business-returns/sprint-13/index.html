@@ -1,0 +1,268 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Sprint 7" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">     
+        <strong class="govuk-tag govuk-tag--green">
+          Completed
+        </strong></span>
+    <h1 class="govuk-heading-xl">Sprint 13 - BRS prototype</h1>
+    <p class="govuk-body-l">
+      Wed, 4 Feb 2026 to Tue, 17 Feb 2026
+    </p>
+  
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div id="sprint-13-details">
+      <h2 class="govuk-heading-l">Monthly return</h2>
+      <p class="govuk-body">
+        The monthly returns journey allows businesss to report payments made to workers during a tax month. Businesss select the tax period, choose which workers to include, enter payment and deduction details, and submit their return by the 19th of the following month.
+      </p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          All screens
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+          <li><a href="monthly-returns/mr-03-08-b-employment-status-declaration.html" class="govuk-link">mr-03-08-b-Employment-status-declaration</a></li>
+          <li><a href="monthly-returns/mr-03-08-b-verified-declaration.html" class="govuk-link">mr-03-08-b-Verified-declaration</a></li>
+          <li><a href="monthly-returns/mr-03-08-g-check-your-answers-submitting-return.html" class="govuk-link">mr-03-08-g-check-your-answers-submitting-return</a></li>
+          <li><a href="monthly-returns/mr-04-a-sending-submission.html" class="govuk-link">mr-04-a-Sending-submission</a></li>
+          <li><a href="monthly-returns/mr-04-b-successful-submission.html" class="govuk-link">mr-04-b-Sccessful-submission-no-receipt-no-email</a></li>
+          <li><a href="monthly-returns/mr-04-c-successful-submission.html" class="govuk-link">mr-04-c-Successful-submission-no-receipt-email</a></li>
+          <li><a href="monthly-returns/mr-04-d-successful-submission.html" class="govuk-link">mr-04-d-successful-submission-receipt-no-email</a></li>
+          <li><a href="monthly-returns/mr-05-a-successful-submission.html" class="govuk-link">mr-05-a-successful-submission-receipt-email</a></li>
+          <li><a href="monthly-returns/mr-05-b-submission-in-progress.html" class="govuk-link">mr-05-b-Submission-in-progress_while-submitting</a></li>
+          <li><a href="monthly-returns/mr-05-c-submission-in-progress-back.html" class="govuk-link">mr-05-c-submission-in-progress_overview-page</a></li>
+          <li><a href="monthly-returns/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link">mr-05-a-submission-unsuccessful-cannot-resubmit</a></li>
+          <li><a href="monthly-returns/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link">mr-05-b-submission-unsuccessful-resubmit</a></li>
+        </ul>
+      </div>
+    </details>
+    <!-- End to end journey -->
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/sprint-13/monthly-returns/prototype-journey/mr-02-a-file-monthly-return" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Standard monthly return journey</a>
+      </p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+
+    <div id="sprint-13-details">
+      <h2 class="govuk-heading-l">Add worker - company, trust and partnership
+</h2>
+      <p class="govuk-body">
+       Register new company, trust and partnership workers and verify their BRS tax status before making deductions from payments.
+      </p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          All screens
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list">
+
+      <!-- All -->
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/all/worker-added-AS-CONF-ptn.html" class="govuk-link">
+          worker-added-AS-CONF-ptn
+        </a>
+      </li>
+
+      <!-- Company -->
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-name-AS-C1-ptn.html" class="govuk-link">
+          company-name-AS-C1-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-add-address-questions-AS-C2-ptn.html" class="govuk-link">
+          company-add-address-questions-AS-C2-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-address-enter-AS-C3-ptn.html" class="govuk-link">
+          company-address-enter-AS-C3-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-add-contact-details-question-AS-C4-ptn.html" class="govuk-link">
+          company-add-contact-details-question-AS-C4-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-contact-email-AS-C4a-ptn.html" class="govuk-link">
+          company-contact-email-AS-C4a-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-contact-phone-AS-C4b-ptn.html" class="govuk-link">
+          company-contact-phone-AS-C4b-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-contact-mobile-AS-C4c-ptn.html" class="govuk-link">
+          company-contact-mobile-AS-C4c-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-has-utr-AS-C5-ptn.html" class="govuk-link">
+          company-has-utr-AS-C5-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-enter-utr-AS-C6-ptn.html" class="govuk-link">
+          company-enter-utr-AS-C6-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-has-crn-AS-C7-ptn.html" class="govuk-link">
+          company-has-crn-AS-C7-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-crn-enter-crn-AS-C8-ptn.html" class="govuk-link">
+          company-crn-enter-crn-AS-C8-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-worksref-AS-C9-ptn.html" class="govuk-link">
+          company-worksref-AS-C9-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-worksref-enter-AS-C10-ptn.html" class="govuk-link">
+          company-worksref-enter-AS-C10-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/company/company-check-answers-AS-CYA-C-ptn.html" class="govuk-link">
+          company-check-answers-AS-CYA-C-ptn
+        </a>
+      </li>
+
+      <!-- Partnership -->
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/partnership/partnership-add-contact-details-question-AS-P4-ptn.html" class="govuk-link">
+          partnership-add-contact-details-question-AS-P4-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/partnership/partnership-contact-email-AS-P4a-ptn.html" class="govuk-link">
+          partnership-contact-email-AS-P4a-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/partnership/partnership-contact-phone-AS-P4b-ptn.html" class="govuk-link">
+          partnership-contact-phone-AS-P4b-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/partnership/partnership-contact-mobile-AS-P4c-ptn.html" class="govuk-link">
+          partnership-contact-mobile-AS-P4c-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/partnership/partnership-address-enter-SL0205-A-ptn.html" class="govuk-link">
+          partnership-address-enter-SL0205-A-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/partnership/partnership-check-answers-AS-CYA-P-ptn.html" class="govuk-link">
+          partnership-check-answers-AS-CYA-P-ptn
+        </a>
+      </li>
+
+      <!-- Trust -->
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-name-AS-T1-ptn.html" class="govuk-link">
+          trust-name-AS-T1-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-add-address-questions-AS-T2-ptn.html" class="govuk-link">
+          trust-add-address-questions-AS-T2-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-address-enter-AS-T3-ptn.html" class="govuk-link">
+          trust-address-enter-AS-T3-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-add-contact-details-question-AS-T4-ptn.html" class="govuk-link">
+          trust-add-contact-details-question-AS-T4-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-contact-email-AS-T4a-ptn.html" class="govuk-link">
+          trust-contact-email-AS-T4a-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-contact-phone-AS-T4b-ptn.html" class="govuk-link">
+          trust-contact-phone-AS-T4b-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-contact-mobile-AS-T4c-ptn.html" class="govuk-link">
+          trust-contact-mobile-AS-T4c-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-has-utr-AS-T5-ptn.html" class="govuk-link">
+          trust-has-utr-AS-T5-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-enter-utr-AS-T6-ptn.html" class="govuk-link">
+          trust-enter-utr-AS-T6-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-worksref-AS-T7-ptn.html" class="govuk-link">
+          trust-worksref-AS-T7-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-worksref-enter-AS-T8-ptn.html" class="govuk-link">
+          trust-worksref-enter-AS-T8-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-check-answers-AS-CYA-T-ptn.html" class="govuk-link">
+          trust-check-answers-AS-CYA-T-ptn
+        </a>
+      </li>
+      <li>
+        <a href="/filing-a-return/business-returns/sprint-13/add-worker/trust/trust-check-answers-AS-CYA-T-YN-ptn.html" class="govuk-link">
+          trust-check-answers-AS-CYA-T-YN-ptn
+        </a>
+      </li>
+
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

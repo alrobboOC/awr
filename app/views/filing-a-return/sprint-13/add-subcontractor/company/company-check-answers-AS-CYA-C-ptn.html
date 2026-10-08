@@ -1,0 +1,277 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before adding the partnership – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before adding this company</h1>
+
+      <h2 class="govuk-heading-m">Subcontractor details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Limited company"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "type"
+                }
+              ]
+            }
+          },
+
+
+        
+
+           {
+            key: {
+              text: "Company name"
+            },
+            value: {
+              text: "{company name}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "company name"
+                }
+              ]
+            }
+          },
+
+            {
+            key: {
+              text: "Add company address?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "company address"
+                }
+              ]
+            }
+          },
+
+          {
+
+
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   "
+                      {Address line 1}<br>
+                      {Address line 2}<br>
+                      {Town or city}}<br>
+                      {County}<br>
+                      {Postal code}<br>
+                      {Country}<br>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+
+
+          {
+
+          key: {
+              text: "Method of contact"
+            },
+            value: {
+              text: "None"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "email address"
+                }
+              ]
+            }
+          },
+          
+
+
+ 
+
+
+
+  
+
+  {
+              key: {
+                text: "Add UTR?"
+              },
+              value: {
+                text: "Yes"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "add UTR"
+                  }
+                ]
+              }
+            },
+
+   {
+           key: {
+              text: "Corporation Tax UTR"
+            },
+            value: {
+              text: "{Corporation Tax UTR for company}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "corporation tax utr"
+                }
+              ]
+            }
+          },
+
+
+
+          
+          {
+            key: {
+              text: "Add company registration number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "company registration number"
+                }
+              ]
+            }
+          },
+
+
+
+       
+          {  
+
+            key: {
+              text: "Company registration number"
+            },
+            value: {
+              text: "{Company registration number}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "company registration number"
+                }
+              ]
+            }
+          },
+
+
+{
+            key: {
+              text: "Add works reference number?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          },
+
+
+          {
+            
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "XLS345-MM"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          }
+
+        ]
+      }) }}
+
+     
+
+      <h2 class="govuk-heading-m">Now add this subcontractor</h2>
+
+      <p class="govuk-body">By adding this subcontractor you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Accept and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

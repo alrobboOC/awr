@@ -1,0 +1,70 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Your subcontractors" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/construction-industry-scheme/manage-cis-return"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Manage your CIS subcontractors
+    </h1>
+
+     <p class="govuk-body">Subcontractors must be verified before you can include them on a monthly return. This will ensure that deductions are made at the correct rate.</p>
+
+     {{ govukInsetText({
+        html: 'You will need to use <a href="#" class="govuk-link">commercial CIS software</a> to submit any verification requests that include more than 50 subcontractors.'
+      }) }}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">Add new subcontractors
+          </a>
+        </h3>
+        <p class="govuk-body">Create a record for any new subcontractor you want to pay.
+</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="verification-select-subcontractor-VF-03-ptn">Verify your subcontractors
+</a>
+        </h3>
+        <p class="govuk-body">Make sure your subcontractors have the correct deductions applied to their payments.</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-top-4">
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#">View your subcontractors
+</a>
+        </h3>
+        <p class="govuk-body">Edit the details of any subcontractor in your list.</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="govuk-heading-s">
+          <a class="govuk-link" href="#"></a>
+        </h3>
+        <p class="govuk-body"></p>
+      </div>
+    </div>
+
+   
+
+  </div>
+
+ 
+
+  </div>
+</div>
+
+{% endblock %}

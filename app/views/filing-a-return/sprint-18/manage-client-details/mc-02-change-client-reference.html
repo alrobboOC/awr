@@ -1,0 +1,30 @@
+ {% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Are you sure you want to delete the monthly return for August 2025? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="event-name">
+        What is your client reference?
+        </label>
+    </h1>
+    </div>
+    <div class="govuk-form-group">
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+{% endblock %}

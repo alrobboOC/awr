@@ -1,0 +1,92 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers for TyneWear Ltd – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {%set workerselected = data['workers']%}
+      {%set tPayment = data['total-payments']%}
+      {%set mCost = data['materials-cost']%}
+      {%set tTax = data['tax-deducted']%}
+      <h1 class="govuk-heading-l">
+        Check your answers for TyneWear Ltd
+      </h1>
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Total payments to worker"
+            },
+            value: {
+              text: "£1200"
+         },
+            actions: {
+              items: [
+                {
+                  href: "mr-03-03-c-payment-details-screen-payments.html",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Total cost of materials"
+            },
+            value: {
+              text: "£500"
+            },
+            actions: {
+              items: [
+                {
+                  href: "mr-03-03-d-payment-details-screen-materials.html",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Total BRS deductions"
+            },
+            value: {
+              text: "£240"
+            },
+            actions: {
+              items: [
+                {
+                  href: "mr-03-03-e-payment-details-screen-tax.html",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="/filing-a-return/business-returns/v12/monthly-returns/mr-03-04-c-add-workers-paid-details-to-list" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

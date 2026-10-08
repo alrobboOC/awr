@@ -1,0 +1,53 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Cost of materials – Business Returns Service prototype – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "payment-details-screen-1-payments.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="payment-details-screen-3-tax.html" method="post" novalidate>
+        
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="materials-cost">
+            Cost of materials for TyneWear Ltd
+          </label>
+        </h1>
+
+        <div id="materials-cost-hint" class="govuk-hint">
+          Materials the worker paid for themselves. Enter pounds and pence, like £300.00, £450.00, £1,200.00
+        </div>
+
+        {{ govukInput({
+          classes: "govuk-input--width-10",
+          id: "materials-cost",
+          name: "materials-cost",
+          value: "300",
+          prefix: {
+            text: "£"
+          },
+          spellcheck: false,
+          attributes: {
+            inputmode: "numeric",
+            "aria-describedby": "materials-cost-hint"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

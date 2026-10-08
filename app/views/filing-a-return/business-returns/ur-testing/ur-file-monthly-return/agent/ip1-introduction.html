@@ -1,0 +1,91 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Business Returns Service" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Business Returns Service (BRS)
+    </h1>
+
+    <p class="govuk-body">Use this service to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+      <li>file monthly BRS returns</li>
+      <li>file nil returns (when you have made no payments)</li>
+      <li>view and manage workers</li>
+      <li>amend returns you have already submitted</li>
+      <li>view notices and statements</li>
+      <li>appeal against late-filing penalties</li>
+      <li>save incomplete returns</li>
+    </ul>
+
+    {{ govukInsetText({
+      text: "You must file BRS returns for each tax month, by the 19th of the following month."
+    }) }}
+
+    <h2 class="govuk-heading-m">Before you start</h2>
+
+    <p class="govuk-body">To use this service, you need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>to be authorised to act for your clients</li>
+      <li>a tax office reference or Unique Taxpayer Reference (UTR)</li>
+      <li>details of payments made to workers during the tax month</li>
+    </ul>
+
+    {{ govukDetails({
+      summaryText: "Other ways to file BRS returns",
+      html: "<h3 class='govuk-heading-s'>Filing only service</h3>
+      <p class='govuk-body'>You can send BRS monthly returns without completing an authorisation online or form FBI-2.</p>
+      <p class='govuk-body'>This service is only available using commercial software.</p>
+      <p class='govuk-body'>
+        <a href='/filing-a-return/business-returns/business-returns/guidance' class='govuk-link'>Find commercial software for BRS returns</a>
+      </p>"
+    }) }}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "alp4-generating-list"
+    }) }}
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-s" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              What is the Business Returns Service
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS monthly returns guidance
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/filing-a-return/business-returns/business-returns/guidance">
+              BRS 340: Penalties for late returns
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://www.gov.uk/guidance/client-authorisation-an-overview">
+              Client authorisation guidance
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}

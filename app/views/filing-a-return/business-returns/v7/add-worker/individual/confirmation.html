@@ -1,0 +1,79 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Worker added – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Worker added to your list"
+      }) }}
+
+      <p class="govuk-body">
+        John Smith has been added to your worker list.
+      </p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Important</span>
+          You must verify this worker with HMRC before making any payments to them.
+        </strong>
+      </div>
+
+      <h2 class="govuk-heading-m">What you need to do next</h2>
+
+      <p class="govuk-body">
+        Before you can make any payments to this worker, you must:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Verify them with HMRC to get their verification number and tax deduction rate</li>
+        <li>apply the correct deduction rate (0%, 20%, or 30%) when making payments</li>
+        <li>You should keep the worker's verification number for your records</li>
+      </ul>
+
+      {{ govukButton({
+        text: "Verify this worker",
+        href: "/filing-a-return/business-returns/verify-worker"
+      }) }}
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/SL-03-worker-type" class="govuk-link">Add another worker</a>
+      </p>
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/business-returns/worker-list" class="govuk-link">View your worker list</a>
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        Once you verify this worker with HMRC, you will be able to:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>make BRS deductions at the correct rate</li>
+        <li>submit their monthly returns</li>
+        <li>provide their payment and deduction statements</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Help and support</h2>
+
+      <p class="govuk-body">
+        If you need help with the Business Returns Service (BRS), you can:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link">read the BRS guidance on GOV.UK</a></li>
+        <li><a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link">contact HMRC</a> if you have questions</li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

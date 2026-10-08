@@ -1,0 +1,173 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before submitting your verification request – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before submitting your verification request</h1>
+
+
+      
+
+     
+
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          
+
+         {
+
+
+            key: {
+              text: "Do you want to reverify any existing workers?"
+            },
+            value: {
+              html:   "
+                      Yes
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          },
+
+
+
+
+
+          {
+
+
+            key: {
+              text: "Workers to reverify"
+            },
+            value: {
+          html: '
+                  <ul class="govuk-list govuk-list--bullet">
+                     <li>Grant, Alan</li>
+                     <li>InGen Research</li>
+                  </ul>
+                '
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          },
+
+          {
+
+
+            key: {
+              text: "Do you want confirmation by email?"
+            },
+            value: {
+              html:   "
+                      Send confirmation to current email address
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          },
+
+          
+
+
+          
+          
+
+
+ 
+
+
+
+  
+
+  {
+              key: {
+                text: "Email address"
+              },
+              value: {
+                text: "{email address}"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "add UTR"
+                  }
+                ]
+              }
+            }
+
+        ]
+      }) }}
+
+
+
+
+      
+
+   <form action="mr-03-08-g-check-your-answers-submitting-nil-return" method="post" novalidate>
+        
+        <h2 class="govuk-heading-m">Declaration</h2>
+
+        <p class="govuk-body">By submitting this verification request, you confirm that:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a formal arrangement is in place (for example, tender accepted, contract agreed, order placed) for all of the workers to be verified in this request.</li>
+          <li>the information given in this verification request is correct and complete to the best of your knowledge and belief.</li>
+        </ul>
+
+
+        {{ govukWarningText({
+          text: "If you give any false information you may face financial penalties and prosecution.",
+          iconFallbackText: "Warning"
+        }) }}
+
+        
+
+        {{ govukButton({
+          text: "Confirm and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

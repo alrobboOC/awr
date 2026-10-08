@@ -1,0 +1,330 @@
+{% extends "filing-a-return/layouts/main.html" %}
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+{% set pageName="Squad A all screens" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    </span>
+    <h1 class="govuk-heading-xl">Manage your CIS return</h1>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<!-- Monthly return screens start from here -->
+    <div id="sprint-23-details">
+      <p>All links and buttons open in a new tab</p>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+<!-- Landing Pages (AAG) -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Landing Pages (AAG)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              
+              <li><a href="/filing-a-return/v5/agent-flow/ip1-introduction.html" class="govuk-link">IP-1 - Introduction</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/lp1-contractor-landing.html" class="govuk-link">LP-1 - Contractor Landing (Will be updated soon)</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/cl1-alp1-combined-search.html" class="govuk-link">ALP-1 - Search</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/alp2-no-clients.html" class="govuk-link">ALP-2 - No Clients</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/alp3-problem-list.html" class="govuk-link">ALP-3 - Problem List</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/alp4-generating-list.html" class="govuk-link">ALP-4 - Generating List</a></li>
+              <li><a href="/filing-a-return/v5/agent-flow/lp2-agent-landing-oneclient.html" class="govuk-link">LP-2 - Agent Landing (Will be updated soon)</a></li>
+              <li><a href="/filing-a-return/v7/subcontractor-landing.html" class="govuk-link">SLP1 - Subcontractor landing (Will be updated soon)</a></li>
+              <li><a href="/filing-a-return/v7/monthly-return-landing.html" class="govuk-link">RLP1 - Returns landing</a></li>
+              <li><a href="/filing-a-return/sprint-18/amend-submitted-return/RLP1b-manage-your-cis-return.html" class="govuk-link">RLP1b - Manage your CIS Return</a></li>
+              <li><a href="/filing-a-return/sprint-18/amend-submitted-return/mr-ar-08-incomplete-returns.html" class="govuk-link">MRAR08 - Incomplete or unsuccessful returns</a></li>
+              <li><a href="/filing-a-return/sprint-18/amend-submitted-return/mr-ar-10b-no-incomplete-returns.html" class="govuk-link">MRAR10b - No Incomplete Returns</a></li>
+              <li><a href="/filing-a-return/sprint-18/amend-submitted-return/mr-ar-10-no-submitted-returns.html" class="govuk-link">MRAR10 - You have not submitted any returns</a></li>
+              
+            </ul>
+          </div>
+        </div>
+
+<!-- Welcome & Pre-Population Flow (WPPF) -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Welcome & Pre-Population Flow (WPPF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+
+            <li><a href="/filing-a-return/v6/welcome-prepop/ps-04-unsuccessful.html" class="govuk-link">PS-04 - Unsuccessful</a></li>
+            <li><a href="/filing-a-return/v6/welcome-prepop/ps-05-success.html" class="govuk-link">PS-05 - Successful</a></li>
+            <li><a href="/filing-a-return/v6/welcome-prepop/ps-06-intro.html" class="govuk-link">PS-06 - Introduction</a></li>
+            <li><a href="/filing-a-return/v6/welcome-prepop/ps05b_no_records.html" class="govuk-link">PS-05b - No records found</a></li>
+            <li><a href="/filing-a-return/v6/welcome-prepop/ps06b_retrieving.html" class="govuk-link">PS-06b - Your subcontractors</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+<!-- Contractor Details Flow (CDF) -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Contractor Details Flow (CDF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/mcd-01-manage-contractor-details-intro.html" class="govuk-link" target="_blank">mcd-01 Manage contractor details intro</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/(new)mcd-02-enter-utr.html" class="govuk-link" target="_blank">mcd-02 Enter UTR</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/(new)mcd-03a-manage-contractor-details.html" class="govuk-link" target="_blank">mcd-03a Manage contractor details (add)</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/(new)mcd-03b-manage-contractor-details-change.html" class="govuk-link" target="_blank">mcd-03b Manage contractor details (change)</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/mcd-04-enter-scheme-name.html" class="govuk-link" target="_blank">mcd-04 Enter scheme name</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/(new)mcd-05-enter-email.html" class="govuk-link" target="_blank">mcd-05 Enter email</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/mcd-06-contractor-details-updated.html" class="govuk-link" target="_blank">mcd-06 Contractor details updated</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/(new)mcd-07-remove-scheme-name.html" class="govuk-link" target="_blank">mcd-07 Remove scheme name</a></li>
+              <li><a href="/filing-a-return/sprint-23/manage-contractor-details/(new)mcd-08-remove-email.html" class="govuk-link" target="_blank">mcd-08 Remove email</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Manage client details -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Manage Client Details Flow (MCDF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+             <li><a href="/filing-a-return/sprint-23/manage-client-details/mc-01-manage-client-details.html" class="govuk-link" target="_blank">mc-01 Manage client details</a></li>
+             <li><a href="/filing-a-return/sprint-23/manage-client-details/mc-02-change-client-reference.html" class="govuk-link" target="_blank">mc-02 Change client reference</a></li>
+             <li><a href="/filing-a-return/sprint-23/manage-client-details/mc-03-client-reference-updated.html" class="govuk-link" target="_blank">mc-03 Client reference updated</a></li>
+             <li><a href="/filing-a-return/sprint-23/manage-client-details/mc-04-remove-this-client.html" class="govuk-link" target="_blank">mc-04 Remove this client</a></li>
+             <li><a href="/filing-a-return/sprint-23/manage-client-details/mc-05-client-removed.html" class="govuk-link" target="_blank">mc-05 Client removed</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- nil return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Monthly Nil Return Flow (MNRF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-02-a-file-your-nil-return.html" class="govuk-link" target="_blank">MR-02-a File your nil return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-02-b-enter-tax-month-and-year.html" class="govuk-link" target="_blank">MR-02-b Enter tax month and year</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-03-08-d-submit-inactivity-request-nil-return.html" class="govuk-link" target="_blank">MR-03-08-d Submit inactivity request nil return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-03-08-e-inactivity-request-nil-return.html" class="govuk-link" target="_blank">MR-03-08-e Inactivity request nil return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link" target="_blank">MR-03-08-2f Do you want email confirmation</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-03-08-f-enter-email-address.html" class="govuk-link" target="_blank">MR-03-08-f Enter email address</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-02-c-declaration-no-payments.html" class="govuk-link" target="_blank">MR-02-c Declaration no payments</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-03-08-g-check-your-answers-submitting-nil-return.html" class="govuk-link" target="_blank">MR-03-08-g Check your answers submitting nil return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-04-a-sending-submission.html" class="govuk-link" target="_blank">MR-04-a Sending submission</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-04-e-successful-submission.html" class="govuk-link" target="_blank">MR-04-e Successful submission with receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-04-b-successful-submission.html" class="govuk-link" target="_blank">MR-04-b Sccessful submission no receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-04-c-successful-submission.html" class="govuk-link" target="_blank">MR-04-c Successful submission no receipt with email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-04-d-successful-submission.html" class="govuk-link" target="_blank">MR-04-d Successful submission with receipt no email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link" target="_blank">MR-05-b Submission in progress (while submitting)</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-05-c-submission-in-progress-back.html" class="govuk-link" target="_blank">MR-05-c Submission in progress (overview page)</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link" target="_blank">MR-05-a submission unsuccessful cannot resubmit</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/nil-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link" target="_blank">MR-05-b Submission unsuccessful resubmit</a></li>
+            </ul>
+          </div>
+        </div>
+
+                <!-- standard return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Monthly Return Flow (MRF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-02-a-file-monthly-return.html.html" class="govuk-link" target="_blank">MR-02-a File monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-02-b-tax-month-and-year.html.html" class="govuk-link" target="_blank">MR-02-b Enter tax month and year</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-02-a-subcontractors-to-include.html" class="govuk-link" target="_blank">MR-03-02-a Subcontractors to include</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-03-c-enter-total-payments.html" class="govuk-link" target="_blank">MR-03-03-c Enter total payments</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-03-d-enter-material-costs.html" class="govuk-link" target="_blank">MR-03-03-d Enter material costs</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-03-e-enter-tax-deducted.html" class="govuk-link" target="_blank">mr-03-03-e Enter tax deducted</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-04-a-check-your-answers.html" class="govuk-link" target="_blank">mr-03-04-a Check your answers</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-04-c-subcontractor-details-added" class="govuk-link" target="_blank">MR-03-04- c added details for a single subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-04-c-subcontractor-details-added_exhustive-view" class="govuk-link" target="_blank">MR-03-04-c added details for multiple subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-04-d-add-subcontractor-details" class="govuk-link" target="_blank">MR-03-04-d Add subcontractor details</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-04-d-add-subcontractor-details_exhustive_view" class="govuk-link" target="_blank">MR-03-04-d Add subcontractor details...(Exhaustive views) </a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-04e-summary-subcontractor-payments" class="govuk-link" target="_blank">MR-03-04-e Summary subcontractor payments</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-03-b-change-subcontractor" class="govuk-link" target="_blank">MR-03-03-b Change subcontractor's details</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/remove-subcontractor-mr-03-03-b" class="govuk-link" target="_blank">MR-03-03-b Remove subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08-b employment-status-declaration.html" class="govuk-link" target="_blank">mr-03-08-b Employment status declaration</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08-b-verified-declaration.html" class="govuk-link" target="_blank">mr-03-08-b Verified declaration</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08-b-verified-declaration.html" class="govuk-link" target="_blank">mr-03-08-b Verified declaration</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08d-submit-inactivity-request.html" class="govuk-link" target="_blank">MR-03-08-d Submit inactivity request</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08e-inactivity-request-warning.html" class="govuk-link" target="_blank">MR-03-08-e Inactivity request warning</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08-2f-do-you-want-email-confirmation.html" class="govuk-link" target="_blank">MR-03-08-f Email address confirmation</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08f-enter-email-address.html" class="govuk-link" target="_blank">MR-03-08-f Enter your email address</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-03-08-g-check-your-answers-submitting-return.html" class="govuk-link" target="_blank">mr-03-08-g Check your answers (submitting return)</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-04-a-sending-submission.html" class="govuk-link" target="_blank">mr-04-a Sending submission</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-04-b-successful-submission.html" class="govuk-link" target="_blank">mr-04-b Sccessful submission no receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-04-c-successful-submission.html" class="govuk-link" target="_blank">mr-04-c Successful submission no receipt with email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-04-d-successful-submission.html" class="govuk-link" target="_blank">mr-04-d Successful submission with receipt no email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-04-e-successful-submission.html" class="govuk-link" target="_blank">mr-04-e Successful submission with receipt and email</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-05-b-submission-in-progress.html" class="govuk-link" target="_blank">mr-05-b Submission in progress (while submitting)</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-05-c-submission-in-progress-back.html" class="govuk-link" target="_blank">mr-05-c Submission in progress (overview page)</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-05-a-submission-unsuccessful-cannot-resubmit.html" class="govuk-link" target="_blank">mr-05-a submission unsuccessful cannot resubmit</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/standard-monthly-return/mr-05-b-submission-unsuccessful-resubmit.html" class="govuk-link" target="_blank">mr-05-b Submission unsuccessful resubmit</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Amend monthly return -->
+        <div class="govuk-accordion__section" id="amend-submitted-return">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="amend-submitted-return-heading">
+                Amend Monthly Return Flow (AMRF)
+              </span>
+            </h2>
+          </div>
+          <div id="amend-submitted-return-content" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-03-amend-confirmation.html" class="govuk-link" target="_blank">MRAR03 - Confirm Amendment</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-06b-what-do-you-want-to-do" class="govuk-link" target="_blank">MRAR06b - What do you want to amend?</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-06-what-do-you-want-to-do.html" class="govuk-link" target="_blank">MRAR06 - What do you want to amend?</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-05-which-subcontractor-do-you-want-select.html" class="govuk-link" target="_blank">MRAR05 - Which subcontractor do you want to select?</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-04-subcontractor-details-added.html" class="govuk-link" target="_blank">MRAR0304c - Subcontractor details</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-11-remove-subcontractor.html" class="govuk-link" target="_blank">MRAR11 - Are you sure you want to remove 'Name'?</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-09-are-you-sure-nil.html" class="govuk-link" target="_blank">MRAR09 - Are you sure you want to amend this return to a nil return?</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-02-cancel-amendment.html" class="govuk-link" target="_blank">MR02 - Cancel Amendment</a></li>
+                  <li><a href="/filing-a-return/sprint-23/amend-submitted-return/mr-ar-03-04-b-payment-details-confirmation.html" class="govuk-link" target="_blank">MRAR0304b - Do you confirm the information in this return is correct?</a></li>
+            
+            </ul>
+          </div>
+        </div>
+
+        <!-- Delete monthly return -->
+        <div class="govuk-accordion__section" id="amend-submitted-return">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="amend-submitted-return-heading">
+                Delete Monthly Return Flow (DMRF)
+              </span>
+            </h2>
+          </div>
+          <div id="amend-submitted-return-content" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/delete-monthly-return/mr-01-delete-monthly-return.html" class="govuk-link" target="_blank">MR01 - Delete Monthly Return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/delete-monthly-return/mr-02-delete-amended-monthly-return.html" class="govuk-link" target="_blank">MR02 - Delete Amended Monthly Return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/delete-monthly-return/mr-03-delete-nil-monthly-return.html" class="govuk-link" target="_blank">MR03 - Delete Nil Monthly Return</a></li>
+              <li><a href="/filing-a-return/sprint-23/monthly-returns/delete-monthly-return/mr-04-delete-amended-nil-monthly-return.html" class="govuk-link" target="_blank">MR04 - Delete Amended Nil Monthly Return</a></li>            
+            </ul>
+          </div>
+        </div>
+
+                <!-- View submitted monthly return -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Submitted Monthly Return Flow (SMRF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/sprint-23/submited-return-history/sr-01-view-tax-year-submission-history.html" class="govuk-link" target="_blank">sr-01 Submitted return history</a></li>
+              <li><a href="/filing-a-return/sprint-23/submited-return-history/sr-02-monthly-return-history-tax-year.html" class="govuk-link" target="_blank">sr-02 Retun history - individual tax year</a></li>
+              <li><a href="/filing-a-return/sprint-23/submited-return-history/sr-03-monthly-return-history-all-tax-years.html" class="govuk-link" target="_blank">sr-03 Retun history - all tax year</a></li>
+              <li><a href="/filing-a-return/sprint-23/submited-return-history/sr-04-monthly-return-submission-details.html" class="govuk-link" target="_blank">sr-04 Print monthly return</a></li>
+              <li><a href="/filing-a-return/sprint-23/submited-return-history/sr-04-d-successful-submission.html" class="govuk-link" target="_blank">SR-02-f View/save submitted return</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Final Validation Flow (FVF) -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Final Validation Flow (FVF)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-01a-error-contractor.html" class="govuk-link" target="_blank">eh-01a Error - contractor</a></li>
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-01b-error-contractor-continue.html" class="govuk-link" target="_blank">eh-01b Error - contractor (continue)</a></li>
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-02a-error-subcontractor.html" class="govuk-link" target="_blank">eh-02a Error - subcontractor</a></li>
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-02b-error-subcontractor-continue.html" class="govuk-link" target="_blank">eh-02b Error - subcontractor (continue)</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/eh-03-error-subcontractor-fix.html" class="govuk-link" target="_blank">eh-03 Fix error - subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/eh-01a-v-error-contractor.html" class="govuk-link" target="_blank">eh-01a-v Error - contractor</a></li>
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-01b-v-error-contractor-continue.html" class="govuk-link" target="_blank">eh-01b-v Error - contractor (continue)</a></li>
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-02a-v-error-subcontractor.html" class="govuk-link" target="_blank">eh-02a-v Error - subcontractor</a></li>
+             <li><a href="/filing-a-return/sprint-23/error-handling/eh-02b-v-error-subcontractor-continue.html" class="govuk-link" target="_blank">eh-02b-v Error - subcontractor (continue)</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/eh-03-v-error-subcontractor-fix.html" class="govuk-link" target="_blank">eh-03-v Fix error - subcontractor</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/eh-04a-enter-scheme-name.html" class="govuk-link" target="_blank">eh-04a Enter scheme name</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/eh-04b-enter-utr.html" class="govuk-link" target="_blank">eh-04b Enter UTR</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/eh-04c-enter-email.html" class="govuk-link" target="_blank">eh-04c Enter email</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Error Handling (ERR) -->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Error Handling Flow (ERR)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <ul class="govuk-list">
+              <li><a href="/filing-a-return/v1-v4/error-handling/crr1.html.html" class="govuk-link">crr1.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/crr2.html.html" class="govuk-link">crr2.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/crr3.html.html" class="govuk-link">crr3.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/crr4.html.html" class="govuk-link">crr4.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/crr5.html.html" class="govuk-link">crr5.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/err1.html.html" class="govuk-link">err1.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/err2.html.html" class="govuk-link">err2.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/err3.html.html" class="govuk-link">err3.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/err4.html.html" class="govuk-link">err4.html</a></li>
+              <li><a href="/filing-a-return/v1-v4/error-handling/err5.html.html" class="govuk-link">err5.html</a></li>
+              <li><a href="/filing-a-return/sprint-22/error-handling/crr6-agent-lost-access.html" class="govuk-link">crr6 Agent Lost Access</a></li>
+              <li><a href="/filing-a-return/sprint-23/error-handling/crr7-security-check.html" class="govuk-link">crr7 Security Check</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        </div>
+</div>
+
+{% endblock %}

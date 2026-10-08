@@ -1,0 +1,65 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation by email – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/filing-a-return/business-returns/routing-handler" method="post">
+
+        <h1 class="govuk-heading-l">
+          Do you want an email confirmation of this verification request?
+        </h1>
+
+        <p class="govuk-body">
+          Your email address is currently <strong>s.spielberg@amblin.com</strong>. You can get a confirmation sent to this address or use a different one.
+        </p>
+
+        {{ govukRadios({
+          name: "emailConfirmation",
+          fieldset: {
+            describedBy: "email-confirmation-info"
+          },
+          items: [
+            {
+              value: "current-email",
+              text: "Send confirmation to current email address"
+            },
+            {
+              value: "another-email",
+              text: "Use a different email address"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "no-email",
+              text: "Do not send an email confirmation"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

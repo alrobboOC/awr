@@ -1,0 +1,63 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+ Summary of payments made – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Summary of payments made
+      </h1>
+
+      <form class="form" action="mr-03-04-b-payment-details-confirmation" method="post">
+
+        <p>
+          You have added the payment details of {{data['workers'].length}} workers.
+        </p>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total payments to workers
+            </dt>
+            <dd class="govuk-summary-list__value">
+             &pound;{{data['total-payments'] or '3600'}}
+            </dd>
+          </div>
+                    <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total cost of materials
+            </dt>
+            <dd class="govuk-summary-list__value">
+             &pound;{{data['materials-cost'] or '900'}}
+            </dd>
+          </div>
+                    <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Total BRS deductions
+            </dt>
+            <dd class="govuk-summary-list__value">
+              &pound;{{data['tax-deducted'] or '540'}}
+            </dd>
+          </div>
+  </dl>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

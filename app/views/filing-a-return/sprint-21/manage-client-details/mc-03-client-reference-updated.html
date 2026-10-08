@@ -1,0 +1,33 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+Are you sure you want to delete the monthly return for August 2025? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+    titleText: "Client reference updated"
+    }) }}
+
+    <p class="govuk-body">You changed this client reference from ABC123 to XYZ456.</p>
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">
+      It may take up to 1 day for this change to take place. You can <a href="index.html" class="govuk-link">view the
+        change on your client dashboard</a>.
+    </p>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+    </p>
+  </div>
+</div>
+</main>
+</div>
+
+
+{% endblock %}

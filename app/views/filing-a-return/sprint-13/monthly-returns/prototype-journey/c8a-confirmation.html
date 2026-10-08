@@ -1,0 +1,64 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Your monthly return has been successfully submitted"
+    }) }}
+
+    <p class="govuk-body">
+      Your CIS monthly return for period ended 5 March 2018 was successfully submitted to HMRC at 08:46 GMT on 6 April 2017.
+    </p>
+
+    <h2 class="govuk-heading-m">Submission details</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contractor name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          PAL 355 Scheme
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Employers Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123/AB456
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email confirmation sent to
+        </dt>
+        <dd class="govuk-summary-list__value">
+          test@test.com
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">
+      This verification request has been successfully submitted and received by HMRC. It can be accessed in read-only format from your history.
+    </p>
+
+    <p class="govuk-body">
+      We were unable to issue a submission receipt at this time. HMRC will contact you shortly. You will receive confirmation of your submission at the following email address: test@test.com
+    </p>
+
+    <p class="govuk-body">
+      Your views are important in order to help make improvements to the service, to offer your views please complete our <a href="#" class="govuk-link">feedback form</a>.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

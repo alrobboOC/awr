@@ -1,0 +1,170 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Which subcontractor do you want to add in the monthly return? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="../standard-monthly-return/mr-03-03-c-enter-total-payments" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Which subcontractor do you want to add to this return?
+              </h1>
+            </legend>
+            <!-- <div id="waste-hint" class="govuk-hint">
+              Select all that apply
+            </div> -->
+            <p class="govuk-body">Showing 1 to 15 of 50 results</p>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor1" name="subcontractor" type="checkbox" value="Alice A">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor1">
+                  Alice, A
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor1" name="subcontractor" type="checkbox" value="Alice A">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor1">
+                  Apex Construction Solutions
+                </label>
+              </div>
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor2" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor2">
+                  Bob, B
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor3" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor3">
+                  Bloggs, Joe
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor4" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor4">
+                  Bloggs, Joseph
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor9" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor9">
+                  Build Right Construction
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor5" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor5">
+                  Charles, C
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor6" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor6">
+                  Dave, D
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor6" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor6">
+                  Draft Services Ltd
+                </label>
+              </div>
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor7" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor7">
+                  Elise, E
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor8" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor8">
+                  Frank, F
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor10" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor10">
+                  Northern Trades Ltd
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor10" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor10">
+                  Pro-Build Subcontractors
+                </label>
+              </div>
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor1" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor1">
+                  Tynewear Ltd
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="subcontractor1" name="subcontractor" type="checkbox" value="Bob B">
+                <label class="govuk-label govuk-checkboxes__label" for="subcontractor1">
+                  SubbyCo Ltd
+                </label>
+              </div>
+              
+              
+            </div>
+          </fieldset>
+        </div>
+
+        <nav class="govuk-pagination govuk-!-margin-bottom-9" aria-label="Pagination">
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+              <span class="govuk-pagination__link-title">
+                Next<span class="govuk-visually-hidden"> page</span>
+              </span>
+              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

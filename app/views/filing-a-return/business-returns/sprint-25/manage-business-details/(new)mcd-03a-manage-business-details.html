@@ -1,0 +1,74 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Manage client details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="mr-05-monthly-return-landing" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Business details
+              </h1>
+            </legend>
+
+            <div class="govuk-!-padding-bottom-4"></div>
+            <h3 class="govuk-heading-m">Accounts office reference: 123 PA 87654321</h3>
+
+
+            <table class="govuk-table">
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Unique taxpayer reference</th>
+                  <td class="govuk-table__cell">1234444555</td>
+                  <td class="govuk-table__cell"><a href="mcd-02-enter-utr.html" class="govuk-link">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Add scheme name?</th>
+                  <td class="govuk-table__cell">Yes</td>
+                  <td class="govuk-table__cell"><a href="mcd-04-enter-scheme-name.html" class="govuk-link">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Scheme name</th>
+                  <td class="govuk-table__cell">John Doe</td>
+                  <td class="govuk-table__cell"><a href="mcd-04-enter-scheme-name.html" class="govuk-link">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Add email address?</th>
+                  <td class="govuk-table__cell">Yes</td>
+                  <td class="govuk-table__cell"><a href="mcd-04-enter-scheme-name.html" class="govuk-link">Change</a></td>
+                </tr>
+                  <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Email address</th>
+                  <td class="govuk-table__cell">123@example.com</td>
+                  <td class="govuk-table__cell"><a href="mcd-05-enter-email.html" class="govuk-link">Change</a></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </fieldset>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+   Save and continue
+    </button>
+      </form>
+ <p class="govuk-body">
+  <a href="mcd-01-manage-business-details-intro.html" class="govuk-link">Return to BRS account</a>
+</p>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

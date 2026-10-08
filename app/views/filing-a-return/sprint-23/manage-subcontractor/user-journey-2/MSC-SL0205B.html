@@ -1,0 +1,49 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the National Insurance number for {subcontractor name}? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "partnership-partner-details-ni.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="partnership-partner-check-answers.html" method="post" novalidate>
+
+        {{ govukInput({
+          label: {
+            text: "What is the National Insurance number for Martin Brody?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "National Insurance numbers can be found on payslips, P60s and other tax documents. For example, 'QQ 12 34 56 C'"
+          },
+          id: "crn",
+          name: "crn",
+          classes: "govuk-input--width-10",
+          value: "QQ 12 34 56 C",
+        
+          spellcheck: false,
+          autocomplete: "off"
+        }) }}
+
+       <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Update"
+        }) }}
+
+       
+      </div>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

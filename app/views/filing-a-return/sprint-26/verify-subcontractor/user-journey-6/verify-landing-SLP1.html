@@ -1,0 +1,98 @@
+{% extends "filing-a-return/layouts/main-with-nav-cards.html" %}
+{% import "filing-a-return/macros/custom/card-template.njk" as card %}
+
+
+{% block pageTitle %}
+  Manage your CIS subcontractors – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!-- <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              If you have entered a tax month incorrectly and it is in progress, you cannot change it.
+            </p>
+            <p class="govuk-body">
+              xxxxxYou must start a new return for the correct period and then delete the one that is incorrect.
+            </p>     
+          </div>
+        </div> -->
+        <h1 class="govuk-heading-l">
+          Manage your CIS subcontractors
+        </h1>
+
+
+        <p class="govuk-body">Subcontractors must be verified before you can include them on a monthly return. This will ensure that deductions are made at the correct rate.</p>
+
+        {{ govukInsetText({
+            html: 'You will need to use <a href="#" class="govuk-link">commercial CIS software</a> to submit any verification requests that include more than 50 subcontractors.'
+          }) }}
+
+          </div>
+          </div>
+    
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      
+    <div class="flex-container govuk-grid-row">
+    
+  {{ card.card(
+    cardUrl="../user-journey-1/verify-select-subcontractor-checkbox-VF-03",
+    headingLevel="h3",
+    heading="Add new subcontractors",
+    linkContent="Create a record for any new subcontractor you want to pay."
+  ) }}
+
+
+  {{ card.card(
+    cardUrl="#",
+    headingLevel="h3",
+    heading="Verify your subcontractors",
+    linkContent="Make sure your subcontractors have the correct deductions applied to their payments.",
+    cardId="fileNilReturnCard"
+  ) }}
+
+  {{ card.card(
+    cardUrl="#",
+    headingLevel="h3",
+    heading="View your subcontractors",
+    linkContent="Edit the details of any subcontractor in your list.",
+    cardId="amendSubmittedReturnCard"
+  ) }}
+
+
+    {{ card.card(
+    cardUrl="#",
+    headingLevel="h3",
+    heading="Check your results",
+    linkContent="View the outcome for your latest verification request.",
+    cardId="amendSubmittedReturnCard"
+  ) }}
+
+
+  </div>  <!-- flex container -->
+
+
+  </div> <!-- govuk-grid-column-full -->
+</div> <!-- govuk-grid-row -->
+  
+</div>
+
+
+{% endblock %}

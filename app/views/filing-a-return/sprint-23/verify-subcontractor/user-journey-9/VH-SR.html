@@ -1,0 +1,83 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Submission receipt
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Submission details
+      </h2>
+      <p>
+       Submitted at hh:mm on dd Month yyyy
+      </p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contractor name          </dt>
+          <dd class="govuk-summary-list__value">
+            {contractor name}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employer reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {employer reference}
+          </dd>
+        </div>
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Receipt reference number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {IR number}
+          </dd>
+       
+        </div>
+        </dl>
+    </div>
+  </div>
+
+
+      
+
+          
+      <p class="govuk-body">
+              Your verification request has been successfully submitted to HMRC.
+      </p>
+       
+      <p class="govuk-body">
+              Please keep this receipt for your records.
+      </p>
+    
+
+      
+      <p class="govuk-body">
+         <a href="javascript:window.print()" class="govuk-link">Print this receipt</a>
+      </p>
+
+      <p class="govuk-body">
+         Back to <a href="sr-02-monthly-return-history-tax-year.html">Manage your subcontractors</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

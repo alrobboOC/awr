@@ -1,0 +1,33 @@
+{% set serviceName = "Construction Industry Scheme" %}
+{% set bodyClasses = "filing-a-return" %}
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "hmrc/components/service-navigation-language-select/macro.njk" import hmrcServiceNavigationLanguageSelect %}
+
+{% block header %}
+
+    {{ govukHeader({
+    })}}
+    {{ govukServiceNavigation({
+        serviceName: "Construction Industry Scheme",
+        serviceUrl: "#",
+        classes: "hmrc-service-navigation--with-language-select",
+        slots: {
+            end: hmrcServiceNavigationLanguageSelect({
+            language: 'en',
+            en: {
+                href: '?en'
+            },
+            cy: {
+                href: '?cy'
+            }
+            })
+        }
+    })}}
+
+{% endblock %}

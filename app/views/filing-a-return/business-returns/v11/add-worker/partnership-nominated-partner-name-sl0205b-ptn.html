@@ -1,0 +1,54 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Enter a nominated partner – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "partnership-partner-count.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="partnership-nominated-partner-details-utr.html" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Who is the nominated partner for {partnership name}?
+              </h1>
+            </legend>
+            <div class="govuk-hint">
+              The nominated partner is responsible for managing the partnership's tax affairs
+            </div>
+
+            {{ govukInput({
+              label: {
+                text: "Full name"
+              },
+              id: "full-name",
+              name: "full-name",
+              autocomplete: "given-name",
+              spellcheck: false
+            }) }}
+
+            
+
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

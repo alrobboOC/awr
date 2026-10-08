@@ -1,0 +1,149 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before submitting your verification request – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">Check your answers before submitting your verification request</h1>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          
+
+          {
+
+
+            key: {
+              text: "Workers to verify"
+            },
+            value: {
+          html: '
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Alex Kintner Groundworks Ltd</li>
+                    <li>Amity Beach Roofing Ltd</li>
+                    <li>Amity Gazette Scaffolding Ltd</li>
+                    <li>Amity Harbour Civil Engineering</li>
+                    <li>Amity Island Business Ltd</li>
+                    <li>Amity Lifeguard Plumbing Services</li>
+                    <li>Amity Police Business Services</li>
+                    <li>Amity Utilities Electrical Ltd</li>
+                    <li>Atlantic Marine Joinery Ltd</li>
+                    <li>Ben Gardner Marine Business</li>
+                    <li>Brody, Martin</li>
+                    <li>Chrissie Watkins Carpentry Ltd</li>
+                    <li>Coastal Tourism Groundworks</li>
+                    <li>Denherder Landscaping & Paving</li>
+                    <li>Ellen Brody Business Consultancy</li>
+                    <li>Estuary Boating Marine Engineering</li>
+                    <li>Harry Wiseman Roofing Supplies</li>
+                    <li>Hendricks Marine Fabrication</li>
+                    <li>Hooper And Associates</li>
+                    <li>Island Ferry Structural Services</li>
+                    <li>June Night Civil Engineering Ltd</li>
+                    <li>Meadows & Co. Business Ltd</li>
+                    <li>Quint Transportation</li>
+                    <li>Quint’s Marine Services Ltd</li>
+                    <li>Seaside Catering Facilities Management</li>
+                    <li>Shark Research Site Surveys Ltd</li>
+                    <li>The Kintner Group</li>
+                    <li>Vaughn, Larry</li>
+                  </ul>
+                '
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          }
+
+
+
+        ]
+      }) }}
+
+     
+
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          
+
+          {
+
+
+            key: {
+              text: "Do you want confirmation by email?"
+            },
+            value: {
+              html:   "
+                      Send confirmation to current email address: <strong>{email address}</strong>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Name"
+                }
+              ]
+            }
+          }
+
+
+          
+          
+
+
+ 
+
+
+
+  
+
+ 
+
+        ]
+      }) }}
+
+
+
+
+
+
+
+      
+
+      <form action="#" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Confirm and submit"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

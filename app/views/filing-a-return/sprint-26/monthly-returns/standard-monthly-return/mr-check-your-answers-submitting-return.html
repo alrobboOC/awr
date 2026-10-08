@@ -1,0 +1,140 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers for TyneWear Ltd – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {%set subcontractorselected = data['subcontractors']%}
+      {%set tPayment = data['total-payments']%}
+      {%set mCost = data['materials-cost']%}
+      {%set tTax = data['tax-deducted']%}
+      <h1 class="govuk-heading-l">
+        Check your answers before submitting your return
+      </h1>
+      <h2 class="govuk-heading-m">Return details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">
+            Return type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Monthly return
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">
+            Time period
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {%set checkMonth = data['mty-month']%}
+            {%set checkYear = data['mty-year']%}
+            {%if checkMonth == '01' or checkMonth == '1' %}
+              January, {{data['mty-year']}}
+            {%elif checkMonth == '02' or checkMonth == '2' %}
+              February, {{data['mty-year']}}
+            {%elif checkMonth == '03' or checkMonth == '3' %}
+              March, {{data['mty-year']}}
+            {%elif checkMonth == '04' or checkMonth == '4' %}
+              April, {{data['mty-year']}}
+            {%elif checkMonth == '05' or checkMonth == '5' %}
+              May, {{data['mty-year']}}
+            {%elif checkMonth == '06' or checkMonth == '6' %}
+              June, {{data['mty-year']}}
+            {%elif checkMonth == '07' or checkMonth == '7' %}
+              July, {{data['mty-year']}}
+            {%elif checkMonth == '08' or checkMonth == '8' %}
+              August, {{data['mty-year']}}
+            {%elif checkMonth == '09' or checkMonth == '9' %}
+              September, {{data['mty-year']}}
+            {%elif checkMonth == '10' or checkMonth == '10' %}
+              October, {{data['mty-year']}}
+            {%elif checkMonth == '11' or checkMonth == '11' %}
+              November, {{data['mty-year']}}
+            {%elif checkMonth == '12' or checkMonth == '12' %}
+              December, {{data['mty-year']}}
+            {% else %}
+              Not entered
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Declaration of employment status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> declaration of employment status</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Declaration of verified status
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> declaration of verified status</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Inactivity request
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['areYouSubmittingAnInactivityRequest'] or "No"}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="mr-03-08d-submit-inactivity-request.html">Change<span class="govuk-visually-hidden"> inactivity request</span></a>
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Email confirmation</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you want submission confirmation by email?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['emailConfirmation']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="mr-03-08-2f-email-address-confirmation.html">Change<span class="govuk-visually-hidden"> email confirmation</span></a>
+          </dd>
+        </div>
+        {%if data['emailConfirmation'] == "Yes" %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email'] or "sarah.phillips@example.gov.uk"}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="mr-03-08f-enter-email-address.html">Change<span class="govuk-visually-hidden"> email address</span></a>
+          </dd>
+        </div>
+        {% endif %}
+      </dl>
+     
+      <form action="mr-sending-submission" method="post" novalidate>
+        {{ govukButton({
+          text: "Confirm and continue"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

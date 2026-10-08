@@ -1,0 +1,50 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Scheme inactive – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/SL-02-05-work-type"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     
+
+        <h1 class="govuk-heading-l">
+          Your scheme is not active
+        </h1>
+
+       
+          <p class="govuk-body">
+              Your scheme was recently made inactive.
+          </p>
+          <p class="govuk-body">
+              You must <a href="/filing-a-return/business-returns/business-returns/guidance" class="govuk-link"></a>contact HMRC by phone to reactivate your scheme</a> before you can pay any more workers.
+          </p>
+                
+          {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+          {{ govukWarningText({
+            text: "Any verification request that you send while your scheme is inactive will fail when you try to submit it.",
+            iconFallbackText: "Warning"
+          }) }}
+
+         <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+
+              <a class="govuk-link" href="#">Cancel request</a>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}

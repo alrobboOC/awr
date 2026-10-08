@@ -1,0 +1,285 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers before updating the trust – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+      <h1 class="govuk-heading-l">{trust name}</h1>
+
+      <h2 class="govuk-heading-m">Worker information</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Trust"
+            }
+            
+          },
+
+
+          {
+            key: {
+              text: "Trust name"
+            },
+            value: {
+              text: "{trust name}"
+            }
+            
+          }
+
+    ]
+      }) }}
+
+
+ <h2 class="govuk-heading-m">More details</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+
+
+          {
+            key: {
+              text: "Add trust address?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "trust address"
+                }
+              ]
+            }
+          },
+
+
+          
+          {
+
+
+            key: {
+              text: "Address"
+            },
+            value: {
+              html:   "
+                      {Address line 1}<br>
+                      {Address line 2}<br>
+                      {Town or city}}<br>
+                      {County}<br>
+                      {Postal code}<br>
+                      {Country}<br>
+                    "
+                    
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+          
+           
+{
+
+          key: {
+              text: "Methods of contact"
+            },
+            value: {
+              html: '<ul class="govuk-list govuk-list--bullet"><li>Email address</li><li>Phone number</li><li>Mobile number</li></ul>'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "methods of contact"
+                }
+              ]
+            }
+          },
+ {
+
+          key: {
+              text: "Email address"
+            },
+            value: {
+              text: "{Email address}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Email address"
+                }
+              ]
+            }
+          },
+
+    {
+            key: {
+              text: "Phone number"
+            },
+            value: {
+              text: "{Phone number}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Phone number"
+                }
+              ]
+            }
+          },
+  
+          {
+            key: {
+              text: "Mobile number"
+            },
+            value: {
+              text: "{Mobile number}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "mobile number"
+                }
+              ]
+            }
+          },
+ 
+
+ {
+                    key: {
+                      text: "Add UTR?"
+                    },
+                    value: {
+                      text: "Yes"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "add UTR"
+                        }
+                      ]
+                    }
+                  },
+
+
+
+          {
+
+            key: {
+              text: "Trust UTR"
+            },
+            value: {
+              text: "{Trust UTR}"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "trust UTR"
+                }
+              ]
+            }
+          },
+
+
+        {
+                    key: {
+                      text: "Add works reference number?"
+                    },
+                    value: {
+                      text: "Yes"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "add works reference number"
+                        }
+                      ]
+                    }
+                  },
+ 
+
+
+
+
+          {
+
+            key: {
+              text: "Works reference number"
+            },
+            value: {
+              text: "XLS345-MM"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "works reference number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+     
+
+      <h2 class="govuk-heading-m">Confirm changes</h2>
+
+      <p class="govuk-body">By changing this worker's details you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="partnership-confirmation.html" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Accept and submit"
+          }) }}
+
+          <a class="govuk-link" href="#">Cancel changes</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

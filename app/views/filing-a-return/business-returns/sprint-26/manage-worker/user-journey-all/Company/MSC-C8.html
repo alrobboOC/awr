@@ -1,0 +1,44 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  What is John Smith's Company Registration Number? – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "partnership-partner-details-ni.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <form action="partnership-partner-check-answers.html" method="post" novalidate>
+
+        {{ govukInput({
+          label: {
+            text: "What is the company registration number for {company name}?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "Company registration numbers are 8 characters long. They can be either 8 digits (01234567) or 2 letters and 6 digits (AC012345). You can find a company's number on the Companies House register."
+          },
+          id: "crn",
+          name: "crn",
+          classes: "govuk-input--width-10",
+          spellcheck: false,
+          autocomplete: "off"
+        }) }}
+
+        {{ govukButton({
+          text: "Update"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

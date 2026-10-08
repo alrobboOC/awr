@@ -1,0 +1,116 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="Check your answers before submitting your return" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c5-inactivity-warning"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Check your answers before submitting your return
+    </h1>
+
+    <h2 class="govuk-heading-m">Return details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Return type"
+          },
+          value: {
+            text: "Monthly nil return"
+          }
+        },
+        {
+          key: {
+            text: "Time period"
+          },
+          value: {
+            text: "6 May 2024 to 5 June 2025"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/business-returns/monthly-nil-return/confirm-nil-return",
+                text: "Change",
+                visuallyHiddenText: "tax period"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Payments to workers"
+          },
+          value: {
+            text: "None"
+          }
+        },
+        {
+          key: {
+            text: "Inactivity request"
+          },
+          value: {
+            text: "Yes"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/business-returns/monthly-nil-return/inactivity-request",
+                text: "Change",
+                visuallyHiddenText: "inactivity request"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Email confirmation</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Email address"
+          },
+          value: {
+            text: "test@test.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "/filing-a-return/business-returns/monthly-nil-return/confirm-email",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Now submit your return</h2>
+
+    <p class="govuk-body">
+      By submitting this return you are confirming that, to the best of your knowledge, the details you are providing are correct.
+    </p>
+
+    {{ govukButton({
+      text: "Accept and submit",
+      href: "/filing-a-return/business-returns/v1-v4/monthly-nil-return/c7-submission-sending"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

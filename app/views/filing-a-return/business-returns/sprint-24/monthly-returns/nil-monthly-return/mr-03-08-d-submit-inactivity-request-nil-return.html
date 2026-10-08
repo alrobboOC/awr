@@ -1,0 +1,63 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+ Are you submitting an inactivity request?– {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Submit inactivity request
+      </h1>
+      <p class="">Tell HMRC that you do not expect to pay this worker in the next six months. </p>
+      <p class="">You will not need to submit monthly returns if your request is accepted.</p>
+      <div class="govuk-inset-text">
+        You must let HMRC know when you start to pay workers again by phoning the BRS Helpline 0300 200 3210
+      </div>
+      <form class="form" action="mr-03-08-e-inactivity-request-nil-return" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "areYouSubmittingAnInactivityRequest",
+          value: data['areYouSubmittingAnInactivityRequest'],
+          fieldset: {
+            legend: {
+              text: "Are you submitting an inactivity request?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "No",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

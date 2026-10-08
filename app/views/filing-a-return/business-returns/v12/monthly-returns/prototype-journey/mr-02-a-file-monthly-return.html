@@ -1,0 +1,36 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName="File your monthly BRS return" %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      File your monthly BRS return
+    </h1>
+
+    <p class="govuk-body">Use this service to file your monthly return for the Business Returns Service (BRS).</p>
+
+    <p class="govuk-body">You will need to enter the tax month, and tax year, on the return.</p>
+
+
+
+    {{ govukButton({
+      text: "Continue",
+      href: "mr-02-b-tax-month-and-year",
+      classes: "govuk-button"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}

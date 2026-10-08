@@ -1,0 +1,52 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Do you confirm the information in this return is correct? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="mr-03-08-b-employment-status-declaration" method="post" novalidate>
+
+        {{ govukRadios({
+          name: "confirmInformation",
+          fieldset: {
+            legend: {
+              text: "Do you confirm the information in this return is correct?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "By confirming you are declaring that, to the best of your knowledge, you have only selected workers you used in this return period."
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes, the information is correct and complete"
+            },
+            {
+              value: "No",
+              text: "No, I need to make changes"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

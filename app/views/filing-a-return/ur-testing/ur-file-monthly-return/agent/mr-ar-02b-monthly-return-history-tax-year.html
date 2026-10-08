@@ -1,0 +1,417 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Monthly return history – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {# <span class="govuk-caption-l">
+      Amend submitted return
+    </span> #}
+
+    {% set taxYear = (data['whichTaxYear'] or '2022 to 2023') | trim %}
+
+    {% if taxYear == 'all' %}
+      <h1 class="govuk-heading-l">
+        Monthly return history for all tax years
+      </h1>
+    {% else %}
+      <h1 class="govuk-heading-l">
+        Monthly return history for tax year {{ taxYear }}
+      </h1>
+    {% endif %}
+
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-5">
+  <div class="govuk-grid-column-full">
+
+    {% if taxYear == "2022 to 2023" or taxYear == "all" %}
+
+    <table class="govuk-table govuk-!-margin-bottom-8 returns-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">
+        Tax year 2022 to 2023
+      </caption>
+
+     <thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header govuk-!-width-one-fifth">Return period ended</th>
+    <th class="govuk-table__header govuk-!-width-one-fifth">Type</th>
+    <th class="govuk-table__header govuk-!-width-one-fifth">Date submitted</th>
+    <th class="govuk-table__header govuk-!-width-one-fifth">Monthly return</th>
+    <th class="govuk-table__header govuk-!-width-one-fifth">Submission receipt</th>
+    <th class="govuk-table__header govuk-!-width-one-fifth">Status</th>
+  </tr>
+</thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Apr 2023</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Feb 2023</td>
+          <td class="govuk-table__cell"><a href="sr-04-monthly-return-submission-details">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Mar 2023</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">5 Jan 2023</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Feb 2023</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Dec 2022</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">In progress</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Jan 2023</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">6 Nov 2022</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Dec 2022</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2022</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Unknown</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Nov 2022</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2022</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Oct 2022</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2022</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Sep 2022</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2022</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+
+    {% if taxYear == "2018 to 2019" or taxYear == "all" %}
+    <table class="govuk-table govuk-!-margin-bottom-8 returns-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">
+        Tax year 2018 to 2019
+      </caption>
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Return period ended</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Type</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Date submitted</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Monthly return</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Submission receipt</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Status</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Apr 2019</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Feb 2019</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Mar 2019</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">5 Jan 2019</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Feb 2019</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Dec 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">In progress</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Jan 2019</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">6 Nov 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Dec 2018</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Unknown</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Nov 2018</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Oct 2018</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Sep 2018</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+
+    {% if taxYear == "2017 to 2018" or taxYear == "all" %}
+    <table class="govuk-table govuk-!-margin-bottom-8 returns-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">
+        Tax year 2017 to 2018
+      </caption>
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Return period ended</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Type</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Date submitted</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Monthly return</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Submission receipt</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Status</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Apr 2018</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Feb 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Mar 2018</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">5 Jan 2018</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Feb 2018</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Dec 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">In progress</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Jan 2018</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">6 Nov 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Dec 2017</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Unknown</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Nov 2017</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Oct 2017</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Sep 2017</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+
+    {% if taxYear == "2016 to 2017" or taxYear == "all" %}
+    <table class="govuk-table govuk-!-margin-bottom-8 returns-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">
+        Tax year 2016 to 2017
+      </caption>
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Return period ended</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Type</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Date submitted</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Monthly return</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Submission receipt</th>
+          <th class="govuk-table__header govuk-!-width-one-fifth">Status</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Apr 2017</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Feb 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Mar 2017</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">5 Jan 2017</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Feb 2017</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">6 Dec 2016</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">In progress</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Jan 2017</th>
+          <td class="govuk-table__cell">Nil</td>
+          <td class="govuk-table__cell">6 Nov 2016</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Dec 2016</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2016</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Unknown</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Nov 2016</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2016</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell">Awaiting confirmation</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Oct 2016</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2016</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-fifth">Sep 2016</th>
+          <td class="govuk-table__cell">Standard</td>
+          <td class="govuk-table__cell">5 Oct 2016</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+          <td class="govuk-table__cell"><a href="mr-ar-03-amend-confirmation.html">Amend</a></td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verify subcontractor with HMRC – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/filing-a-return/subcontractor-list"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Verify subcontractor with HMRC
+      </h1>
+
+      <p class="govuk-body">
+        We will send the following details to HMRC to verify this subcontractor's CIS registration status, and determine the correct tax deduction rate.
+      </p>
+
+      <h2 class="govuk-heading-m">Subcontractor details</h2>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Type"
+            },
+            value: {
+              text: "Individual or sole trader"
+            }
+          },
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "John Smith"
+            }
+          },
+          {
+            key: {
+              text: "Date of birth"
+            },
+            value: {
+              text: "15 March 1985"
+            }
+          },
+          {
+            key: {
+              text: "National Insurance number"
+            },
+            value: {
+              text: "QQ 12 34 56 C"
+            }
+          },
+          {
+            key: {
+              text: "Unique Taxpayer Reference"
+            },
+            value: {
+              text: "1234567890"
+            }
+          }
+        ]
+      }) }}
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          These details must match the information the subcontractor used when registering with HMRC for CIS.
+        </strong>
+      </div>
+
+      <p class="govuk-body">
+        If the details are incorrect, you should <a href="/filing-a-return/subcontractor-details/1" class="govuk-link">edit the subcontractor's details</a> before verifying them.
+      </p>
+
+      <form action="/filing-a-return/verification-result" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Verify with HMRC"
+        }) }}
+
+      </form>
+
+      <p class="govuk-body">
+        <a href="/filing-a-return/subcontractor-list" class="govuk-link">Cancel and return to subcontractor list</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

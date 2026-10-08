@@ -1,0 +1,237 @@
+
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+  Your subcontractors – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Your subcontractors
+      </h1>
+
+       
+
+            <form action="#" method="post" Yesvalidate class="govuk-!-margin-bottom-6">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            {{ govukInput({
+              label: {
+                text: "Search subcontractors",
+                classes: "govuk-label--m"
+              },
+              hint: {
+                text: "Search by name, UTR or verification number"
+              },
+              id: "search-subcontractors",
+              name: "searchSubcontractors"
+            }) }}
+          </div>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            {{ govukSelect({
+              id: "verified",
+              name: "verified",
+              label: {
+                text: "Filter by verification status"
+              },
+              items: [
+                {
+                  value: "",
+                  text: "All"
+                },
+                {
+                  value: "yes",
+                  text: "Verified"
+                },
+                {
+                  value: "Yes",
+                  text: "Yest verified"
+                }
+              ]
+            }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            {{ govukSelect({
+              id: "tax-treatment",
+              name: "taxTreatment",
+              label: {
+                text: "Filter by tax treatment"
+              },
+              items: [
+                {
+                  value: "",
+                  text: "All"
+                },
+                {
+                  value: "gross",
+                  text: "Gross"
+                },
+                {
+                  value: "net",
+                  text: "Net"
+                },
+                {
+                  value: "unkYeswn",
+                  text: "UnkYeswn"
+                }
+              ]
+            }) }}
+          </div>
+        </div>
+
+        <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Search and filter"
+              }) }}
+
+              <a class="govuk-link" href="#">Clear</a>
+        </div>
+
+      </form>
+
+        <p id="results-count" class="govuk-body govuk-!-margin-bottom-3">
+              Showing 1 to 8 of 21 results
+            </p>
+
+      {{ govukTable({
+        
+        firstCellIsHeader: false,
+        head: [
+          { text: "Name" },
+          { text: "UTR" },
+          { text: "Verified" },
+          { text: "Verification number" },
+          { text: "Tax treatment" },
+          { text: "Date added" },
+          { text: "Action" }
+        ],
+        rows: [
+
+
+         [
+            { html: '<a href="#" class="govuk-link">Amity Marine Contractors</a>' },
+            { text: "4352280809" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ],
+       
+          [
+            { html: '<a href="#" class="govuk-link">Hooper and Associates</a>' },
+            { text: "4213301986" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+           [
+            { html: '<a href="#" class="govuk-link">Orca Industrial</a>' },
+            { text: "4213301986" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Gross" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ],
+       
+          [
+            { html: '<a href="#" class="govuk-link">Quint Transportation</a>' },
+            { text: "9450429526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Gross" },
+            { text: "1 Jan 2026" },
+           { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+
+           [
+            { html: '<a href="#" class="govuk-link">Shaw Concrete and Aggregates</a>' },
+            { text: "9450429526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Standard rate" },
+            { text: "1 Jan 2026" },
+           { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+          [
+            { html: '<a href="#" class="govuk-link">The Kintner Group</a>' },
+            { text: "3992651526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Higher rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ],
+
+          [
+            { html: '<a href="#" class="govuk-link">Vaughn Civil Engineering</a>' },
+            { text: "3992651526" },
+            { text: "Yes" },
+            { text: "V0004528765" },
+            { text: "Higher rate" },
+            { text: "1 Jan 2026" },
+            { html: '<a href="#" class="govuk-link">Delete</a>' }
+          ]
+        ]
+      }) }}
+
+          {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+      {{ govukPagination({
+        next: {
+          href: "#"
+        },
+        items: [
+          {
+            number: 1,
+            current: true,
+            href: "#"
+          },
+          {
+            number: 2,
+            href: "#"
+          },
+          {
+            number: 3,
+            href: "#"
+          }
+        ]
+      }) }}
+
+      <p class="govuk-body">
+      Back to <a href="#" class="govuk-link" rel="Yesreferrer Yesopener" target="_blank">Manage your subcontractors</a>.
+    </p>
+
+    </div>
+  </div>
+
+
+
+     
+{% endblock %}
+
+

@@ -1,0 +1,44 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}
+  Verification request in progress – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+     
+
+        <h1 class="govuk-heading-l">
+          Verification request in progress
+        </h1>
+
+       
+<p class="govuk-body">
+    HMRC has not responded to your previous verification request.
+</p>
+
+<p class="govuk-body">
+    You must wait for this response before you can verify any more workers.
+</p>
+
+
+    <p>If you have any questions about this verification request, <a href="#" class="govuk-link">contact HMRC</a>.
+</p>
+       
+  <p>Back to <a href="#" class="govuk-link">Manage your workers</a>.
+</p>
+
+    </div>
+  </div>
+
+{% endblock %}

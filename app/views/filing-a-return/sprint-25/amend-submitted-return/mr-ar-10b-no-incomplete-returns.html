@@ -1,0 +1,49 @@
+{% extends "filing-a-return/layouts/main.html" %}
+
+{% block pageTitle %}
+ What do you want to do? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <form action="mr-ar-09-are-you-sure-nil" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+             You have no incomplete returns
+            </h1>
+          </legend>
+          <br>
+          
+<p>To view a monthly return, or make any amendments, you must file one first.</p>
+<p class="govuk-body">
+  You can do this in <a href="RLP1b-manage-your-cis-return" class="govuk-link">Manage my CIS returns</a>.</p>
+  
+  {# <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>Lorem ipsum</p> #}
+
+
+  <p class="govuk-body">Find out more about <a href="https://www.gov.uk/what-you-must-do-as-a-cis-contractor" class="govuk-link">what you must do as a CIS contractor</a>.</p>
+
+        </fieldset>
+      </div>
+      <br>
+      {# <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button> #}
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}
