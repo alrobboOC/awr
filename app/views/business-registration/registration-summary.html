@@ -1,8 +1,8 @@
-{% extends "layouts/business-registration.html" %}
+{% extends "business-registration/layouts/main.html" %}
 {% set pageName = "Registration summary" %}
 
 {% block beforeContent %}
-  {{ govukBackLink({ text: "Back", href: "/personal-details-do-not-match" }) }}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/personal-details-do-not-match" }) }}
 {% endblock %}
 
 {% block content %}
@@ -32,10 +32,10 @@
         {{ govukSummaryList({ rows: [
           { key: { text: "Name" }, value: { text: "Alex Morgan" } },
           { key: { text: "Date of birth" }, value: { text: "14 June 1985" } },
-          { key: { text: "Address" }, value: { html: registrationAddress }, actions: { items: [{ href: "/change-registration-address", text: "Change", visuallyHiddenText: "registration address" }] } }
+          { key: { text: "Address" }, value: { html: registrationAddress }, actions: { items: [{ href: "/business-registration/change-registration-address", text: "Change", visuallyHiddenText: "registration address" }] } }
         ] }) }}
         <p class="govuk-body">Your personal details do not match HMRC records.</p>
-        <p class="govuk-body"><a class="govuk-link" href="/personal-details-do-not-match">Check the details held by HMRC</a> before continuing your registration.</p>
+        <p class="govuk-body"><a class="govuk-link" href="/business-registration/personal-details-do-not-match">Check the details held by HMRC</a> before continuing your registration.</p>
       {% endif %}
     </div>
   </div>

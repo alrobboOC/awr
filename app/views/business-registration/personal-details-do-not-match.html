@@ -1,9 +1,9 @@
-{% extends "layouts/business-registration.html" %}
+{% extends "business-registration/layouts/main.html" %}
 
 {% set pageName = "Your personal details do not match HMRC records" %}
 
 {% block beforeContent %}
-  {{ govukBackLink({ text: "Back", href: "/registration-summary" }) }}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/registration-summary" }) }}
 {% endblock %}
 
 {% block content %}
@@ -28,7 +28,7 @@
       }) }}
 
       
-      <p class="govuk-body">Check the personal details you entered in your <a class="govuk-link" href="/registration-summary">registration summary</a>.</p>
+      <p class="govuk-body">Check the personal details you entered in your <a class="govuk-link" href="/business-registration/registration-summary">registration summary</a>.</p>
 
      
       <p class="govuk-body">Sign out and <a class="govuk-link" href="https://www.gov.uk/tell-hmrc-change-of-details" target="_blank" rel="noopener noreferrer">tell HMRC about changes to your personal details (opens in new tab)</a>.</p>
@@ -38,7 +38,7 @@
 
 <br>      
 
-      <form action="/personal-details-do-not-match" method="post" novalidate>
+      <form action="/business-registration/personal-details-do-not-match" method="post" novalidate>
         {{ govukButton({ text: "Continue" }) }}
       </form>
 

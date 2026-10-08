@@ -1,9 +1,9 @@
-{% extends "layouts/business-registration.html" %}
+{% extends "business-registration/layouts/main.html" %}
 
 {% set pageName = "Your personal details match HMRC records" %}
 
 {% block beforeContent %}
-  {{ govukBackLink({ text: "Back", href: "/personal-details-do-not-match-addresses" }) }}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/personal-details-do-not-match-addresses" }) }}
 {% endblock %}
 
 {% block content %}
@@ -56,7 +56,7 @@
         ]
       }) }}
 
-      <form action="/personal-details-do-not-match" method="post" novalidate>
+      <form action="/business-registration/personal-details-do-not-match" method="post" novalidate>
         {{ govukButton({ text: "Continue" }) }}
       </form>
 

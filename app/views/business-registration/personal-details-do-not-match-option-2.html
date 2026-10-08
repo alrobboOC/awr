@@ -1,9 +1,9 @@
-{% extends "layouts/business-registration.html" %}
+{% extends "business-registration/layouts/main.html" %}
 
 {% set pageName = "Your personal details do not match HMRC records" %}
 
 {% block beforeContent %}
-  {{ govukBackLink({ text: "Back", href: "/registration-summary" }) }}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/registration-summary" }) }}
 {% endblock %}
 
 {% block content %}
@@ -26,7 +26,7 @@
           {
             key: { text: "Personal details" },
             value: { text: "Alex Morgan" },
-            actions: { items: [{ href: "/registration-summary", text: "Change", visuallyHiddenText: "name entered in your registration" }] }
+            actions: { items: [{ href: "/business-registration/registration-summary", text: "Change", visuallyHiddenText: "name entered in your registration" }] }
           },
           {
             key: { text: "Details held by HMRC" },
@@ -42,7 +42,7 @@
           {
             key: { text: "Personal details" },
             value: { text: "14 June 1985" },
-            actions: { items: [{ href: "/registration-summary", text: "Change", visuallyHiddenText: "date of birth entered in your registration" }] }
+            actions: { items: [{ href: "/business-registration/registration-summary", text: "Change", visuallyHiddenText: "date of birth entered in your registration" }] }
           },
           {
             key: { text: "Details held by HMRC" },
@@ -58,7 +58,7 @@
           {
             key: { text: "Personal details" },
             value: { html: registrationAddress },
-            actions: { items: [{ href: "/change-registration-address", text: "Change", visuallyHiddenText: "address entered in your registration" }] }
+            actions: { items: [{ href: "/business-registration/change-registration-address", text: "Change", visuallyHiddenText: "address entered in your registration" }] }
           },
           {
             key: { text: "Details held by HMRC" },
@@ -68,7 +68,7 @@
         ]
       }) }}
 
-      <form action="/personal-details-do-not-match" method="post" novalidate>
+      <form action="/business-registration/personal-details-do-not-match" method="post" novalidate>
         {{ govukButton({ text: "Continue" }) }}
       </form>
 

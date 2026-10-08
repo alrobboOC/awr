@@ -1,9 +1,9 @@
-{% extends "layouts/business-registration.html" %}
+{% extends "business-registration/layouts/main.html" %}
 
 {% set pageName = "Your personal details do not match HMRC records" %}
 
 {% block beforeContent %}
-  {{ govukBackLink({ text: "Back", href: "/registration-summary" }) }}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/registration-summary" }) }}
 {% endblock %}
 
 {% block content %}
@@ -34,7 +34,7 @@
             <th scope="row" class="govuk-table__header">Name</th>
             <td class="govuk-table__cell">
               <div class="govuk-!-margin-bottom-2">Alex Morgan</div>
-              <a class="govuk-link" href="/registration-summary">Change<span class="govuk-visually-hidden"> name entered in your registration</span></a>
+              <a class="govuk-link" href="/business-registration/registration-summary">Change<span class="govuk-visually-hidden"> name entered in your registration</span></a>
             </td>
             <td class="govuk-table__cell">
               <div class="govuk-!-margin-bottom-2">Alex James Morgan</div>
@@ -45,7 +45,7 @@
             <th scope="row" class="govuk-table__header">Date of birth</th>
             <td class="govuk-table__cell">
               <div class="govuk-!-margin-bottom-2">14 June 1985</div>
-              <a class="govuk-link" href="/registration-summary">Change<span class="govuk-visually-hidden"> date of birth entered in your registration</span></a>
+              <a class="govuk-link" href="/business-registration/registration-summary">Change<span class="govuk-visually-hidden"> date of birth entered in your registration</span></a>
             </td>
             <td class="govuk-table__cell">
               <div class="govuk-!-margin-bottom-2">14 June 1985</div>
@@ -56,7 +56,7 @@
             <th scope="row" class="govuk-table__header">Address</th>
             <td class="govuk-table__cell">
               <div class="govuk-!-margin-bottom-2">{{ registrationAddress | safe }}</div>
-              <a class="govuk-link" href="/change-registration-address">Change<span class="govuk-visually-hidden"> address entered in your registration</span></a>
+              <a class="govuk-link" href="/business-registration/change-registration-address">Change<span class="govuk-visually-hidden"> address entered in your registration</span></a>
             </td>
             <td class="govuk-table__cell">
               <div class="govuk-!-margin-bottom-2">18 High Street<br>London<br>SW1A 2AA</div>
@@ -66,7 +66,7 @@
         </tbody>
       </table>
 
-      <form action="/personal-details-do-not-match" method="post" novalidate>
+      <form action="/business-registration/personal-details-do-not-match" method="post" novalidate>
         {{ govukButton({ text: "Continue" }) }}
       </form>
 

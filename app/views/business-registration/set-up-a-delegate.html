@@ -1,7 +1,7 @@
-{% extends "layouts/business-registration.html" %}
+{% extends "business-registration/layouts/main.html" %}
 {% set pageName = "Set up a delegate" %}
 {% block beforeContent %}
-  {{ govukBackLink({ text: "Back", href: "/business-registration-summary" }) }}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/business-registration-summary" }) }}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
@@ -9,7 +9,7 @@
       <h1 class="govuk-heading-l">Set up a delegate</h1>
       <p class="govuk-body">A delegate can complete, view or amend your registration.</p>
       <p class="govuk-body">Delegate setup is not available in this prototype.</p>
-      <p class="govuk-body"><a class="govuk-link" href="/business-registration-summary">Return to your registration summary</a></p>
+      <p class="govuk-body"><a class="govuk-link" href="/business-registration/business-registration-summary">Return to your registration summary</a></p>
     </div>
   </div>
 {% endblock %}
