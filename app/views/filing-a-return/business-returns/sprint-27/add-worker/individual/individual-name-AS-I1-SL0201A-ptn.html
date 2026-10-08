@@ -19,7 +19,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <form
-  action="{% if 'trading_name' in data.individualNames %}individual-tradingname-AS-I1-SL0201D-ptn{% else %}individual-add-address-questions-AS-I2-SL0205E-ptn{% endif %}"
+  action="{% if 'trading_name' in (data.individualNames | default([], true)) %}individual-tradingname-AS-I1-SL0201D-ptn{% else %}individual-add-address-questions-AS-I2-SL0205E-ptn{% endif %}"
   method="post"
   novalidate>
 

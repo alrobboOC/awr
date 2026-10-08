@@ -1,0 +1,37 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% set pageName = "Check employment status for tax" %}
+{% block pageTitle %}{{ pageName }} – {{ serviceName }} – GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/filing-a-return/business-returns/sprint-27/worker-landing-page/SLP-01" }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Before you add a worker</span>
+    <h1 class="govuk-heading-l">Check employment status for tax</h1>
+    <p class="govuk-body-l">Before you add a worker to your return, you need to make sure they are self-employed for tax purposes for the work they do for you.</p>
+    <h2 class="govuk-heading-m">Why you need to check</h2>
+    <p class="govuk-body">You are responsible for checking each worker’s employment status. Someone who is self-employed for other work may be employed for the work they do for you.</p>
+    <p class="govuk-body">If you treat a worker as self-employed when they should be employed, you may have to pay unpaid tax and National Insurance, as well as penalties.</p>
+    <p class="govuk-body">Use the employment status check to help you decide whether the worker should be included on your return. If they are employed for tax purposes, their payments should be handled through PAYE instead.</p>
+
+    <h2 class="govuk-heading-m" id="who-can-use-the-tool">Who can use the tool</h2>
+    <p class="govuk-body">Businesses, workers and agents can use CEST. Its result informs who handles tax and National Insurance.</p>
+
+    <h2 class="govuk-heading-m" id="before-you-start">Before you start</h2>
+    {{ govukInsetText({ text: "A contract must exist or be expected. It need not be written." }) }}
+    <p class="govuk-body">Have information about:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the contract and worker’s responsibilities</li>
+      <li>who controls the tasks, timing, location and methods</li>
+      <li>payment arrangements, benefits and expenses</li>
+    </ul>
+    <p class="govuk-body">CEST is anonymous. Gather your information first because progress cannot be saved.</p>
+    <p class="govuk-body">Start the check on the next screen.</p>
+    {{ govukButton({ text: "Continue", href: "employment-status-check" }) }}
+  </div>
+</div>
+{% endblock %}

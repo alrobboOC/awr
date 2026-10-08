@@ -1,0 +1,25 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block pageTitle %}Who are you checking employment status for? – {{ serviceName }} – GOV.UK{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "check-employment-status-for-tax" }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Check employment status for tax</span>
+    <form method="post" action="employment-status-working-arrangement">
+      {{ govukRadios({
+        name: "employment-status-check-for",
+        value: data["employment-status-check-for"],
+        fieldset: { legend: { text: "Who are you checking employment status for?", isPageHeading: true, classes: "govuk-fieldset__legend--l" } },
+        items: [
+          { value: "worker", text: "A worker your business hires or plans to hire" },
+          { value: "myself", text: "Yourself" },
+          { value: "client", text: "A worker on behalf of a client" }
+        ]
+      }) }}
+      {{ govukButton({ text: "Continue" }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

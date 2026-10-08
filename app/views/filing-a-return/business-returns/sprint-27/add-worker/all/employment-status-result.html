@@ -1,0 +1,41 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}Self-employed for tax purposes for this work – {{ serviceName }} – GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "employment-status-working-arrangement" }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({ titleText: "Self-employed for tax purposes for this work" }) }}
+
+    <p class="govuk-body">This is based on the information provided.</p>
+    <p class="govuk-body">If the working arrangement changes, or the worker starts different work for you, check their employment status again. This result only applies to the work covered by this check.</p>
+
+    <h2 class="govuk-heading-m">Why you are getting this result</h2>
+    <p class="govuk-body">The answers provided indicate that the worker is self-employed for tax purposes for this work.</p>
+    <p class="govuk-body">Being self-employed for this work does not mean they will be self-employed for every working arrangement.</p>
+
+    <h2 class="govuk-heading-m">What you should do next</h2>
+    <ol class="govuk-list govuk-list--number">
+      <li>Save or print this result.</li>
+      <li>Keep a copy with the answers provided for your records.</li>
+      <li>Continue to add the worker’s details to your return.</li>
+    </ol>
+
+    <div class="govuk-button-group employment-status-result-actions">
+      <button type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.print()">Save or print your result</button>
+    </div>
+
+    <p class="govuk-body">You can include this worker on your return for this work. You will still need to check their details and apply the appropriate payment deductions.</p>
+    <p class="govuk-body">Keep this result to support your decision about the worker’s employment status.</p>
+
+    <div class="govuk-button-group employment-status-result-actions">
+      {{ govukButton({ text: "Continue", href: "SL03-worker-type" }) }}
+    </div>
+    <p class="govuk-body employment-status-result-actions"><a class="govuk-link" href="employment-status-check">Start again</a> to check employment status for other work.</p>
+  </div>
+</div>
+{% endblock %}

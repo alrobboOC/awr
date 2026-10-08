@@ -106,3 +106,9 @@
 .business-returns {
   @import "../business-returns/sass/application";
 }
+
+@media print {
+  .business-returns .employment-status-result-actions {
+    display: none;
+  }
+}

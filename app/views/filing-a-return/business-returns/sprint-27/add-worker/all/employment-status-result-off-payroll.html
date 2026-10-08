@@ -1,0 +1,53 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+
+{% block pageTitle %}Off-payroll working rules (IR35) apply – {{ serviceName }} – GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "employment-status-working-arrangement" }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({ titleText: "Off-payroll working rules (IR35) apply" }) }}
+
+    <p class="govuk-body">This is based on the information provided.</p>
+    <h2 class="govuk-heading-m">Why you are getting this result</h2>
+    <p class="govuk-body">The answers provided indicate that the worker:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>will carry out duties as an office holder</li>
+      <li>provides their services through an intermediary, such as a limited company, partnership or unincorporated body</li>
+    </ul>
+    <p class="govuk-body">The worker is treated as employed for tax purposes for this work.</p>
+    <p class="govuk-body">For this example, the intermediary needs to operate PAYE on the worker’s earnings.</p>
+
+    <h2 class="govuk-heading-m">What you should do next</h2>
+    <ol class="govuk-list govuk-list--number">
+      <li>Save or print this result.</li>
+      <li>Share it with the person responsible for handling the worker’s payments.</li>
+      <li>Keep a copy with the answers provided for your records.</li>
+    </ol>
+    <div class="govuk-button-group employment-status-result-actions">
+      <button type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.print()">Save or print your result</button>
+    </div>
+
+    {{ govukInsetText({ text: "Do not add payments for this work to your return as self-employed worker payments. They need to be handled through PAYE." }) }}
+    <h2 class="govuk-heading-m">Adding this person as an employee</h2>
+    <p class="govuk-body">If you are taking this person on as an employee of your business, add them to your payroll rather than this return.</p>
+    <ol class="govuk-list govuk-list--number">
+      <li>Get their personal details and P45. If they do not have a P45, use HMRC’s starter checklist to work out their tax code and starter declaration.</li>
+      <li>Set them up in your payroll software.</li>
+      <li>Tell HMRC about them by including their details in your first Full Payment Submission (FPS) for them, on or before their first payday.</li>
+    </ol>
+    <p class="govuk-body">Include their personal details, tax code, starter declaration, and pay and deductions since they started working for you. Do not include pay or deductions from their previous job.</p>
+    <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/new-employee/registering">Find out how to register a new employee with HMRC</a>.</p>
+    <p class="govuk-body">If the person continues to work through an intermediary, share this result with the person responsible for payroll so they can arrange the appropriate PAYE treatment.</p>
+
+    <p class="govuk-body">If the working arrangement changes, check the worker’s employment status again.</p>
+    <div class="govuk-button-group employment-status-result-actions">
+      {{ govukButton({ text: "Return to managing workers", href: "/filing-a-return/business-returns/sprint-27/worker-landing-page/SLP-01" }) }}
+    </div>
+    <p class="govuk-body employment-status-result-actions"><a class="govuk-link" href="employment-status-check">Start again</a> to check employment status for other work.</p>
+  </div>
+</div>
+{% endblock %}

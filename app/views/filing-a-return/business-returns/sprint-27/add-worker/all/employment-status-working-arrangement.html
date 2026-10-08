@@ -1,0 +1,17 @@
+{% extends "filing-a-return/business-returns/layouts/main.html" %}
+{% block pageTitle %}The working arrangement – {{ serviceName }} – GOV.UK{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "employment-status-check" }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Check employment status for tax</span>
+    <h1 class="govuk-heading-l">The working arrangement</h1>
+    <p class="govuk-body">The employment status questions would continue here, covering the contract, responsibilities, control over the work and payment arrangements.</p>
+    {{ govukInsetText({ text: "This part of the prototype does not calculate an employment status result." }) }}
+    {{ govukButton({ text: "View self-employed example result", href: "employment-status-result" }) }}
+    <p class="govuk-body"><a class="govuk-link" href="employment-status-result-off-payroll">View off-payroll working example result</a></p>
+  </div>
+</div>
+{% endblock %}
