@@ -1,0 +1,21 @@
+{% extends "business-registration/layouts/main.html" %}
+{% set pageName = "Change your personal details" %}
+{% block beforeContent %}
+  {{ govukBackLink({ text: "Back", href: "/business-registration/personal-details-do-not-match-tables" }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{ pageName }}</h1>
+      <form action="/business-registration/change-personal-details" method="post">
+        {{ govukInput({ label: { text: "Full name" }, id: "registrationName", name: "registrationName", value: data["registrationName"] or "Alex Morgan" }) }}
+        {{ govukInput({ label: { text: "Date of birth" }, id: "registrationDateOfBirth", name: "registrationDateOfBirth", value: data["registrationDateOfBirth"] or "14 June 1985" }) }}
+        {{ govukInput({ label: { text: "Address line 1" }, id: "registrationAddressLine1", name: "registrationAddressLine1", value: data["registrationAddressLine1"] or "42 Sample Street" }) }}
+        {{ govukInput({ label: { text: "Address line 2 (optional)" }, id: "registrationAddressLine2", name: "registrationAddressLine2", value: data["registrationAddressLine2"] or "" }) }}
+        {{ govukInput({ label: { text: "Town or city" }, id: "registrationAddressTown", name: "registrationAddressTown", value: data["registrationAddressTown"] or "Exampleton" }) }}
+        {{ govukInput({ label: { text: "Postcode" }, id: "registrationAddressPostcode", name: "registrationAddressPostcode", value: data["registrationAddressPostcode"] or "AB1 3EF" }) }}
+        {{ govukButton({ text: "Save and continue" }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

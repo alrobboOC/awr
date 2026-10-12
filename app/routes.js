@@ -58,6 +58,28 @@ router.post(['/change-registration-address', '/business-registration/change-regi
   res.redirect('/business-registration/personal-details-do-not-match-addresses')
 })
 
+// Compare edited registration details with the fixed HMRC example records.
+router.post('/business-registration/change-personal-details', (req, res, next) => {
+  const expected = {
+    registrationName: 'Alex Morgan',
+    registrationDateOfBirth: '14 June 1985',
+    registrationAddressLine1: '24 Example Road',
+    registrationAddressLine2: '',
+    registrationAddressTown: 'Exampleton',
+    registrationAddressPostcode: 'AB1 2CD'
+  }
+  const normalise = (value) => String(value || '').trim().replace(/\s+/g, ' ').toLowerCase()
+  const matches = Object.entries(expected).every(([key, value]) => normalise(req.body[key]) === normalise(value))
+  Object.keys(expected).forEach((key) => { req.session.data[key] = String(req.body[key] || '').trim() })
+  req.session.data.useHmrcPersonalDetails = false
+  req.session.save((error) => {
+    if (error) return next(error)
+    res.redirect(matches
+      ? '/business-registration/personal-details-match-earlier-design'
+      : '/business-registration/personal-details-do-not-match-tables')
+  })
+})
+
 // Keep existing bookmarks working after grouping the registration templates.
 const registrationPages = ['personal-details-do-not-match-addresses', 'business-registration-summary', 'delete-business-registration', 'personal-details-match-earlier-design', 'change-of-personal-details', 'set-up-a-delegate', 'personal-details-match', 'business-registration-section', 'business-tax-account', 'personal-details-do-not-match', 'personal-details-do-not-match-option-2', 'personal-details-do-not-match-option-3', 'change-registration-address', 'registration-summary', 'business-registration-signed-out', 'business-tax-account-section']
 
